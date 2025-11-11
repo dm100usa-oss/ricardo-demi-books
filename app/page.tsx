@@ -1,6 +1,5 @@
-// app/page.tsx
 import Image from "next/image";
-import { books } from "@/data/books";
+import { books } from "../data/books";
 
 export default function Home() {
   return (
