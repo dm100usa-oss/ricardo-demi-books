@@ -1,5 +1,4 @@
-// app/books/[slug]/page.tsx
-import { books } from "@/data/books";
+import { books } from "../../../data/books";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
