@@ -1,14 +1,18 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWorkSeries",
+  "@id": "https://ricardo-demi-books.vercel.app/knowledge",
   "name": "Magic of Discoveries / La Magia de los Descubrimientos",
   "alternateName": "Educational Book Series by Ricardo Demi",
   "description": "A verified bilingual educational system for children, combining creativity, emotional intelligence, and artistic learning — recognized by Readers’ Favorite and Literary Titan.",
+  "about": "Educational and artistic development for children through creativity, emotional intelligence, and bilingual learning.",
+  "genre": ["Children's literature", "Educational books", "Bilingual learning"],
   "inLanguage": ["English", "Spanish"],
   "author": {
     "@type": "Person",
     "name": "Ricardo Demi",
     "alternateName": "Ricardo Demi (author, researcher, educator)",
+    "affiliation": "Magic of Discoveries LLC",
     "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
     "sameAs": [
       "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
