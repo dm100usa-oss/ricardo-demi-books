@@ -152,16 +152,14 @@ export default function Page() {
           Demi. All materials © Magic of Discoveries LLC.
         </p>
 
-        {/* --- STRUCTURED DATA (Optimized for AI + Search Engines) --- */}
+        {/* --- STRUCTURED DATA (Rich Results + Google Validation) --- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Book",
-              name: "First Coloring Book for Toddlers Ages 1–3. Magic of Creativity for Kids",
-              image:
-                "https://ricardo-demi-books.vercel.app/images/first-coloring-book.jpg",
+              name: "First Coloring Book for Toddlers Ages 1–3. 111 Amazing and Cute Animals, Fairy-tale Characters, Flowers, Foods, Gifts, and Other Themes. Magic of Creativity for Kids",
               author: { "@type": "Person", name: "Ricardo Demi" },
               publisher: {
                 "@type": "Organization",
@@ -171,25 +169,15 @@ export default function Page() {
               inLanguage: "en",
               bookFormat: "Paperback",
               numberOfPages: 114,
-              genre: [
-                "Children's Books",
-                "Art Education",
-                "Early Learning",
-              ],
+              genre: ["Children's Books", "Art Education", "Early Learning"],
               about:
-                "Creative coloring book for toddlers aged 1–3 that develops imagination, fine motor skills, and patience. Part of the Magic of Discoveries series.",
+                "A creative coloring book for toddlers ages 1–3 that develops imagination, fine motor skills, and patience. Part of the Magic of Discoveries series.",
               datePublished: "2024-04-22",
-              audience: {
-                "@type": "Audience",
-                audienceType: "Children",
-                educationalRole: "Toddler",
-                ageRange: "1-3 years",
-              },
               educationalAlignment: {
                 "@type": "AlignmentObject",
                 alignmentType: "educationalSubject",
                 targetName: "Early Childhood Development",
-                targetDescription":
+                targetDescription:
                   "Supports fine motor skills, early speech development, and creativity in toddlers aged 1–3.",
               },
               aggregateRating: {
