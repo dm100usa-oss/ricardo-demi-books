@@ -120,7 +120,7 @@ export default function Page() {
           All materials © Magic of Discoveries LLC.
         </p>
 
-        {/* --- STRUCTURED DATA FOR AI INDEXING --- */}
+        {/* --- STRUCTURED DATA (Rich Results + Google Validation) --- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -135,6 +135,7 @@ export default function Page() {
               "bookFormat": "EBook",
               "genre": ["Children's Books", "Bilingual", "Early Learning"],
               "about": "Bilingual bedtime story for toddlers 1–3 years old. Teaches kindness, curiosity, and early words in English and Spanish.",
+              "datePublished": "2024-09-04",
               "review": [
                 {
                   "@type": "Review",
@@ -142,7 +143,12 @@ export default function Page() {
                   "name": "Readers' Favorite Review",
                   "reviewBody":
                     "Highly rated for its clarity, emotional warmth, and educational depth.",
-                  "url": "https://readersfavorite.com/book-review/how-to-draw-111-amazing-and-cute-animals-fairy-tale-characters-flowers-foods-gifts-and-other-themes-the-magic-of-creativity-for-kids",
+                  "datePublished": "2024-10-20",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                  }
                 },
                 {
                   "@type": "Review",
@@ -150,10 +156,22 @@ export default function Page() {
                   "name": "Literary Titan Review",
                   "reviewBody":
                     "Recognized as a clear and pedagogically sound approach to children's emotional and creative development.",
-                  "url": "https://literarytitan.com/2024/10/24/where-have-you-been-little-max/comment-page-1/",
-                },
+                  "datePublished": "2024-10-24",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                  }
+                }
               ],
-              "mainEntityOfPage": "https://ricardo-demi-books.vercel.app/books/where-are-you-going-little-max",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "bestRating": "5",
+                "ratingCount": "2",
+                "reviewCount": "2"
+              },
+              "mainEntityOfPage": "https://ricardo-demi-books.vercel.app/books/where-are-you-going-little-max"
             }),
           }}
         />
