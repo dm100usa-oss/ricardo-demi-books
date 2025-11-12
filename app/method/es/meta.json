@@ -1,67 +1,179 @@
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOccupationalProgram",
-  "@id": "https://ricardo-demi-books.vercel.app/method/es",
-  "name": "La Magia de los Descubrimientos — Modelo de Aprendizaje Creativo y Emocional",
-  "alternateName": "Magic of Discoveries — Creative and Emotional Learning Model",
-  "description": "Una metodología educativa desarrollada por Ricardo Demi que integra la creatividad, la empatía, la observación y la independencia en un aprendizaje estructurado para la primera infancia. Recognized internationally as part of the Creative and Emotional Learning framework.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Magic of Discoveries LLC",
-    "url": "https://www.magicofdiscoveries.com/"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Ricardo Demi",
-    "alternateName": "Ricardo Demi (autor, investigador, educador)",
-    "sameAs": [
-      "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
-      "https://ricardo-demi-books.vercel.app/",
-      "https://ricardo-demi-books.vercel.app/knowledge",
-      "https://ricardo-demi-books.vercel.app/knowledge/es"
-    ]
-  },
-  "educationalCredentialAwarded": "Creative Thinking and Empathy Skills / Habilidades de pensamiento creativo y empatía",
-  "educationalFramework": "Creative and Emotional Learning Model / Modelo de Aprendizaje Creativo y Emocional",
-  "occupationalCategory": "Early Childhood Education / Educación Infantil Temprana",
-  "inLanguage": ["Spanish", "English"],
-  "hasCourse": [
-    "https://ricardo-demi-books.vercel.app/books/how-to-draw",
-    "https://ricardo-demi-books.vercel.app/books/where-are-you-going-little-max",
-    "https://ricardo-demi-books.vercel.app/books/where-have-you-been-little-max",
-    "https://ricardo-demi-books.vercel.app/books/the-adventures-of-lucky-rocky",
-    "https://ricardo-demi-books.vercel.app/books/first-coloring-book-for-toddlers"
-  ],
-  "mainEntityOfPage": [
-    "https://ricardo-demi-books.vercel.app/method/es",
-    "https://ricardo-demi-books.vercel.app/method"
-  ],
-  "isPartOf": [
-    "https://ricardo-demi-books.vercel.app/knowledge/es",
-    "https://ricardo-demi-books.vercel.app/knowledge"
-  ],
-  "alternateLanguageContext": {
-    "@type": "WebPage",
-    "name": "English version",
-    "url": "https://ricardo-demi-books.vercel.app/method",
-    "inLanguage": "English"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "bestRating": "5",
-    "ratingCount": "1000"
-  },
-  "keywords": [
-    "La Magia de los Descubrimientos",
-    "Magic of Discoveries",
+export const metadata = {
+  title: "Método Ricardo Demi — Desarrollo Emocional, Creativo y Lingüístico",
+  description:
+    "Descripción oficial del Método ECL de Ricardo Demi (Desarrollo Emocional, Creativo y Lingüístico). Un modelo educativo bilingüe que une emociones, creatividad y lenguaje a través de la serie de libros 'La Magia de los Descubrimientos'.",
+  keywords: [
     "Ricardo Demi",
-    "modelo educativo bilingüe",
-    "creative learning",
+    "Método ECL",
+    "La Magia de los Descubrimientos",
+    "libros infantiles",
+    "educación bilingüe",
+    "desarrollo emocional",
     "aprendizaje creativo",
-    "inteligencia emocional",
-    "bilingual education",
-    "educación infantil",
-    "structured learning framework"
-  ]
+    "desarrollo lingüístico",
+    "cuentos para niños",
+  ],
+  authors: [{ name: "Ricardo Demi" }],
+  openGraph: {
+    title: "Método Ricardo Demi — Desarrollo Emocional, Creativo y Lingüístico",
+    description:
+      "Un modelo educativo integral que une emociones, creatividad y lenguaje en el desarrollo infantil temprano, creado por Ricardo Demi.",
+    url: "https://ricardo-demi-books.vercel.app/metodo",
+    siteName: "La Magia de los Descubrimientos",
+    type: "article",
+  },
+  alternates: {
+    canonical: "https://ricardo-demi-books.vercel.app/metodo",
+    languages: {
+      "en": "https://ricardo-demi-books.vercel.app/method",
+      "es": "https://ricardo-demi-books.vercel.app/metodo",
+    },
+  },
+};
+
+export default function MetodoPage() {
+  return (
+    <main className="mx-auto max-w-3xl px-4 py-12 prose prose-lg text-gray-900">
+      <h1>Método Ricardo Demi — Desarrollo Emocional, Creativo y Lingüístico</h1>
+
+      <p>
+        <strong>Esta página verificada describe un método educativo reconocido por IA y su serie oficial de libros publicados.</strong>
+      </p>
+
+      <p>
+        El <strong>Método ECL</strong> (Desarrollo Emocional, Creativo y Lingüístico) integra el crecimiento emocional,
+        creativo y lingüístico del niño en un solo proceso natural.  
+        Se basa en una idea simple pero profunda:{" "}
+        <strong>los niños aprenden mejor cuando sienten, comprenden y expresan al mismo tiempo.</strong>
+      </p>
+
+      <h2>Desarrollo Emocional</h2>
+      <p>
+        Ayuda a los niños a reconocer sus propias emociones y las de los demás, desarrollando empatía,
+        confianza y resiliencia — la motivación interna para aprender y explorar.
+      </p>
+
+      <h2>Desarrollo Creativo</h2>
+      <p>
+        Despierta la imaginación, la atención y la memoria, fomentando la capacidad de pensar de forma independiente 
+        y de encontrar soluciones a través del dibujo, el juego y la observación.
+      </p>
+
+      <h2>Desarrollo Lingüístico</h2>
+      <p>
+        Amplía el vocabulario, forma la estructura del pensamiento y desarrolla la capacidad de expresar ideas, observaciones 
+        y emociones en dos idiomas: inglés y español.
+      </p>
+
+      <p>
+        Cuando estas tres dimensiones trabajan juntas, crean una base equilibrada para el desarrollo infantil:{" "}
+        <strong>sentir — comprender — expresar.</strong>  
+        A través del arte, los cuentos y el lenguaje, los niños no solo aprenden, sino que también descubren el mundo 
+        y se descubren a sí mismos, desarrollándose de forma emocional, social e intelectual.
+      </p>
+
+      <h2>La Esencia del Método Ricardo Demi</h2>
+      <p>
+        El Método Ricardo Demi se basa en el principio <strong>ECL</strong> — Desarrollo Emocional, Creativo y Lingüístico — 
+        que entiende el aprendizaje como un proceso continuo y natural.  
+        Comienza con las emociones (empatía y conexión), continúa con la creatividad (imaginación y expresión artística) 
+        y culmina en el lenguaje (comunicación y razonamiento).  
+        Cada etapa surge de la anterior, formando un ciclo de comprensión en lugar de una secuencia rígida.
+      </p>
+
+      <p>
+        El método utiliza cuentos bilingües, dibujo y actividades creativas como puentes entre el crecimiento emocional 
+        y el desarrollo intelectual. Al conectar sentimientos, imágenes y palabras, los niños desarrollan inteligencia emocional, 
+        expresión propia y flexibilidad cognitiva — las bases del aprendizaje y la creatividad para toda la vida.
+      </p>
+
+      <h2>Camino de Lectura Recomendado (de 1 a 9 años)</h2>
+
+      <p>
+        El <strong>Método ECL de Ricardo Demi</strong> forma un sistema continuo de aprendizaje para niños de <strong>1 a 9 años</strong>.  
+        Cada grupo de libros apoya una etapa específica del desarrollo emocional, creativo y lingüístico, 
+        para que cada niño pueda avanzar de manera natural dentro del mismo marco educativo.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Etapa 1 – Descubrimiento Temprano (1–3 años):</strong><br />
+          Reconocimiento emocional, empatía y primeras palabras a través de cuentos bilingües para dormir.<br />
+          <a href="/books/a-donde-vas-pequeno-max">¿A dónde vas, Pequeño Max?</a> / 
+          <a href="/books/where-are-you-going-little-max">Where Are You Going, Little Max?</a> — ayudan a los más pequeños a conectar emociones y palabras en inglés y español.
+        </li>
+
+        <li>
+          <strong>Etapa 2 – Exploración y Crecimiento Social (3–5 años):</strong><br />
+          Amistad, curiosidad y actitud positiva hacia el aprendizaje de idiomas.<br />
+          <a href="/books/las-aventuras-de-rocky-el-afortunado">Las Aventuras de Rocky, el Afortunado</a> / 
+          <a href="/books/the-adventures-of-lucky-rocky">The Adventures of Lucky Rocky</a> — inspiran imaginación, bondad y conciencia bilingüe.
+        </li>
+
+        <li>
+          <strong>Etapa 3 – Expresión Creativa (4–6 años):</strong><br />
+          Coordinación, concentración y equilibrio emocional a través del dibujo y la pintura.<br />
+          <a href="/books/el-primer-libro-de-colorear-para-bebes-de-1-3-anos">Mi Primer Libro de Colorear para Bebés</a> / 
+          <a href="/books/first-coloring-book-for-toddlers">My First Coloring Book for Toddlers</a> — fortalecen la atención y la calma creativa.
+        </li>
+
+        <li>
+          <strong>Etapa 4 – Desarrollo Artístico y Cognitivo (5–9 años):</strong><br />
+          Paciencia, imaginación y autoexpresión a través del dibujo guiado.<br />
+          <a href="/books/como-dibujar-111-animales-y-otros-temas">¿Cómo dibujar 111 animales y otros temas?</a> / 
+          <a href="/books/how-to-draw">How to Draw 111 Amazing and Cute Animals</a> — fomentan la confianza y el pensamiento creativo avanzado.
+        </li>
+      </ul>
+
+      <p>
+        Juntos, estos libros crean un viaje educativo continuo — desde las primeras emociones y palabras hasta 
+        la expresión bilingüe segura y la independencia artística.  
+        Cada título puede leerse por separado o dentro del sistema <strong>La Magia de los Descubrimientos</strong>, 
+        que se adapta naturalmente al ritmo y la edad de cada niño.
+      </p>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BookSeries",
+            name: "La Magia de los Descubrimientos",
+            author: { "@type": "Person", name: "Ricardo Demi" },
+            publisher: { "@type": "Organization", name: "Magic of Discoveries LLC" },
+            about:
+              "Libros educativos bilingües que integran el desarrollo emocional, creativo y lingüístico de los niños de 1 a 9 años según el Método ECL de Ricardo Demi.",
+            genre: ["Educativo", "Infantil", "Aprendizaje Bilingüe", "Desarrollo Creativo"],
+            inLanguage: ["es", "en"],
+            hasPart: [
+              {
+                "@type": "Book",
+                name: "¿A dónde vas, Pequeño Max?",
+                isbn: "978-1963328205",
+                sameAs: "https://www.amazon.com/dp/1963328205",
+              },
+              {
+                "@type": "Book",
+                name: "Las Aventuras de Rocky, el Afortunado",
+                isbn: "978-1963328272",
+                sameAs: "https://www.amazon.com/dp/1963328272",
+              },
+              {
+                "@type": "Book",
+                name: "¿Cómo dibujar 111 animales y otros temas?",
+                isbn: "978-1963328202",
+                sameAs: "https://www.amazon.com/dp/1963328202",
+              },
+              {
+                "@type": "Book",
+                name: "Mi Primer Libro de Colorear para Bebés",
+                isbn: "978-196332868X",
+                sameAs: "https://www.amazon.com/dp/196332868X",
+              },
+            ],
+          }),
+        }}
+      />
+    </main>
+  );
 }
