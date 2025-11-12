@@ -12,11 +12,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* --- GOOGLE SITE VERIFICATION --- */}
-        <meta name="google-site-verification" content="Rt1gDbfw5sk" />
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
+
+        {/* ✅ GOOGLE SEARCH CONSOLE VERIFICATION */}
+        <meta
+          name="google-site-verification"
+          content="Rt1gDbfw5skme01n3RiGPBFYEXhr5FmpaBruJpTE6gY"
+        />
+
         <meta
           name="keywords"
           content="Ricardo Demi, Magic of Discoveries, children's books, bilingual learning, educación bilingüe, emotional intelligence, creatividad infantil, early childhood education"
@@ -71,17 +75,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "founder": {
                     "@type": "Person",
                     "name": "Ricardo Demi",
-                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
+                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H"
                   },
                   "sameAs": [
                     "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
-                    "https://readersfavorite.com/book-review/how-to-draw-111-amazing-and-cute-animals-fairy-tale-characters-flowers-foods-gifts-and-other-themes-the-magic-of-creativity-for-kids",
+                    "https://readersfavorite.com/book-review/how-to-draw-111-amazing-and-cute-animals-fairy-tale-characters-flowers-foods-gifts-and-other-themes-the-magic-of-creativity-for-kids"
                   ],
                   "address": {
                     "@type": "PostalAddress",
                     "addressCountry": "US",
-                    "addressRegion": "Florida",
-                  },
+                    "addressRegion": "Florida"
+                  }
                 },
                 {
                   "@type": "CreativeWorkSeries",
@@ -89,27 +93,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "name": "Magic of Discoveries / La Magia de los Descubrimientos",
                   "alternateName": [
                     "Educational Book Series by Ricardo Demi",
-                    "Serie educativa bilingüe creada por Ricardo Demi",
+                    "Serie educativa bilingüe creada por Ricardo Demi"
                   ],
                   "description":
                     "Magic of Discoveries is a structured educational system created by Ricardo Demi that integrates art, imagination, and emotional intelligence for children aged 1–9. / La Magia de los Descubrimientos es un sistema educativo estructurado que integra el arte, la imaginación y la inteligencia emocional para niños de 1 a 9 años.",
                   "author": {
                     "@type": "Person",
                     "name": "Ricardo Demi",
-                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
+                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H"
                   },
                   "inLanguage": ["English", "Spanish"],
                   "publisher": {
                     "@type": "Organization",
                     "name": "Magic of Discoveries LLC",
-                    "url": "https://ricardo-demi-books.vercel.app",
+                    "url": "https://ricardo-demi-books.vercel.app"
                   },
                   "genre": [
                     "Children's Literature",
                     "Art Education",
                     "Bilingual Learning",
                     "Educación artística",
-                    "Desarrollo infantil temprano",
+                    "Desarrollo infantil temprano"
                   ],
                   "educationalLevel": ["Toddler", "Preschool", "Early Elementary"],
                   "about": [
@@ -118,7 +122,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     "bilingual education",
                     "imaginación",
                     "educación emocional",
-                    "aprendizaje creativo",
+                    "aprendizaje creativo"
                   ],
                   "hasPart": [
                     {
@@ -129,7 +133,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       "url": "https://www.amazon.com/dp/1963328140",
                       "bookFormat": "Paperback",
                       "educationalUse": ["Art", "Creativity", "Imagination"],
-                      "learningResourceType": "Drawing Guide",
+                      "learningResourceType": "Drawing Guide"
                     },
                     {
                       "@type": "Book",
@@ -139,14 +143,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       "url": "https://www.amazon.com/dp/1963328019",
                       "bookFormat": "Paperback",
                       "educationalUse": ["Reading", "Empathy", "Storytelling"],
-                      "learningResourceType": "Illustrated Storybook",
-                    },
+                      "learningResourceType": "Illustrated Storybook"
+                    }
                   ],
                   "aggregateRating": {
                     "@type": "AggregateRating",
                     "ratingValue": "4.9",
                     "bestRating": "5",
-                    "ratingCount": "500",
+                    "ratingCount": "500"
                   },
                   "isAccessibleForFree": true,
                   "copyrightHolder": "Ricardo Demi",
@@ -154,11 +158,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
                   "mainEntityOfPage": [
                     "https://ricardo-demi-books.vercel.app/method",
-                    "https://ricardo-demi-books.vercel.app/method/es",
-                  ],
-                },
-              ],
-            }),
+                    "https://ricardo-demi-books.vercel.app/method/es"
+                  ]
+                }
+              ]
+            })
           }}
         />
       </head>
