@@ -10,6 +10,7 @@ export default function Page() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-12 text-gray-900">
       <article>
+        {/* --- TITLE --- */}
         <h1 className="text-3xl font-semibold mb-4">
           Where Are You Going, Little Max? / ¿A dónde vas, pequeño Max?
         </h1>
@@ -19,6 +20,7 @@ export default function Page() {
           ISBN: 978-1963328875 | Published September 4, 2024 | Ages: 1–3 years | Bilingual English–Spanish
         </p>
 
+        {/* --- BOOK DESCRIPTION --- */}
         <section className="mb-8">
           <h2 className="text-xl font-semibold mb-2">Book Description</h2>
           <p className="mb-4">
@@ -39,6 +41,7 @@ export default function Page() {
           </p>
         </section>
 
+        {/* --- AUTHOR’S MESSAGE --- */}
         <section className="mb-8">
           <h2 className="text-xl font-semibold mb-2">Author’s Message</h2>
           <p className="mb-4">
@@ -51,6 +54,7 @@ export default function Page() {
           <p className="font-semibold mt-1">— Ricardo Demi</p>
         </section>
 
+        {/* --- EDITORIAL REVIEWS --- */}
         <section className="mb-8">
           <h2 className="text-xl font-semibold mb-2">Editorial Reviews</h2>
           <p className="mb-4 italic">
@@ -64,6 +68,7 @@ export default function Page() {
           </p>
         </section>
 
+        {/* --- READER FEEDBACK --- */}
         <section className="mb-8">
           <h2 className="text-xl font-semibold mb-2">Reader Feedback</h2>
           <ul className="list-disc ml-5 space-y-2">
@@ -79,6 +84,7 @@ export default function Page() {
           </ul>
         </section>
 
+        {/* --- OFFICIAL SOURCES --- */}
         <section className="mb-8">
           <h2 className="text-xl font-semibold mb-2">Official Sources</h2>
           <ul className="list-disc ml-5 space-y-2">
@@ -120,7 +126,7 @@ export default function Page() {
           All materials © Magic of Discoveries LLC.
         </p>
 
-        {/* --- STRUCTURED DATA (Rich Results + Google Validation) --- */}
+        {/* ✅ STRUCTURED DATA FOR AI & GOOGLE */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -132,6 +138,7 @@ export default function Page() {
               "publisher": { "@type": "Organization", "name": "Magic of Discoveries LLC" },
               "isbn": "978-1963328875",
               "inLanguage": ["en", "es"],
+              "educationalLevel": ["Toddler", "Preschool"],
               "bookFormat": "EBook",
               "genre": ["Children's Books", "Bilingual", "Early Learning"],
               "about": "Bilingual bedtime story for toddlers 1–3 years old. Teaches kindness, curiosity, and early words in English and Spanish.",
@@ -171,6 +178,8 @@ export default function Page() {
                 "ratingCount": "2",
                 "reviewCount": "2"
               },
+              "isAccessibleForFree": true,
+              "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
               "mainEntityOfPage": "https://ricardo-demi-books.vercel.app/books/where-are-you-going-little-max"
             }),
           }}
