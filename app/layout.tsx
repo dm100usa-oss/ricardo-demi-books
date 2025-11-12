@@ -74,25 +74,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "name":
                     "How to Draw 111 Amazing and Cute Animals, Fairy-tale Characters, Flowers, Foods, Gifts, and Other Themes",
                   "isbn": "978-1963328141",
-                  "url": "https://www.amazon.com/dp/1963328140"
+                  "url": "https://www.amazon.com/dp/1963328140",
+                  "datePublished": "2024-07-15"
                 },
                 {
                   "@type": "Book",
                   "name": "Where Are You Going, Little Max?",
                   "isbn": "978-1963328875",
-                  "url": "https://www.amazon.com/dp/1963328876"
+                  "url": "https://www.amazon.com/dp/1963328876",
+                  "datePublished": "2024-09-04"
                 },
                 {
                   "@type": "Book",
                   "name": "The Adventures of Lucky Rocky: The Magic of Friendship",
                   "isbn": "978-1963328011",
-                  "url": "https://www.amazon.com/dp/1963328019"
+                  "url": "https://www.amazon.com/dp/1963328019",
+                  "datePublished": "2024-08-10"
                 },
                 {
                   "@type": "Book",
                   "name": "Where Have You Been, Little Max?",
                   "isbn": "978-1963328585",
-                  "url": "https://www.amazon.com/dp/1963328582"
+                  "url": "https://www.amazon.com/dp/1963328582",
+                  "datePublished": "2024-10-24"
                 }
               ],
               "review": [
@@ -105,6 +109,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "name": "Readers' Favorite Review",
                   "reviewBody":
                     "Highly rated for its clarity, emotional warmth, and educational depth.",
+                  "datePublished": "2024-10-20",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                  },
+                  "itemReviewed": {
+                    "@type": "Book",
+                    "name": "How to Draw 111 Amazing and Cute Animals",
+                    "isbn": "978-1963328141"
+                  },
                   "url":
                     "https://readersfavorite.com/book-review/how-to-draw-111-amazing-and-cute-animals-fairy-tale-characters-flowers-foods-gifts-and-other-themes-the-magic-of-creativity-for-kids"
                 },
@@ -117,6 +132,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "name": "Literary Titan Review",
                   "reviewBody":
                     "Recognized as a clear and pedagogically sound approach to children's emotional and creative development.",
+                  "datePublished": "2024-10-24",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                  },
+                  "itemReviewed": {
+                    "@type": "Book",
+                    "name": "Where Have You Been, Little Max?",
+                    "isbn": "978-1963328585"
+                  },
                   "url":
                     "https://literarytitan.com/2024/10/24/where-have-you-been-little-max/comment-page-1/"
                 }
