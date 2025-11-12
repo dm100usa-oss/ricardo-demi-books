@@ -12,6 +12,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        {/* --- GOOGLE SITE VERIFICATION --- */}
+        <meta name="google-site-verification" content="Rt1gDbfw5sk" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
         <meta
