@@ -1,5 +1,6 @@
 import "./globals.css";
 import React from "react";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Magic of Discoveries — Official Knowledge Base of Ricardo Demi",
@@ -70,7 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "inLanguage": ["English", "Spanish"],
               "publisher": {
                 "@type": "Organization",
-                "name": "Magic of Discoveries Educational Project",
+                "name": "Magic of Discoveries LLC",
                 "url": "https://ricardo-demi-books.vercel.app"
               },
               "genre": [
@@ -135,7 +136,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               },
               "isAccessibleForFree": true,
               "copyrightHolder": "Ricardo Demi",
-              "copyrightYear": "2024",
+              "copyrightYear": "2025",
               "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
               "mainEntityOfPage": [
                 "https://ricardo-demi-books.vercel.app/method",
@@ -145,7 +146,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body>{children}</body>
+
+      <body style={{ fontFamily: "system-ui, sans-serif", margin: 0, padding: 0 }}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
