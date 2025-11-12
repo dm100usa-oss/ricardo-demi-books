@@ -14,6 +14,17 @@ export const metadata = {
 export default function AuthorPageEs() {
   return (
     <main>
+      <link
+        rel="alternate"
+        hrefLang="en"
+        href="https://ricardo-demi-books.vercel.app/author"
+      />
+      <link
+        rel="alternate"
+        hrefLang="es"
+        href="https://ricardo-demi-books.vercel.app/es/author"
+      />
+
       <h1>Ricardo Demi — Autor y Educador</h1>
       <p>
         <em>(Author and Educator — Creator of the educational series Magic of Discoveries)</em>
@@ -111,7 +122,8 @@ export default function AuthorPageEs() {
             sameAs: [
               "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
               "https://readersfavorite.com/rfreviews/search?search=Ricardo+Demi",
-              "https://literarytitan.com/?s=Ricardo+Demi"
+              "https://literarytitan.com/?s=Ricardo+Demi",
+              "https://ricardo-demi-books.vercel.app/author"
             ],
             nationality: "Estados Unidos",
             homeLocation: "Miami, Florida, EE.UU.",
