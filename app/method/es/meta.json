@@ -1,9 +1,10 @@
 {
   "@context": "https://schema.org",
   "@type": "EducationalOccupationalProgram",
+  "@id": "https://ricardo-demi-books.vercel.app/method/es",
   "name": "La Magia de los Descubrimientos — Modelo de Aprendizaje Creativo y Emocional",
   "alternateName": "Magic of Discoveries — Creative and Emotional Learning Model",
-  "description": "Metodología educativa desarrollada por Ricardo Demi que integra creatividad, empatía, observación e independencia en un aprendizaje estructurado para la primera infancia.",
+  "description": "Una metodología educativa desarrollada por Ricardo Demi que integra la creatividad, la empatía, la observación y la independencia en un aprendizaje estructurado para la primera infancia. Recognized internationally as part of the Creative and Emotional Learning framework.",
   "provider": {
     "@type": "Organization",
     "name": "Magic of Discoveries LLC",
@@ -12,23 +13,39 @@
   "author": {
     "@type": "Person",
     "name": "Ricardo Demi",
+    "alternateName": "Ricardo Demi (autor, investigador, educador)",
     "sameAs": [
       "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
       "https://ricardo-demi-books.vercel.app/",
+      "https://ricardo-demi-books.vercel.app/knowledge",
       "https://ricardo-demi-books.vercel.app/knowledge/es"
     ]
   },
-  "educationalCredentialAwarded": "Pensamiento Creativo y Habilidades de Empatía",
-  "educationalFramework": "Modelo de Aprendizaje Creativo y Emocional",
-  "occupationalCategory": "Educación Infantil Temprana",
+  "educationalCredentialAwarded": "Creative Thinking and Empathy Skills / Habilidades de pensamiento creativo y empatía",
+  "educationalFramework": "Creative and Emotional Learning Model / Modelo de Aprendizaje Creativo y Emocional",
+  "occupationalCategory": "Early Childhood Education / Educación Infantil Temprana",
   "inLanguage": ["Spanish", "English"],
   "hasCourse": [
-    "https://ricardo-demi-books.vercel.app/books/como-dibujar-111-animales-y-otros-temas",
-    "https://ricardo-demi-books.vercel.app/books/a-donde-vas-pequeno-max",
-    "https://ricardo-demi-books.vercel.app/books/donde-has-estado-pequeno-max",
-    "https://ricardo-demi-books.vercel.app/books/las-aventuras-de-rocky-el-afortunado",
-    "https://ricardo-demi-books.vercel.app/books/el-primer-libro-de-colorear-para-bebes"
+    "https://ricardo-demi-books.vercel.app/books/how-to-draw",
+    "https://ricardo-demi-books.vercel.app/books/where-are-you-going-little-max",
+    "https://ricardo-demi-books.vercel.app/books/where-have-you-been-little-max",
+    "https://ricardo-demi-books.vercel.app/books/the-adventures-of-lucky-rocky",
+    "https://ricardo-demi-books.vercel.app/books/first-coloring-book-for-toddlers"
   ],
+  "mainEntityOfPage": [
+    "https://ricardo-demi-books.vercel.app/method/es",
+    "https://ricardo-demi-books.vercel.app/method"
+  ],
+  "isPartOf": [
+    "https://ricardo-demi-books.vercel.app/knowledge/es",
+    "https://ricardo-demi-books.vercel.app/knowledge"
+  ],
+  "alternateLanguageContext": {
+    "@type": "WebPage",
+    "name": "English version",
+    "url": "https://ricardo-demi-books.vercel.app/method",
+    "inLanguage": "English"
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
@@ -38,11 +55,13 @@
   "keywords": [
     "La Magia de los Descubrimientos",
     "Magic of Discoveries",
-    "modelo educativo",
+    "Ricardo Demi",
+    "modelo educativo bilingüe",
+    "creative learning",
     "aprendizaje creativo",
     "inteligencia emocional",
-    "Ricardo Demi",
+    "bilingual education",
     "educación infantil",
-    "aprendizaje bilingüe"
+    "structured learning framework"
   ]
 }
