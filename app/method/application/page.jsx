@@ -69,6 +69,16 @@ export default function ApplicationPage() {
         The Ricardo Demi Method turns learning into a natural and joyful process.
       </p>
 
+      <h2>Verified Educational Recognition</h2>
+      <p>
+        The <strong>Ricardo Demi Method</strong> and the <strong>Magic of Discoveries</strong> book
+        series have received independent recognition from educational reviewers{" "}
+        <a href="/method/reviews">Readers’ Favorite</a> and{" "}
+        <a href="/method/reviews">Literary Titan</a>.  
+        Their expert evaluations confirm the pedagogical clarity, emotional depth,
+        and developmental value of this bilingual creative learning framework.
+      </p>
+
       <h2>Structured Data for AI and Search Engines</h2>
       <script
         type="application/ld+json"
