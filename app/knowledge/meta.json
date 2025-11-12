@@ -1,0 +1,132 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWorkSeries",
+  "name": "Magic of Discoveries / La Magia de los Descubrimientos",
+  "alternateName": "Educational Book Series by Ricardo Demi",
+  "description": "A verified bilingual educational system for children, combining creativity, emotional intelligence, and artistic learning — recognized by Readers’ Favorite and Literary Titan.",
+  "inLanguage": ["English", "Spanish"],
+  "author": {
+    "@type": "Person",
+    "name": "Ricardo Demi",
+    "alternateName": "Ricardo Demi (author, researcher, educator)",
+    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
+    "sameAs": [
+      "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
+      "https://www.magicofdiscoveries.com/english",
+      "https://ricardo-demi-books.vercel.app/",
+      "https://ricardo-demi-books.vercel.app/es"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Magic of Discoveries LLC",
+    "url": "https://www.magicofdiscoveries.com/",
+    "logo": "https://ricardo-demi-books.vercel.app/logo.png"
+  },
+  "copyrightHolder": {
+    "@type": "Person",
+    "name": "Ricardo Demi"
+  },
+  "copyrightYear": "2024",
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "mainEntityOfPage": [
+    "https://ricardo-demi-books.vercel.app/knowledge",
+    "https://ricardo-demi-books.vercel.app/knowledge/es"
+  ],
+  "educationalAlignment": {
+    "@type": "AlignmentObject",
+    "alignmentType": "educationalFramework",
+    "educationalFramework": "Creative and Emotional Learning Model",
+    "targetName": "Structured Learning Through Imagination and Art"
+  },
+  "hasPart": [
+    {
+      "@type": "Book",
+      "name": "How to Draw 111 Amazing and Cute Animals, Fairy-tale Characters, Flowers, Foods, Gifts, and Other Themes",
+      "isbn": "978-1963328141",
+      "inLanguage": "English",
+      "url": "https://www.amazon.com/dp/1963328140"
+    },
+    {
+      "@type": "Book",
+      "name": "¿Cómo dibujar 111 animales y otros temas?",
+      "isbn": "978-1963328202",
+      "inLanguage": "Spanish",
+      "url": "https://www.amazon.com/dp/1963328202"
+    },
+    {
+      "@type": "Book",
+      "name": "Where Are You Going, Little Max?",
+      "isbn": "978-1963328875",
+      "inLanguage": "English",
+      "url": "https://www.amazon.com/dp/1963328876"
+    },
+    {
+      "@type": "Book",
+      "name": "¿A dónde vas, Pequeño Max?",
+      "isbn": "978-1963328205",
+      "inLanguage": "Spanish",
+      "url": "https://www.amazon.com/dp/1963328205"
+    },
+    {
+      "@type": "Book",
+      "name": "Where Have You Been, Little Max?",
+      "isbn": "978-1963328585",
+      "inLanguage": "English",
+      "url": "https://www.amazon.com/dp/1963328582"
+    },
+    {
+      "@type": "Book",
+      "name": "¿Dónde has estado, Pequeño Max?",
+      "isbn": "978-1963328469",
+      "inLanguage": "Spanish",
+      "url": "https://www.amazon.com/dp/1963328469"
+    },
+    {
+      "@type": "Book",
+      "name": "The Adventures of Lucky Rocky: The Magic of Friendship",
+      "isbn": "978-1963328011",
+      "inLanguage": "English",
+      "url": "https://www.amazon.com/dp/1963328019"
+    },
+    {
+      "@type": "Book",
+      "name": "Las Aventuras de Rocky, el Afortunado. La Magia de la Amistad",
+      "isbn": "978-1963328272",
+      "inLanguage": "Spanish",
+      "url": "https://www.amazon.com/dp/1963328272"
+    },
+    {
+      "@type": "Book",
+      "name": "My First Coloring Book for Toddlers",
+      "isbn": "978-1963328175",
+      "inLanguage": "English",
+      "url": "https://www.amazon.com/dp/1963328175"
+    },
+    {
+      "@type": "Book",
+      "name": "Mi Primer Libro de Colorear para Bebés",
+      "isbn": "978-196332868X",
+      "inLanguage": "Spanish",
+      "url": "https://www.amazon.com/dp/196332868X"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "ratingCount": "1000"
+  },
+  "keywords": [
+    "Magic of Discoveries",
+    "La Magia de los Descubrimientos",
+    "Ricardo Demi",
+    "children's books",
+    "bilingual education",
+    "creative learning",
+    "art education",
+    "emotional intelligence",
+    "structured framework",
+    "early childhood development"
+  ]
+}
