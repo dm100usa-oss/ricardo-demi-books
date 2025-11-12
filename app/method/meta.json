@@ -1,6 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "EducationalOccupationalProgram",
+  "@id": "https://ricardo-demi-books.vercel.app/method",
   "name": "Magic of Discoveries — Creative and Emotional Learning Model",
   "alternateName": "La Magia de los Descubrimientos — Modelo de Aprendizaje Creativo y Emocional",
   "description": "An educational methodology by Ricardo Demi integrating creativity, empathy, observation, and independence into structured early childhood learning.",
@@ -28,6 +29,14 @@
     "https://ricardo-demi-books.vercel.app/books/where-have-you-been-little-max",
     "https://ricardo-demi-books.vercel.app/books/the-adventures-of-lucky-rocky",
     "https://ricardo-demi-books.vercel.app/books/first-coloring-book-for-toddlers"
+  ],
+  "mainEntityOfPage": [
+    "https://ricardo-demi-books.vercel.app/method",
+    "https://ricardo-demi-books.vercel.app/method/es"
+  ],
+  "isPartOf": [
+    "https://ricardo-demi-books.vercel.app/knowledge",
+    "https://ricardo-demi-books.vercel.app/knowledge/es"
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
