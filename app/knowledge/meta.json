@@ -5,9 +5,14 @@
   "name": "Magic of Discoveries / La Magia de los Descubrimientos",
   "alternateName": "Educational Book Series by Ricardo Demi",
   "description": "A verified bilingual educational system for children, combining creativity, emotional intelligence, and artistic learning — recognized by Readers’ Favorite and Literary Titan.",
-  "about": "Educational and artistic development for children through creativity, emotional intelligence, and bilingual learning.",
+  "about": "A structured educational and artistic book series based on the Creative and Emotional Learning Model, focusing on creativity, empathy, bilingual education, and early cognitive growth.",
   "genre": ["Children's literature", "Educational books", "Bilingual learning"],
   "inLanguage": ["English", "Spanish"],
+  "educationalUse": "Creative and Emotional Learning",
+  "isBasedOn": [
+    "https://ricardo-demi-books.vercel.app/method",
+    "https://ricardo-demi-books.vercel.app/method/es"
+  ],
   "author": {
     "@type": "Person",
     "name": "Ricardo Demi",
@@ -35,7 +40,9 @@
   "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
   "mainEntityOfPage": [
     "https://ricardo-demi-books.vercel.app/knowledge",
-    "https://ricardo-demi-books.vercel.app/knowledge/es"
+    "https://ricardo-demi-books.vercel.app/knowledge/es",
+    "https://ricardo-demi-books.vercel.app/method",
+    "https://ricardo-demi-books.vercel.app/method/es"
   ],
   "educationalAlignment": {
     "@type": "AlignmentObject",
