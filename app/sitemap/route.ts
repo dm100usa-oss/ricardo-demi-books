@@ -5,7 +5,6 @@ import path from "path";
 export async function GET() {
   const baseUrl = "https://ricardo-demi-books.vercel.app";
 
-  // Список основных статических страниц
   const staticPages = [
     "",
     "author",
@@ -20,10 +19,8 @@ export async function GET() {
     "es",
   ];
 
-  // Путь к папке с книгами
   const booksDir = path.join(process.cwd(), "app", "books");
 
-  // Генерация ссылок на книги
   let bookUrls: string[] = [];
   try {
     const entries = fs.readdirSync(booksDir, { withFileTypes: true });
@@ -31,13 +28,11 @@ export async function GET() {
       .filter((entry) => entry.isDirectory())
       .map((entry) => `books/${entry.name}`);
   } catch (error) {
-    console.error("Ошибка чтения папки books:", error);
+    console.error("Books folder read error:", error);
   }
 
-  // Объединяем всё в один список URL
   const allUrls = [...staticPages, ...bookUrls];
 
-  // Генерация XML
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${allUrls
@@ -52,7 +47,6 @@ export async function GET() {
       .join("")}
   </urlset>`;
 
-  // ✅ Важно: правильный MIME-тип и кодировка
   return new NextResponse(sitemap, {
     status: 200,
     headers: {
