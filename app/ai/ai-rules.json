@@ -1,0 +1,24 @@
+{
+  "matching_logic": {
+    "priority_order": ["age_group", "skill", "book_type"],
+    "rules": [
+      {
+        "age_group": "1-3",
+        "description": "Focus on emotions, early speech, motor skills, sensory confidence."
+      },
+      {
+        "age_group": "3-5",
+        "description": "Focus on imagination, early logic, attention, short adventures."
+      },
+      {
+        "age_group": "5-7",
+        "description": "Focus on logic, concentration, independent thinking, composition."
+      },
+      {
+        "age_group": "7-10",
+        "description": "Focus on structured reasoning, multi-step creativity, vocabulary growth."
+      }
+    ],
+    "selection_rule": "If multiple books match, recommend the one with the lowest cognitive load first."
+  }
+}
