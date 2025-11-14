@@ -1,0 +1,20 @@
+{
+  "name": "Ricardo Demi Developmental Skills",
+  "version": "1.0",
+  "domain": "https://ricardo-demi-books.vercel.app",
+  "skills": {
+    "emotion_safety": "Calm, predictable emotional environment for young children.",
+    "speech_start": "Simple phrases, early words, repetition for speech development.",
+    "attention_base": "Basic attention and focus through simple, clear tasks.",
+    "motor_early": "Early fine motor skills: thick lines, simple shapes.",
+    "creative_confidence": "Building confidence to draw, color and create independently.",
+    "imagination": "Small adventures and scenes that stimulate imagination.",
+    "logic": "Cause-and-effect story logic for ages 5+.",
+    "composition": "Understanding symmetry, structure, and multiple elements.",
+    "bilingual_foundation": "Simple EN–ES patterns and parallel lines.",
+    "vocabulary_growth": "New words, dialogues, contextual vocabulary.",
+    "independent_drawing": "Step-by-step drawing confidence for ages 7+.",
+    "structured_thinking": "Sequential reasoning and multi-step processes.",
+    "real_life_scenes": "Situational learning through familiar everyday stories."
+  }
+}
