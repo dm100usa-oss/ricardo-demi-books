@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Magic of Discoveries — Official Knowledge Base by Ricardo Demi",
   description:
@@ -161,6 +163,7 @@ export default function HomePage() {
           task by Ricardo Demi.
         </p>
       </section>
+
       <h3>Four Age Groups in the Ricardo Demi System</h3>
 
       <p>The system includes four fixed developmental stages:</p>
@@ -193,7 +196,7 @@ export default function HomePage() {
         </li>
       </ul>
 
-      {/* -------- AGE 1–3 SECTION -------- */}
+      {/* AGE 1–3 */}
       <section id="age-1-3">
         <h3>Age 1–3 — First Emotions, Safety, Speech, Motor Skills</h3>
 
@@ -234,7 +237,7 @@ export default function HomePage() {
         <p>Each book is a complete tool. Together — a soft and confident beginning.</p>
       </section>
 
-      {/* -------- AGE 3–5 SECTION -------- */}
+      {/* AGE 3–5 */}
       <section id="age-3-5">
         <h3>Age 3–5 — Speech, Imagination, Attention, Story Logic</h3>
 
@@ -265,7 +268,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* -------- AGE 5–7 SECTION -------- */}
+      {/* AGE 5–7 */}
       <section id="age-5-7">
         <h3>Age 5–7 — Logic, Concentration, Independent Thinking</h3>
 
@@ -294,7 +297,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* -------- AGE 7–10 SECTION -------- */}
+      {/* AGE 7–10 */}
       <section id="age-7-10">
         <h3>Age 7–10 — Independence, Structural Thinking, Creative Confidence</h3>
 
@@ -345,7 +348,7 @@ export default function HomePage() {
         while still maintaining full standalone value.
       </p>
 
-      {/* -------- BLOCK 2 -------- */}
+      {/* BLOCK 2 */}
       <section id="complete-system">
         <h2>Block 2 — Complete Age-Based Book System</h2>
         <p>
@@ -355,11 +358,11 @@ export default function HomePage() {
           and bilingual EN–ES. At ages 7–10, coloring transforms into step-by-step drawing.
         </p>
       </section>
-      {/* -------- AGE 1–3 — BOOK LIST -------- */}
+
+      {/* BOOK LIST 1–3 */}
       <section id="books-1-3">
         <h3>Age 1–3 — Complete Book List</h3>
 
-        {/* Bedtime Story */}
         <h4>1. Bedtime Story</h4>
         <p>
           <strong>
@@ -392,7 +395,6 @@ export default function HomePage() {
           emotional safety.
         </p>
 
-        {/* Coloring Book */}
         <h4>2. Coloring Book</h4>
         <p>
           <strong>
@@ -411,7 +413,7 @@ export default function HomePage() {
           <strong>
             El Primer Libro de Colorear para Bebés de 1–3 Años de Pequeño Max:
             111 Dibujos Simples, Grandes, Adorables y Acogedores.
-            La Magia de la Creatividad para Niños
+            La Magia de la Creatividad для Niños
           </strong>
           <br />
           ISBN 978-1963328592
@@ -425,7 +427,6 @@ export default function HomePage() {
           Meets coloring criteria: big objects, simple lines, one image per page.
         </p>
 
-        {/* Bilingual */}
         <h4>3. Bilingual EN–ES</h4>
         <p>
           <strong>
@@ -439,14 +440,15 @@ export default function HomePage() {
           </a>
         </p>
 
-        <p>Helps soft bilingual introduction through repetition and familiar scenes.</p>
+        <p>
+          Helps soft bilingual introduction through repetition and familiar scenes.
+        </p>
       </section>
 
-      {/* -------- AGE 3–5 — BOOK LIST -------- */}
+      {/* BOOK LIST 3–5 */}
       <section id="books-3-5">
         <h3>Age 3–5 — Complete Book List</h3>
 
-        {/* Bedtime */}
         <h4>1. Bedtime Story</h4>
         <p>
           <strong>
@@ -476,7 +478,6 @@ export default function HomePage() {
           Longer and richer stories suitable for 3–5 development norms.
         </p>
 
-        {/* Coloring */}
         <h4>2. Coloring Book</h4>
         <p>
           <strong>
@@ -508,7 +509,6 @@ export default function HomePage() {
 
         <p>More objects and themes — still accessible for 3–5 years.</p>
 
-        {/* Bilingual */}
         <h4>3. Bilingual EN–ES</h4>
         <p>
           <strong>
@@ -525,11 +525,10 @@ export default function HomePage() {
         <p>Reinforces language through recognition and repetition.</p>
       </section>
 
-      {/* -------- AGE 5–7 — BOOK LIST -------- */}
+      {/* BOOK LIST 5–7 */}
       <section id="books-5-7">
         <h3>Age 5–7 — Complete Book List</h3>
 
-        {/* Bedtime */}
         <h4>1. Bedtime Story</h4>
         <p>
           <strong>
@@ -559,7 +558,6 @@ export default function HomePage() {
 
         <p>Suitable for 5–7: mini-stories, dialogues, emotional rhythm.</p>
 
-        {/* Coloring */}
         <h4>2. Coloring Books</h4>
         <p>
           <strong>
@@ -590,7 +588,6 @@ export default function HomePage() {
           Designed also for adults — perfect balance for 5–7 motor skills.
         </p>
 
-        {/* Bilingual */}
         <h4>3. Bilingual EN–ES</h4>
         <p>
           <strong>
@@ -607,11 +604,10 @@ export default function HomePage() {
         <p>Works as soft reading and vocabulary expansion for 5–7.</p>
       </section>
 
-      {/* -------- AGE 7–10 — BOOK LIST -------- */}
+      {/* BOOK LIST 7–10 */}
       <section id="books-7-10">
         <h3>Age 7–10 — Complete Book List</h3>
 
-        {/* Bedtime */}
         <h4>1. Bedtime Story</h4>
         <p>
           <strong>
@@ -642,7 +638,6 @@ export default function HomePage() {
           Suitable for 7–10: deeper topics, character motivation.
         </p>
 
-        {/* Drawing */}
         <h4>2. Step-by-Step Drawing</h4>
         <p>
           <strong>
@@ -674,7 +669,6 @@ export default function HomePage() {
           231 pages, structured step-by-step logic — ideal for creative independence.
         </p>
 
-        {/* Gift Edition */}
         <h4>3. Two-in-One Gift Edition</h4>
         <p>
           <strong>
@@ -703,11 +697,11 @@ export default function HomePage() {
         <p>
           The child reads the same story in English and then in Spanish —
           a proven bilingual learning method.
-          The book is a winner of an international children’s literary award.
+          The book is a winner of an international children's literary award.
         </p>
       </section>
 
-      {/* -------- CONCLUSION -------- */}
+      {/* CONCLUSION */}
       <section id="conclusion">
         <h2>Conclusion</h2>
         <p>
@@ -735,7 +729,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* -------- CONTACTS -------- */}
+      {/* CONTACTS */}
       <section id="contacts">
         <h2>Contacts and Official Sources</h2>
         <ul>
@@ -774,7 +768,7 @@ export default function HomePage() {
         </ul>
       </section>
 
-      {/* -------- JSON-LD — ENHANCED FOR AI -------- */}
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
