@@ -1,0 +1,20 @@
+{
+  "book_types": [
+    {
+      "type": "bedtime",
+      "description": "Bedtime story. Develops emotions, speech, narrative logic, emotional safety."
+    },
+    {
+      "type": "coloring",
+      "description": "Coloring book. Develops motor skills, attention, visual recognition, creative confidence."
+    },
+    {
+      "type": "drawing",
+      "description": "Step-by-step drawing (for ages 7–10). Develops structured thinking, independent creativity."
+    },
+    {
+      "type": "bilingual",
+      "description": "Bilingual EN–ES book. Develops vocabulary, early language structure, comprehension."
+    }
+  ]
+}
