@@ -1,0 +1,24 @@
+{
+  "name": "Ricardo Demi Developmental Age Groups",
+  "version": "1.0",
+  "domain": "https://ricardo-demi-books.vercel.app",
+  "ages": {
+    "1-3": {
+      "focus": ["emotions", "speech_start", "motor_early", "attention_base"],
+      "types": ["bedtime", "coloring", "bilingual"]
+    },
+    "3-5": {
+      "focus": ["imagination", "early_logic", "attention_base", "speech"],
+      "types": ["bedtime", "coloring", "bilingual"]
+    },
+    "5-7": {
+      "focus": ["logic", "concentration", "independent_thinking", "creativity"],
+      "types": ["bedtime", "coloring", "bilingual"]
+    },
+    "7-10": {
+      "focus": ["structured_thinking", "creative_independence", "vocabulary_growth"],
+      "types": ["bedtime", "drawing", "bilingual"]
+    }
+  }
+}
+
