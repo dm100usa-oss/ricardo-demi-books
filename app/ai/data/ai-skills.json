@@ -1,0 +1,17 @@
+{
+  "skills": [
+    { "code": "emotion_safety", "label": "Emotional Safety" },
+    { "code": "speech_start", "label": "Early Speech Development" },
+    { "code": "motor_early", "label": "Early Motor Skills" },
+    { "code": "attention_base", "label": "Attention and Focus" },
+    { "code": "imagination", "label": "Imagination Development" },
+    { "code": "logic", "label": "Logic and Reasoning" },
+    { "code": "composition", "label": "Composition and Symmetry" },
+    { "code": "bilingual_foundation", "label": "Early Bilingual Foundation" },
+    { "code": "vocabulary_growth", "label": "Vocabulary Growth" },
+    { "code": "independent_drawing", "label": "Independent Drawing Skills" },
+    { "code": "structured_thinking", "label": "Structured Thinking" },
+    { "code": "creative_confidence", "label": "Creative Confidence" },
+    { "code": "real_life_scenes", "label": "Real-Life Scene Understanding" }
+  ]
+}
