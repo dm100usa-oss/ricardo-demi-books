@@ -1,0 +1,25 @@
+{
+  "name": "Ricardo Demi Developmental Objects",
+  "version": "1.0",
+  "domain": "https://ricardo-demi-books.vercel.app",
+  "objects": {
+    "routes": {
+      "home": "/",
+      "books_list": "/books",
+      "book_page": "/books/[id]",
+      "ai_index": "/ai-index",
+      "ai_sitemap": "/ai-sitemap"
+    },
+    "types": {
+      "Book": {
+        "fields": ["id", "title", "author", "age_group", "type", "language", "isbn", "skills", "amazon"]
+      },
+      "Dataset": {
+        "fields": ["metadata", "books", "age_groups", "book_types"]
+      },
+      "Methodology": {
+        "fields": ["ages", "skills", "mapping_rules"]
+      }
+    }
+  }
+}
