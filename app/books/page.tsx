@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import Link from "next/link";
 
 export const dynamic = "force-static";
 
@@ -11,9 +12,9 @@ export const metadata = {
     canonical: "https://ricardo-demi-books.vercel.app/books",
     languages: {
       en: "https://ricardo-demi-books.vercel.app/books",
-      es: "https://ricardo-demi-books.vercel.app/es/books",
-    },
-  },
+      es: "https://ricardo-demi-books.vercel.app/es/books"
+    }
+  }
 };
 
 function getBooksData() {
@@ -37,7 +38,15 @@ export default function BooksPage() {
             key={book.id}
             className="border rounded-lg p-4 shadow-sm bg-white"
           >
-            <h2 className="text-xl font-bold">{book.title}</h2>
+            <h2 className="text-xl font-bold">
+              <Link
+                href={`/books/${book.id}`}
+                className="text-blue-600 underline"
+              >
+                {book.title}
+              </Link>
+            </h2>
+
             <p>Author: {book.author}</p>
             <p>Age group: {book.age_group}</p>
             <p>Type: {book.type}</p>
@@ -46,9 +55,7 @@ export default function BooksPage() {
 
             <p>
               Skills:{" "}
-              {book.skills && Array.isArray(book.skills)
-                ? book.skills.join(", ")
-                : ""}
+              {Array.isArray(book.skills) ? book.skills.join(", ") : ""}
             </p>
 
             <p>
