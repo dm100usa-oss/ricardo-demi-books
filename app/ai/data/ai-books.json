@@ -1,0 +1,25 @@
+{
+  "books": [
+    { "id": 1, "title": "Where Are You Going, Little Max?", "age": "1-3", "type": "bedtime", "skills": ["emotion_safety", "speech_start", "attention_base"], "isbn": "978-1963328431", "amazon": "https://www.amazon.com/dp/1963328434" },
+    { "id": 2, "title": "¿A dónde vas, Pequeño Max?", "age": "1-3", "type": "bedtime", "skills": ["emotion_safety", "speech_start"], "isbn": "978-1963328462", "amazon": "https://www.amazon.com/dp/1963328469" },
+    { "id": 3, "title": "First Coloring Book for Toddlers 1–3", "age": "1-3", "type": "coloring", "skills": ["motor_early", "attention_base", "creative_confidence"], "isbn": "978-1963328561", "amazon": "https://www.amazon.com/dp/1963328566" },
+    { "id": 4, "title": "El Primer Libro de Colorear 1–3", "age": "1-3", "type": "coloring", "skills": ["motor_early"], "isbn": "978-1963328592", "amazon": "https://www.amazon.com/dp/1963328590" },
+    { "id": 5, "title": "Where Are You Going (Bilingual Edition)", "age": "1-3", "type": "bilingual", "skills": ["bilingual_foundation", "speech_start"], "isbn": "978-1963328875", "amazon": "https://www.amazon.com/dp/1963328876" },
+
+    { "id": 6, "title": "Where Have You Been, Little Max?", "age": "3-5", "type": "bedtime", "skills": ["imagination", "emotion_safety", "attention_base"], "isbn": "978-1963328585", "amazon": "https://www.amazon.com/dp/1963328582" },
+    { "id": 7, "title": "¿Dónde Has Estado, Pequeño Max?", "age": "3-5", "type": "bedtime", "skills": ["imagination", "attention_base"], "isbn": "978-1963328684", "amazon": "https://www.amazon.com/dp/196332868X" },
+    { "id": 8, "title": "First Coloring Book 111 Animals (3–5)", "age": "3-5", "type": "coloring", "skills": ["attention_base", "motor_early", "creative_confidence"], "isbn": "978-1963328271", "amazon": "https://www.amazon.com/dp/1963328272" },
+    { "id": 9, "title": "El Primer Libro 111 Animales (3–5)", "age": "3-5", "type": "coloring", "skills": ["attention_base"], "isbn": "978-1963328202", "amazon": "https://www.amazon.com/dp/1963328205" },
+    { "id": 10, "title": "Bilingual 3–5 Edition (Little Max)", "age": "3-5", "type": "bilingual", "skills": ["vocabulary_growth", "bilingual_foundation"], "isbn": "978-1963328875", "amazon": "https://www.amazon.com/dp/1963328876" },
+
+    { "id": 11, "title": "Lucky Rocky: Magic of Friendship", "age": "5-7", "type": "bedtime", "skills": ["logic", "imagination", "emotion_safety"], "isbn": "978-1963328011", "amazon": "https://www.amazon.com/dp/1963328019" },
+    { "id": 12, "title": "Rocky ES: Magia de la Amistad", "age": "5-7", "type": "bedtime", "skills": ["logic", "emotion_safety"], "isbn": "978-1963328042", "amazon": "https://www.amazon.com/dp/1963328043" },
+    { "id": 13, "title": "Take a Break — Cute Animals", "age": "5-7", "type": "coloring", "skills": ["composition", "motor_early", "creative_confidence"], "isbn": "978-1963328165", "amazon": "https://www.amazon.com/dp/1963328167" },
+    { "id": 14, "title": "Tómate un Descanso — Ocean Beauty", "age": "5-7", "type": "coloring", "skills": ["composition"], "isbn": "978-1963328394", "amazon": "https://www.amazon.com/dp/1963328396" },
+    { "id": 15, "title": "Lucky Rocky: Magic of Kindness", "age": "7-10", "type": "bedtime", "skills": ["logic", "vocabulary_growth", "structural_thinking"], "isbn": "978-1963328691", "amazon": "https://www.amazon.com/dp/1963328698" },
+
+    { "id": 16, "title": "How to Draw 111 Animals", "age": "7-10", "type": "drawing", "skills": ["independent_drawing", "structured_thinking", "creative_confidence"], "isbn": "978-1963328141", "amazon": "https://www.amazon.com/dp/1963328141" },
+    { "id": 17, "title": "Cómo dibujar 111 Animales", "age": "7-10", "type": "drawing", "skills": ["independent_drawing"], "isbn": "978-1963328172", "amazon": "https://www.amazon.com/dp/1963328172" },
+    { "id": 18, "title": "Lucky Rocky Two-in-One Edition", "age": "7-10", "type": "bilingual", "skills": ["vocabulary_growth", "real_life_scenes", "logic"], "isbn": "978-1963328981", "amazon": "https://www.amazon.com/dp/1963328981" }
+  ]
+}
