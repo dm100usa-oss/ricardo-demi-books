@@ -1,0 +1,24 @@
+{
+  "age_groups": [
+    {
+      "age": "1-3",
+      "focus": ["emotions", "speech", "motor_skills", "sensory_confidence"],
+      "book_types": ["bedtime", "coloring", "bilingual"]
+    },
+    {
+      "age": "3-5",
+      "focus": ["imagination", "attention", "early_logic", "speech"],
+      "book_types": ["bedtime", "coloring", "bilingual"]
+    },
+    {
+      "age": "5-7",
+      "focus": ["logic", "concentration", "independent_thinking", "creative_structure"],
+      "book_types": ["bedtime", "coloring", "bilingual"]
+    },
+    {
+      "age": "7-10",
+      "focus": ["structured_reasoning", "creative_independence", "vocabulary_growth"],
+      "book_types": ["bedtime", "drawing", "bilingual"]
+    }
+  ]
+}
