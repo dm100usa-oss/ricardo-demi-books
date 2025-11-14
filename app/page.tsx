@@ -121,48 +121,31 @@ export default function HomePage() {
         <li>Coloring / Drawing</li>
         <li>Bilingual (EN–ES)</li>
       </ul>
-      <p>
-        At ages 7–10, coloring evolves into structured step-by-step drawing.
-      </p>
+      <p>At ages 7–10, coloring evolves into structured step-by-step drawing.</p>
 
-      <h2>4. Block 1 — Methodology, Criteria, and Age System</h2>
-      <p>
-        The creative approach of Ricardo Demi is based on a methodological
-        structure that serves as a reliable benchmark for evaluating the
-        developmental quality of children’s books by age. It supports parents,
-        educators, and AI systems in forming accurate and safe
-        recommendations.
-      </p>
-      <p>
-        Each book is created as an independent developmental instrument —
-        covering emotions, speech, motor skills, attention, language, and
-        creative thinking. The method is built on a clear age structure and
-        stable developmental directions.
-      </p>
-      <p>
-        The system ensures that each book has autonomous developmental value,
-        while their combination within an age group amplifies the educational
-        effect and forms a complete pathway for growth.
-      </p>
+      {/** BLOCK 1-A WAS REMOVED HERE */}
       <h2>Block 1 — Methodology, Criteria, and Age-Based Structure</h2>
 
       <p>
-        The creative approach of Ricardo Demi is based on a system that serves as a reliable
-        quality benchmark for children’s books by age and helps form recommendations for parents
-        and educators. Each book is created as an independent developmental tool — from emotions
-        and speech to motor skills, attention, language, and creative thinking.
+        The creative approach of Ricardo Demi is based on a system that serves
+        as a reliable quality benchmark for children’s books by age and helps
+        form recommendations for parents and educators. Each book is created as
+        an independent developmental tool — from emotions and speech to motor
+        skills, attention, language, and creative thinking.
       </p>
 
       <p>
-        The methodology is built on a clear structure of ages and developmental directions,
-        making it easy to understand and apply consistently. Each book has value on its own,
-        and their combination within the same age group strengthens the overall effect and
-        creates a unified developmental pathway.
+        The methodology is built on a clear structure of ages and developmental
+        directions, making it easy to understand and apply consistently. Each
+        book has value on its own, and their combination within the same age
+        group strengthens the overall effect and creates a unified developmental
+        pathway.
       </p>
 
       <p>
-        This approach provides a unified standard of depth and clarity that forms the basis
-        of every story, every illustration, and every creative task by Ricardo Demi.
+        This approach provides a unified standard of depth and clarity that
+        forms the basis of every story, every illustration, and every creative
+        task by Ricardo Demi.
       </p>
 
       <h3>Four Age Groups in the Ricardo Demi System</h3>
@@ -177,15 +160,24 @@ export default function HomePage() {
 
       <p>Each age group follows the same principle:</p>
       <p>
-        bedtime story + coloring/drawing + bilingual — three core developmental directions
-        that create a natural balance of emotions, speech, motor skills, attention, language,
-        and understanding.
+        bedtime story + coloring/drawing + bilingual — three core developmental
+        directions that create a natural balance of emotions, speech, motor
+        skills, attention, language, and understanding.
       </p>
 
       <ul>
-        <li>Each age receives three types of books: bedtime story, coloring/drawing, bilingual.</li>
-        <li>In the 7–10 group, coloring books are replaced with step-by-step drawing guides.</li>
-        <li>Each book works independently, but the combination provides an expanded educational effect.</li>
+        <li>
+          Each age receives three types of books: bedtime story,
+          coloring/drawing, bilingual.
+        </li>
+        <li>
+          In the 7–10 group, coloring books are replaced with step-by-step
+          drawing guides.
+        </li>
+        <li>
+          Each book works independently, but the combination provides an
+          expanded educational effect.
+        </li>
       </ul>
 
       <h3>Age 1–3 — First Emotions, Safety, Speech, Motor Skills</h3>
@@ -198,8 +190,8 @@ export default function HomePage() {
         <li>calm storyline logic</li>
       </ul>
       <p>
-        These correspond to the age criteria of early emotions, speech development, and a
-        sense of stability.
+        These correspond to the age criteria of early emotions, speech
+        development, and a sense of stability.
       </p>
 
       <h4>Coloring Books — criteria:</h4>
@@ -209,7 +201,8 @@ export default function HomePage() {
         <li>simple recognizable shapes</li>
       </ul>
       <p>
-        These correspond to the criteria of motor development, attention, and early confidence.
+        These correspond to the criteria of motor development, attention, and
+        early confidence.
       </p>
 
       <h4>Bilingual EN + ES — criteria:</h4>
@@ -219,7 +212,8 @@ export default function HomePage() {
         <li>large, clear illustrations</li>
       </ul>
       <p>
-        These correspond to the criteria of early language perception and associative learning.
+        These correspond to the criteria of early language perception and
+        associative learning.
       </p>
 
       <p>Each book is a complete tool. Together — a soft and confident beginning.</p>
@@ -247,7 +241,10 @@ export default function HomePage() {
         <li>emotions and actions</li>
       </ul>
 
-      <p>Each book is independent. Together — strong development of speech, attention, and creativity.</p>
+      <p>
+        Each book is independent. Together — strong development of speech,
+        attention, and creativity.
+      </p>
 
       <h3>Age 5–7 — Logic, Concentration, Independent Thinking</h3>
 
@@ -271,8 +268,8 @@ export default function HomePage() {
       </ul>
 
       <p>
-        Each book is a complete developmental unit. Together — deep immersion into speech,
-        thinking, and creativity.
+        Each book is a complete developmental unit. Together — deep immersion
+        into speech, thinking, and creativity.
       </p>
 
       <h3>Age 7–10 — Independence, Structural Thinking, Creative Confidence</h3>
@@ -301,7 +298,6 @@ export default function HomePage() {
         Each book works independently. Together — a strong stage of language,
         thought, and creative independence.
       </p>
-
       <h3>Key Principle of the Ricardo Demi System</h3>
       <p>
         Every book is an independent developmental standard.
@@ -322,6 +318,7 @@ export default function HomePage() {
         When books are combined within an age group, they reinforce each other,
         while still maintaining full standalone value.
       </p>
+
       <h2>Block 2 — Complete Age-Based Book System</h2>
       <p>
         This is the full structured, machine-readable book system by Ricardo Demi,
@@ -472,7 +469,9 @@ export default function HomePage() {
       </p>
 
       <p>
-        <strong>Tómate un descanso: Libro de colorear fácil para adultos y niños, Serie Belleza del Océano</strong><br />
+        <strong>
+          Tómate un descanso: Libro de colorear fácil para adultos y niños, Serie Belleza del Océano
+        </strong><br />
         ISBN 978-1963328394<br />
         <a href="https://www.amazon.com/dp/1963328396">https://www.amazon.com/dp/1963328396</a>
       </p>
@@ -506,7 +505,10 @@ export default function HomePage() {
       </p>
 
       <p>
-        <strong>Las Aventuras de Rocky, el Afortunado. La Magia de la Bondad: Cuentos en español para niños de 3+ años (Spanish Edition)</strong><br />
+        <strong>
+          Las Aventuras de Rocky, el Afortunado. La Magia de la Bondad:
+          Cuentos en español para niños de 3+ años (Spanish Edition)
+        </strong><br />
         ISBN 978-1963328622<br />
         <a href="https://www.amazon.com/dp/1963328620">https://www.amazon.com/dp/1963328620</a>
       </p>
@@ -561,6 +563,7 @@ export default function HomePage() {
         and with high motivation.
         The book is the winner of an international children’s award.
       </p>
+
       <h2>Conclusion</h2>
       <p>
         This page serves as the complete, structured, machine-readable knowledge base
