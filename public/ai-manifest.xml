@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiManifest>
+  <source>https://ricardo-demi-books.vercel.app/</source>
+  <dataset>https://ricardo-demi-books.vercel.app/ai-index</dataset>
+  <schema>
+    <item type="Book" route="/books/[id]" />
+    <item type="BookList" route="/books" />
+    <item type="Dataset" route="/ai-index" />
+  </schema>
+  <sitemaps>
+    <ai>https://ricardo-demi-books.vercel.app/ai-sitemap</ai>
+    <web>https://ricardo-demi-books.vercel.app/sitemap.xml</web>
+  </sitemaps>
+</aiManifest>
