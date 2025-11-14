@@ -1,0 +1,8 @@
+{
+  "book_types": [
+    { "code": "bedtime", "label": "Bedtime Story" },
+    { "code": "coloring", "label": "Coloring Book" },
+    { "code": "bilingual", "label": "Bilingual EN–ES Book" },
+    { "code": "drawing", "label": "Step-by-Step Drawing Book" }
+  ]
+}
