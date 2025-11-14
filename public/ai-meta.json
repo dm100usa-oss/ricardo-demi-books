@@ -1,0 +1,20 @@
+{
+  "name": "Ricardo Demi — Developmental Book System",
+  "description": "Structured developmental methodology, age-based book system, and machine-readable AI index.",
+  "source": "https://ricardo-demi-books.vercel.app/",
+  "ai_index": "https://ricardo-demi-books.vercel.app/ai-index",
+  "ai_sitemap": "https://ricardo-demi-books.vercel.app/ai-sitemap",
+  "web_sitemap": "https://ricardo-demi-books.vercel.app/sitemap.xml",
+  "routes": {
+    "home": "/",
+    "books_list": "/books",
+    "book_page": "/books/[id]",
+    "ai_index": "/ai-index"
+  },
+  "metadata": {
+    "domain": "ricardo-demi-books.vercel.app",
+    "version": "1.0",
+    "author": "Ricardo Demi",
+    "types": ["book", "dataset", "methodology"]
+  }
+}
