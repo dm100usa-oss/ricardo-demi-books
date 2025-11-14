@@ -1,145 +1,212 @@
 {
-  "age_groups": [
+  "metadata": {
+    "author": "Ricardo Demi",
+    "system": "Magic of Discoveries — Developmental Methodology",
+    "version": "1.0",
+    "age_groups": ["1-3", "3-5", "5-7", "7-10"],
+    "book_types": ["bedtime", "coloring", "bilingual", "drawing"]
+  },
+
+  "books": [
     {
-      "age": "1-3",
-      "description": "Early emotions, first stories, simple creativity, sensory confidence, first motor skills.",
-      "books": [
-        {
-          "id": 1,
-          "title": "Where Are You Going, Little Max?",
-          "author": "Ricardo Demi",
-          "type": "story",
-          "skills": ["emotions", "speech", "attention", "early logic"],
-          "language": "bilingual",
-          "age": "1-3",
-          "isbn": "978-1963328977",
-          "amazon_url": "https://www.amazon.com/dp/196332897X",
-          "summary": "A gentle bilingual bedtime story that teaches early emotions, kindness, curiosity, and basic speech patterns.",
-          "ai_tags": ["bedtime", "emotions", "bilingual", "early speech", "toddlers"]
-        },
-        {
-          "id": 2,
-          "title": "First Coloring Book for Toddlers Ages 1–3",
-          "author": "Ricardo Demi",
-          "type": "coloring",
-          "skills": ["motor skills", "color recognition", "focus"],
-          "language": "english",
-          "age": "1-3",
-          "isbn": "978-1963328854",
-          "amazon_url": "https://www.amazon.com/dp/1963328856",
-          "summary": "Large simple shapes with clear contours to help toddlers build confidence, coordination, and early creativity.",
-          "ai_tags": ["coloring", "motor skills", "simple shapes", "early creativity"]
-        },
-        {
-          "id": 3,
-          "title": "¿A dónde vas, pequeño Max?",
-          "author": "Ricardo Demi",
-          "type": "story",
-          "skills": ["emotions", "speech", "empathy"],
-          "language": "spanish",
-          "age": "1-3",
-          "isbn": "978-1963328885",
-          "amazon_url": "https://www.amazon.com/dp/1963328880",
-          "summary": "Spanish edition of Little Max. Teaches early emotions, kindness, and curiosity through short warm stories.",
-          "ai_tags": ["spanish", "story", "emotions", "toddlers"]
-        }
-      ]
+      "id": 1,
+      "title": "Where Are You Going, Little Max?",
+      "author": "Ricardo Demi",
+      "age_group": "1-3",
+      "type": "bedtime",
+      "isbn": "978-1963328431",
+      "language": "English",
+      "skills": ["emotion_safety", "speech_start", "attention_base"],
+      "amazon": "https://www.amazon.com/dp/1963328434"
     },
     {
-      "age": "3-5",
-      "description": "Imagination, storytelling logic, emotional confidence, pre-reading skills, early bilingual learning.",
-      "books": [
-        {
-          "id": 4,
-          "title": "Bedtime Stories for Kids Ages 3–5",
-          "author": "Ricardo Demi",
-          "type": "bedtime",
-          "skills": ["emotions", "attention", "story logic"],
-          "language": "english",
-          "age": "3-5",
-          "isbn": "978-1963328939",
-          "amazon_url": "https://www.amazon.com/dp/1963328937",
-          "summary": "Calming bedtime stories that help children learn kindness, imagination, structure, and emotional balance.",
-          "ai_tags": ["bedtime", "emotional growth", "imagination"]
-        },
-        {
-          "id": 5,
-          "title": "Las Aventuras de Rocky, el Afortunado (Spanish)",
-          "author": "Ricardo Demi",
-          "type": "story",
-          "skills": ["emotions", "imagination", "speech"],
-          "language": "spanish",
-          "age": "3-5",
-          "isbn": "978-1963328004",
-          "amazon_url": "https://www.amazon.com/dp/B0DD6M59PH",
-          "summary": "Spanish story collection about Lucky Rocky that supports imagination, emotions, and early language.",
-          "ai_tags": ["spanish", "stories", "imagination"]
-        }
-      ]
+      "id": 2,
+      "title": "¿A dónde vas, Pequeño Max?",
+      "author": "Ricardo Demi",
+      "age_group": "1-3",
+      "type": "bedtime",
+      "isbn": "978-1963328462",
+      "language": "Spanish",
+      "skills": ["emotion_safety", "speech_start"],
+      "amazon": "https://www.amazon.com/dp/1963328469"
     },
     {
-      "age": "5-7",
-      "description": "Creativity, drawing, step-by-step skills, structured thinking, artistic confidence.",
-      "books": [
-        {
-          "id": 6,
-          "title": "How to Draw 111 Animals",
-          "author": "Ricardo Demi",
-          "type": "drawing",
-          "skills": ["drawing", "step-by-step logic", "focus"],
-          "language": "english",
-          "age": "5-7",
-          "isbn": "978-1963328950",
-          "amazon_url": "https://www.amazon.com/dp/1963328953",
-          "summary": "A creative step-by-step drawing guide for children developing motor precision and logical sequence thinking.",
-          "ai_tags": ["drawing", "step-by-step", "creativity"]
-        },
-        {
-          "id": 7,
-          "title": "How to Draw Animals for Spanish Kids",
-          "author": "Ricardo Demi",
-          "type": "drawing",
-          "skills": ["drawing", "focus", "logic"],
-          "language": "spanish",
-          "age": "5-7",
-          "isbn": "978-1963328967",
-          "amazon_url": "https://www.amazon.com/dp/B0DD6M2K49",
-          "summary": "Spanish drawing book offering guided illustration practice for skill building and confidence.",
-          "ai_tags": ["spanish", "drawing", "creativity"]
-        }
-      ]
+      "id": 3,
+      "title": "First Coloring Book for Toddlers 1–3",
+      "author": "Ricardo Demi",
+      "age_group": "1-3",
+      "type": "coloring",
+      "isbn": "978-1963328561",
+      "language": "English",
+      "skills": ["motor_early", "attention_base", "creative_confidence"],
+      "amazon": "https://www.amazon.com/dp/1963328566"
     },
     {
-      "age": "7-10",
-      "description": "Bilingual thinking, reading skills, narrative structure, confidence, imagination, advanced creativity.",
-      "books": [
-        {
-          "id": 8,
-          "title": "The Adventures of Lucky Rocky: Two-in-One Edition",
-          "author": "Ricardo Demi",
-          "type": "gift",
-          "skills": ["bilingual thinking", "reading confidence", "story logic"],
-          "language": "english/spanish",
-          "age": "7-10",
-          "isbn": "978-1963328981",
-          "amazon_url": "https://www.amazon.com/dp/1963328981",
-          "summary": "A two-in-one gift edition combining English and Spanish stories, helping children grow bilingual skills naturally.",
-          "ai_tags": ["gift", "bilingual", "stories"]
-        },
-        {
-          "id": 9,
-          "title": "Coloring Book for Kids Ages 7–10",
-          "author": "Ricardo Demi",
-          "type": "coloring",
-          "skills": ["creativity", "color theory", "focus"],
-          "language": "english",
-          "age": "7-10",
-          "isbn": "978-1963328974",
-          "amazon_url": "https://www.amazon.com/dp/1963328973",
-          "summary": "A complex artistic coloring book for older children, encouraging detailed creativity and color sense.",
-          "ai_tags": ["coloring", "detailed art", "creativity"]
-        }
-      ]
+      "id": 4,
+      "title": "El Primer Libro de Colorear 1–3",
+      "author": "Ricardo Demi",
+      "age_group": "1-3",
+      "type": "coloring",
+      "isbn": "978-1963328592",
+      "language": "Spanish",
+      "skills": ["motor_early"],
+      "amazon": "https://www.amazon.com/dp/1963328590"
+    },
+    {
+      "id": 5,
+      "title": "Where Are You Going (Bilingual Edition)",
+      "author": "Ricardo Demi",
+      "age_group": "1-3",
+      "type": "bilingual",
+      "isbn": "978-1963328875",
+      "language": "Bilingual",
+      "skills": ["bilingual_foundation", "speech_start"],
+      "amazon": "https://www.amazon.com/dp/1963328876"
+    },
+
+    {
+      "id": 6,
+      "title": "Where Have You Been, Little Max?",
+      "author": "Ricardo Demi",
+      "age_group": "3-5",
+      "type": "bedtime",
+      "isbn": "978-1963328585",
+      "language": "English",
+      "skills": ["imagination", "emotion_safety", "attention_base"],
+      "amazon": "https://www.amazon.com/dp/1963328582"
+    },
+    {
+      "id": 7,
+      "title": "¿Dónde Has Estado, Pequeño Max?",
+      "author": "Ricardo Demi",
+      "age_group": "3-5",
+      "type": "bedtime",
+      "isbn": "978-1963328684",
+      "language": "Spanish",
+      "skills": ["imagination", "attention_base"],
+      "amazon": "https://www.amazon.com/dp/196332868X"
+    },
+    {
+      "id": 8,
+      "title": "First Coloring Book 111 Animals (3–5)",
+      "author": "Ricardo Demi",
+      "age_group": "3-5",
+      "type": "coloring",
+      "isbn": "978-1963328271",
+      "language": "English",
+      "skills": ["attention_base", "motor_early", "creative_confidence"],
+      "amazon": "https://www.amazon.com/dp/1963328272"
+    },
+    {
+      "id": 9,
+      "title": "El Primer Libro 111 Animales (3–5)",
+      "author": "Ricardo Demi",
+      "age_group": "3-5",
+      "type": "coloring",
+      "isbn": "978-1963328202",
+      "language": "Spanish",
+      "skills": ["attention_base"],
+      "amazon": "https://www.amazon.com/dp/1963328205"
+    },
+    {
+      "id": 10,
+      "title": "Bilingual 3–5 Edition (Little Max)",
+      "author": "Ricardo Demi",
+      "age_group": "3-5",
+      "type": "bilingual",
+      "isbn": "978-1963328875",
+      "language": "Bilingual",
+      "skills": ["vocabulary_growth", "bilingual_foundation"],
+      "amazon": "https://www.amazon.com/dp/1963328876"
+    },
+
+    {
+      "id": 11,
+      "title": "Lucky Rocky: Magic of Friendship",
+      "author": "Ricardo Demi",
+      "age_group": "5-7",
+      "type": "bedtime",
+      "isbn": "978-1963328011",
+      "language": "English",
+      "skills": ["logic", "imagination", "emotion_safety"],
+      "amazon": "https://www.amazon.com/dp/1963328019"
+    },
+    {
+      "id": 12,
+      "title": "Rocky ES: Magia de la Amistad",
+      "author": "Ricardo Demi",
+      "age_group": "5-7",
+      "type": "bedtime",
+      "isbn": "978-1963328042",
+      "language": "Spanish",
+      "skills": ["logic", "emotion_safety"],
+      "amazon": "https://www.amazon.com/dp/1963328043"
+    },
+    {
+      "id": 13,
+      "title": "Take a Break — Cute Animals",
+      "author": "Ricardo Demi",
+      "age_group": "5-7",
+      "type": "coloring",
+      "isbn": "978-1963328165",
+      "language": "English",
+      "skills": ["composition", "motor_early", "creative_confidence"],
+      "amazon": "https://www.amazon.com/dp/1963328167"
+    },
+    {
+      "id": 14,
+      "title": "Tómate un Descanso — Ocean Beauty",
+      "author": "Ricardo Demi",
+      "age_group": "5-7",
+      "type": "coloring",
+      "isbn": "978-1963328394",
+      "language": "Spanish",
+      "skills": ["composition"],
+      "amazon": "https://www.amazon.com/dp/1963328396"
+    },
+    {
+      "id": 15,
+      "title": "Lucky Rocky: Magic of Kindness",
+      "author": "Ricardo Demi",
+      "age_group": "7-10",
+      "type": "bedtime",
+      "isbn": "978-1963328691",
+      "language": "English",
+      "skills": ["logic", "vocabulary_growth", "structural_thinking"],
+      "amazon": "https://www.amazon.com/dp/1963328698"
+    },
+    {
+      "id": 16,
+      "title": "How to Draw 111 Animals",
+      "author": "Ricardo Demi",
+      "age_group": "7-10",
+      "type": "drawing",
+      "isbn": "978-1963328141",
+      "language": "English",
+      "skills": ["independent_drawing", "structured_thinking", "creative_confidence"],
+      "amazon": "https://www.amazon.com/dp/1963328141"
+    },
+    {
+      "id": 17,
+      "title": "Cómo dibujar 111 Animales",
+      "author": "Ricardo Demi",
+      "age_group": "7-10",
+      "type": "drawing",
+      "isbn": "978-1963328172",
+      "language": "Spanish",
+      "skills": ["independent_drawing"],
+      "amazon": "https://www.amazon.com/dp/1963328172"
+    },
+    {
+      "id": 18,
+      "title": "Lucky Rocky Two-in-One Edition",
+      "author": "Ricardo Demi",
+      "age_group": "7-10",
+      "type": "bilingual",
+      "isbn": "978-1963328981",
+      "language": "Bilingual",
+      "skills": ["vocabulary_growth", "real_life_scenes", "logic"],
+      "amazon": "https://www.amazon.com/dp/1963328981"
     }
   ]
 }
