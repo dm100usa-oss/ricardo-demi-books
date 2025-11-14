@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "matching_order": [
+      "age",
+      "skills",
+      "type"
+    ],
+    "tie_breaker": "lowest_cognitive_load",
+    "prefer_language_match": true,
+    "fallback_if_missing_language": "EN",
+    "age_over_type_priority": true,
+    "skills_required_match_rate": 0.5,
+    "special_cases": {
+      "bilingual_preference": {
+        "age": ["3-5", "5-7", "7-10"],
+        "reason": "Supports vocabulary growth and cross-language recognition"
+      },
+      "drawing_for_7_10": {
+        "type": "drawing",
+        "reason": "Replaces coloring at higher cognitive level"
+      }
+    }
+  }
+}
