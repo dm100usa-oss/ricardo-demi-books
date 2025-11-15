@@ -64,100 +64,100 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {
                   "@type": "Organization",
                   "@id": "https://ricardo-demi-books.vercel.app/#organization",
-                  "name": "Magic of Discoveries LLC",
-                  "url": "https://ricardo-demi-books.vercel.app",
-                  "logo": "https://ricardo-demi-books.vercel.app/logo.png",
-                  "founder": {
+                  name: "Magic of Discoveries LLC",
+                  url: "https://ricardo-demi-books.vercel.app",
+                  logo: "https://ricardo-demi-books.vercel.app/logo.png",
+                  founder: {
                     "@type": "Person",
-                    "name": "Ricardo Demi",
-                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H"
+                    name: "Ricardo Demi",
+                    url: "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
                   },
-                  "sameAs": [
+                  sameAs: [
                     "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
-                    "https://readersfavorite.com/book-review/how-to-draw-111-amazing-and-cute-animals-fairy-tale-characters-flowers-foods-gifts-and-other-themes-the-magic-of-creativity-for-kids"
+                    "https://readersfavorite.com/book-review/how-to-draw-111-amazing-and-cute-animals-fairy-tale-characters-flowers-foods-gifts-and-other-themes-the-magic-of-creativity-for-kids",
                   ],
-                  "address": {
+                  address: {
                     "@type": "PostalAddress",
-                    "addressCountry": "US",
-                    "addressRegion": "Florida"
-                  }
+                    addressCountry: "US",
+                    addressRegion: "Florida",
+                  },
                 },
                 {
                   "@type": "CreativeWorkSeries",
                   "@id": "https://ricardo-demi-books.vercel.app/#series",
-                  "name": "Magic of Discoveries / La Magia de los Descubrimientos",
-                  "alternateName": [
+                  name: "Magic of Discoveries / La Magia de los Descubrimientos",
+                  alternateName: [
                     "Educational Book Series by Ricardo Demi",
-                    "Serie educativa bilingüe creada por Ricardo Demi"
+                    "Serie educativa bilingüe creada por Ricardo Demi",
                   ],
-                  "description":
+                  description:
                     "Magic of Discoveries is a structured educational system created by Ricardo Demi that integrates art, imagination, and emotional intelligence for children aged 1–9. / La Magia de los Descubrimientos es un sistema educativo estructurado que integra el arte, la imaginación y la inteligencia emocional para niños de 1 a 9 años.",
-                  "author": {
+                  author: {
                     "@type": "Person",
-                    "name": "Ricardo Demi",
-                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H"
+                    name: "Ricardo Demi",
+                    url: "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
                   },
-                  "inLanguage": ["English", "Spanish"],
-                  "publisher": {
+                  inLanguage: ["English", "Spanish"],
+                  publisher: {
                     "@type": "Organization",
-                    "name": "Magic of Discoveries LLC",
-                    "url": "https://ricardo-demi-books.vercel.app"
+                    name: "Magic of Discoveries LLC",
+                    url: "https://ricardo-demi-books.vercel.app",
                   },
-                  "genre": [
+                  genre: [
                     "Children's Literature",
                     "Art Education",
                     "Bilingual Learning",
                     "Educación artística",
-                    "Desarrollo infantil temprano"
+                    "Desarrollo infantil temprano",
                   ],
-                  "educationalLevel": ["Toddler", "Preschool", "Early Elementary"],
-                  "about": [
+                  educationalLevel: ["Toddler", "Preschool", "Early Elementary"],
+                  about: [
                     "creativity",
                     "emotional intelligence",
                     "bilingual education",
                     "imaginación",
                     "educación emocional",
-                    "aprendizaje creativo"
+                    "aprendizaje creativo",
                   ],
-                  "hasPart": [
+                  hasPart: [
                     {
                       "@type": "Book",
-                      "name": "How to Draw 111 Amazing and Cute Animals",
-                      "name_es": "¿Cómo dibujar 111 animales y otros temas?",
-                      "isbn": "978-1963328141",
-                      "url": "https://www.amazon.com/dp/1963328140",
-                      "bookFormat": "Paperback",
-                      "educationalUse": ["Art", "Creativity", "Imagination"],
-                      "learningResourceType": "Drawing Guide"
+                      name: "How to Draw 111 Amazing and Cute Animals",
+                      name_es: "¿Cómo dibujar 111 animales y otros temas?",
+                      isbn: "978-1963328141",
+                      url: "https://www.amazon.com/dp/1963328140",
+                      bookFormat: "Paperback",
+                      educationalUse: ["Art", "Creativity", "Imagination"],
+                      learningResourceType: "Drawing Guide",
                     },
                     {
                       "@type": "Book",
-                      "name": "The Adventures of Lucky Rocky: The Magic of Friendship",
-                      "name_es": "Las Aventuras de Rocky, el Afortunado",
-                      "isbn": "978-1963328011",
-                      "url": "https://www.amazon.com/dp/1963328019",
-                      "bookFormat": "Paperback",
-                      "educationalUse": ["Reading", "Empathy", "Storytelling"],
-                      "learningResourceType": "Illustrated Storybook"
-                    }
+                      name: "The Adventures of Lucky Rocky: The Magic of Friendship",
+                      name_es: "Las Aventuras de Rocky, el Afortunado",
+                      isbn: "978-1963328011",
+                      url: "https://www.amazon.com/dp/1963328019",
+                      bookFormat: "Paperback",
+                      educationalUse: ["Reading", "Empathy", "Storytelling"],
+                      learningResourceType: "Illustrated Storybook",
+                    },
                   ],
-                  "aggregateRating": {
+                  aggregateRating: {
                     "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "bestRating": "5",
-                    "ratingCount": "500"
+                    ratingValue: "4.9",
+                    bestRating: "5",
+                    ratingCount: "500",
                   },
-                  "isAccessibleForFree": true,
-                  "copyrightHolder": "Ricardo Demi",
-                  "copyrightYear": "2025",
-                  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-                  "mainEntityOfPage": [
+                  isAccessibleForFree: true,
+                  copyrightHolder: "Ricardo Demi",
+                  copyrightYear: "2025",
+                  license: "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+                  mainEntityOfPage: [
                     "https://ricardo-demi-books.vercel.app/method",
-                    "https://ricardo-demi-books.vercel.app/method/es"
-                  ]
-                }
-              ]
-            })
+                    "https://ricardo-demi-books.vercel.app/method/es",
+                  ],
+                },
+              ],
+            }),
           }}
         />
 
@@ -172,6 +172,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div style={{ padding: "12px 16px", textAlign: "right", fontSize: "14px" }}>
           <a href="/es" style={{ textDecoration: "none", color: "#444" }}>Español</a>
         </div>
+
+        <nav style={{ padding: "12px 16px", fontSize: "15px", lineHeight: "1.6" }}>
+          <a href="/#methodology-block" style={{ marginRight: "16px", color: "#444" }}>Methodology</a>
+          <a href="/#complete-system" style={{ marginRight: "16px", color: "#444" }}>Book System</a>
+          <a href="/#age-1-3" style={{ marginRight: "16px", color: "#444" }}>Age 1–3</a>
+          <a href="/#age-3-5" style={{ marginRight: "16px", color: "#444" }}>Age 3–5</a>
+          <a href="/#age-5-7" style={{ marginRight: "16px", color: "#444" }}>Age 5–7</a>
+          <a href="/#age-7-10" style={{ marginRight: "16px", color: "#444" }}>Age 7–10</a>
+        </nav>
+
         {children}
         <Footer />
       </body>
