@@ -14,8 +14,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
-
-        {/* ✅ GOOGLE SEARCH CONSOLE VERIFICATION */}
         <meta
           name="google-site-verification"
           content="Rt1gDbfw5skme01n3RiGPBFYEXhr5FmpaBruJpTE6gY"
@@ -39,10 +37,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           content="https://ricardo-demi-books.vercel.app/cover.jpg"
         />
 
-        {/* --- CANONICAL URL --- */}
         <link rel="canonical" href="https://ricardo-demi-books.vercel.app/" />
 
-        {/* --- MULTILINGUAL RELATIONSHIP --- */}
         <link
           rel="alternate"
           hrefLang="en"
@@ -59,7 +55,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://ricardo-demi-books.vercel.app/method"
         />
 
-        {/* --- STRUCTURED DATA: CREATIVE SERIES + ORGANIZATION --- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -166,7 +161,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        {/* ✅ FAVICON AND MANIFEST LINKS */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -175,6 +169,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
 
       <body style={{ fontFamily: "system-ui, sans-serif", margin: 0, padding: 0 }}>
+        <div style={{ padding: "12px 16px", textAlign: "right", fontSize: "14px" }}>
+          <a href="/es" style={{ textDecoration: "none", color: "#444" }}>Español</a>
+        </div>
         {children}
         <Footer />
       </body>
