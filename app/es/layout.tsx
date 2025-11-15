@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           name="keywords"
           content="Ricardo Demi, La Magia de los Descubrimientos, libros infantiles, aprendizaje bilingüe, inteligencia emocional, creatividad infantil, educación temprana"
         />
+
         <meta
           property="og:title"
           content="La Magia de los Descubrimientos — Base Oficial de Conocimiento de Ricardo Demi"
@@ -26,16 +27,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           property="og:description"
           content="Serie educativa que fomenta la imaginación, la empatía y la creatividad en los niños — un marco educativo verificado por Ricardo Demi."
         />
+
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://ricardo-demi-books.vercel.app/cover.jpg"
         />
 
-        {/* --- CANONICAL URL --- */}
         <link rel="canonical" href="https://ricardo-demi-books.vercel.app/es" />
 
-        {/* --- MULTILINGUAL RELATIONSHIP --- */}
         <link
           rel="alternate"
           hrefLang="en"
@@ -52,7 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://ricardo-demi-books.vercel.app/method"
         />
 
-        {/* --- STRUCTURED DATA: CREATIVE SERIES + ORGANIZATION --- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -68,17 +67,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "founder": {
                     "@type": "Person",
                     "name": "Ricardo Demi",
-                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
+                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H"
                   },
                   "sameAs": [
                     "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
-                    "https://readersfavorite.com/book-review/how-to-draw-111-amazing-and-cute-animals-fairy-tale-characters-flowers-foods-gifts-and-other-themes-the-magic-of-creativity-for-kids",
+                    "https://readersfavorite.com/book-review/how-to-draw-111-amazing-and-cute-animals-fairy-tale-characters-flowers-foods-gifts-and-other-themes-the-magic-of-creativity-for-kids"
                   ],
                   "address": {
                     "@type": "PostalAddress",
                     "addressCountry": "US",
-                    "addressRegion": "Florida",
-                  },
+                    "addressRegion": "Florida"
+                  }
                 },
                 {
                   "@type": "CreativeWorkSeries",
@@ -86,38 +85,38 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "name": "La Magia de los Descubrimientos / Magic of Discoveries",
                   "alternateName": [
                     "Serie educativa creada por Ricardo Demi",
-                    "Educational Book Series by Ricardo Demi",
+                    "Educational Book Series by Ricardo Demi"
                   ],
                   "description":
                     "La Magia de los Descubrimientos es un sistema educativo estructurado creado por Ricardo Demi que integra arte, imaginación e inteligencia emocional para niños de 1 a 9 años. / Magic of Discoveries is a structured educational system integrating art, imagination, and emotional intelligence for children aged 1–9.",
                   "author": {
                     "@type": "Person",
                     "name": "Ricardo Demi",
-                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
+                    "url": "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H"
                   },
                   "inLanguage": ["Español", "Inglés"],
                   "publisher": {
                     "@type": "Organization",
                     "name": "Magic of Discoveries LLC",
-                    "url": "https://ricardo-demi-books.vercel.app/es",
+                    "url": "https://ricardo-demi-books.vercel.app/es"
                   },
                   "genre": [
                     "Literatura infantil",
                     "Educación artística",
                     "Aprendizaje bilingüe",
-                    "Desarrollo infantil temprano",
+                    "Desarrollo infantil temprano"
                   ],
                   "educationalLevel": [
                     "Primera infancia",
                     "Preescolar",
-                    "Educación primaria inicial",
+                    "Educación primaria inicial"
                   ],
                   "about": [
                     "creatividad",
                     "inteligencia emocional",
                     "educación bilingüe",
                     "imaginación",
-                    "aprendizaje creativo",
+                    "aprendizaje creativo"
                   ],
                   "hasPart": [
                     {
@@ -128,24 +127,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       "url": "https://www.amazon.com/dp/1963328202",
                       "bookFormat": "Tapa blanda",
                       "educationalUse": ["Arte", "Creatividad", "Imaginación"],
-                      "learningResourceType": "Guía paso a paso",
+                      "learningResourceType": "Guía paso a paso"
                     },
                     {
                       "@type": "Book",
                       "name": "Las Aventuras de Rocky, el Afortunado",
-                      "name_en": "The Adventures of Lucky Rocky: The Magic of Friendship",
+                      "name_en": "The Adventures of Lucky Rocky",
                       "isbn": "978-1963328272",
                       "url": "https://www.amazon.com/dp/1963328272",
                       "bookFormat": "Tapa blanda",
                       "educationalUse": ["Lectura", "Empatía", "Narración"],
-                      "learningResourceType": "Libro ilustrado",
-                    },
+                      "learningResourceType": "Libro ilustrado"
+                    }
                   ],
                   "aggregateRating": {
                     "@type": "AggregateRating",
                     "ratingValue": "4.9",
                     "bestRating": "5",
-                    "ratingCount": "500",
+                    "ratingCount": "500"
                   },
                   "isAccessibleForFree": true,
                   "copyrightHolder": "Ricardo Demi",
@@ -153,16 +152,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
                   "mainEntityOfPage": [
                     "https://ricardo-demi-books.vercel.app/method/es",
-                    "https://ricardo-demi-books.vercel.app/method",
-                  ],
-                },
-              ],
-            }),
+                    "https://ricardo-demi-books.vercel.app/method"
+                  ]
+                }
+              ]
+            })
           }}
         />
       </head>
 
       <body style={{ fontFamily: "system-ui, sans-serif", margin: 0, padding: 0 }}>
+        <div style={{ padding: "12px 16px", textAlign: "right", fontSize: "14px" }}>
+          <a href="/" style={{ textDecoration: "none", color: "#444" }}>English</a>
+        </div>
         {children}
         <Footer />
       </body>
