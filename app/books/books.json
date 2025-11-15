@@ -10,6 +10,7 @@
   "books": [
     {
       "id": 1,
+      "slug": "where-are-you-going-little-max",
       "title": "Where Are You Going, Little Max?",
       "author": "Ricardo Demi",
       "age_group": "1-3",
@@ -21,6 +22,7 @@
     },
     {
       "id": 2,
+      "slug": "a-donde-vas-pequeno-max",
       "title": "¿A dónde vas, Pequeño Max?",
       "author": "Ricardo Demi",
       "age_group": "1-3",
@@ -32,6 +34,7 @@
     },
     {
       "id": 3,
+      "slug": "first-coloring-book-for-toddlers",
       "title": "First Coloring Book for Toddlers 1–3",
       "author": "Ricardo Demi",
       "age_group": "1-3",
@@ -43,6 +46,7 @@
     },
     {
       "id": 4,
+      "slug": "el-primer-libro-de-colorear-para-bebes-de-1-3-anos",
       "title": "El Primer Libro de Colorear 1–3",
       "author": "Ricardo Demi",
       "age_group": "1-3",
@@ -54,6 +58,7 @@
     },
     {
       "id": 5,
+      "slug": "where-are-you-going-bilingual",
       "title": "Where Are You Going (Bilingual Edition)",
       "author": "Ricardo Demi",
       "age_group": "1-3",
@@ -66,6 +71,7 @@
 
     {
       "id": 6,
+      "slug": "where-have-you-been-little-max",
       "title": "Where Have You Been, Little Max?",
       "author": "Ricardo Demi",
       "age_group": "3-5",
@@ -77,6 +83,7 @@
     },
     {
       "id": 7,
+      "slug": "donde-has-estado-pequeno-max",
       "title": "¿Dónde Has Estado, Pequeño Max?",
       "author": "Ricardo Demi",
       "age_group": "3-5",
@@ -88,6 +95,7 @@
     },
     {
       "id": 8,
+      "slug": "how-to-draw",
       "title": "First Coloring Book 111 Animals (3–5)",
       "author": "Ricardo Demi",
       "age_group": "3-5",
@@ -99,6 +107,7 @@
     },
     {
       "id": 9,
+      "slug": "como-dibujar-111-animales-y-otros-temas",
       "title": "El Primer Libro 111 Animales (3–5)",
       "author": "Ricardo Demi",
       "age_group": "3-5",
@@ -110,6 +119,7 @@
     },
     {
       "id": 10,
+      "slug": "the-adventures-of-lucky-rocky",
       "title": "Bilingual 3–5 Edition (Little Max)",
       "author": "Ricardo Demi",
       "age_group": "3-5",
@@ -122,6 +132,7 @@
 
     {
       "id": 11,
+      "slug": "las-aventuras-de-rocky-el-afortunado",
       "title": "Lucky Rocky: Magic of Friendship",
       "author": "Ricardo Demi",
       "age_group": "5-7",
@@ -133,6 +144,7 @@
     },
     {
       "id": 12,
+      "slug": "rocky-es-magia-de-la-amistad",
       "title": "Rocky ES: Magia de la Amistad",
       "author": "Ricardo Demi",
       "age_group": "5-7",
@@ -144,6 +156,7 @@
     },
     {
       "id": 13,
+      "slug": "take-a-break-cute-animals",
       "title": "Take a Break — Cute Animals",
       "author": "Ricardo Demi",
       "age_group": "5-7",
@@ -155,6 +168,7 @@
     },
     {
       "id": 14,
+      "slug": "tomate-un-descanso-ocean",
       "title": "Tómate un Descanso — Ocean Beauty",
       "author": "Ricardo Demi",
       "age_group": "5-7",
@@ -164,8 +178,10 @@
       "skills": ["composition"],
       "amazon": "https://www.amazon.com/dp/1963328396"
     },
+
     {
       "id": 15,
+      "slug": "the-adventures-of-lucky-rocky-kindness",
       "title": "Lucky Rocky: Magic of Kindness",
       "author": "Ricardo Demi",
       "age_group": "7-10",
@@ -177,6 +193,7 @@
     },
     {
       "id": 16,
+      "slug": "how-to-draw",
       "title": "How to Draw 111 Animals",
       "author": "Ricardo Demi",
       "age_group": "7-10",
@@ -188,6 +205,7 @@
     },
     {
       "id": 17,
+      "slug": "como-dibujar-111-animales-y-otros-temas",
       "title": "Cómo dibujar 111 Animales",
       "author": "Ricardo Demi",
       "age_group": "7-10",
@@ -199,6 +217,7 @@
     },
     {
       "id": 18,
+      "slug": "lucky-rocky-two-in-one",
       "title": "Lucky Rocky Two-in-One Edition",
       "author": "Ricardo Demi",
       "age_group": "7-10",
