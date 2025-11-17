@@ -1,5 +1,3 @@
-import books from "@/public/ai-books.json";
-
 export const dynamic = "force-static";
 
 export const metadata = {
@@ -11,8 +9,12 @@ export const metadata = {
   },
 };
 
-export default function AIIndexPage() {
-  const allBooks = books;
+export default async function AIIndexPage() {
+  const res = await fetch(
+    "https://ricardo-demi-books.vercel.app/ai-books.json",
+    { cache: "force-cache" }
+  );
+  const allBooks = await res.json();
 
   const ageGroups = Array.from(new Set(allBooks.map((b) => b.age_group))).sort();
   const bookTypes = Array.from(new Set(allBooks.map((b) => b.type))).sort();
