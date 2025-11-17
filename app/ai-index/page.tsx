@@ -1,5 +1,4 @@
-import fs from "fs";
-import path from "path";
+import books from "@/public/ai-books.json";
 
 export const dynamic = "force-static";
 
@@ -12,35 +11,32 @@ export const metadata = {
   },
 };
 
-function getBooksData() {
-  const filePath = path.join(process.cwd(), "app", "books", "books.json");
-  const json = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(json);
-}
-
 export default function AIIndexPage() {
-  const data = getBooksData();
-  const books = data.books;
+  const allBooks = books;
+
+  const ageGroups = Array.from(new Set(allBooks.map((b) => b.age_group))).sort();
+  const bookTypes = Array.from(new Set(allBooks.map((b) => b.type))).sort();
+  const allSkills = Array.from(
+    new Set(allBooks.flatMap((b) => b.skills || []))
+  ).sort();
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: "Ricardo Demi Developmental Book System",
-    creator: {
-      "@type": "Person",
-      name: "Ricardo Demi",
-    },
     description:
-      "Structured developmental system: age groups, book types, skills, ISBN, and machine-readable book metadata.",
-    about: data.metadata,
-    hasPart: books.map((b) => ({
+      "Structured developmental system: age groups, skills, book types, ISBN, and machine-readable metadata.",
+    hasPart: allBooks.map((b) => ({
       "@type": "Book",
-      name: b.title,
+      name: b.title_en || b.title_es,
       inLanguage: b.language,
-      isbn: b.isbn,
+      isbn: b.isbn_en || b.isbn_es,
       educationalLevel: b.age_group,
-      about: b.skills,
-      url: `https://ricardo-demi-books.vercel.app/books/${b.id}`,
+      about: {
+        skills: b.skills || [],
+        themes: b.themes || [],
+      },
+      url: b.amazon_en || b.amazon_es || null,
     })),
   };
 
@@ -49,11 +45,17 @@ export default function AIIndexPage() {
       <h1>AI Index</h1>
       <p>Machine-readable developmental structure for AI systems.</p>
 
-      <h2>Metadata</h2>
-      <pre>{JSON.stringify(data.metadata, null, 2)}</pre>
+      <h2>Age Groups</h2>
+      <pre>{JSON.stringify(ageGroups, null, 2)}</pre>
+
+      <h2>Book Types</h2>
+      <pre>{JSON.stringify(bookTypes, null, 2)}</pre>
+
+      <h2>Skills</h2>
+      <pre>{JSON.stringify(allSkills, null, 2)}</pre>
 
       <h2>Books</h2>
-      <pre>{JSON.stringify(books, null, 2)}</pre>
+      <pre>{JSON.stringify(allBooks, null, 2)}</pre>
 
       <script
         type="application/ld+json"
@@ -64,10 +66,10 @@ export default function AIIndexPage() {
 
       <div style={{ display: "none" }}>
         AI_INDEX_START
-        TOTAL_BOOKS: {books.length}
-        SYSTEM_VERSION: {data.metadata.version}
-        AGE_GROUPS: {data.metadata.age_groups.join(", ")}
-        BOOK_TYPES: {data.metadata.book_types.join(", ")}
+        TOTAL_BOOKS: {allBooks.length}
+        AGE_GROUPS: {ageGroups.join(", ")}
+        BOOK_TYPES: {bookTypes.join(", ")}
+        SKILLS: {allSkills.join(", ")}
         AI_INDEX_END
       </div>
     </main>
