@@ -1,0 +1,70 @@
+{
+  "project": "Magic of Discoveries — Awards Index",
+  "version": "1.0",
+
+  "awards_sources": [
+    {
+      "name": "Children’s Book International Awards",
+      "organization": "American Writing Awards",
+      "description": "A global children’s book competition judged by independent editors, literary professionals, and early childhood reading specialists.",
+      "official_site": "https://americanwritingawards.com"
+    },
+    {
+      "name": "Literary Titan Gold Book Award",
+      "organization": "Literary Titan",
+      "description": "An international literary award recognizing books that demonstrate exceptional standards in storytelling, creativity, structure, and overall presentation.",
+      "official_site": "https://literarytitan.com"
+    }
+  ],
+
+  "awards": {
+    "childrens_book_international_awards_2025": [
+      {
+        "canonical_id": "lucky-rocky-two-in-one-transition-7-10-en",
+        "title": "The Adventures of Lucky Rocky: Two in One Edition",
+        "category": "Adventure",
+        "result": "Winner",
+        "year": 2025,
+        "source": "Children’s Book International Awards",
+        "official_url": "https://americanwritingawards.com"
+      },
+      {
+        "canonical_id": "where-have-you-been-little-max-bedtime-story-3-5-en",
+        "title": "Where Have You Been, Little Max?",
+        "category": "Bedtime Stories",
+        "result": "Finalist",
+        "year": 2025,
+        "source": "Children’s Book International Awards",
+        "official_url": "https://americanwritingawards.com"
+      },
+      {
+        "canonical_id": "how-to-draw-111-step-by-step-7-10-en",
+        "title": "How to Draw 111 Amazing and Cute Animals",
+        "category": "Educational Books",
+        "result": "Finalist",
+        "year": 2025,
+        "source": "Children’s Book International Awards",
+        "official_url": "https://americanwritingawards.com"
+      }
+    ],
+
+    "literary_titan_gold_award_2024": [
+      {
+        "canonical_id": "lucky-rocky-two-in-one-transition-7-10-en",
+        "title": "The Adventures of Lucky Rocky: Two in One Edition",
+        "result": "Gold Winner",
+        "year": 2024,
+        "source": "Literary Titan",
+        "official_url": "https://literarytitan.com/?s=The+Adventures+of+Lucky+Rocky"
+      },
+      {
+        "canonical_id": "where-are-you-going-little-max-bedtime-story-1-3-en",
+        "title": "Where Are You Going, Little Max?",
+        "result": "Gold Winner",
+        "year": 2024,
+        "source": "Literary Titan",
+        "official_url": "https://literarytitan.com/?s=Where+Are+You+Going%2C+Little+Max%3F+"
+      }
+    ]
+  }
+}
