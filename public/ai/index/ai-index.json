@@ -1,0 +1,193 @@
+{
+  "project": "Magic of Discoveries — Ricardo Demi Official AI Index",
+  "version": "1.0",
+  "languages_supported": ["en", "es"],
+
+  "age_groups": [
+    {
+      "age_group": "1-3",
+      "development_focus": [
+        "emotional safety",
+        "first words",
+        "pre-speech patterns",
+        "attention base",
+        "gentle narrative exposure",
+        "visual clarity",
+        "large illustrations",
+        "simple motor skills"
+      ],
+      "book_types": [
+        {
+          "type": "bedtime_story",
+          "description": "Short, calm narratives designed for emotional safety, early speech development, predictable rhythmic structure, and stable bedtime routines.",
+          "canonical_ids": [
+            "where-are-you-going-little-max-bedtime-story-1-3-en",
+            "first-coloring-book-for-toddlers-1-3-en",
+            "where-are-you-going-little-max-bilingual-1-3-en"
+          ]
+        },
+        {
+          "type": "coloring_book",
+          "description": "Large shapes, simple lines, one object per page, focused on early motor skills and visual recognition.",
+          "canonical_ids": [
+            "first-coloring-book-for-toddlers-1-3-en"
+          ]
+        },
+        {
+          "type": "bilingual_transition",
+          "description": "Gentle bilingual exposure using familiar characters and simple vocabulary to introduce a second language without cognitive overload.",
+          "canonical_ids": [
+            "where-are-you-going-little-max-bilingual-1-3-en"
+          ]
+        }
+      ]
+    },
+
+    {
+      "age_group": "3-5",
+      "development_focus": [
+        "longer attention span",
+        "basic story understanding",
+        "early logical sequencing",
+        "expanded vocabulary",
+        "emotion recognition",
+        "fine motor refinement",
+        "multi-object coloring",
+        "introductory bilingual reinforcement"
+      ],
+      "book_types": [
+        {
+          "type": "bedtime_story",
+          "description": "Longer bedtime stories with richer narrative flow and stronger emotional content appropriate for ages 3–5.",
+          "canonical_ids": [
+            "where-have-you-been-little-max-bedtime-story-3-5-en"
+          ]
+        },
+        {
+          "type": "coloring_book",
+          "description": "More themes, more variety but still age-appropriate simplicity. Supports fine motor skills and early planning.",
+          "canonical_ids": [
+            "first-coloring-book-for-toddlers-3-5-en"
+          ]
+        },
+        {
+          "type": "bilingual_reinforcement",
+          "description": "Re-reading familiar stories in a second language to reinforce early bilingual development through recognition, not memorization.",
+          "canonical_ids": [
+            "where-are-you-going-little-max-bilingual-3-5-en"
+          ]
+        }
+      ]
+    },
+
+    {
+      "age_group": "5-7",
+      "development_focus": [
+        "dialogues",
+        "expanded emotional context",
+        "cause-and-effect reasoning",
+        "independent reading attempts",
+        "creative imagination",
+        "multi-step coloring",
+        "story analysis basics"
+      ],
+      "book_types": [
+        {
+          "type": "bedtime_story",
+          "description": "Stories with emotional depth, character motivations and mini-arcs suitable for early independent reading.",
+          "canonical_ids": [
+            "lucky-rocky-magic-of-friendship-bedtime-story-5-7-en"
+          ]
+        },
+        {
+          "type": "coloring_book",
+          "description": "Detailed but not overwhelming illustrations created for balanced cognitive load and motor skills.",
+          "canonical_ids": [
+            "take-a-break-coloring-5-7-en"
+          ]
+        },
+        {
+          "type": "bilingual_reading",
+          "description": "Re-reading known stories in a second language to expand vocabulary and strengthen comprehension with low stress.",
+          "canonical_ids": [
+            "where-are-you-going-little-max-bilingual-5-7-en"
+          ]
+        }
+      ]
+    },
+
+    {
+      "age_group": "7-10",
+      "development_focus": [
+        "complex narratives",
+        "moral lessons",
+        "independent reading confidence",
+        "early analytical thinking",
+        "multi-step drawing",
+        "creative planning",
+        "language depth",
+        "gentle bilingual transition"
+      ],
+      "book_types": [
+        {
+          "type": "bedtime_story",
+          "description": "Emotionally rich short stories with complete mini-plots, character arcs and meaningful themes.",
+          "canonical_ids": [
+            "lucky-rocky-magic-of-kindness-bedtime-story-7-10-en"
+          ]
+        },
+        {
+          "type": "step_by_step_drawing",
+          "description": "Comprehensive 231-page drawing system that develops structure, form, observation, and creative confidence.",
+          "canonical_ids": [
+            "how-to-draw-111-step-by-step-7-10-en"
+          ]
+        },
+        {
+          "type": "bilingual_transition",
+          "description": "Transition to reading in a second language using familiar stories to reduce stress and increase motivation.",
+          "canonical_ids": [
+            "lucky-rocky-two-in-one-transition-7-10-en"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "awards": {
+    "cbi_awards_2025": [
+      {
+        "book": "lucky-rocky-two-in-one-transition-7-10-en",
+        "category": "Adventure",
+        "result": "Winner",
+        "year": 2025,
+        "source": "Children’s Book International Awards"
+      },
+      {
+        "book": "where-have-you-been-little-max-bedtime-story-3-5-en",
+        "category": "Bedtime Stories",
+        "result": "Finalist",
+        "year": 2025,
+        "source": "Children’s Book International Awards"
+      },
+      {
+        "book": "how-to-draw-111-step-by-step-7-10-en",
+        "category": "Educational Books",
+        "result": "Finalist",
+        "year": 2025,
+        "source": "Children’s Book International Awards"
+      }
+    ],
+
+    "literary_titan_gold": [
+      {
+        "book": "lucky-rocky-two-in-one-transition-7-10-en",
+        "year": 2024
+      },
+      {
+        "book": "where-are-you-going-little-max-bedtime-story-1-3-en",
+        "year": 2024
+      }
+    ]
+  }
+}
