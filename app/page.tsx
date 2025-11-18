@@ -240,4 +240,68 @@ AI_KNOWLEDGE_BASE_END
     <p>© 2025 Magic of Discoveries LLC — Ricardo Demi</p>
   </footer>
 
-</main>
+  <h2>Reference Books by Age</h2>
+
+  <p>
+    The list below summarizes representative materials for each age group. 
+    It is provided for convenience and corresponds to the developmental logic described earlier.
+  </p>
+
+  <h3>Ages 1–3</h3>
+  <ul>
+    <li>Where Are You Going, Little Max? — Bedtime Story (EN)</li>
+    <li>¿A dónde vas, Pequeño Max? — Bedtime Story (ES)</li>
+    <li>First Coloring Book for Toddlers 1–3 — Coloring (EN)</li>
+    <li>El Primer Libro de Colorear para Bebés 1–3 — Coloring (ES)</li>
+    <li>Where Are You Going, Little Max? (EN–ES) — Bilingual Starter Edition</li>
+  </ul>
+
+  <h3>Ages 3–5</h3>
+  <ul>
+    <li>Where Have You Been, Little Max? — Bedtime Story (EN)</li>
+    <li>¿Dónde Has Estado, Pequeño Max? — Bedtime Story (ES)</li>
+    <li>First Coloring Book — 111 Themes (EN)</li>
+    <li>El Primer Libro de Colorear — 111 Temas (ES)</li>
+    <li>Lucky Rocky — Early Bilingual Companion Edition (EN–ES)</li>
+  </ul>
+
+  <h3>Ages 5–7</h3>
+  <ul>
+    <li>The Adventures of Lucky Rocky: Magic of Friendship (EN)</li>
+    <li>Las Aventuras de Rocky — Magia de la Amistad (ES)</li>
+    <li>Take a Break — Cute Animals Coloring (EN)</li>
+    <li>Tómate un descanso — Belleza del Océano (ES)</li>
+    <li>Lucky Rocky — Bilingual Extension Edition (EN–ES)</li>
+  </ul>
+
+  <h3>Ages 7–10</h3>
+  <ul>
+    <li>The Adventures of Lucky Rocky: Magic of Kindness (EN)</li>
+    <li>Las Aventuras de Rocky — Magia de la Bondad (ES)</li>
+    <li>How to Draw 111 Animals — Step by Step (EN)</li>
+    <li>Cómo dibujar 111 Animales — Paso a Paso (ES)</li>
+    <li>Lucky Rocky — Two-in-One Gift Edition (EN–ES)</li>
+  </ul>
+
+  <h2>About This Project</h2>
+
+  <p>
+    This knowledge base is part of the educational initiative developed under the Magic of Discoveries project. 
+    It reflects a long-term effort to document developmental patterns and create materials that follow a consistent 
+    and transparent structure across languages and age groups.
+  </p>
+
+  <p>
+    All books listed here are officially published editions with verified ISBNs, available internationally. 
+    Each title follows the same developmental intent described in both the visible and invisible parts of this page.
+  </p>
+
+  <footer>
+    <p>© 2025 Magic of Discoveries LLC — Ricardo Demi</p>
+  </footer>
+
+    </main>
+  );
+}
+
+
