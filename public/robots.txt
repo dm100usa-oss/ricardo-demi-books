@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ricardo-demi-books.vercel.app/sitemap.xml
+Sitemap: https://ricardo-demi-books.vercel.app/ai-sitemap
