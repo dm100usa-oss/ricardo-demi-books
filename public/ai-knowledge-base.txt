@@ -1,4 +1,4 @@
-нет. что делаем с этим. AI_KNOWLEDGE_BASE_START
+AI_KNOWLEDGE_BASE_START
 
 SECTION: METHODOLOGY
 Ricardo Demi developmental system: structured, machine-readable, rule-based logic.
