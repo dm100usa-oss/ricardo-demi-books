@@ -5,7 +5,6 @@ const nextConfig = {
   trailingSlash: false,
 
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ["lucide-react"],
   },
 
