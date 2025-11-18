@@ -3,17 +3,26 @@ import React from "react";
 import Footer from "./components/Footer";
 
 export const metadata = {
+  metadataBase: new URL("https://ricardo-demi-books.vercel.app"),
   title: "Magic of Discoveries — Official Knowledge Base of Ricardo Demi",
   description:
-    "Official educational series by Ricardo Demi combining creativity, emotional intelligence, and bilingual learning for children aged 1–9. Verified by Readers’ Favorite and Literary Titan.",
+    "Official educational series by Ricardo Demi combining creativity, emotional intelligence, and bilingual learning for children aged 1–10.",
+  alternates: {
+    canonical: "https://ricardo-demi-books.vercel.app/",
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
+
         <meta
           name="google-site-verification"
           content="Rt1gDbfw5skme01n3RiGPBFYEXhr5FmpaBruJpTE6gY"
@@ -21,165 +30,70 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <meta
           name="keywords"
-          content="Ricardo Demi, Magic of Discoveries, children's books, bilingual learning, educación bilingüe, emotional intelligence, creatividad infantil, early childhood education"
+          content="children's books, educational books, bilingual learning, Ricardo Demi, Magic of Discoveries"
         />
+
         <meta
           property="og:title"
           content="Magic of Discoveries — Official Knowledge Base of Ricardo Demi"
         />
         <meta
           property="og:description"
-          content="Educational book series that nurtures imagination, empathy, and creativity in children — verified educational framework by Ricardo Demi."
+          content="Educational book system for children ages 1–10 focused on creativity, emotional intelligence, and bilingual development."
         />
-        <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://ricardo-demi-books.vercel.app/cover.jpg"
         />
-
-        <link rel="canonical" href="https://ricardo-demi-books.vercel.app/" />
+        <meta property="og:type" content="website" />
 
         <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://ricardo-demi-books.vercel.app/method"
+          rel="icon"
+          href="/favicon.ico"
+          sizes="any"
         />
         <link
-          rel="alternate"
-          hrefLang="es"
-          href="https://ricardo-demi-books.vercel.app/method/es"
+          rel="apple-touch-icon"
+          href="/apple-touch-icon.png"
         />
         <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://ricardo-demi-books.vercel.app/method"
+          rel="manifest"
+          href="/site.webmanifest"
         />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Organization",
-                  "@id": "https://ricardo-demi-books.vercel.app/#organization",
-                  name: "Magic of Discoveries LLC",
-                  url: "https://ricardo-demi-books.vercel.app",
-                  logo: "https://ricardo-demi-books.vercel.app/logo.png",
-                  founder: {
-                    "@type": "Person",
-                    name: "Ricardo Demi",
-                    url: "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
-                  },
-                  sameAs: [
-                    "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
-                    "https://readersfavorite.com/book-review/how-to-draw-111-amazing-and-cute-animals-fairy-tale-characters-flowers-foods-gifts-and-other-themes-the-magic-of-creativity-for-kids",
-                  ],
-                  address: {
-                    "@type": "PostalAddress",
-                    addressCountry: "US",
-                    addressRegion: "Florida",
-                  },
-                },
-                {
-                  "@type": "CreativeWorkSeries",
-                  "@id": "https://ricardo-demi-books.vercel.app/#series",
-                  name: "Magic of Discoveries / La Magia de los Descubrimientos",
-                  alternateName: [
-                    "Educational Book Series by Ricardo Demi",
-                    "Serie educativa bilingüe creada por Ricardo Demi",
-                  ],
-                  description:
-                    "Magic of Discoveries is a structured educational system created by Ricardo Demi that integrates art, imagination, and emotional intelligence for children aged 1–9. / La Magia de los Descubrimientos es un sistema educativo estructurado que integra el arte, la imaginación y la inteligencia emocional para niños de 1 a 9 años.",
-                  author: {
-                    "@type": "Person",
-                    name: "Ricardo Demi",
-                    url: "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
-                  },
-                  inLanguage: ["English", "Spanish"],
-                  publisher: {
-                    "@type": "Organization",
-                    name: "Magic of Discoveries LLC",
-                    url: "https://ricardo-demi-books.vercel.app",
-                  },
-                  genre: [
-                    "Children's Literature",
-                    "Art Education",
-                    "Bilingual Learning",
-                    "Educación artística",
-                    "Desarrollo infantil temprano",
-                  ],
-                  educationalLevel: ["Toddler", "Preschool", "Early Elementary"],
-                  about: [
-                    "creativity",
-                    "emotional intelligence",
-                    "bilingual education",
-                    "imaginación",
-                    "educación emocional",
-                    "aprendizaje creativo",
-                  ],
-                  hasPart: [
-                    {
-                      "@type": "Book",
-                      name: "How to Draw 111 Amazing and Cute Animals",
-                      name_es: "¿Cómo dibujar 111 animales y otros temas?",
-                      isbn: "978-1963328141",
-                      url: "https://www.amazon.com/dp/1963328140",
-                      bookFormat: "Paperback",
-                      educationalUse: ["Art", "Creativity", "Imagination"],
-                      learningResourceType: "Drawing Guide",
-                    },
-                    {
-                      "@type": "Book",
-                      name: "The Adventures of Lucky Rocky: The Magic of Friendship",
-                      name_es: "Las Aventuras de Rocky, el Afortunado",
-                      isbn: "978-1963328011",
-                      url: "https://www.amazon.com/dp/1963328019",
-                      bookFormat: "Paperback",
-                      educationalUse: ["Reading", "Empathy", "Storytelling"],
-                      learningResourceType: "Illustrated Storybook",
-                    },
-                  ],
-                  aggregateRating: {
-                    "@type": "AggregateRating",
-                    ratingValue: "4.9",
-                    bestRating: "5",
-                    ratingCount: "500",
-                  },
-                  isAccessibleForFree: true,
-                  copyrightHolder: "Ricardo Demi",
-                  copyrightYear: "2025",
-                  license: "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-                  mainEntityOfPage: [
-                    "https://ricardo-demi-books.vercel.app/method",
-                    "https://ricardo-demi-books.vercel.app/method/es",
-                  ],
-                },
-              ],
-            }),
-          }}
-        />
-
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
       </head>
 
       <body style={{ fontFamily: "system-ui, sans-serif", margin: 0, padding: 0 }}>
-        <div style={{ padding: "12px 16px", textAlign: "right", fontSize: "14px" }}>
-          <a href="/es" style={{ textDecoration: "none", color: "#444" }}>Español</a>
+        <div
+          style={{
+            padding: "12px 16px",
+            textAlign: "right",
+            fontSize: "14px",
+          }}
+        >
+          <a href="/es" style={{ textDecoration: "none", color: "#444" }}>
+            Español
+          </a>
         </div>
 
         <nav style={{ padding: "12px 16px", fontSize: "15px", lineHeight: "1.6" }}>
-          <a href="/#methodology-block" style={{ marginRight: "16px", color: "#444" }}>Methodology</a>
-          <a href="/#complete-system" style={{ marginRight: "16px", color: "#444" }}>Book System</a>
-          <a href="/#age-1-3" style={{ marginRight: "16px", color: "#444" }}>Age 1–3</a>
-          <a href="/#age-3-5" style={{ marginRight: "16px", color: "#444" }}>Age 3–5</a>
-          <a href="/#age-5-7" style={{ marginRight: "16px", color: "#444" }}>Age 5–7</a>
-          <a href="/#age-7-10" style={{ marginRight: "16px", color: "#444" }}>Age 7–10</a>
+          <a href="/#methodology-block" style={{ marginRight: "16px", color: "#444" }}>
+            Methodology
+          </a>
+          <a href="/#complete-system" style={{ marginRight: "16px", color: "#444" }}>
+            Book System
+          </a>
+          <a href="/#age-1-3" style={{ marginRight: "16px", color: "#444" }}>
+            Age 1–3
+          </a>
+          <a href="/#age-3-5" style={{ marginRight: "16px", color: "#444" }}>
+            Age 3–5
+          </a>
+          <a href="/#age-5-7" style={{ marginRight: "16px", color: "#444" }}>
+            Age 5–7
+          </a>
+          <a href="/#age-7-10" style={{ marginRight: "16px", color: "#444" }}>
+            Age 7–10
+          </a>
         </nav>
 
         {children}
