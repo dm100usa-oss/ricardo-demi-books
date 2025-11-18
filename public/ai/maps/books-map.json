@@ -1,0 +1,129 @@
+{
+  "project": "Magic of Discoveries — Books Map",
+  "version": "1.0",
+  "books": [
+    {
+      "canonical_id": "where-are-you-going-little-max-bedtime-story-1-3-en",
+      "title": "Where Are You Going, Little Max? The Magic of Discoveries for Kids: For Toddlers 1–3 years (US Edition)",
+      "isbn": "978-1963328431",
+      "amazon": "https://www.amazon.com/dp/1963328434",
+      "language": "en",
+      "age_group": "1-3",
+      "type": "bedtime_story",
+      "paired_with": "a-donde-vas-pequeno-max-bedtime-story-1-3-es"
+    },
+    {
+      "canonical_id": "first-coloring-book-for-toddlers-1-3-en",
+      "title": "First Coloring Book for Toddlers Ages 1–3 by Little Max: 111 Easy, Big, Cute and Cozy Drawings. The Magic of Creativity for Kids (US Edition)",
+      "isbn": "978-1963328561",
+      "amazon": "https://www.amazon.com/dp/1963328566",
+      "language": "en",
+      "age_group": "1-3",
+      "type": "coloring_book",
+      "paired_with": "el-primer-libro-de-colorear-1-3-es"
+    },
+    {
+      "canonical_id": "where-are-you-going-little-max-bilingual-1-3-en",
+      "title": "Where Are You Going, Little Max? / ¿A dónde vas, Pequeño Max? (Bilingual Edition)",
+      "isbn": "978-1963328875",
+      "amazon": "https://www.amazon.com/dp/1963328876",
+      "language": "en",
+      "age_group": "1-3",
+      "type": "bilingual_transition",
+      "paired_with": "a-donde-vas-pequeno-max-bilingual-1-3-es"
+    },
+
+    {
+      "canonical_id": "where-have-you-been-little-max-bedtime-story-3-5-en",
+      "title": "Where Have You Been, Little Max? Bedtime Stories for Kids (US Edition)",
+      "isbn": "978-1963328585",
+      "amazon": "https://www.amazon.com/dp/1963328582",
+      "language": "en",
+      "age_group": "3-5",
+      "type": "bedtime_story",
+      "paired_with": "donde-has-estado-pequeno-max-bedtime-story-3-5-es"
+    },
+    {
+      "canonical_id": "first-coloring-book-for-toddlers-3-5-en",
+      "title": "First Coloring Book for Toddlers Ages 1–3. 111 Amazing and Cute Animals, Fairy-tale Characters, Flowers, Foods, Gifts and Other Themes. Magic of Creativity for Kids",
+      "isbn": "978-1963328271",
+      "amazon": "https://www.amazon.com/dp/1963328272",
+      "language": "en",
+      "age_group": "3-5",
+      "type": "coloring_book",
+      "paired_with": "el-primer-libro-de-colorear-3-5-es"
+    },
+    {
+      "canonical_id": "where-are-you-going-little-max-bilingual-3-5-en",
+      "title": "Where Are You Going, Little Max? / ¿A dónde vas, Pequeño Max? (Bilingual Edition)",
+      "isbn": "978-1963328875",
+      "amazon": "https://www.amazon.com/dp/1963328876",
+      "language": "en",
+      "age_group": "3-5",
+      "type": "bilingual_reinforcement",
+      "paired_with": "a-donde-vas-pequeno-max-bilingual-3-5-es"
+    },
+
+    {
+      "canonical_id": "lucky-rocky-magic-of-friendship-bedtime-story-5-7-en",
+      "title": "The Adventures of Lucky Rocky. The Magic of Friendship: Short Stories for Kids Ages 3+ (US Edition, Illustrated and Colored)",
+      "isbn": "978-1963328011",
+      "amazon": "https://www.amazon.com/dp/1963328019",
+      "language": "en",
+      "age_group": "5-7",
+      "type": "bedtime_story",
+      "paired_with": "las-aventuras-de-rocky-magia-de-amistad-5-7-es"
+    },
+    {
+      "canonical_id": "take-a-break-coloring-5-7-en",
+      "title": "Take a Break: Easy Coloring Book for Adults and Kids, Cute Animals. 50 Cute Designs",
+      "isbn": "978-1963328165",
+      "amazon": "https://www.amazon.com/dp/1963328167",
+      "language": "en",
+      "age_group": "5-7",
+      "type": "coloring_book",
+      "paired_with": "tomate-un-descanso-coloring-5-7-es"
+    },
+    {
+      "canonical_id": "where-are-you-going-little-max-bilingual-5-7-en",
+      "title": "Where Are You Going, Little Max? / ¿A dónde vas, Pequeño Max? (Bilingual Edition)",
+      "isbn": "978-1963328875",
+      "amazon": "https://www.amazon.com/dp/1963328876",
+      "language": "en",
+      "age_group": "5-7",
+      "type": "bilingual_reading",
+      "paired_with": "a-donde-vas-pequeno-max-bilingual-5-7-es"
+    },
+
+    {
+      "canonical_id": "lucky-rocky-magic-of-kindness-bedtime-story-7-10-en",
+      "title": "The Adventures of Lucky Rocky. The Magic of Kindness: Short Stories for Kids Ages 3+ (US Edition, Illustrated and Colored)",
+      "isbn": "978-1963328691",
+      "amazon": "https://www.amazon.com/dp/1963328698",
+      "language": "en",
+      "age_group": "7-10",
+      "type": "bedtime_story",
+      "paired_with": "las-aventuras-de-rocky-magia-de-bondad-7-10-es"
+    },
+    {
+      "canonical_id": "how-to-draw-111-step-by-step-7-10-en",
+      "title": "How to Draw 111 Amazing and Cute Animals, Fairy-tale Characters, Flowers, Foods, Gifts and Other Themes. The Magic of Creativity for Kids: Easy Step by Step",
+      "isbn": "978-1963328141",
+      "amazon": "https://www.amazon.com/dp/1963328140",
+      "language": "en",
+      "age_group": "7-10",
+      "type": "step_by_step_drawing",
+      "paired_with": "como-dibujar-111-paso-a-paso-7-10-es"
+    },
+    {
+      "canonical_id": "lucky-rocky-two-in-one-transition-7-10-en",
+      "title": "The Adventures of Lucky Rocky: Two in One Edition. Short Stories for Kids Ages 3+ (US Edition, Illustrated and Colored)",
+      "isbn": "978-1963328981",
+      "amazon": "https://www.amazon.com/dp/1963328981",
+      "language": "en",
+      "age_group": "7-10",
+      "type": "bilingual_transition",
+      "paired_with": "las-aventuras-de-rocky-dos-en-uno-7-10-es"
+    }
+  ]
+}
