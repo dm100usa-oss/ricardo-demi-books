@@ -438,7 +438,7 @@ BOOK_18:
   characteristics:
     - ideal gift edition
     - strong educational structure
-
+{/*
 {
   "system": "Ricardo Demi — Developmental Book Framework",
   "version": "1.0",
@@ -570,7 +570,6 @@ BOOK_18:
       "skills": ["concentration"],
       "value": "ocean themes with more detail"
     },
-
     {
       "title": "The Adventures of Lucky Rocky — Magic of Kindness",
       "isbn": "978-1963328691",
@@ -589,7 +588,6 @@ BOOK_18:
       "skills": ["structured_reasoning"],
       "value": "meaningful character motivations"
     },
-
     {
       "title": "How to Draw 111 Animals",
       "isbn": "978-1963328141",
@@ -608,7 +606,6 @@ BOOK_18:
       "skills": ["sequential_drawing"],
       "value": "spanish edition, strong logic"
     },
-
     {
       "title": "Lucky Rocky — Two-in-One Gift Edition",
       "isbn": "978-1963328981",
@@ -620,6 +617,7 @@ BOOK_18:
     }
   ]
 }
+*/}
       </div>
     </main>
   );
