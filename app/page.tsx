@@ -1,5 +1,3 @@
-"use client";
-
 export const dynamic = "force-static";
 
 export const metadata = {
@@ -14,6 +12,7 @@ export const metadata = {
     },
   },
 };
+
 
 export default function HomePage() {
 
