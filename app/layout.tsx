@@ -20,19 +20,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Basic meta */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
 
+        {/* Bing Verification */}
+        <meta
+          name="msvalidate.01"
+          content="7A3E245327DA485A41AE5DFAC5449599"
+        />
+
+        {/* Google Verification */}
         <meta
           name="google-site-verification"
           content="Rt1gDbfw5skme01n3RiGPBFYEXhr5FmpaBruJpTE6gY"
         />
 
+        {/* SEO Keywords */}
         <meta
           name="keywords"
           content="children's books, educational books, bilingual learning, Ricardo Demi, Magic of Discoveries"
         />
 
+        {/* OpenGraph */}
         <meta
           property="og:title"
           content="Magic of Discoveries — Official Knowledge Base of Ricardo Demi"
@@ -47,22 +57,14 @@ export default function RootLayout({
         />
         <meta property="og:type" content="website" />
 
-        <link
-          rel="icon"
-          href="/favicon.ico"
-          sizes="any"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="manifest"
-          href="/site.webmanifest"
-        />
+        {/* Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
 
       <body style={{ fontFamily: "system-ui, sans-serif", margin: 0, padding: 0 }}>
+        {/* Language Switcher */}
         <div
           style={{
             padding: "12px 16px",
@@ -75,6 +77,7 @@ export default function RootLayout({
           </a>
         </div>
 
+        {/* Navigation */}
         <nav style={{ padding: "12px 16px", fontSize: "15px", lineHeight: "1.6" }}>
           <a href="/#methodology-block" style={{ marginRight: "16px", color: "#444" }}>
             Methodology
