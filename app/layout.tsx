@@ -23,13 +23,11 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
 
-        {/* Bing Verification */}
         <meta
           name="msvalidate.01"
           content="7A3E245327DA485A41AE5DFAC5449599"
         />
 
-        {/* Google Verification */}
         <meta
           name="google-site-verification"
           content="Rt1gDbfw5skme01n3RiGPBFYEXhr5FmpaBruJpTE6gY"
@@ -59,11 +57,18 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
 
-      <body style={{ fontFamily: "system-ui, sans-serif", margin: 0, padding: 0 }}>
+      <body
+        style={{
+          fontFamily: "system-ui, sans-serif",
+          margin: 0,
+          padding: 0,
+        }}
+      >
 
-        {/* ---------- TOP NAVIGATION ---------- */}
+        {/* TOP NAVIGATION */}
         <nav
           style={{
+            backgroundColor: "#f5f5f5",
             padding: "14px 16px",
             fontSize: "15px",
             display: "flex",
@@ -74,10 +79,6 @@ export default function RootLayout({
             borderBottom: "1px solid #ddd",
           }}
         >
-          <a href="/" style={{ color: "#333", textDecoration: "none" }}>
-            English&nbsp;&nbsp;🇺🇸
-          </a>
-
           <a href="/#methodology-block" style={{ color: "#333", textDecoration: "none" }}>
             Methodology
           </a>
@@ -102,12 +103,11 @@ export default function RootLayout({
             Age 7–10
           </a>
 
+          {/* ONLY ESPAÑOL HERE */}
           <a href="/es" style={{ color: "#333", textDecoration: "none" }}>
             Español&nbsp;&nbsp;🇪🇸
           </a>
         </nav>
-
-        {/* ---------- END NAV ---------- */}
 
         {children}
         <Footer />
