@@ -30,48 +30,67 @@ export default function RootLayoutES({
           padding: 0,
         }}
       >
-        {/* Top Navigation */}
+
+        {/* TOP NAVIGATION */}
         <nav
           style={{
             backgroundColor: "#f5f5f5",
-            padding: "12px 16px",
-            textAlign: "center",
+            padding: "14px 16px",
             fontSize: "15px",
-            lineHeight: "1.6",
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
-            gap: "24px",
-            flexWrap: "wrap",
-            borderBottom: "1px solid #e0e0e0",
-            color: "#444",
+            gap: "22px",
+            color: "#333",
+            fontWeight: 500,
+            borderBottom: "1px solid #ddd",
           }}
         >
-          {/* Language switcher */}
-          <a href="/" style={{ color: "#444" }}>
-            English 🇺🇸
-          </a>
-
-          <a href="/es#methodology-block" style={{ color: "#444" }}>
+          <a
+            href="/es#methodology-block"
+            style={{ color: "#333", textDecoration: "none" }}
+          >
             Metodología
           </a>
-          <a href="/es#complete-system" style={{ color: "#444" }}>
+
+          <a
+            href="/es#complete-system"
+            style={{ color: "#333", textDecoration: "none" }}
+          >
             Sistema de Libros
           </a>
-          <a href="/es#age-1-3" style={{ color: "#444" }}>
+
+          <a
+            href="/es#age-1-3"
+            style={{ color: "#333", textDecoration: "none" }}
+          >
             Edad 1–3
           </a>
-          <a href="/es#age-3-5" style={{ color: "#444" }}>
+
+          <a
+            href="/es#age-3-5"
+            style={{ color: "#333", textDecoration: "none" }}
+          >
             Edad 3–5
           </a>
-          <a href="/es#age-5-7" style={{ color: "#444" }}>
+
+          <a
+            href="/es#age-5-7"
+            style={{ color: "#333", textDecoration: "none" }}
+          >
             Edad 5–7
           </a>
-          <a href="/es#age-7-10" style={{ color: "#444" }}>
+
+          <a
+            href="/es#age-7-10"
+            style={{ color: "#333", textDecoration: "none" }}
+          >
             Edad 7–10
           </a>
 
-          <span style={{ color: "#444" }}>Español 🇪🇸</span>
+          {/* ONLY ENGLISH HERE */}
+          <a href="/" style={{ color: "#333", textDecoration: "none" }}>
+            English&nbsp;&nbsp;🇺🇸
+          </a>
         </nav>
 
         {children}
