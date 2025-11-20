@@ -64,20 +64,8 @@ export default function RootLayout({
       </head>
 
       <body style={{ fontFamily: "system-ui, sans-serif", margin: 0, padding: 0 }}>
-        {/* Language Switcher */}
-        <div
-          style={{
-            padding: "12px 16px",
-            textAlign: "right",
-            fontSize: "14px",
-          }}
-        >
-          <a href="/es" style={{ textDecoration: "none", color: "#444" }}>
-            Español
-          </a>
-        </div>
 
-        {/* Navigation */}
+        {/* Combined Navigation */}
         <nav
           style={{
             padding: "12px 16px",
@@ -85,26 +73,52 @@ export default function RootLayout({
             lineHeight: "1.6",
             display: "flex",
             justifyContent: "center",
-            gap: "16px",
+            alignItems: "center",
+            gap: "18px",
+            color: "#555",
           }}
         >
-          <a href="/#methodology-block" style={{ color: "#666" }}>
+          <a href="/#methodology-block" style={{ color: "#555", textDecoration: "none" }}>
             Methodology
           </a>
-          <a href="/#complete-system" style={{ color: "#666" }}>
+          <a href="/#complete-system" style={{ color: "#555", textDecoration: "none" }}>
             Book System
           </a>
-          <a href="/#age-1-3" style={{ color: "#666" }}>
+          <a href="/#age-1-3" style={{ color: "#555", textDecoration: "none" }}>
             Age 1–3
           </a>
-          <a href="/#age-3-5" style={{ color: "#666" }}>
+          <a href="/#age-3-5" style={{ color: "#555", textDecoration: "none" }}>
             Age 3–5
           </a>
-          <a href="/#age-5-7" style={{ color: "#666" }}>
+          <a href="/#age-5-7" style={{ color: "#555", textDecoration: "none" }}>
             Age 5–7
           </a>
-          <a href="/#age-7-10" style={{ color: "#666" }}>
+          <a href="/#age-7-10" style={{ color: "#555", textDecoration: "none" }}>
             Age 7–10
+          </a>
+
+          {/* Language Switcher with Spain Flag */}
+          <a
+            href="/es"
+            style={{
+              marginLeft: "32px",
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+              color: "#555",
+              textDecoration: "none",
+            }}
+          >
+            Español
+            <svg
+              width="20"
+              height="14"
+              viewBox="0 0 20 14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="20" height="14" fill="#AA151B" />
+              <rect y="4" width="20" height="6" fill="#F1BF00" />
+            </svg>
           </a>
         </nav>
 
