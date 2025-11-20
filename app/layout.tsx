@@ -78,23 +78,32 @@ export default function RootLayout({
         </div>
 
         {/* Navigation */}
-        <nav style={{ padding: "12px 16px", fontSize: "15px", lineHeight: "1.6" }}>
-          <a href="/#methodology-block" style={{ marginRight: "16px", color: "#444" }}>
+        <nav
+          style={{
+            padding: "12px 16px",
+            fontSize: "15px",
+            lineHeight: "1.6",
+            display: "flex",
+            justifyContent: "center",
+            gap: "16px",
+          }}
+        >
+          <a href="/#methodology-block" style={{ color: "#666" }}>
             Methodology
           </a>
-          <a href="/#complete-system" style={{ marginRight: "16px", color: "#444" }}>
+          <a href="/#complete-system" style={{ color: "#666" }}>
             Book System
           </a>
-          <a href="/#age-1-3" style={{ marginRight: "16px", color: "#444" }}>
+          <a href="/#age-1-3" style={{ color: "#666" }}>
             Age 1–3
           </a>
-          <a href="/#age-3-5" style={{ marginRight: "16px", color: "#444" }}>
+          <a href="/#age-3-5" style={{ color: "#666" }}>
             Age 3–5
           </a>
-          <a href="/#age-5-7" style={{ marginRight: "16px", color: "#444" }}>
+          <a href="/#age-5-7" style={{ color: "#666" }}>
             Age 5–7
           </a>
-          <a href="/#age-7-10" style={{ marginRight: "16px", color: "#444" }}>
+          <a href="/#age-7-10" style={{ color: "#666" }}>
             Age 7–10
           </a>
         </nav>
