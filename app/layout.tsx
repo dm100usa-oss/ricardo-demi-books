@@ -79,31 +79,30 @@ export default function RootLayout({
             borderBottom: "1px solid #ddd",
           }}
         >
-          <a href="/#methodology-block" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/method" style={{ color: "#333", textDecoration: "none" }}>
             Methodology
           </a>
 
-          <a href="/#complete-system" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/books" style={{ color: "#333", textDecoration: "none" }}>
             Book System
           </a>
 
-          <a href="/#age-1-3" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/ages/1-3" style={{ color: "#333", textDecoration: "none" }}>
             Age 1–3
           </a>
 
-          <a href="/#age-3-5" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/ages/3-5" style={{ color: "#333", textDecoration: "none" }}>
             Age 3–5
           </a>
 
-          <a href="/#age-5-7" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/ages/5-7" style={{ color: "#333", textDecoration: "none" }}>
             Age 5–7
           </a>
 
-          <a href="/#age-7-10" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/ages/7-10" style={{ color: "#333", textDecoration: "none" }}>
             Age 7–10
           </a>
 
-          {/* ONLY ESPAÑOL HERE */}
           <a href="/es" style={{ color: "#333", textDecoration: "none" }}>
             Español&nbsp;&nbsp;🇪🇸
           </a>
