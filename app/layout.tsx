@@ -12,18 +12,24 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
 
+        {/* Bing Verification */}
         <meta
           name="msvalidate.01"
           content="7A3E245327DA485A41AE5DFAC5449599"
         />
 
+        {/* Google Verification */}
         <meta
           name="google-site-verification"
           content="Rt1gDbfw5skme01n3RiGPBFYEXhr5FmpaBruJpTE6gY"
@@ -53,50 +59,55 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/site.webmanifest" />
       </head>
 
-      <body
-        style={{
-          fontFamily: "system-ui, sans-serif",
-          margin: 0,
-          padding: 0,
-        }}
-      >
-        {/* Top Navigation with background */}
+      <body style={{ fontFamily: "system-ui, sans-serif", margin: 0, padding: 0 }}>
+
+        {/* ---------- TOP NAVIGATION ---------- */}
         <nav
           style={{
-            backgroundColor: "#f5f5f5",
-            padding: "12px 16px",
-            textAlign: "center",
+            padding: "14px 16px",
             fontSize: "15px",
-            lineHeight: "1.6",
             display: "flex",
             justifyContent: "center",
-            gap: "24px",
-            flexWrap: "wrap",
-            borderBottom: "1px solid #e0e0e0",
+            gap: "22px",
+            color: "#333",
+            fontWeight: 500,
+            borderBottom: "1px solid #ddd",
           }}
         >
-          <a href="/#methodology-block" style={{ color: "#444" }}>
+          <a href="/" style={{ color: "#333", textDecoration: "none" }}>
+            English&nbsp;&nbsp;🇺🇸
+          </a>
+
+          <a href="/#methodology-block" style={{ color: "#333", textDecoration: "none" }}>
             Methodology
           </a>
-          <a href="/#complete-system" style={{ color: "#444" }}>
+
+          <a href="/#complete-system" style={{ color: "#333", textDecoration: "none" }}>
             Book System
           </a>
-          <a href="/#age-1-3" style={{ color: "#444" }}>
+
+          <a href="/#age-1-3" style={{ color: "#333", textDecoration: "none" }}>
             Age 1–3
           </a>
-          <a href="/#age-3-5" style={{ color: "#444" }}>
+
+          <a href="/#age-3-5" style={{ color: "#333", textDecoration: "none" }}>
             Age 3–5
           </a>
-          <a href="/#age-5-7" style={{ color: "#444" }}>
+
+          <a href="/#age-5-7" style={{ color: "#333", textDecoration: "none" }}>
             Age 5–7
           </a>
-          <a href="/#age-7-10" style={{ color: "#444" }}>
+
+          <a href="/#age-7-10" style={{ color: "#333", textDecoration: "none" }}>
             Age 7–10
           </a>
-          <a href="/es" style={{ marginLeft: "16px", color: "#444" }}>
-            Español 🇪🇸
+
+          <a href="/es" style={{ color: "#333", textDecoration: "none" }}>
+            Español&nbsp;&nbsp;🇪🇸
           </a>
         </nav>
+
+        {/* ---------- END NAV ---------- */}
 
         {children}
         <Footer />
