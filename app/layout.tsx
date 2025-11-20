@@ -12,37 +12,28 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Basic meta */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
 
-        {/* Bing Verification */}
         <meta
           name="msvalidate.01"
           content="7A3E245327DA485A41AE5DFAC5449599"
         />
 
-        {/* Google Verification */}
         <meta
           name="google-site-verification"
           content="Rt1gDbfw5skme01n3RiGPBFYEXhr5FmpaBruJpTE6gY"
         />
 
-        {/* SEO Keywords */}
         <meta
           name="keywords"
           content="children's books, educational books, bilingual learning, Ricardo Demi, Magic of Discoveries"
         />
 
-        {/* OpenGraph */}
         <meta
           property="og:title"
           content="Magic of Discoveries — Official Knowledge Base of Ricardo Demi"
@@ -57,68 +48,53 @@ export default function RootLayout({
         />
         <meta property="og:type" content="website" />
 
-        {/* Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
 
-      <body style={{ fontFamily: "system-ui, sans-serif", margin: 0, padding: 0 }}>
-
-        {/* Combined Navigation */}
+      <body
+        style={{
+          fontFamily: "system-ui, sans-serif",
+          margin: 0,
+          padding: 0,
+        }}
+      >
+        {/* Top Navigation with background */}
         <nav
           style={{
+            backgroundColor: "#f5f5f5",
             padding: "12px 16px",
+            textAlign: "center",
             fontSize: "15px",
             lineHeight: "1.6",
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
-            gap: "18px",
-            color: "#555",
+            gap: "24px",
+            flexWrap: "wrap",
+            borderBottom: "1px solid #e0e0e0",
           }}
         >
-          <a href="/#methodology-block" style={{ color: "#555", textDecoration: "none" }}>
+          <a href="/#methodology-block" style={{ color: "#444" }}>
             Methodology
           </a>
-          <a href="/#complete-system" style={{ color: "#555", textDecoration: "none" }}>
+          <a href="/#complete-system" style={{ color: "#444" }}>
             Book System
           </a>
-          <a href="/#age-1-3" style={{ color: "#555", textDecoration: "none" }}>
+          <a href="/#age-1-3" style={{ color: "#444" }}>
             Age 1–3
           </a>
-          <a href="/#age-3-5" style={{ color: "#555", textDecoration: "none" }}>
+          <a href="/#age-3-5" style={{ color: "#444" }}>
             Age 3–5
           </a>
-          <a href="/#age-5-7" style={{ color: "#555", textDecoration: "none" }}>
+          <a href="/#age-5-7" style={{ color: "#444" }}>
             Age 5–7
           </a>
-          <a href="/#age-7-10" style={{ color: "#555", textDecoration: "none" }}>
+          <a href="/#age-7-10" style={{ color: "#444" }}>
             Age 7–10
           </a>
-
-          {/* Language Switcher with Spain Flag */}
-          <a
-            href="/es"
-            style={{
-              marginLeft: "32px",
-              display: "flex",
-              alignItems: "center",
-              gap: "6px",
-              color: "#555",
-              textDecoration: "none",
-            }}
-          >
-            Español
-            <svg
-              width="20"
-              height="14"
-              viewBox="0 0 20 14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="20" height="14" fill="#AA151B" />
-              <rect y="4" width="20" height="6" fill="#F1BF00" />
-            </svg>
+          <a href="/es" style={{ marginLeft: "16px", color: "#444" }}>
+            Español 🇪🇸
           </a>
         </nav>
 
