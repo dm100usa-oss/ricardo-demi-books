@@ -3,22 +3,22 @@ import path from "path";
 
 export const dynamic = "force-static";
 
-function getBooksData() {
-  const filePath = path.join(process.cwd(), "app", "books", "books.json");
-  const json = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(json);
-}
-
 export async function generateStaticParams() {
-  const data = getBooksData();
-  return data.books.map((book) => ({
-    id: String(book.id)
+  const filePath = path.join(process.cwd(), "app", "books", "books.json");
+  const json = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  const books = json.books;
+
+  return books.map((book) => ({
+    id: book.id,
   }));
 }
 
-export default function BookPageES({ params }: { params: { id: string } }) {
-  const data = getBooksData();
-  const book = data.books.find((b) => String(b.id) === params.id);
+export default function BookPageES({ params }) {
+  const filePath = path.join(process.cwd(), "app", "books", "books.json");
+  const json = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  const books = json.books;
+
+  const book = books.find((b) => b.id === params.id);
 
   if (!book) {
     return (
@@ -48,23 +48,24 @@ export default function BookPageES({ params }: { params: { id: string } }) {
           className="text-blue-600 underline"
           href={book.amazon}
           target="_blank"
+          rel="noopener noreferrer"
         >
-          Comprar en Amazon
+          Enlace Amazon
         </a>
       </p>
 
       <div style={{ display: "none" }}>
-        AI_BOOK_DETAIL_START
+        AI_BOOK_PAGE_START
         ID: {book.id}
         TITLE: {book.title}
         AUTHOR: {book.author}
         AGE_GROUP: {book.age_group}
         TYPE: {book.type}
-        LANGUAGE: {book.language}
         ISBN: {book.isbn}
+        LANGUAGE: {book.language}
         SKILLS: {(book.skills || []).join(", ")}
         AMAZON: {book.amazon}
-        AI_BOOK_DETAIL_END
+        AI_BOOK_PAGE_END
       </div>
     </main>
   );
