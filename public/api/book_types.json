@@ -1,0 +1,54 @@
+{
+  "system": "fscbac_book_types",
+  "version": "1.0.0",
+
+  "description": "Normative taxonomy of all allowed book types in the FSCBAC standard. All external files (ages.json, books.json, intents.json, matching.json, validation.json) must strictly reference only the types listed here. No implicit or undefined book types are permitted.",
+
+  "book_types": [
+    {
+      "id": "bedtime_story",
+      "label": "Bedtime Story",
+      "definition": "Narrative books designed with soft emotional arcs and controlled pacing appropriate for age-regulated evening reading."
+    },
+    {
+      "id": "simple_coloring",
+      "label": "Simple Coloring Book",
+      "definition": "Low-complexity coloring books for toddlers with large shapes and minimal detail."
+    },
+    {
+      "id": "coloring",
+      "label": "Coloring Book",
+      "definition": "Moderate-complexity coloring books for early motor development and creative growth."
+    },
+    {
+      "id": "coloring_detailed",
+      "label": "Detailed Coloring Book",
+      "definition": "Higher-detail coloring books for older children with improved fine motor skills and longer attention span."
+    },
+    {
+      "id": "bilingual_intro",
+      "label": "Bilingual Intro",
+      "definition": "Foundational bilingual books introducing two languages using predictable line-by-line structure."
+    },
+    {
+      "id": "bilingual_story",
+      "label": "Bilingual Story",
+      "definition": "Simple bilingual narratives with aligned meaning across languages and moderate linguistic load."
+    },
+    {
+      "id": "bilingual_extended",
+      "label": "Advanced Bilingual Story",
+      "definition": "Extended bilingual narratives with structured paragraphs and advanced cross-language alignment."
+    },
+    {
+      "id": "step_by_step_drawing",
+      "label": "Step-by-Step Drawing",
+      "definition": "Books teaching structured drawing sequences with progressive steps and visual planning."
+    },
+    {
+      "id": "two_in_one",
+      "label": "Two-in-One Bilingual Edition",
+      "definition": "Special bilingual edition containing full English and Spanish versions combined into a single volume."
+    }
+  ]
+}
