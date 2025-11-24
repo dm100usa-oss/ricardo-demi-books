@@ -1,140 +1,161 @@
-[
-  {
-    "age_group": "1-3",
-    "speech_level": "single_words_and_two_word_phrases",
-    "motor_level": "basic_fine_motor_start",
-    "attention_level": "short_focus",
-    "emotional_capacity": "very_low_intensity_only",
-    "cognitive_limits": "minimal",
-    "narrative_limits": "no_conflict_simple_sequence",
-    "visual_limits": "large_simple_shapes_low_detail",
-    "allowed_book_types": [
-      "bedtime_story",
-      "simple_coloring",
-      "bilingual_intro"
-    ],
-    "forbidden_elements": [
-      "conflict",
-      "fear",
-      "fast_pacing",
-      "high_contrast_visuals",
-      "small_details",
-      "complex_story_logic",
-      "extended_dialogues"
-    ],
-    "preferred_skills": [
-      "confidence",
-      "soft_story",
-      "predictable_sequence",
-      "motor_basic",
-      "attention_growth",
-      "low_stimulation",
-      "sensory_safety",
-      "one_object_per_page",
-      "low_cognitive_load"
-    ]
-  },
-  {
-    "age_group": "3-5",
-    "speech_level": "simple_sentences_and_dialogues",
-    "motor_level": "controlled_coloring_basic_shapes",
-    "attention_level": "moderate_focus",
-    "emotional_capacity": "low_intensity_soft_adventures",
-    "cognitive_limits": "basic_cause_effect",
-    "narrative_limits": "short_adventure_5_7_minutes",
-    "visual_limits": "moderate_detail",
-    "allowed_book_types": [
-      "bedtime_story",
-      "coloring",
-      "bilingual_story"
-    ],
-    "forbidden_elements": [
-      "fear_scenes",
-      "complex_moral_conflicts",
-      "dense_text",
-      "multiple_parallel_scenes",
-      "high_detail_overload"
-    ],
-    "preferred_skills": [
-      "imagination_seed",
-      "early_logic",
-      "simple_dialogues",
-      "attention_growth",
-      "speech_development",
-      "moderate_detail",
-      "shape_variety",
-      "thematic_exploration",
-      "low_cognitive_load",
-      "bilingual_stories"
-    ]
-  },
-  {
-    "age_group": "5-7",
-    "speech_level": "complex_sentences_and_descriptions",
-    "motor_level": "detailed_coloring_control",
-    "attention_level": "longer_focus",
-    "emotional_capacity": "moderate_depth",
-    "cognitive_limits": "multi_step_reasoning_start",
-    "narrative_limits": "emotional_story_arcs",
-    "visual_limits": "higher_detail_balanced",
-    "allowed_book_types": [
-      "bedtime_story",
-      "coloring_detailed",
-      "bilingual_story"
-    ],
-    "forbidden_elements": [
-      "high_tension",
-      "fast_scene_switching",
-      "advanced_vocabulary_blocks",
-      "extended_moral_conflict"
-    ],
-    "preferred_skills": [
-      "emotion_depth",
-      "logic",
-      "concentration",
-      "independent_thinking",
-      "situational_language",
-      "visual_planning",
-      "moderate_detail",
-      "complex_vocabulary"
-    ]
-  },
-  {
-    "age_group": "7-10",
-    "speech_level": "advanced_sentences_high_vocabulary",
-    "motor_level": "sequential_drawing_mastery",
-    "attention_level": "extended_focus",
-    "emotional_capacity": "advanced_emotion_depth",
-    "cognitive_limits": "structured_reasoning",
-    "narrative_limits": "multi_scene_stories",
-    "visual_limits": "step_by_step_complexity",
-    "allowed_book_types": [
-      "bedtime_story",
-      "step_by_step_drawing",
-      "bilingual_extended"
-    ],
-    "forbidden_elements": [
-      "graphic_conflict",
-      "fear_inducing_scenes",
-      "stories_without_clear_moral",
-      "unstructured_visual_complexity"
-    ],
-    "preferred_skills": [
-      "multi_scene_structure",
-      "moral_reasoning",
-      "structured_reasoning",
-      "abstract_reasoning",
-      "motor_mastery",
-      "complex_shape_breakdown",
-      "independent_drawing",
-      "long_focus",
-      "full_paragraph_bilingual",
-      "parallel_reading",
-      "meaning_alignment",
-      "cross_language_mapping",
-      "independent_language_growth",
-      "advanced_emotion_depth"
-    ]
-  }
-]
+{
+  "version": "1.0.0",
 
+  "ages": [
+    {
+      "age_group": "1-3",
+      "description": "Foundational developmental stage with minimal cognitive load, soft emotional tolerance and very limited narrative complexity.",
+      "speech_level": "single_words_and_two_word_phrases",
+      "motor_level": "basic_fine_motor_start",
+      "attention_level": "short_focus",
+      "emotional_capacity": "very_low_intensity_only",
+      "cognitive_limits": "minimal",
+      "narrative_limits": "no_conflict_simple_sequence",
+      "visual_limits": "large_simple_shapes_low_detail",
+
+      "allowed_book_types": [
+        "bedtime_story",
+        "simple_coloring",
+        "bilingual_intro"
+      ],
+
+      "forbidden_elements": [
+        "conflict",
+        "fear",
+        "fast_pacing",
+        "high_contrast_visuals",
+        "small_details",
+        "complex_story_logic",
+        "extended_dialogues"
+      ],
+
+      "preferred_skills": [
+        "confidence",
+        "predictable_sequence",
+        "motor_basic",
+        "attention_growth",
+        "low_stimulation",
+        "sensory_safety",
+        "one_object_per_page",
+        "low_cognitive_load"
+      ]
+    },
+
+    {
+      "age_group": "3-5",
+      "description": "Early expansion stage with simple story arcs, basic emotional tolerance, and moderate detail processing.",
+      "speech_level": "simple_sentences_and_dialogues",
+      "motor_level": "controlled_coloring_basic_shapes",
+      "attention_level": "moderate_focus",
+      "emotional_capacity": "low_intensity_soft_adventures",
+      "cognitive_limits": "basic_cause_effect",
+      "narrative_limits": "short_adventure_5_7_minutes",
+      "visual_limits": "moderate_detail",
+
+      "allowed_book_types": [
+        "bedtime_story",
+        "coloring",
+        "bilingual_story"
+      ],
+
+      "forbidden_elements": [
+        "fear_scenes",
+        "complex_moral_conflicts",
+        "dense_text",
+        "multiple_parallel_scenes",
+        "high_detail_overload"
+      ],
+
+      "preferred_skills": [
+        "imagination_seed",
+        "early_logic",
+        "simple_dialogues",
+        "attention_growth",
+        "speech_development",
+        "moderate_detail",
+        "shape_variety",
+        "thematic_exploration",
+        "low_cognitive_load",
+        "bilingual_foundation"
+      ]
+    },
+
+    {
+      "age_group": "5-7",
+      "description": "Middle developmental stage with increased reasoning, stable emotional depth, and balanced visual complexity.",
+      "speech_level": "complex_sentences_and_descriptions",
+      "motor_level": "detailed_coloring_control",
+      "attention_level": "longer_focus",
+      "emotional_capacity": "moderate_depth",
+      "cognitive_limits": "multi_step_reasoning_start",
+      "narrative_limits": "emotional_story_arcs",
+      "visual_limits": "higher_detail_balanced",
+
+      "allowed_book_types": [
+        "bedtime_story",
+        "coloring_detailed",
+        "bilingual_story"
+      ],
+
+      "forbidden_elements": [
+        "high_tension",
+        "fast_scene_switching",
+        "advanced_vocabulary_blocks",
+        "extended_moral_conflict"
+      ],
+
+      "preferred_skills": [
+        "emotion_depth",
+        "logic",
+        "concentration",
+        "independent_thinking",
+        "situational_language",
+        "visual_planning",
+        "moderate_detail",
+        "reading_comprehension"
+      ]
+    },
+
+    {
+      "age_group": "7-10",
+      "description": "Advanced developmental stage with structured reasoning, complex emotional interpretation and extended narrative capacity.",
+      "speech_level": "advanced_sentences_high_vocabulary",
+      "motor_level": "sequential_drawing_mastery",
+      "attention_level": "extended_focus",
+      "emotional_capacity": "advanced_emotion_depth",
+      "cognitive_limits": "structured_reasoning",
+      "narrative_limits": "multi_scene_stories",
+      "visual_limits": "step_by_step_complexity",
+
+      "allowed_book_types": [
+        "bedtime_story",
+        "step_by_step_drawing",
+        "bilingual_extended"
+      ],
+
+      "forbidden_elements": [
+        "graphic_conflict",
+        "fear_inducing_scenes",
+        "stories_without_clear_moral",
+        "unstructured_visual_complexity"
+      ],
+
+      "preferred_skills": [
+        "multi_scene_structure",
+        "moral_reasoning",
+        "structured_reasoning",
+        "abstract_reasoning",
+        "motor_mastery",
+        "complex_shape_breakdown",
+        "independent_drawing",
+        "long_focus",
+        "full_paragraph_bilingual",
+        "parallel_reading",
+        "meaning_alignment",
+        "cross_language_mapping",
+        "independent_language_growth",
+        "advanced_emotion_depth"
+      ]
+    }
+  ]
+}
