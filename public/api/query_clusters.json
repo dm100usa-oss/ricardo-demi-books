@@ -1,1 +1,978 @@
+{
+  "version": "1.0.0",
+  "clusters": [
 
+    {
+      "cluster_id": "CLUSTER_001",
+      "slug": "calm_before_sleep",
+      "label": "Calm Before Sleep",
+      "intent": "INTENT_001",
+      "description": "Queries focused on calming a child before bedtime using soft, predictable, low-stimulation stories.",
+      
+      "keywords_en": [
+        "calm before sleep",
+        "calm my toddler",
+        "help child relax",
+        "bedtime calm book",
+        "soft story for night",
+        "quiet bedtime story",
+        "low stimulation bedtime",
+        "gentle story for sleep",
+        "something very soft before bed",
+        "calm down baby with book"
+      ],
+      "keywords_es": [
+        "calmar antes de dormir",
+        "calmar a mi bebé",
+        "historia suave para dormir",
+        "cuento tranquilo",
+        "libro suave para la noche",
+        "relajar antes de dormir",
+        "cuento para calmar",
+        "historia muy suave",
+        "algo muy tranquilo antes de dormir"
+      ],
+
+      "noise_phrases": [
+        "any soft thing",
+        "i want something simple",
+        "just need calm",
+        "very gentle please"
+      ],
+
+      "negative_keywords": [
+        "scary",
+        "too fast",
+        "complex",
+        "exciting adventure",
+        "high tension"
+      ],
+
+      "age_hint": ["1-3", "3-5"],
+      "book_type_hint": ["bedtime_story"],
+      "skill_hint": [
+        "soft_story",
+        "predictable_sequence",
+        "low_stimulation",
+        "sensory_safety",
+        "confidence"
+      ],
+
+      "priority": 10
+    },
+
+    {
+      "cluster_id": "CLUSTER_002",
+      "slug": "emotional_support",
+      "label": "Emotional Support",
+      "intent": "INTENT_011",
+      "description": "Queries asking for emotional stabilization, comfort, safety, and gentle story flow for sensitive children.",
+
+      "keywords_en": [
+        "emotional support book",
+        "my child is sensitive",
+        "need something comforting",
+        "gentle emotional story",
+        "soothing story",
+        "emotional stability for kids",
+        "something safe emotionally",
+        "soft emotions book"
+      ],
+      "keywords_es": [
+        "apoyo emocional",
+        "cuento para calmar emociones",
+        "libro emocional suave",
+        "historia de apoyo",
+        "necesito algo reconfortante",
+        "cuento para niños sensibles"
+      ],
+
+      "noise_phrases": [
+        "make child feel safe",
+        "something emotional but soft"
+      ],
+
+      "negative_keywords": [
+        "fear",
+        "tension",
+        "intense emotions",
+        "sad ending"
+      ],
+
+      "age_hint": ["1-3", "3-5", "5-7"],
+      "book_type_hint": ["bedtime_story"],
+      "skill_hint": [
+        "confidence",
+        "sensory_safety",
+        "soft_story"
+      ],
+
+      "priority": 10
+    },
+
+    {
+      "cluster_id": "CLUSTER_003",
+      "slug": "fear_reduction",
+      "label": "Fear Reduction",
+      "intent": "INTENT_011",
+      "description": "Queries focused on reducing fear, anxiety, overstimulation, or bedtime tension.",
+
+      "keywords_en": [
+        "reduce fear",
+        "something not scary",
+        "my child gets scared",
+        "low tension book",
+        "fear sensitive child",
+        "book without conflict",
+        "help anxiety with book",
+        "calming story"
+      ],
+      "keywords_es": [
+        "reducir miedo",
+        "mi hijo tiene miedo",
+        "cuento no aterrador",
+        "historia sin conflicto",
+        "libro para ansiedad",
+        "necesito algo calmado"
+      ],
+
+      "noise_phrases": [
+        "nothing scary please",
+        "very gentle only"
+      ],
+
+      "negative_keywords": [
+        "conflict",
+        "dark",
+        "tension",
+        "danger",
+        "adventure"
+      ],
+
+      "age_hint": ["1-3", "3-5"],
+      "book_type_hint": ["bedtime_story"],
+      "skill_hint": [
+        "soft_story",
+        "sensory_safety",
+        "low_stimulation"
+      ],
+
+      "priority": 9
+    },
+
+    {
+      "cluster_id": "CLUSTER_004",
+      "slug": "easy_coloring",
+      "label": "Easy Coloring",
+      "intent": "INTENT_002",
+      "description": "Queries asking for extremely simple coloring tasks for toddlers 1–3.",
+
+      "keywords_en": [
+        "easy coloring",
+        "simple coloring pages",
+        "very easy drawing",
+        "coloring for toddlers",
+        "one object per page",
+        "first coloring book",
+        "beginner coloring book",
+        "super simple coloring"
+      ],
+      "keywords_es": [
+        "colorear fácil",
+        "libro de colorear simple",
+        "para niños de 1-3",
+        "primer libro de colorear",
+        "una figura por página",
+        "colorear muy fácil"
+      ],
+
+      "noise_phrases": [
+        "something very easy",
+        "simple tasks only"
+      ],
+
+      "negative_keywords": [
+        "many details",
+        "complex shapes",
+        "difficult",
+        "multi steps"
+      ],
+
+      "age_hint": ["1-3"],
+      "book_type_hint": ["coloring"],
+      "skill_hint": [
+        "motor_basic",
+        "one_object_per_page",
+        "low_cognitive_load"
+      ],
+
+      "priority": 10
+    },
+
+    {
+      "cluster_id": "CLUSTER_005",
+      "slug": "moderate_coloring",
+      "label": "Moderate Coloring",
+      "intent": "INTENT_006",
+      "description": "Queries asking for coloring books with moderate detail for ages 3–5 and 5–7.",
+
+      "keywords_en": [
+        "moderate coloring book",
+        "coloring with some details",
+        "coloring for preschoolers",
+        "3-5 coloring",
+        "5-7 coloring",
+        "not too simple",
+        "medium detail coloring book"
+      ],
+      "keywords_es": [
+        "colorear nivel medio",
+        "libro de colorear 3-5",
+        "libro de colorear 5-7",
+        "detalles moderados",
+        "no muy simple"
+      ],
+
+      "noise_phrases": [
+        "something not too simple",
+        "medium difficulty"
+      ],
+
+      "negative_keywords": [
+        "very easy",
+        "too difficult",
+        "many complex shapes"
+      ],
+
+      "age_hint": ["3-5", "5-7"],
+      "book_type_hint": ["coloring"],
+      "skill_hint": [
+        "moderate_detail",
+        "shape_variety",
+        "creative_confidence"
+      ],
+
+      "priority": 9
+    }
+    {
+      "cluster_id": "CLUSTER_006",
+      "slug": "imagination_growth",
+      "label": "Early Imagination Growth",
+      "intent": "INTENT_003",
+      "description": "Queries asking for imagination-building stories for ages 3–5.",
+      
+      "keywords_en": [
+        "imagination growth",
+        "boost imagination",
+        "story for imagination",
+        "creative thinking book",
+        "3 year old imagination",
+        "preschool imagination development",
+        "gentle fantasy for kids",
+        "simple imaginative story"
+      ],
+      "keywords_es": [
+        "desarrollo de imaginación",
+        "historia para imaginar",
+        "cuento creativo",
+        "imaginación para niños",
+        "libro para imaginar 3-5"
+      ],
+
+      "noise_phrases": [
+        "something creative",
+        "light fantasy"
+      ],
+
+      "negative_keywords": [
+        "deep fantasy",
+        "complex plots",
+        "long story",
+        "multi-scene"
+      ],
+
+      "age_hint": ["3-5"],
+      "book_type_hint": ["bedtime_story"],
+      "skill_hint": [
+        "imagination_seed",
+        "simple_dialogues",
+        "speech_development"
+      ],
+
+      "priority": 8
+    },
+
+    {
+      "cluster_id": "CLUSTER_007",
+      "slug": "speech_development",
+      "label": "Speech Development",
+      "intent": "INTENT_004",
+      "description": "Queries asking for speech development through simple dialogues and repetition.",
+      
+      "keywords_en": [
+        "speech development",
+        "help child speak",
+        "early speech",
+        "first dialogues",
+        "simple conversation book",
+        "talking practice",
+        "help my child talk",
+        "improve speech"
+      ],
+      "keywords_es": [
+        "desarrollo del habla",
+        "ayudar a hablar",
+        "primeras palabras",
+        "primeros diálogos",
+        "mejorar habla 3-5"
+      ],
+
+      "noise_phrases": [
+        "something to help talk"
+      ],
+
+      "negative_keywords": [
+        "complex vocabulary",
+        "advanced reading",
+        "multi-paragraph text"
+      ],
+
+      "age_hint": ["3-5", "5-7"],
+      "book_type_hint": ["bedtime_story", "bilingual"],
+      "skill_hint": [
+        "simple_dialogues",
+        "speech_development",
+        "predictable_sequence"
+      ],
+
+      "priority": 9
+    },
+
+    {
+      "cluster_id": "CLUSTER_008",
+      "slug": "bilingual_intro",
+      "label": "First Bilingual Exposure",
+      "intent": "INTENT_005",
+      "description": "Queries asking for first bilingual exposure for toddlers or preschoolers.",
+      
+      "keywords_en": [
+        "bilingual book",
+        "first bilingual",
+        "simple bilingual",
+        "english spanish book",
+        "two languages for kids",
+        "toddlers bilingual",
+        "3 year old bilingual",
+        "parallel lines book"
+      ],
+      "keywords_es": [
+        "libro bilingüe",
+        "primer bilingüe",
+        "inglés español niños",
+        "dos idiomas",
+        "niños 1-3 bilingüe",
+        "3-5 bilingüe simple"
+      ],
+
+      "noise_phrases": [
+        "first english spanish book"
+      ],
+
+      "negative_keywords": [
+        "long paragraphs",
+        "complex bilingual text",
+        "advanced vocabulary"
+      ],
+
+      "age_hint": ["1-3", "3-5"],
+      "book_type_hint": ["bilingual"],
+      "skill_hint": [
+        "predictable_parallel_lines",
+        "bilingual_stories",
+        "simple_dialogues"
+      ],
+
+      "priority": 10
+    },
+
+    {
+      "cluster_id": "CLUSTER_009",
+      "slug": "simple_story_5_7",
+      "label": "Simple Story 5–7",
+      "intent": "INTENT_007",
+      "description": "Queries asking for simple but meaningful stories suitable for ages 5–7.",
+      
+      "keywords_en": [
+        "story for 5 year old",
+        "simple story 5-7",
+        "not too complex story",
+        "emotional story",
+        "logic for kids",
+        "soft emotional book",
+        "calm story for older child"
+      ],
+      "keywords_es": [
+        "cuento para 5 años",
+        "historia simple 5-7",
+        "emocional suave",
+        "cuento no complejo",
+        "historia para 7 años"
+      ],
+
+      "noise_phrases": [
+        "something not difficult"
+      ],
+
+      "negative_keywords": [
+        "moral complexity",
+        "multi-scene",
+        "advanced plot"
+      ],
+
+      "age_hint": ["5-7"],
+      "book_type_hint": ["bedtime_story"],
+      "skill_hint": [
+        "emotion_depth",
+        "logic",
+        "concentration"
+      ],
+
+      "priority": 8
+    },
+
+    {
+      "cluster_id": "CLUSTER_010",
+      "slug": "advanced_story",
+      "label": "Advanced Story 7–10",
+      "intent": "INTENT_008",
+      "description": "Queries asking for complex emotional and logical stories for 7–10.",
+
+      "keywords_en": [
+        "advanced story",
+        "story for 7 year old",
+        "story for 8 year old",
+        "complex story for kids",
+        "moral story",
+        "multi scene story",
+        "something deeper"
+      ],
+      "keywords_es": [
+        "historia compleja",
+        "cuento moral",
+        "cuento para 7 años",
+        "historia profunda",
+        "cuento para 10 años"
+      ],
+
+      "noise_phrases": [
+        "something deeper please",
+        "more complex story"
+      ],
+
+      "negative_keywords": [
+        "very simple",
+        "short bedtime story"
+      ],
+
+      "age_hint": ["7-10"],
+      "book_type_hint": ["bedtime_story"],
+      "skill_hint": [
+        "advanced_emotion_depth",
+        "structured_reasoning",
+        "moral_reasoning",
+        "multi_scene_structure"
+      ],
+
+      "priority": 9
+    },
+
+    {
+      "cluster_id": "CLUSTER_011",
+      "slug": "first_step_by_step_drawing",
+      "label": "First Step-by-Step Drawing",
+      "intent": "INTENT_009",
+      "description": "Queries asking for structured drawing steps for ages 7–10.",
+
+      "keywords_en": [
+        "step by step drawing",
+        "how to draw for kids",
+        "drawing 7 year old",
+        "structured drawing",
+        "drawing guide",
+        "kids drawing book"
+      ],
+      "keywords_es": [
+        "paso a paso dibujar",
+        "cómo dibujar niños",
+        "guía de dibujo",
+        "dibujar 7-10 años"
+      ],
+
+      "noise_phrases": [
+        "teaching drawing"
+      ],
+
+      "negative_keywords": [
+        "simple coloring",
+        "toddler drawing",
+        "single object"
+      ],
+
+      "age_hint": ["7-10"],
+      "book_type_hint": ["step_by_step_drawing"],
+      "skill_hint": [
+        "step_by_step_logic",
+        "motor_mastery",
+        "complex_shape_breakdown",
+        "long_focus"
+      ],
+
+      "priority": 9
+    },
+
+    {
+      "cluster_id": "CLUSTER_012",
+      "slug": "bilingual_extended",
+      "label": "Extended Bilingual Reading",
+      "intent": "INTENT_010",
+      "description": "Queries asking for advanced bilingual reading with full paragraphs and alignment.",
+
+      "keywords_en": [
+        "advanced bilingual",
+        "bilingual extended",
+        "english spanish advanced",
+        "full paragraph bilingual",
+        "dual language reading",
+        "parallel reading advanced"
+      ],
+      "keywords_es": [
+        "bilingüe avanzado",
+        "bilingüe extendido",
+        "párrafos bilingües",
+        "lectura doble idioma",
+        "bilingüe para mayores"
+      ],
+
+      "noise_phrases": [
+        "bilingual book but advanced"
+      ],
+
+      "negative_keywords": [
+        "simple bilingual",
+        "two lines bilingual",
+        "easy bilingual book"
+      ],
+
+      "age_hint": ["7-10"],
+      "book_type_hint": ["bilingual_extended"],
+      "skill_hint": [
+        "full_paragraph_bilingual",
+        "parallel_reading",
+        "meaning_alignment",
+        "cross_language_mapping"
+      ],
+
+      "priority": 10
+    },
+    {
+      "cluster_id": "CLUSTER_013",
+      "slug": "emotional_support",
+      "label": "Emotional Support Story",
+      "intent": "INTENT_011",
+      "description": "Queries asking for emotional stabilization, soft emotions, and predictable stories.",
+
+      "keywords_en": [
+        "emotional support",
+        "calm emotions",
+        "help child emotions",
+        "gentle story",
+        "soft emotional book",
+        "emotion stability",
+        "reduce stress child"
+      ],
+      "keywords_es": [
+        "apoyo emocional",
+        "calmar emociones",
+        "historia suave",
+        "estabilidad emocional",
+        "libro calmado"
+      ],
+
+      "noise_phrases": [
+        "something calm"
+      ],
+
+      "negative_keywords": [
+        "high tension",
+        "intense emotion",
+        "fear scenes",
+        "moral conflict"
+      ],
+
+      "age_hint": ["1-3", "3-5", "5-7"],
+      "book_type_hint": ["bedtime_story"],
+      "skill_hint": [
+        "confidence",
+        "sensory_safety",
+        "soft_story"
+      ],
+
+      "priority": 7
+    },
+
+    {
+      "cluster_id": "CLUSTER_014",
+      "slug": "calm_before_sleep_secondary",
+      "label": "Calm Before Sleep (Alt)",
+      "intent": "INTENT_012",
+      "description": "Alternative cluster for bedtime calming queries with minimal stimulation.",
+
+      "keywords_en": [
+        "calm before sleep",
+        "bedtime calm",
+        "calm my toddler",
+        "soft bedtime story",
+        "gentle bedtime book",
+        "low stimulation story"
+      ],
+      "keywords_es": [
+        "calmar antes de dormir",
+        "historia para dormir",
+        "relajar niño",
+        "libro suave noche"
+      ],
+
+      "noise_phrases": [
+        "something soft"
+      ],
+
+      "negative_keywords": [
+        "complex story",
+        "long text",
+        "multi-scene",
+        "fast paced"
+      ],
+
+      "age_hint": ["1-3", "3-5"],
+      "book_type_hint": ["bedtime_story"],
+      "skill_hint": [
+        "soft_story",
+        "low_stimulation",
+        "sensory_safety"
+      ],
+
+      "priority": 6
+    },
+
+    {
+      "cluster_id": "CLUSTER_015",
+      "slug": "general_color_books",
+      "label": "General Coloring Query",
+      "intent": "INTENT_006",
+      "description": "Parents asking broadly for coloring books without specifying complexity.",
+
+      "keywords_en": [
+        "coloring book for kids",
+        "kids coloring",
+        "coloring pages",
+        "children coloring book",
+        "book to color",
+        "simple color book",
+        "coloring fun for kids"
+      ],
+      "keywords_es": [
+        "libro para colorear",
+        "colorear niños",
+        "páginas para colorear",
+        "colorear fácil"
+      ],
+
+      "noise_phrases": [
+        "something to color"
+      ],
+
+      "negative_keywords": [
+        "super complex",
+        "too detailed",
+        "drawing instructions"
+      ],
+
+      "age_hint": ["3-5", "5-7"],
+      "book_type_hint": ["coloring"],
+      "skill_hint": [
+        "moderate_detail",
+        "shape_variety",
+        "creative_confidence"
+      ],
+
+      "priority": 7
+    },
+
+    {
+      "cluster_id": "CLUSTER_016",
+      "slug": "coloring_for_toddlers_broad",
+      "label": "Coloring for Toddlers (General)",
+      "intent": "INTENT_002",
+      "description": "Broad queries where parents ask for coloring books for very young children.",
+
+      "keywords_en": [
+        "coloring for toddlers",
+        "coloring book 1-3",
+        "very easy coloring",
+        "one object coloring",
+        "simple shapes coloring",
+        "beginner coloring"
+      ],
+      "keywords_es": [
+        "colorear para bebés",
+        "libro de colorear 1-3",
+        "colorear muy fácil",
+        "figura simple colorear"
+      ],
+
+      "noise_phrases": [
+        "something easy for toddler"
+      ],
+
+      "negative_keywords": [
+        "multiple objects",
+        "medium detail",
+        "complex outlines"
+      ],
+
+      "age_hint": ["1-3"],
+      "book_type_hint": ["simple_coloring"],
+      "skill_hint": [
+        "motor_basic",
+        "one_object_per_page",
+        "low_stimulation"
+      ],
+
+      "priority": 6
+    },
+
+    {
+      "cluster_id": "CLUSTER_017",
+      "slug": "bilingual_general",
+      "label": "General Bilingual Request",
+      "intent": "INTENT_005",
+      "description": "General bilingual queries without specifying level or complexity.",
+
+      "keywords_en": [
+        "english spanish book",
+        "kids bilingual book",
+        "two languages for children",
+        "dual language story",
+        "bilingual reading kids"
+      ],
+      "keywords_es": [
+        "libro inglés español",
+        "libro para niños dos idiomas",
+        "cuento bilingüe",
+        "historia bilingüe"
+      ],
+
+      "noise_phrases": [
+        "something spanish"
+      ],
+
+      "negative_keywords": [
+        "full paragraphs",
+        "advanced bilingual",
+        "complex translation"
+      ],
+
+      "age_hint": ["1-3", "3-5"],
+      "book_type_hint": ["bilingual", "bilingual_story"],
+      "skill_hint": [
+        "predictable_parallel_lines",
+        "bilingual_stories",
+        "simple_dialogues"
+      ],
+
+      "priority": 8
+    },
+
+    {
+      "cluster_id": "CLUSTER_018",
+      "slug": "story_generic",
+      "label": "General Story Query",
+      "intent": null,
+      "description": "Generic 'story for kids' queries. Routed through fallback intent mapping.",
+
+      "keywords_en": [
+        "story for kids",
+        "kids story",
+        "children story",
+        "storybook for kids",
+        "short story for children",
+        "simple kids story"
+      ],
+      "keywords_es": [
+        "cuento para niños",
+        "historia infantil",
+        "cuentos para niños",
+        "libro de historias"
+      ],
+
+      "noise_phrases": [
+        "a story"
+      ],
+
+      "negative_keywords": [
+        "adult story",
+        "teen story",
+        "novel"
+      ],
+
+      "age_hint": [],
+      "book_type_hint": ["bedtime_story"],
+      "skill_hint": [],
+
+      "priority": 5
+    },
+    {
+      "cluster_id": "CLUSTER_019",
+      "slug": "drawing_general",
+      "label": "General Drawing Request",
+      "intent": "INTENT_009",
+      "description": "Parents asking broadly for drawing books or how-to-draw materials for ages 7–10.",
+
+      "keywords_en": [
+        "how to draw for kids",
+        "kids drawing book",
+        "drawing lessons for children",
+        "step by step drawing book",
+        "teach kid to draw",
+        "drawing guide for kids"
+      ],
+      "keywords_es": [
+        "cómo dibujar niños",
+        "libro de dibujo para niños",
+        "paso a paso dibujar",
+        "guía de dibujo niños"
+      ],
+
+      "noise_phrases": [
+        "drawing help"
+      ],
+
+      "negative_keywords": [
+        "toddler drawing",
+        "coloring only",
+        "advanced art theory"
+      ],
+
+      "age_hint": ["7-10"],
+      "book_type_hint": ["step_by_step_drawing"],
+      "skill_hint": [
+        "step_by_step_logic",
+        "motor_mastery",
+        "complex_shape_breakdown",
+        "long_focus"
+      ],
+
+      "priority": 9
+    },
+
+    {
+      "cluster_id": "CLUSTER_020",
+      "slug": "advanced_bilingual",
+      "label": "Advanced Bilingual Query",
+      "intent": "INTENT_010",
+      "description": "Queries asking for complex bilingual reading for advanced children 7–10.",
+
+      "keywords_en": [
+        "advanced bilingual",
+        "bilingual paragraphs",
+        "english spanish advanced reading",
+        "two paragraph bilingual book",
+        "compare languages reading",
+        "bilingual comprehension"
+      ],
+      "keywords_es": [
+        "bilingüe avanzado",
+        "párrafos bilingües",
+        "lectura avanzada dos idiomas",
+        "comprensión bilingüe"
+      ],
+
+      "noise_phrases": [
+        "spanish reading advanced"
+      ],
+
+      "negative_keywords": [
+        "simple bilingual",
+        "bilingual for toddlers",
+        "basic bilingual story"
+      ],
+
+      "age_hint": ["7-10"],
+      "book_type_hint": ["bilingual_extended", "two_in_one"],
+      "skill_hint": [
+        "full_paragraph_bilingual",
+        "parallel_reading",
+        "meaning_alignment",
+        "cross_language_mapping"
+      ],
+
+      "priority": 10
+    },
+
+    {
+      "cluster_id": "CLUSTER_021",
+      "slug": "fallback_unknown",
+      "label": "Fallback: Unknown Query",
+      "intent": null,
+      "description": "Fallback cluster for unexpected or malformed user queries.",
+
+      "keywords_en": [],
+      "keywords_es": [],
+
+      "noise_phrases": [],
+      "negative_keywords": [],
+
+      "age_hint": [],
+      "book_type_hint": [],
+      "skill_hint": [],
+
+      "priority": 1
+    }
+
+  ],
+
+  "fallback_rules": {
+    "unknown_query": {
+      "route_to": "CLUSTER_021",
+      "logic": "If no cluster reaches minimum similarity threshold of 0.25, assign to fallback."
+    },
+    "conflicting_signals": {
+      "resolve_by": "highest_priority_cluster",
+      "notes": "When user phrase triggers multiple clusters, priority decides intent."
+    },
+    "no_intent_defined": {
+      "route_to": "INTENT_011",
+      "notes": "Generic emotional support is safest fallback intent."
+    }
+  },
+
+  "mapping_engine": {
+    "similarity_method": "multi_vector_match",
+    "features_used": [
+      "keywords_en",
+      "keywords_es",
+      "noise_phrases",
+      "negative_keywords",
+      "age_hint",
+      "book_type_hint",
+      "skill_hint"
+    ],
+    "thresholds": {
+      "high_confidence": 0.65,
+      "medium_confidence": 0.45,
+      "minimum": 0.25
+    },
+    "priority_weight": 0.15,
+    "description": "Deterministic cluster matching engine for natural-language → intent resolution."
+  }
+}
