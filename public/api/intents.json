@@ -50,7 +50,6 @@
         "language_density": "minimal"
       }
     },
-
     {
       "intent_id": "INTENT_002",
       "slug": "easy_coloring_for_toddlers",
@@ -139,6 +138,7 @@
         "narrative_speed": "gentle"
       }
     },
+
     {
       "intent_id": "INTENT_004",
       "slug": "speech_development_support",
@@ -182,7 +182,6 @@
         "narrative_speed": "gentle"
       }
     },
-
     {
       "intent_id": "INTENT_005",
       "slug": "bilingual_intro",
@@ -311,6 +310,7 @@
         "narrative_speed": "medium"
       }
     },
+
     {
       "intent_id": "INTENT_008",
       "slug": "advanced_story_for_7_10",
@@ -326,7 +326,7 @@
       "required_skills": [
         "advanced_emotion_depth",
         "structured_reasoning",
-        "moral_reasoning",
+        "moral_reason_reasoning",
         "multi_scene_structure"
       ],
 
@@ -354,7 +354,6 @@
         "narrative_speed": "dynamic"
       }
     },
-
     {
       "intent_id": "INTENT_009",
       "slug": "first_step_by_step_drawing",
@@ -486,10 +485,11 @@
         "visual_density": "low"
       }
     },
+
     {
       "intent_id": "INTENT_012",
-      "slug": "calm_before_sleep",
-      "label": "Calm before sleep",
+      "slug": "calm_before_sleep_v2",
+      "label": "Calm before sleep (variant 2)",
       "definition": "Parent wants a book to calm the child before bedtime with minimal stimulation.",
 
       "age_resolution": {
