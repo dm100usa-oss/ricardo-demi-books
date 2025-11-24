@@ -1,1710 +1,532 @@
 {
-  "meta": {
-    "version": "1.0.0",
-    "author": "Ricardo Demi Method — FSCBAC Standard",
-    "description": "Formal mapping between natural-language user queries and developmental intents used by the FSCBAC Center of Truth.",
-    "purpose": "Convert any natural user phrase into formal age, skills, book types, and developmental parameters."
-  },
-
-  "global_rules": {
-    "interpretation": "Always convert natural queries into formal intents before matching books.",
-    "age_resolution": "If age is mentioned, map to nearest age_group from ages.json. If missing, infer from skill context.",
-    "skill_resolution": "Always use only allowed skills defined in skills.json. Never infer new skills.",
-    "safety_priority": "If query is ambiguous, choose the safest developmental option.",
-    "origin_priority": "Books present in books.json always outrank external books when matching intent parameters.",
-    "matching_flow": [
-      "resolve_intent",
-      "resolve_age",
-      "resolve_skills",
-      "apply_matching_rules",
-      "filter_books",
-      "rank_books"
-    ]
-  },
-
+  "version": "1.0.0",
+  "description": "Deterministic intent → age → skills → book_types engine for FSCBAC Center of Truth.",
   "intents": [
-    {
-      "intent_id": "bedtime_calming_1_3",
-      "age_groups": ["1-3"],
-      "description": "Calming bedtime reading for emotional safety and predictable nighttime routine.",
-      "target_skills": [
-        "emotion_safety",
-        "attention_base",
-        "soft_story",
-        "predictable_sequence"
-      ],
-      "book_type_preference": [
-        "bedtime_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "very_low",
-        "emotional_intensity": "very_low",
-        "narrative_structure": "simple_sequence",
-        "visual_load": "large_simple_shapes"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "conflict",
-          "fear",
-          "fast_pacing",
-          "visual_overload"
-        ],
-        "notes": "Strict emotional safety required for ages 1–3."
-      },
-      "natural_phrases": [
-        "easy bedtime story for toddlers",
-        "calming story for a 2-year-old",
-        "short bedtime story for babies",
-        "book to help my toddler relax",
-        "gentle story with big pictures",
-        "first bedtime book for toddlers",
-        "soft bedtime story",
-        "story for emotional comfort",
-        "storybook not overwhelming",
-        "bedtime book toddlers can follow",
-        "gentle bedtime routine story",
-        "simple bedtime reading for toddlers"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_no_age_detected": "use 1-3",
-        "if_no_skill_detected": "apply emotion_safety",
-        "if_visual_complexity_ambiguous": "choose lowest complexity"
-      }
-    },
-    {
-      "intent_id": "early_speech_development_1_3",
-      "age_groups": ["1-3"],
-      "description": "Support early speech development through simple words, repetition, and predictable phrasing.",
-      "target_skills": [
-        "speech_start",
-        "early_language",
-        "predictable_sequence",
-        "attention_base"
-      ],
-      "book_type_preference": [
-        "bedtime_story",
-        "bilingual_intro"
-      ],
-      "value_profile_requirements": {
-        "complexity": "very_low",
-        "linguistic_load": "minimal",
-        "narrative_structure": "single_actions",
-        "visual_load": "one_object_per_page"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "dense_text",
-          "complex_dialogues",
-          "multi_scene_stories"
-        ],
-        "notes": "Speech development at this age requires extremely short phrases and predictable repetition."
-      },
-      "natural_phrases": [
-        "simple story for early speech",
-        "bedtime story with short phrases",
-        "story that teaches early words",
-        "book for improving toddler vocabulary",
-        "story with short clear lines",
-        "first storybook for a 1-year-old",
-        "story with simple scenes",
-        "book that repeats simple words",
-        "intro book for early speech",
-        "book with basic vocabulary",
-        "starter phrases for toddlers",
-        "simple language book for babies",
-        "very early speech development book"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_no_skill_detected": "apply speech_start",
-        "if_user_asks_for_language": "add early_language",
-        "if_query_is_short": "reduce complexity to minimal"
-      }
-    },
 
     {
-      "intent_id": "low_stimulation_safe_1_3",
-      "age_groups": ["1-3"],
-      "description": "Provide extremely low-stimulation books for emotional comfort and sensory safety.",
-      "target_skills": [
-        "low_stimulation",
-        "sensory_safety",
-        "attention_base",
-        "low_cognitive_load"
-      ],
-      "book_type_preference": [
-        "bedtime_story",
-        "simple_coloring"
-      ],
-      "value_profile_requirements": {
-        "complexity": "minimal",
-        "emotional_intensity": "very_low",
-        "visual_load": "very_simple_single_object",
-        "narrative_structure": "linear_minimal"
+      "intent_id": "INTENT_001",
+      "slug": "calm_before_sleep",
+      "label": "Calm before sleep",
+      "definition": "Parent wants to calm a child before bedtime using soft, predictable, low-intensity books.",
+      
+      "age_resolution": {
+        "allowed": ["1-3", "3-5"],
+        "ideal": "1-3",
+        "notes": "Toddlers require soft emotional load and predictable structure."
       },
-      "constraints": {
-        "forbidden_elements": [
-          "small_details",
-          "high_contrast_visuals",
-          "fast_pacing",
-          "conflict",
-          "loud_visual_patterns"
-        ],
-        "notes": "This intent is triggered when parents ask for calm, gentle, or non-overstimulating experience."
-      },
-      "natural_phrases": [
-        "story not overwhelming",
-        "book for sensory-sensitive toddlers",
-        "story with gentle illustrations",
-        "calming book for toddlers",
-        "book for very young kids not overstimulating",
-        "soft visuals for babies",
-        "book without small details",
-        "gentle reading before sleep",
-        "sensory-friendly book",
-        "calming minimal story",
-        "story easy on the eyes for toddlers",
-        "minimal complexity toddler book"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_no_intent_detected": "default_to_low_stimulation",
-        "if_too_many_skills_detected": "reduce_to_sensory_safety"
-      }
-    },
 
-    {
-      "intent_id": "motor_and_first_coloring_1_3",
-      "age_groups": ["1-3"],
-      "description": "Introduce early motor skills and basic coloring exercises for toddlers.",
-      "target_skills": [
-        "motor_early",
-        "shape_recognition",
-        "attention_base",
-        "one_object_per_page",
-        "creative_confidence"
-      ],
-      "book_type_preference": [
-        "simple_coloring"
-      ],
-      "value_profile_requirements": {
-        "complexity": "minimal",
-        "visual_load": "large_simple_shapes",
-        "emotional_intensity": "neutral",
-        "linguistic_load": "none"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "tiny_details",
-          "complex_backgrounds",
-          "high_visual_density"
-        ],
-        "notes": "Coloring at ages 1–3 must be extremely simple and avoid frustration."
-      },
-      "natural_phrases": [
-        "easy coloring book for toddlers",
-        "big simple pictures to color",
-        "first coloring book for 2-year-olds",
-        "coloring book not overwhelming",
-        "one object per page coloring",
-        "simple cute drawings for toddlers",
-        "coloring without tiny details",
-        "book for pencil control",
-        "first creative activity",
-        "big drawings for small hands",
-        "clear bold outlines",
-        "starter coloring book",
-        "sensory-friendly coloring",
-        "calming coloring book",
-        "easy drawings to avoid frustration"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_query_unclear": "apply motor_early",
-        "if_user_requests_simple": "add low_stimulation"
-      }
-    },
-    {
-      "intent_id": "bilingual_introduction_1_3",
-      "age_groups": ["1-3"],
-      "description": "Introduce bilingual foundations using extremely simple parallel lines and repeated vocabulary.",
-      "target_skills": [
-        "bilingual_foundation",
-        "early_language",
-        "speech_start",
-        "predictable_parallel_lines",
-        "attention_base",
-        "low_cognitive_load"
-      ],
-      "book_type_preference": [
-        "bilingual_intro"
-      ],
-      "value_profile_requirements": {
-        "complexity": "very_low",
-        "linguistic_load": "minimal_parallel",
-        "visual_load": "simple_large_objects",
-        "narrative_structure": "repetitive_pairs"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "long_sentences",
-          "dense_bilingual_blocks",
-          "multi_scene_structure"
-        ],
-        "notes": "At ages 1–3, bilingual content must be parallel, short, and extremely predictable."
-      },
-      "natural_phrases": [
-        "first bilingual book for toddlers",
-        "english spanish book for babies",
-        "simple bilingual story",
-        "parallel text EN ES",
-        "gentle bilingual bedtime story",
-        "easy bilingual picture book",
-        "help toddlers learn two languages",
-        "simple bilingual sentences",
-        "bilingual book not overwhelming",
-        "first Spanish book for toddlers",
-        "simple EN ES word pairs",
-        "short bilingual bedtime story",
-        "bilingual story toddlers can follow",
-        "early bilingual vocabulary",
-        "bilingual book with repetition"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_user_says_language": "add bilingual_foundation",
-        "if_request_is_general": "simplify_to_parallel_pairs"
-      }
-    },
-
-    {
-      "intent_id": "emotional_security_1_3",
-      "age_groups": ["1-3"],
-      "description": "Provide emotional safety, predictability, and calm routines before sleep or rest.",
-      "target_skills": [
-        "emotion_safety",
+      "required_skills": [
         "confidence",
         "soft_story",
         "predictable_sequence",
-        "attention_base",
+        "low_stimulation",
+        "sensory_safety",
         "low_cognitive_load"
       ],
-      "book_type_preference": [
-        "bedtime_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "minimal",
-        "emotional_intensity": "low",
-        "visual_load": "simple_soft",
-        "narrative_structure": "routine_sequence"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "conflict",
-          "fear",
-          "fast_pacing",
-          "high_contrast_visuals"
-        ],
-        "notes": "This intent is triggered by any request mentioning calm, gentle, routine, soft, or bedtime safety."
-      },
-      "natural_phrases": [
-        "calming bedtime story",
-        "story to help my toddler relax",
-        "gentle story with big pictures",
-        "soft and safe nighttime reading",
-        "story for emotional comfort",
-        "story not overwhelming",
-        "gentle book before nap",
-        "calm story for a 2 year old",
-        "safe bedtime story for babies",
-        "story with gentle illustrations",
-        "predictable bedtime routine book",
-        "story to help toddler calm down",
-        "gentle story to build confidence",
-        "bedtime starter book",
-        "minimal complexity bedtime story"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_sleep": "apply emotion_safety",
-        "if_user_asks_for_gentle": "limit_visual_load_to_soft"
-      }
-    },
 
-    {
-      "intent_id": "simple_imagination_start_1_3",
-      "age_groups": ["1-3"],
-      "description": "Support the earliest stage of imagination using simple characters, soft emotions, and visual predictability.",
-      "target_skills": [
-        "imagination_seed",
-        "attention_base",
-        "early_language",
-        "soft_story",
-        "predictable_sequence"
-      ],
-      "book_type_preference": [
-        "bedtime_story",
-        "simple_coloring"
-      ],
-      "value_profile_requirements": {
-        "complexity": "minimal",
-        "emotional_intensity": "very_low",
-        "visual_load": "soft_simple",
-        "narrative_structure": "single_line_story"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "fear_scenes",
-          "multi_step_logic",
-          "complex_story_logic"
-        ],
-        "notes": "Imagination for toddlers must be soft, symbolic, and extremely simple."
-      },
-      "natural_phrases": [
-        "story for early imagination",
-        "first imagination book",
-        "simple imaginative story for toddlers",
-        "book with familiar characters",
-        "soft imaginative bedtime story",
-        "story for gentle imagination",
-        "creative starter story",
-        "cute characters for babies",
-        "easy imagination scenes",
-        "minimal imagination book",
-        "toddler friendly creative story",
-        "simple imagination scenes"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_query_mentions_imagination": "apply imagination_seed",
-        "if_user_says_creativity": "add creative_confidence"
-      }
-    },
-
-    {
-      "intent_id": "speech_and_attention_combined_1_3",
-      "age_groups": ["1-3"],
-      "description": "Combine simple speech exercises with short attention strengthening.",
-      "target_skills": [
-        "speech_start",
-        "attention_base",
-        "early_language",
-        "predictable_sequence"
-      ],
-      "book_type_preference": [
-        "bedtime_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "minimal",
-        "linguistic_load": "very_low",
-        "visual_load": "simple_repetitive",
-        "narrative_structure": "repetition_focus"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "dense_text",
-          "fast_pacing"
-        ],
-        "notes": "This intent is triggered when parents mention both 'focus' and 'speech' or equivalents."
-      },
-      "natural_phrases": [
-        "book to help toddlers focus",
-        "story with repeated simple words",
-        "easy speech and attention book",
-        "book toddlers can follow",
-        "short repetitive story",
-        "simple rhythm story",
-        "toddler focus and speech book"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_both_topics_detected": "apply predictable_sequence"
-      }
-    },
-
-    {
-      "intent_id": "general_best_book_for_age_1_3",
-      "age_groups": ["1-3"],
-      "description": "General, non-specific request for the best book for a toddler age 1–3.",
-      "target_skills": [
-        "emotion_safety",
-        "attention_base",
-        "predictable_sequence",
-        "low_cognitive_load"
-      ],
-      "book_type_preference": [
-        "bedtime_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "minimal",
-        "emotional_intensity": "very_low",
-        "visual_load": "simple_large_shapes"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "fear",
-          "complex_story_logic",
-          "fast_pacing"
-        ],
-        "notes": "This is triggered by generic phrases like 'best book for a 1-year-old'."
-      },
-      "natural_phrases": [
-        "best book for 1-year-old",
-        "best book for 2-year-old",
-        "book for a toddler",
-        "what book for 1-3 years",
-        "recommended book for toddlers",
-        "book suitable for 2-year-old"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_age_only_detected": "default_to_emotion_safety"
-      }
-    },
-    {
-      "intent_id": "imagination_growth_3_5",
-      "age_groups": ["3-5"],
-      "description": "Develop early imagination with simple adventures, symbolic scenes, and short creative arcs appropriate for ages 3–5.",
-      "target_skills": [
-        "imagination_seed",
-        "thematic_exploration",
-        "simple_dialogues",
-        "early_logic",
-        "attention_growth",
-        "speech_development"
-      ],
-      "book_type_preference": [
-        "bedtime_story",
-        "coloring"
-      ],
-      "value_profile_requirements": {
-        "complexity": "low",
-        "emotional_intensity": "low_to_moderate",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "short_adventure"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "fear_scenes",
-          "complex_moral_conflicts",
-          "dense_text",
-          "multiple_parallel_scenes"
-        ],
-        "notes": "Imagination for ages 3–5 must gently expand symbolic thinking without introducing tension or narrative confusion."
-      },
-      "natural_phrases": [
-        "book to develop imagination for 3 year old",
-        "creative stories for 4 year olds",
-        "simple adventure story for toddlers",
-        "imagination development book",
-        "gentle creative bedtime story",
-        "story to help child imagine",
-        "creative thinking book for preschoolers",
-        "soft imaginative adventure",
-        "simple fantasy for toddlers",
-        "early creative storytelling book",
-        "imagination friendly picture book",
-        "short imaginative story with simple dialogues"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_query_mentions_imagination": "apply imagination_seed",
-        "if_story_is_requested": "apply_short_adventure_structure"
-      }
-    },
-
-    {
-      "intent_id": "early_logic_3_5",
-      "age_groups": ["3-5"],
-      "description": "Introduce simple cause-and-effect logic suitable for ages 3–5, maintaining short scenes and moderate detail.",
-      "target_skills": [
-        "early_logic",
-        "attention_growth",
-        "simple_dialogues",
-        "moderate_detail",
-        "shape_variety",
-        "reading_comprehension_start"
-      ],
-      "book_type_preference": [
-        "bedtime_story",
-        "bilingual_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "low",
-        "linguistic_load": "simple_sentences",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "basic_cause_effect"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "extended_conflict",
-          "multi_step_reasoning",
-          "dense_paragraphs",
-          "fast_scene_switching"
-        ],
-        "notes": "Logic for ages 3–5 must be simple, visual, short, and clearly connected to the child's everyday experiences."
-      },
-      "natural_phrases": [
-        "logic book for 3 year old",
-        "simple story with cause and effect",
-        "early logic development",
-        "story that explains simple consequences",
-        "book to teach basic logic",
-        "gentle logic story",
-        "story to build reasoning for preschoolers",
-        "simple story with clear sequence",
-        "logic friendly bedtime story",
-        "book that teaches simple rules"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_query_mentions_reasoning": "add early_logic",
-        "if_complexity_unspecified": "reduce_to_basic_cause_effect"
-      }
-    },
-
-    {
-      "intent_id": "speech_development_3_5",
-      "age_groups": ["3-5"],
-      "description": "Support early speech development with simple dialogues, repeated structures, and thematic vocabulary.",
-      "target_skills": [
-        "speech_development",
-        "simple_dialogues",
-        "thematic_exploration",
-        "early_language",
+      "optional_skills": [
         "attention_growth"
       ],
-      "book_type_preference": [
-        "bedtime_story",
-        "bilingual_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "low",
-        "linguistic_load": "simple_dialogues",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "short_scenes"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "advanced_vocabulary_blocks",
-          "dense_paragraphs",
-          "extended_moral_conflict",
-          "multiple_parallel_scenes"
-        ],
-        "notes": "Speech development for ages 3–5 must rely on short dialogue patterns and predictable repetition."
-      },
-      "natural_phrases": [
-        "book to help my child talk more",
-        "story for speech development",
-        "simple dialogues for preschoolers",
-        "speech building book",
-        "story for child to repeat phrases",
-        "book with simple conversation",
-        "easy vocabulary building story",
-        "early speech training book",
-        "simple text to practice speaking",
-        "dialogue friendly bedtime story",
-        "speech book for 4 year olds",
-        "book to expand vocabulary"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_talking": "apply speech_development",
-        "if_user_wants_dialogues": "apply simple_dialogues"
-      }
-    },
 
-    {
-      "intent_id": "attention_development_3_5",
-      "age_groups": ["3-5"],
-      "description": "Strengthen focused attention and ability to follow moderate-length sequences.",
-      "target_skills": [
-        "attention_growth",
-        "simple_dialogues",
+      "forbidden_skills": [
+        "complex_vocabulary",
         "early_logic",
-        "moderate_detail",
-        "shape_variety"
-      ],
-      "book_type_preference": [
-        "bedtime_story",
-        "coloring"
-      ],
-      "value_profile_requirements": {
-        "complexity": "low",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "short_sequence",
-        "linguistic_load": "simple_sentences"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "multi_scene_structure",
-          "high_detail_overload",
-          "fast_scene_switching"
-        ],
-        "notes": "Attention for ages 3–5 must avoid overload and maintain consistent visual focus."
-      },
-      "natural_phrases": [
-        "book to improve attention for 3 year old",
-        "story to help child focus",
-        "improve concentration for preschoolers",
-        "simple story to follow",
-        "follow the story book",
-        "short scenes with moderate detail",
-        "attention development story",
-        "focus book for 4 year old",
-        "story with stable visuals",
-        "easy-to-follow adventure"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_focus": "apply attention_growth",
-        "if_visual_load_too_high": "restrict_to_moderate_detail"
-      }
-    }
-    {
-      "intent_id": "emotional_safety_3_5",
-      "age_groups": ["3-5"],
-      "description": "Provide emotional safety, stable tone, predictable emotional transitions, and soft bedtime pacing suitable for preschool ages.",
-      "target_skills": [
-        "emotion_safety",
-        "attention_growth",
-        "simple_dialogues",
-        "early_logic",
-        "imagination_seed"
-      ],
-      "book_type_preference": [
-        "bedtime_story",
-        "bilingual_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "low",
-        "emotional_intensity": "low",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "soft_sequence"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "fear_tension",
-          "fast_plot_changes",
-          "unpredictable_emotions",
-          "high_conflict"
-        ],
-        "notes": "Emotional safety for ages 3–5 must imitate predictable, soothing emotional cycles and avoid any form of tension."
-      },
-      "natural_phrases": [
-        "soft story for preschoolers",
-        "emotionally safe book",
-        "story with gentle emotions",
-        "calming bedtime story for 3 year old",
-        "safe story for sensitive children",
-        "book without scary scenes",
-        "gentle emotional development",
-        "soothing preschool bedtime",
-        "story with warm energy",
-        "book for emotional comfort"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_safety": "apply emotion_safety",
-        "if_no_tone_specified": "reduce_emotional_intensity"
-      }
-    },
-
-    {
-      "intent_id": "bilingual_learning_3_5",
-      "age_groups": ["3-5"],
-      "description": "Introduce bilingual recognition, parallel sentences, thematic vocabulary pairs, and early comprehension for ages 3–5.",
-      "target_skills": [
-        "bilingual_stories",
-        "vocabulary_growth",
-        "parallel_sentences",
-        "early_comprehension",
-        "language_reinforcement"
-      ],
-      "book_type_preference": [
-        "bilingual_story",
-        "bedtime_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "low",
-        "linguistic_load": "simple_bilingual_sentences",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "short_parallel_scenes"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "dense_parallel_paragraphs",
-          "advanced_vocabulary",
-          "complex_dialogues",
-          "heavy_text_pages"
-        ],
-        "notes": "Bilingual development for 3–5 must use simple parallel lines EN–ES with clear visual alignment."
-      },
-      "natural_phrases": [
-        "first bilingual book for 3 year old",
-        "bilingual story for preschoolers",
-        "simple english spanish book",
-        "easy vocabulary bilingual book",
-        "early bilingual reading",
-        "parallel sentences book",
-        "bilingual bedtime story",
-        "dual language story for kids",
-        "book to start bilingual learning",
-        "gentle bilingual introduction"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_bilingual": "apply bilingual_stories",
-        "if_sentence_structure_unspecified": "apply_parallel_sentences"
-      }
-    },
-
-    {
-      "intent_id": "coloring_skill_growth_3_5",
-      "age_groups": ["3-5"],
-      "description": "Develop motor skills, attention growth, shape variety understanding, and creative confidence through moderate-detail coloring.",
-      "target_skills": [
-        "motor_growth",
-        "attention_growth",
-        "shape_variety",
-        "creative_confidence",
-        "moderate_detail",
-        "thematic_exploration"
-      ],
-      "book_type_preference": [
-        "coloring"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "none",
-        "linguistic_load": "none"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "over_detailed_pages",
-          "tiny_shapes",
-          "visual_noise",
-          "multiple_objects_per_page_without_structure"
-        ],
-        "notes": "Coloring for ages 3–5 must gently increase complexity without overwhelming detail density."
-      },
-      "natural_phrases": [
-        "coloring book for 4 year old",
-        "moderate detail coloring",
-        "preschool coloring activity",
-        "coloring to improve motor skills",
-        "cute animals to color",
-        "coloring for attention growth",
-        "not too detailed coloring book",
-        "coloring to encourage creativity",
-        "starter coloring level 3–5",
-        "age appropriate coloring"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_color": "apply motor_growth",
-        "if_detail_level_unspecified": "default_to_moderate_detail"
-      }
-    },
-
-    {
-      "intent_id": "gentle_adventure_3_5",
-      "age_groups": ["3-5"],
-      "description": "Deliver small adventure arcs with low tension, simple logic, and soft emotional transitions.",
-      "target_skills": [
-        "imagination_seed",
-        "early_logic",
-        "attention_growth",
-        "simple_dialogues",
-        "emotion_safety"
-      ],
-      "book_type_preference": [
-        "bedtime_story",
-        "bilingual_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "low",
-        "visual_load": "moderate_detail",
-        "emotional_intensity": "low",
-        "narrative_structure": "gentle_adventure"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "suspense",
-          "threat_scenes",
-          "fast_plot",
-          "multi_layer_conflict"
-        ],
-        "notes": "Adventures for 3–5 need to be symbolic, slow, and emotionally safe."
-      },
-      "natural_phrases": [
-        "gentle adventure story",
-        "soft adventure for 3 year old",
-        "adventure not scary",
-        "story with tiny adventure",
-        "simple adventure for preschooler",
-        "adventure story without fear",
-        "book with gentle actions",
-        "soft plot adventure",
-        "safe adventure bedtime story",
-        "low tension adventure"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_adventure": "add imagination_seed",
-        "if_safety_unspecified": "apply emotion_safety"
-      }
-    }
-    {
-      "intent_id": "emotional_depth_5_7",
-      "age_groups": ["5-7"],
-      "description": "Support emotional depth, early moral interpretation, empathy development and meaningful reflection for children ages 5–7.",
-      "target_skills": [
-        "emotion_depth",
-        "empathy_development",
-        "vocabulary_growth",
-        "independent_thinking",
-        "story_structure"
-      ],
-      "book_type_preference": [
-        "story",
-        "bedtime_story",
-        "chapter_like_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "emotional_intensity": "moderate",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "multi_scene_linear"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "high_fear",
-          "dark_conflict",
-          "over_complex_moral_dilemmas",
-          "violence"
-        ],
-        "notes": "Children 5–7 can process moderate emotional depth but still require emotional safety and clarity."
-      },
-      "natural_phrases": [
-        "story with emotional lessons",
-        "book about feelings",
-        "story teaching empathy",
-        "meaningful story for kids",
-        "story with deeper meaning",
-        "gentle moral story",
-        "story to help understand emotions",
-        "soft emotional development book",
-        "book to teach kindness",
-        "story with emotional value"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_feelings": "apply emotion_depth",
-        "if_request_mentions_empathy": "apply empathy_development"
-      }
-    },
-
-    {
-      "intent_id": "logic_and_reasoning_5_7",
-      "age_groups": ["5-7"],
-      "description": "Introduce simple logic, moral reasoning seeds, cause–effect understanding, and structured narrative reasoning.",
-      "target_skills": [
         "logic",
-        "early_logic",
-        "independent_thinking",
-        "story_structure",
-        "vocabulary_growth"
-      ],
-      "book_type_preference": [
-        "story",
-        "chapter_like_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "cause_effect_simple",
-        "linguistic_load": "moderate"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "multi_layer_logic",
-          "heavy_philosophical_elements",
-          "fast_irregular_plot"
-        ],
-        "notes": "Logic for ages 5–7 must be grounded in simple, relatable actions and consequences."
-      },
-      "natural_phrases": [
-        "story teaching logic",
-        "book for reasoning skills",
-        "story explaining actions",
-        "simple logic for kids",
-        "story with cause and effect",
-        "book to help reasoning"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_logic": "apply logic",
-        "if_cause_effect_unspecified": "apply early_logic"
-      }
-    },
-
-    {
-      "intent_id": "vocabulary_expansion_5_7",
-      "age_groups": ["5-7"],
-      "description": "Expand vocabulary through emotionally meaningful stories, structured dialogues and multi-scene story formats.",
-      "target_skills": [
-        "vocabulary_growth",
-        "emotion_depth",
-        "simple_dialogues",
-        "story_structure",
-        "independent_thinking"
-      ],
-      "book_type_preference": [
-        "story",
-        "bedtime_story",
-        "bilingual_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "visual_load": "moderate_detail",
-        "linguistic_load": "structured_dialogues",
-        "narrative_structure": "multi_scene_linear"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "dense_vocabulary_lists",
-          "over_complex_dummy_text",
-          "text_walls_without_scene_break"
-        ],
-        "notes": "Vocabulary expansion at 5–7 works best when embedded in meaningful emotional scenes."
-      },
-      "natural_phrases": [
-        "book to improve vocabulary",
-        "story with more words",
-        "book for language comprehension",
-        "story to expand vocabulary",
-        "vocabulary builder for kids",
-        "language growth book"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_words": "apply vocabulary_growth",
-        "if_language_goal_unspecified": "apply story_structure"
-      }
-    },
-
-    {
-      "intent_id": "empathy_and_kindness_5_7",
-      "age_groups": ["5-7"],
-      "description": "Strengthen empathy, kindness reflection, character motivation understanding and emotional interpretation.",
-      "target_skills": [
-        "empathy_development",
-        "emotion_depth",
-        "independent_thinking",
-        "logic",
-        "story_structure"
-      ],
-      "book_type_preference": [
-        "story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "emotional_intensity": "moderate",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "moral_single_arc"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "aggressive_conflicts",
-          "dark_themes",
-          "emotional_overload",
-          "parallel_storylines"
-        ],
-        "notes": "Empathy development relies on single-thread narratives with stable emotional pacing."
-      },
-      "natural_phrases": [
-        "story about kindness",
-        "story teaching empathy",
-        "book for emotional intelligence",
-        "story with moral lessons",
-        "gentle moral story",
-        "story about friendship values"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_kindness": "apply empathy_development",
-        "if_moral_goal_unspecified": "apply emotion_depth"
-      }
-    },
-
-    {
-      "intent_id": "coloring_advanced_5_7",
-      "age_groups": ["5-7"],
-      "description": "Moderately complex coloring activities for developing motor control, detail management, composition, and visual planning.",
-      "target_skills": [
-        "motor_control",
-        "attention_growth",
-        "detail_management",
-        "creative_confidence",
-        "composition",
-        "visual_planning"
-      ],
-      "book_type_preference": [
-        "coloring"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "visual_load": "moderate_to_high_detail",
-        "narrative_structure": "none",
-        "linguistic_load": "none"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "too_many_tiny_shapes",
-          "over_dense_detail",
-          "visual_noise",
-          "unstructured_scene_layout"
-        ],
-        "notes": "Coloring for 5–7 must balance challenge with achievable detail density."
-      },
-      "natural_phrases": [
-        "coloring book with more detail",
-        "animals coloring for older kids",
-        "coloring for motor control",
-        "coloring for patience",
-        "creative coloring for kids",
-        "coloring to improve focus"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_detail": "apply detail_management",
-        "if_motor_goal_unspecified": "apply motor_control"
-      }
-    }
-    {
-      "intent_id": "calm_story_5_7",
-      "age_groups": ["5-7"],
-      "description": "Provide a calm, softly emotional bedtime story for ages 5–7 with meaningful content but no overstimulation.",
-      "target_skills": [
-        "emotion_depth",
-        "attention_growth",
-        "story_structure",
-        "vocabulary_growth"
-      ],
-      "book_type_preference": [
-        "bedtime_story",
-        "story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "emotional_intensity": "soft",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "single_scene_or_two"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "heavy_conflict",
-          "loud_action",
-          "fast_plot",
-          "fear_elements"
-        ],
-        "notes": "Ages 5–7 benefit from soothing rhythm combined with meaningful narrative seeds."
-      },
-      "natural_phrases": [
-        "calm bedtime story 5-year-old",
-        "gentle story for preschooler",
-        "soft bedtime reading 5–7",
-        "simple calm story",
-        "story to calm before bed",
-        "emotional but soft story"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_bedtime": "apply emotion_depth",
-        "if_calm_goal_unspecified": "apply attention_growth"
-      }
-    },
-
-    {
-      "intent_id": "drawing_early_5_7",
-      "age_groups": ["5-7"],
-      "description": "Develop early structured drawing skills using moderate detail, step-by-step clarity and composition basics.",
-      "target_skills": [
-        "motor_control",
-        "visual_planning",
-        "creative_confidence",
-        "detail_management",
-        "composition"
-      ],
-      "book_type_preference": [
-        "drawing",
-        "activity"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "none",
-        "linguistic_load": "minimal"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "high_detail_complexity",
-          "multi_stage_shapes",
-          "advanced_proportions",
-          "realistic_anatomy"
-        ],
-        "notes": "At 5–7, drawing must emphasize confidence, not accuracy."
-      },
-      "natural_phrases": [
-        "drawing for preschoolers",
-        "easy step by step drawing",
-        "draw animals for 5-year-olds",
-        "beginner drawing book",
-        "art skills for young kids",
-        "simple drawing lessons"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_drawing": "apply motor_control",
-        "if_step_by_step_unspecified": "apply visual_planning"
-      }
-    },
-
-    {
-      "intent_id": "imagination_growth_5_7",
-      "age_groups": ["5-7"],
-      "description": "Support imagination development through stories with gentle adventure, creative scenes, emotional safety, and early logic.",
-      "target_skills": [
-        "imagination",
-        "emotion_depth",
-        "logic",
-        "attention_growth",
-        "story_structure"
-      ],
-      "book_type_preference": [
-        "story",
-        "bedtime_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "gentle_adventure",
-        "emotional_intensity": "soft"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "dark_adventures",
-          "fast_action",
-          "complex_mythology",
-          "multi_timeline_plots"
-        ],
-        "notes": "Imagination should be anchored in emotional safety and calm pacing."
-      },
-      "natural_phrases": [
-        "story for imagination",
-        "creative story 5–7",
-        "gentle adventure for kids",
-        "storybook with small adventure",
-        "fantasy but simple story",
-        "story for creative thinking"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_imagination": "apply imagination",
-        "if_creative_goal_unspecified": "apply story_structure"
-      }
-    },
-
-    {
-      "intent_id": "bilingual_stories_5_7",
-      "age_groups": ["5-7"],
-      "description": "Introduce bilingual concepts through simple dialogues, short bilingual sequences and parallel sentence patterns.",
-      "target_skills": [
-        "bilingual_stories",
-        "vocabulary_growth",
-        "parallel_sentences",
-        "early_comprehension",
-        "language_reinforcement"
-      ],
-      "book_type_preference": [
-        "bilingual_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate",
-        "visual_load": "moderate_detail",
-        "linguistic_load": "moderate",
-        "narrative_structure": "simple_scenes"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "full_paragraph_bilingual",
-          "complex_synonyms",
-          "dense translation blocks"
-        ],
-        "notes": "For 5–7, bilingual text must be simple, parallel and emotionally safe."
-      },
-      "natural_phrases": [
-        "bilingual book for preschool",
-        "easy bilingual story",
-        "english spanish story kids",
-        "simple bilingual dialogues",
-        "book to learn two languages",
-        "first bilingual reading"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_bilingual": "apply bilingual_stories",
-        "if_language_goal_unspecified": "apply early_comprehension"
-      }
-    },
-
-    {
-      "intent_id": "advanced_logic_7_10",
-      "age_groups": ["7-10"],
-      "description": "Develop abstract reasoning, multi-scene comprehension, cause–effect chains, motivation interpretation and independent thinking.",
-      "target_skills": [
-        "abstract_reasoning",
-        "independent_thinking",
-        "multi_scene_structure",
-        "logic",
-        "emotion_depth",
-        "vocabulary_expansion"
-      ],
-      "book_type_preference": [
-        "story",
-        "chapter_story",
-        "emotional_moral_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "high",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "multi_scene_complex",
-        "linguistic_load": "high"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "dark_themes",
-          "heavy_suspense",
-          "emotionally_intense_conflicts",
-          "violent_scenes"
-        ],
-        "notes": "Logic for 7–10 includes deeper meaning but must remain emotionally safe."
-      },
-      "natural_phrases": [
-        "story with complex reasoning",
-        "book for independent thinking",
-        "story teaching consequences",
-        "advanced bedtime story",
-        "story for deeper logic",
-        "meaningful adventure"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_logic": "apply logic",
-        "if_complex_goal_unspecified": "apply abstract_reasoning"
-      }
-    }
-    {
-      "intent_id": "moral_lessons_7_10",
-      "age_groups": ["7-10"],
-      "description": "Provide a story with moral reasoning, emotional depth, kindness themes and multi-scene narrative appropriate for ages 7–10.",
-      "target_skills": [
-        "moral_reasoning",
-        "advanced_emotion_depth",
-        "empathy_development",
-        "multi_scene_structure",
-        "abstract_reasoning",
-        "independent_thinking",
-        "vocabulary_expansion"
-      ],
-      "book_type_preference": [
-        "story",
-        "emotional_moral_story",
-        "chapter_story"
-      ],
-      "value_profile_requirements": {
-        "complexity": "high",
-        "emotional_intensity": "moderate",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "multi_scene_complex",
-        "linguistic_load": "high"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "fear_inducing_scenes",
-          "heavy_conflict",
-          "violent_actions",
-          "dark_themes"
-        ],
-        "notes": "Moral development must remain emotionally safe and constructive at ages 7–10."
-      },
-      "natural_phrases": [
-        "story teaching kindness",
-        "book with moral lessons",
-        "story for empathy",
-        "story with deeper meaning",
-        "gentle moral story",
-        "story explaining consequences",
-        "meaningful story for kids"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_kindness": "apply moral_reasoning",
-        "if_emotional_goal_unspecified": "apply advanced_emotion_depth"
-      }
-    },
-
-    {
-      "intent_id": "bilingual_advanced_7_10",
-      "age_groups": ["7-10"],
-      "description": "Support advanced bilingual development with full-paragraph EN–ES, cross-language meaning alignment and independent comprehension.",
-      "target_skills": [
-        "full_paragraph_bilingual",
-        "meaning_alignment",
-        "comprehension_depth",
-        "parallel_reading",
-        "cross_language_mapping",
-        "vocabulary_expansion",
-        "independent_language_growth"
-      ],
-      "book_type_preference": [
-        "bilingual_extended",
-        "bilingual_transition"
-      ],
-      "value_profile_requirements": {
-        "complexity": "high",
-        "visual_load": "low",
-        "linguistic_load": "high",
-        "narrative_structure": "multi_scene_complex",
-        "emotional_intensity": "moderate"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "simple_parallel_sentences",
-          "picture_dependence",
-          "fragmented_translation",
-          "baby_vocabulary"
-        ],
-        "notes": "Ages 7–10 require structured paragraph-level bilingual mapping, not simplistic word pairs."
-      },
-      "natural_phrases": [
-        "bilingual book with paragraphs",
-        "advanced bilingual reading",
-        "story in English and Spanish",
-        "parallel reading for kids",
-        "two-language book for 8-year-olds",
-        "bilingual chapter story",
-        "book to improve bilingual skills"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_bilingual": "apply full_paragraph_bilingual",
-        "if_level_unspecified": "apply comprehension_depth"
-      }
-    },
-
-    {
-      "intent_id": "drawing_advanced_7_10",
-      "age_groups": ["7-10"],
-      "description": "Provide structured step-by-step drawing that develops procedural reasoning, motor mastery, shape analysis and long focus for ages 7–10.",
-      "target_skills": [
-        "procedural_reasoning",
-        "step_by_step_logic",
-        "motor_mastery",
-        "visual_analysis",
-        "complex_shape_breakdown",
-        "long_focus",
-        "creative_confidence"
-      ],
-      "book_type_preference": [
-        "step_by_step_drawing",
-        "drawing"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate_to_high",
-        "visual_load": "structured_complexity",
-        "linguistic_load": "minimal",
-        "narrative_structure": "none"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "over_detailed_realistic_anatomy",
-          "non_structured_drawing_pages",
-          "hyper_detailed_shading",
-          "adult_level_proportions"
-        ],
-        "notes": "Drawing must stay child-appropriate, structured, confidence-building, not overwhelming."
-      },
-      "natural_phrases": [
-        "step-by-step drawing book",
-        "drawing for older kids",
-        "how to draw animals 7–10",
-        "drawing with many steps",
-        "drawing to improve motor skills",
-        "drawing for concentration",
-        "structured drawing lessons"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_drawing": "apply step_by_step_logic",
-        "if_complexity_unspecified": "apply visual_analysis"
-      }
-    },
-
-    {
-      "intent_id": "long_focus_training_7_10",
-      "age_groups": ["7-10"],
-      "description": "Strengthen long attention span through structured drawing, multi-scene stories or bilingual reading, depending on user preference.",
-      "target_skills": [
-        "long_focus",
-        "multi_scene_structure",
-        "procedural_reasoning",
-        "visual_analysis",
-        "vocabulary_expansion"
-      ],
-      "book_type_preference": [
-        "step_by_step_drawing",
-        "story",
-        "bilingual_extended"
-      ],
-      "value_profile_requirements": {
-        "complexity": "moderate_to_high",
-        "visual_load": "medium",
-        "linguistic_load": "medium_to_high",
-        "narrative_structure": "extended"
-      },
-      "constraints": {
-        "forbidden_elements": [
-          "short_simple_scenes",
-          "too_easy_drawing",
-          "oversimplified_text",
-          "hyperactive_plot"
-        ],
-        "notes": "7–10 age group can handle longer cognitive arcs if emotional tone is balanced."
-      },
-      "natural_phrases": [
-        "book to increase focus",
-        "longer story for kids",
-        "work on concentration",
-        "drawing for patience",
-        "bilingual reading for focus",
-        "complex story to stay engaged"
-      ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
-      },
-      "fallback_rules": {
-        "if_request_mentions_focus": "apply long_focus",
-        "if_book_type_unspecified": "prefer_story"
-      }
-    },
-
-    {
-      "intent_id": "vocabulary_expansion_7_10",
-      "age_groups": ["7-10"],
-      "description": "Expand vocabulary through stories with rich language, multi-scene arcs, emotional nuance and developmentally safe complexity.",
-      "target_skills": [
-        "vocabulary_expansion",
-        "advanced_emotion_depth",
-        "logic",
-        "multi_scene_structure",
+        "structured_reasoning",
         "abstract_reasoning"
       ],
-      "book_type_preference": [
-        "story",
-        "emotional_moral_story",
-        "bilingual_extended"
+
+      "book_type_preference": {
+        "primary": ["bedtime_story"],
+        "secondary": ["simple_coloring"],
+        "forbidden": ["step_by_step_drawing", "bilingual_extended"]
+      },
+
+      "value_profile": {
+        "complexity": "very_low",
+        "emotion_intensity": "minimal",
+        "visual_density": "low",
+        "narrative_speed": "slow",
+        "language_density": "minimal"
+      }
+    },
+
+    {
+      "intent_id": "INTENT_002",
+      "slug": "easy_coloring_for_toddlers",
+      "label": "Easy coloring for toddlers",
+      "definition": "Parent wants extremely simple coloring tasks for ages 1–3.",
+      
+      "age_resolution": {
+        "allowed": ["1-3"],
+        "ideal": "1-3",
+        "notes": "Strict toddler motor limits. One object per page ideal."
+      },
+
+      "required_skills": [
+        "motor_basic",
+        "one_object_per_page",
+        "low_stimulation",
+        "low_cognitive_load"
       ],
-      "value_profile_requirements": {
+
+      "optional_skills": [
+        "attention_growth",
+        "creative_confidence"
+      ],
+
+      "forbidden_skills": [
+        "moderate_detail",
+        "shape_variety",
+        "complex_shape_breakdown"
+      ],
+
+      "book_type_preference": {
+        "primary": ["simple_coloring"],
+        "secondary": ["coloring"],
+        "forbidden": ["step_by_step_drawing"]
+      },
+
+      "value_profile": {
+        "complexity": "very_low",
+        "motor_requirement": "minimal",
+        "visual_density": "very_low",
+        "page_structure": "single_object"
+      }
+    },
+
+    {
+      "intent_id": "INTENT_003",
+      "slug": "early_imagination_growth",
+      "label": "Early imagination growth",
+      "definition": "Parent asks for books that start imagination formation for ages 3–5.",
+      
+      "age_resolution": {
+        "allowed": ["3-5"],
+        "ideal": "3-5",
+        "notes": "This age supports imagination seeds and simple narrative expansion."
+      },
+
+      "required_skills": [
+        "imagination_seed",
+        "simple_dialogues",
+        "speech_development"
+      ],
+
+      "optional_skills": [
+        "early_logic",
+        "attention_growth",
+        "shape_variety",
+        "moderate_detail"
+      ],
+
+      "forbidden_skills": [
+        "structured_reasoning",
+        "complex_vocabulary",
+        "abstract_reasoning"
+      ],
+
+      "book_type_preference": {
+        "primary": ["bedtime_story"],
+        "secondary": ["coloring"],
+        "forbidden": ["step_by_step_drawing"]
+      },
+
+      "value_profile": {
+        "complexity": "low",
+        "emotion_intensity": "soft",
+        "visual_density": "moderate",
+        "narrative_speed": "gentle"
+      }
+    },
+    {
+      "intent_id": "INTENT_004",
+      "slug": "speech_development_support",
+      "label": "Speech development support",
+      "definition": "Parent wants a book to strengthen early speech skills through simple dialogues and repetition.",
+      
+      "age_resolution": {
+        "allowed": ["3-5", "5-7"],
+        "ideal": "3-5",
+        "notes": "Early speech expansions happen at 3–5; 5–7 can still benefit."
+      },
+
+      "required_skills": [
+        "simple_dialogues",
+        "speech_development",
+        "predictable_sequence"
+      ],
+
+      "optional_skills": [
+        "imagination_seed",
+        "attention_growth",
+        "low_cognitive_load"
+      ],
+
+      "forbidden_skills": [
+        "complex_vocabulary",
+        "abstract_reasoning",
+        "structured_reasoning"
+      ],
+
+      "book_type_preference": {
+        "primary": ["bedtime_story", "bilingual_story"],
+        "secondary": [],
+        "forbidden": ["step_by_step_drawing"]
+      },
+
+      "value_profile": {
+        "complexity": "low",
+        "emotion_intensity": "soft",
+        "language_density": "simple",
+        "narrative_speed": "gentle"
+      }
+    },
+
+    {
+      "intent_id": "INTENT_005",
+      "slug": "bilingual_intro",
+      "label": "Bilingual introduction",
+      "definition": "Parent wants first bilingual exposure for a 1–3 or 3–5 child.",
+      
+      "age_resolution": {
+        "allowed": ["1-3", "3-5"],
+        "ideal": "3-5",
+        "notes": "1–3 only simple pairs; 3–5 is the natural bilingual start."
+      },
+
+      "required_skills": [
+        "predictable_parallel_lines",
+        "bilingual_stories",
+        "simple_dialogues"
+      ],
+
+      "optional_skills": [
+        "speech_development",
+        "imagination_seed",
+        "attention_growth"
+      ],
+
+      "forbidden_skills": [
+        "complex_vocabulary",
+        "full_paragraph_bilingual",
+        "parallel_reading"
+      ],
+
+      "book_type_preference": {
+        "primary": ["bilingual", "bilingual_story"],
+        "secondary": ["bedtime_story"],
+        "forbidden": ["bilingual_extended"]
+      },
+
+      "value_profile": {
+        "complexity": "low",
+        "language_density": "simple",
+        "bilingual_structure": "two_rows_simple",
+        "visual_density": "moderate"
+      }
+    },
+
+    {
+      "intent_id": "INTENT_006",
+      "slug": "moderate_color_development",
+      "label": "Moderate color development",
+      "definition": "Parent wants moderate coloring complexity for ages 3–5 or 5–7.",
+      
+      "age_resolution": {
+        "allowed": ["3-5", "5-7"],
+        "ideal": "3-5",
+        "notes": "First detail processing improves at ages 3–5."
+      },
+
+      "required_skills": [
+        "moderate_detail",
+        "shape_variety",
+        "creative_confidence"
+      ],
+
+      "optional_skills": [
+        "attention_growth",
+        "visual_planning",
+        "low_cognitive_load"
+      ],
+
+      "forbidden_skills": [
+        "complex_shape_breakdown",
+        "motor_mastery"
+      ],
+
+      "book_type_preference": {
+        "primary": ["coloring"],
+        "secondary": ["bedtime_story"],
+        "forbidden": ["step_by_step_drawing"]
+      },
+
+      "value_profile": {
+        "complexity": "moderate",
+        "visual_density": "medium",
+        "motor_requirement": "moderate"
+      }
+    },
+
+    {
+      "intent_id": "INTENT_007",
+      "slug": "simple_story_for_5_7",
+      "label": "Simple but meaningful story for ages 5–7",
+      "definition": "Parent wants a story with emotional and logical growth but still simple enough.",
+      
+      "age_resolution": {
+        "allowed": ["5-7"],
+        "ideal": "5-7",
+        "notes": "This age develops deeper emotional and simple logical understanding."
+      },
+
+      "required_skills": [
+        "emotion_depth",
+        "logic",
+        "concentration"
+      ],
+
+      "optional_skills": [
+        "imagination_seed",
+        "situational_language",
+        "speech_development"
+      ],
+
+      "forbidden_skills": [
+        "structured_reasoning",
+        "abstract_reasoning",
+        "moral_reasoning"
+      ],
+
+      "book_type_preference": {
+        "primary": ["bedtime_story"],
+        "secondary": ["bilingual_story"],
+        "forbidden": ["step_by_step_drawing"]
+      },
+
+      "value_profile": {
+        "complexity": "moderate",
+        "emotion_intensity": "soft",
+        "narrative_speed": "medium"
+      }
+    },
+    {
+      "intent_id": "INTENT_008",
+      "slug": "advanced_story_for_7_10",
+      "label": "Advanced emotional and logical story for ages 7–10",
+      "definition": "Parent wants deeper narrative arcs, emotional interpretation and multi-scene structure.",
+
+      "age_resolution": {
+        "allowed": ["7-10"],
+        "ideal": "7-10",
+        "notes": "Only this age can handle multi-scene complexity and moral implications."
+      },
+
+      "required_skills": [
+        "advanced_emotion_depth",
+        "structured_reasoning",
+        "moral_reasoning",
+        "multi_scene_structure"
+      ],
+
+      "optional_skills": [
+        "abstract_reasoning",
+        "complex_vocabulary",
+        "situational_language"
+      ],
+
+      "forbidden_skills": [
+        "low_stimulation",
+        "soft_story"
+      ],
+
+      "book_type_preference": {
+        "primary": ["bedtime_story"],
+        "secondary": ["bilingual_extended"],
+        "forbidden": ["simple_coloring"]
+      },
+
+      "value_profile": {
         "complexity": "high",
-        "linguistic_load": "high",
-        "visual_load": "moderate_detail",
-        "narrative_structure": "multi_scene_complex"
+        "emotion_intensity": "moderate",
+        "visual_density": "high",
+        "narrative_speed": "dynamic"
+      }
+    },
+
+    {
+      "intent_id": "INTENT_009",
+      "slug": "first_step_by_step_drawing",
+      "label": "First step-by-step drawing (7–10)",
+      "definition": "Parent wants structured drawing tasks with stable visual order.",
+
+      "age_resolution": {
+        "allowed": ["7-10"],
+        "ideal": "7-10",
+        "notes": "Structured drawing logic appears only from 7."
       },
-      "constraints": {
-        "forbidden_elements": [
-          "dense_academic_vocabulary",
-          "graphic_conflict",
-          "fear_scenes",
-          "adult_themes"
-        ],
-        "notes": "Vocabulary must grow in an emotionally stable and developmentally aligned environment."
-      },
-      "natural_phrases": [
-        "book to expand vocabulary",
-        "story with many new words",
-        "advanced reading for kids",
-        "vocabulary builder book",
-        "language-rich story",
-        "story with deeper language"
+
+      "required_skills": [
+        "step_by_step_logic",
+        "motor_mastery",
+        "complex_shape_breakdown",
+        "long_focus"
       ],
-      "matching_integration": {
-        "uses_skills_from": "skills.json",
-        "uses_age_norms_from": "ages.json",
-        "uses_matching_rules_from": "matching.json",
-        "book_pool": "books.json"
+
+      "optional_skills": [
+        "creative_confidence",
+        "visual_planning"
+      ],
+
+      "forbidden_skills": [
+        "motor_basic",
+        "one_object_per_page",
+        "moderate_detail"
+      ],
+
+      "book_type_preference": {
+        "primary": ["step_by_step_drawing"],
+        "secondary": [],
+        "forbidden": ["simple_coloring", "bilingual_story"]
       },
-            "fallback_rules": {
-        "if_request_mentions_vocabulary": "apply vocabulary_expansion",
-        "if_complexity_unspecified": "apply multi_scene_structure"
+
+      "value_profile": {
+        "complexity": "high",
+        "motor_requirement": "high",
+        "visual_density": "structured",
+        "step_count": "multi_step"
+      }
+    },
+
+    {
+      "intent_id": "INTENT_010",
+      "slug": "bilingual_extended_reading",
+      "label": "Extended bilingual reading",
+      "definition": "Parent wants advanced bilingual books with full paragraphs and alignment tasks.",
+
+      "age_resolution": {
+        "allowed": ["7-10"],
+        "ideal": "7-10",
+        "notes": "Full-paragraph bilingual understanding appears only here."
+      },
+
+      "required_skills": [
+        "full_paragraph_bilingual",
+        "parallel_reading",
+        "meaning_alignment",
+        "cross_language_mapping"
+      ],
+
+      "optional_skills": [
+        "situational_language",
+        "abstract_reasoning",
+        "complex_vocabulary"
+      ],
+
+      "forbidden_skills": [
+        "predictable_parallel_lines",
+        "simple_dialogues",
+        "bilingual_stories"
+      ],
+
+      "book_type_preference": {
+        "primary": ["bilingual_extended"],
+        "secondary": ["two_in_one"],
+        "forbidden": ["bilingual_story", "simple_coloring"]
+      },
+
+      "value_profile": {
+        "complexity": "high",
+        "language_density": "high",
+        "bilingual_structure": "two_paragraphs",
+        "semantic_alignment": "required"
+      }
+    },
+
+    {
+      "intent_id": "INTENT_011",
+      "slug": "emotional_support_story",
+      "label": "Emotional support story",
+      "definition": "Parent asks for a book that stabilizes the child's emotions without overstimulation.",
+
+      "age_resolution": {
+        "allowed": ["1-3", "3-5", "5-7"],
+        "ideal": "3-5",
+        "notes": "3–5 is the universal emotional support range."
+      },
+
+      "required_skills": [
+        "confidence",
+        "sensory_safety",
+        "soft_story"
+      ],
+
+      "optional_skills": [
+        "predictable_sequence",
+        "attention_growth"
+      ],
+
+      "forbidden_skills": [
+        "high_tension",
+        "advanced_emotion_depth",
+        "moral_reasoning"
+      ],
+
+      "book_type_preference": {
+        "primary": ["bedtime_story"],
+        "secondary": ["bilingual_story"],
+        "forbidden": ["step_by_step_drawing"]
+      },
+
+      "value_profile": {
+        "complexity": "very_low",
+        "emotion_intensity": "minimal",
+        "narrative_speed": "slow",
+        "visual_density": "low"
+      }
+    },
+    {
+      "intent_id": "INTENT_012",
+      "slug": "calm_before_sleep",
+      "label": "Calm before sleep",
+      "definition": "Parent wants a book to calm the child before bedtime with minimal stimulation.",
+
+      "age_resolution": {
+        "allowed": ["1-3", "3-5"],
+        "ideal": "1-3",
+        "notes": "The safest bedtime segment."
+      },
+
+      "required_skills": [
+        "soft_story",
+        "low_stimulation",
+        "sensory_safety"
+      ],
+
+      "optional_skills": [
+        "predictable_sequence",
+        "confidence"
+      ],
+
+      "forbidden_skills": [
+        "high_tension",
+        "advanced_emotion_depth",
+        "structured_reasoning"
+      ],
+
+      "book_type_preference": {
+        "primary": ["bedtime_story"],
+        "secondary": [],
+        "forbidden": ["coloring", "step_by_step_drawing"]
+      },
+
+      "value_profile": {
+        "complexity": "very_low",
+        "emotion_intensity": "very_low",
+        "visual_density": "low",
+        "narrative_speed": "slow"
       }
     }
   ]
-
 }
