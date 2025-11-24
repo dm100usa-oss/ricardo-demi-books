@@ -1700,8 +1700,12 @@
         "uses_matching_rules_from": "matching.json",
         "book_pool": "books.json"
       },
-      "fallback_rules": {
+            "fallback_rules": {
         "if_request_mentions_vocabulary": "apply vocabulary_expansion",
         "if_complexity_unspecified": "apply multi_scene_structure"
       }
     }
+  ]
+
+}
+
