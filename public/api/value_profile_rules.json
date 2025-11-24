@@ -1,0 +1,423 @@
+{
+  "version": "1.0.0",
+  "system": "fscbac_value_profile_rules",
+
+  "explanation": "Age → value_profile compatibility rules. Strictly references allowed values from value_profile_taxonomy.json. Used by matching.json and validation.json.",
+
+  "rules": {
+    "1-3": {
+      "complexity": {
+        "allowed": ["very_low", "low"],
+        "forbidden": ["medium", "medium_low", "medium_high", "high", "very_high"]
+      },
+      "emotional_intensity": {
+        "allowed": ["none", "very_low", "low", "soft"],
+        "forbidden": ["medium", "high"]
+      },
+      "narrative_structure": {
+        "allowed": ["predictable", "simple_sequence", "none", "parallel_en_es"],
+        "forbidden": [
+          "5_to_7_min_story",
+          "short_dialogues",
+          "adventure_arc",
+          "emotional_arc",
+          "multi_scene_light",
+          "multi_scene",
+          "multi_scene_expanded",
+          "multi_scene_complex",
+          "full_bilingual_parallel",
+          "procedural"
+        ]
+      },
+      "linguistic_load": {
+        "allowed": ["none", "minimal"],
+        "forbidden": [
+          "short_dialogues",
+          "simple_spanish",
+          "minimal_spanish",
+          "moderate",
+          "moderate_spanish",
+          "dialogue_rich",
+          "high",
+          "very_high",
+          "advanced_dialogue",
+          "advanced_spanish",
+          "advanced_dual_language"
+        ]
+      },
+      "visual_load": {
+        "allowed": ["simple", "one_object_per_page", "low_detail"],
+        "forbidden": ["moderate_detail", "high_detail", "step_by_step"]
+      },
+      "purpose": {
+        "allowed": [
+          "early_bedtime_routine",
+          "spanish_bedtime",
+          "motor_skill_start",
+          "early_motor_control",
+          "bilingual_foundation"
+        ],
+        "forbidden": [
+          "imagination_growth",
+          "spanish_preschool_bedtime",
+          "motor_control_growth",
+          "spanish_motor_growth",
+          "early_emotional_reasoning",
+          "spanish_emotional_growth",
+          "attention_and_motor_growth",
+          "spanish_focus_growth",
+          "moral_reasoning",
+          "spanish_moral_reasoning",
+          "drawing_mastery",
+          "spanish_drawing_mastery",
+          "bilingual_comprehension_depth"
+        ]
+      },
+      "recommended_for": {
+        "allowed": [
+          "toddlers_beginner_story",
+          "toddlers_spanish_speakers",
+          "toddlers_first_bilingual_book",
+          "toddlers_first_coloring",
+          "spanish_toddlers_coloring_start"
+        ],
+        "forbidden": [
+          "preschool_evening_reading",
+          "spanish_preschool_imagination",
+          "preschool_coloring",
+          "spanish_preschool_creativity",
+          "kids_early_logic_growth",
+          "spanish_kids_logic",
+          "kids_intermediate_coloring",
+          "spanish_kids_coloring",
+          "kids_advanced_emotional_logic",
+          "spanish_advanced_readers",
+          "kids_art_progression",
+          "spanish_young_artists",
+          "advanced_bilingual_kids"
+        ]
+      }
+    },
+
+    "3-5": {
+      "complexity": {
+        "allowed": ["low", "medium"],
+        "forbidden": ["very_low", "medium_low", "medium_high", "high", "very_high"]
+      },
+      "emotional_intensity": {
+        "allowed": ["none", "low", "soft", "medium"],
+        "forbidden": ["high"]
+      },
+      "narrative_structure": {
+        "allowed": [
+          "simple_sequence",
+          "5_to_7_min_story",
+          "short_dialogues",
+          "adventure_arc",
+          "parallel_en_es",
+          "none"
+        ],
+        "forbidden": [
+          "predictable",
+          "multi_scene_light",
+          "multi_scene",
+          "multi_scene_expanded",
+          "multi_scene_complex",
+          "emotional_arc",
+          "full_bilingual_parallel",
+          "procedural"
+        ]
+      },
+      "linguistic_load": {
+        "allowed": [
+          "none",
+          "minimal",
+          "short_dialogues",
+          "simple_spanish",
+          "minimal_spanish",
+          "moderate"
+        ],
+        "forbidden": [
+          "moderate_spanish",
+          "dialogue_rich",
+          "high",
+          "very_high",
+          "advanced_dialogue",
+          "advanced_spanish",
+          "advanced_dual_language"
+        ]
+      },
+      "visual_load": {
+        "allowed": ["simple", "low_detail", "moderate_detail"],
+        "forbidden": ["one_object_per_page", "high_detail", "step_by_step"]
+      },
+      "purpose": {
+        "allowed": [
+          "imagination_growth",
+          "spanish_preschool_bedtime",
+          "motor_control_growth",
+          "spanish_motor_growth",
+          "spanish_preschool_imagination"
+        ],
+        "forbidden": [
+          "early_bedtime_routine",
+          "spanish_bedtime",
+          "motor_skill_start",
+          "early_motor_control",
+          "early_emotional_reasoning",
+          "spanish_emotional_growth",
+          "attention_and_motor_growth",
+          "spanish_focus_growth",
+          "moral_reasoning",
+          "spanish_moral_reasoning",
+          "drawing_mastery",
+          "spanish_drawing_mastery",
+          "bilingual_comprehension_depth",
+          "bilingual_foundation"
+        ]
+      },
+      "recommended_for": {
+        "allowed": [
+          "preschool_evening_reading",
+          "preschool_coloring",
+          "spanish_preschool_creativity",
+          "spanish_preschool_imagination"
+        ],
+        "forbidden": [
+          "toddlers_beginner_story",
+          "toddlers_spanish_speakers",
+          "toddlers_first_bilingual_book",
+          "toddlers_first_coloring",
+          "spanish_toddlers_coloring_start",
+          "kids_early_logic_growth",
+          "spanish_kids_logic",
+          "kids_intermediate_coloring",
+          "spanish_kids_coloring",
+          "kids_advanced_emotional_logic",
+          "spanish_advanced_readers",
+          "kids_art_progression",
+          "spanish_young_artists",
+          "advanced_bilingual_kids"
+        ]
+      }
+    },
+
+    "5-7": {
+      "complexity": {
+        "allowed": ["medium", "medium_low", "medium_high"],
+        "forbidden": ["very_low", "low", "high", "very_high"]
+      },
+      "emotional_intensity": {
+        "allowed": ["none", "soft", "medium"],
+        "forbidden": ["low", "very_low", "high"]
+      },
+      "narrative_structure": {
+        "allowed": [
+          "adventure_arc",
+          "emotional_arc",
+          "multi_scene_light",
+          "none"
+        ],
+        "forbidden": [
+          "predictable",
+          "simple_sequence",
+          "5_to_7_min_story",
+          "short_dialogues",
+          "parallel_en_es",
+          "multi_scene",
+          "multi_scene_expanded",
+          "multi_scene_complex",
+          "full_bilingual_parallel",
+          "procedural"
+        ]
+      },
+      "linguistic_load": {
+        "allowed": [
+          "minimal",
+          "short_dialogues",
+          "moderate",
+          "dialogue_rich"
+        ],
+        "forbidden": [
+          "none",
+          "simple_spanish",
+          "minimal_spanish",
+          "moderate_spanish",
+          "high",
+          "very_high",
+          "advanced_dialogue",
+          "advanced_spanish",
+          "advanced_dual_language"
+        ]
+      },
+      "visual_load": {
+        "allowed": ["low_detail", "moderate_detail", "high_detail"],
+        "forbidden": ["simple", "one_object_per_page", "step_by_step"]
+      },
+      "purpose": {
+        "allowed": [
+          "early_emotional_reasoning",
+          "spanish_emotional_growth",
+          "attention_and_motor_growth",
+          "spanish_focus_growth",
+          "kids_early_logic_growth",
+          "spanish_kids_logic"
+        ],
+        "forbidden": [
+          "early_bedtime_routine",
+          "spanish_bedtime",
+          "motor_skill_start",
+          "early_motor_control",
+          "imagination_growth",
+          "spanish_preschool_bedtime",
+          "motor_control_growth",
+          "spanish_motor_growth",
+          "moral_reasoning",
+          "spanish_moral_reasoning",
+          "drawing_mastery",
+          "spanish_drawing_mastery",
+          "bilingual_comprehension_depth",
+          "bilingual_foundation"
+        ]
+      },
+      "recommended_for": {
+        "allowed": [
+          "kids_intermediate_coloring",
+          "spanish_kids_coloring"
+        ],
+        "forbidden": [
+          "toddlers_beginner_story",
+          "toddlers_spanish_speakers",
+          "toddlers_first_bilingual_book",
+          "toddlers_first_coloring",
+          "spanish_toddlers_coloring_start",
+          "preschool_evening_reading",
+          "preschool_coloring",
+          "spanish_preschool_creativity",
+          "spanish_preschool_imagination",
+          "kids_advanced_emotional_logic",
+          "spanish_advanced_readers",
+          "kids_art_progression",
+          "spanish_young_artists",
+          "advanced_bilingual_kids"
+        ]
+      }
+    },
+
+    "7-10": {
+      "complexity": {
+        "allowed": ["medium_high", "high", "very_high"],
+        "forbidden": ["very_low", "low", "medium", "medium_low"]
+      },
+      "emotional_intensity": {
+        "allowed": ["soft", "medium", "high"],
+        "forbidden": ["none", "very_low", "low"]
+      },
+      "narrative_structure": {
+        "allowed": [
+          "multi_scene",
+          "multi_scene_expanded",
+          "multi_scene_complex",
+          "emotional_arc",
+          "adventure_arc",
+          "full_bilingual_parallel",
+          "procedural"
+        ],
+        "forbidden": [
+          "predictable",
+          "simple_sequence",
+          "5_to_7_min_story",
+          "short_dialogues",
+          "parallel_en_es",
+          "multi_scene_light",
+          "none"
+        ]
+      },
+      "linguistic_load": {
+        "allowed": [
+          "moderate",
+          "moderate_spanish",
+          "dialogue_rich",
+          "advanced_dialogue",
+          "advanced_spanish",
+          "advanced_dual_language",
+          "high",
+          "very_high"
+        ],
+        "forbidden": [
+          "none",
+          "minimal",
+          "short_dialogues",
+          "simple_spanish",
+          "minimal_spanish"
+        ]
+      },
+      "visual_load": {
+        "allowed": ["moderate_detail", "high_detail", "step_by_step"],
+        "forbidden": ["simple", "one_object_per_page", "low_detail"]
+      },
+      "purpose": {
+        "allowed": [
+          "moral_reasoning",
+          "spanish_moral_reasoning",
+          "drawing_mastery",
+          "spanish_drawing_mastery",
+          "bilingual_comprehension_depth",
+          "kids_advanced_emotional_logic",
+          "spanish_advanced_readers",
+          "kids_art_progression",
+          "spanish_young_artists",
+          "advanced_bilingual_kids"
+        ],
+        "forbidden": [
+          "early_bedtime_routine",
+          "spanish_bedtime",
+          "motor_skill_start",
+          "early_motor_control",
+          "imagination_growth",
+          "spanish_preschool_bedtime",
+          "motor_control_growth",
+          "spanish_motor_growth",
+          "early_emotional_reasoning",
+          "spanish_emotional_growth",
+          "attention_and_motor_growth",
+          "spanish_focus_growth",
+          "bilingual_foundation",
+          "kids_intermediate_coloring",
+          "spanish_kids_coloring"
+        ]
+      },
+      "recommended_for": {
+        "allowed": [
+          "kids_advanced_emotional_logic",
+          "spanish_advanced_readers",
+          "kids_art_progression",
+          "spanish_young_artists",
+          "advanced_bilingual_kids"
+        ],
+        "forbidden": [
+          "toddlers_beginner_story",
+          "toddlers_spanish_speakers",
+          "toddlers_first_bilingual_book",
+          "toddlers_first_coloring",
+          "spanish_toddlers_coloring_start",
+          "preschool_evening_reading",
+          "spanish_preschool_imagination",
+          "preschool_coloring",
+          "spanish_preschool_creativity",
+          "kids_early_logic_growth",
+          "spanish_kids_logic",
+          "kids_intermediate_coloring",
+          "spanish_kids_coloring"
+        ]
+      }
+    }
+  },
+
+  "meta": {
+    "canonical": true,
+    "deterministic": true,
+    "compatible_with_taxonomy": true,
+    "purpose": "Provide strict machine-readable developmental constraints for each age group."
+  }
+}
