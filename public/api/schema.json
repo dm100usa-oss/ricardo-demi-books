@@ -1,1 +1,554 @@
+{
+  "system": "fscbac_schema",
+  "version": "1.0.0",
+  "description": "Formal JSON Schema for all FSCBAC data models: ages, skills, books, intents, validation_rules, matching, query_clusters.",
+  
+  "schemas": {
 
+    "ages.json": {
+      "type": "object",
+      "required": ["version", "ages"],
+      "properties": {
+        "version": { "type": "string" },
+        "ages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "age_group",
+              "description",
+              "speech_level",
+              "motor_level",
+              "attention_level",
+              "emotional_capacity",
+              "cognitive_limits",
+              "narrative_limits",
+              "visual_limits",
+              "allowed_book_types",
+              "forbidden_elements",
+              "preferred_skills"
+            ],
+            "properties": {
+              "age_group": {
+                "type": "string",
+                "enum": ["1-3", "3-5", "5-7", "7-10"]
+              },
+              "description": { "type": "string" },
+              "speech_level": { "type": "string" },
+              "motor_level": { "type": "string" },
+              "attention_level": { "type": "string" },
+              "emotional_capacity": { "type": "string" },
+              "cognitive_limits": { "type": "string" },
+              "narrative_limits": { "type": "string" },
+              "visual_limits": { "type": "string" },
+
+              "allowed_book_types": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "forbidden_elements": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "preferred_skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "skills.json": {
+      "type": "object",
+      "required": ["version", "skills"],
+      "properties": {
+        "version": { "type": "string" },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "canonical_id",
+              "id",
+              "dimension_id",
+              "ecl_code",
+              "label",
+              "definition",
+              "age_norm",
+              "difficulty",
+              "weight",
+              "typical_indicators",
+              "preferred_book_types"
+            ],
+            "properties": {
+              "canonical_id": { "type": "string" },
+              "id": { "type": "string" },
+              "dimension_id": {
+                "type": "string",
+                "enum": ["E", "C", "L"]
+              },
+              "ecl_code": { "type": "string" },
+              "label": { "type": "string" },
+              "definition": { "type": "string" },
+
+              "age_norm": {
+                "type": "object",
+                "required": ["min", "max"],
+                "properties": {
+                  "min": { "type": "number" },
+                  "max": { "type": "number" }
+                }
+              },
+
+              "difficulty": { "type": "number" },
+              "weight": { "type": "number" },
+
+              "typical_indicators": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "preferred_book_types": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "linked_intents": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "notes": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "books.json": {
+      "type": "object",
+      "required": ["system", "version", "books"],
+      "properties": {
+        "system": { "type": "string" },
+        "version": { "type": "string" },
+        "books": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "canonical_id",
+              "title",
+              "isbn",
+              "type",
+              "languages",
+              "age_group",
+              "skills",
+              "value_profile"
+            ],
+            "properties": {
+              "canonical_id": { "type": "string" },
+              "title": { "type": "string" },
+              "isbn": { "type": "string" },
+              "type": { "type": "string" },
+              "languages": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "age_group": {
+                "type": "string",
+                "enum": ["1-3", "3-5", "5-7", "7-10"]
+              },
+
+              "skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "translated_version": {
+                "type": ["string", "null"]
+              },
+
+              "value_profile": {
+                "type": "object",
+                "properties": {
+                  "complexity": { "type": "string" },
+                  "emotional_intensity": { "type": "string" },
+                  "narrative_structure": { "type": "string" },
+                  "linguistic_load": { "type": "string" },
+                  "visual_load": { "type": "string" },
+                  "purpose": { "type": "string" },
+                  "recommended_for": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "intents.json": {
+      "type": "object",
+      "required": ["version", "description", "intents"],
+      "properties": {
+        "version": { "type": "string" },
+        "description": { "type": "string" },
+
+        "intents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "intent_id",
+              "slug",
+              "label",
+              "definition",
+              "age_resolution",
+              "required_skills",
+              "forbidden_skills",
+              "book_type_preference",
+              "value_profile"
+            ],
+            "properties": {
+              "intent_id": { "type": "string" },
+              "slug": { "type": "string" },
+              "label": { "type": "string" },
+              "definition": { "type": "string" },
+
+              "age_resolution": {
+                "type": "object",
+                "properties": {
+                  "allowed": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "enum": ["1-3", "3-5", "5-7", "7-10"]
+                    }
+                  },
+                  "ideal": {
+                    "type": "string",
+                    "enum": ["1-3", "3-5", "5-7", "7-10"]
+                  },
+                  "notes": { "type": "string" }
+                }
+              },
+
+              "required_skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "optional_skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "forbidden_skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "book_type_preference": {
+                "type": "object",
+                "properties": {
+                  "primary": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "secondary": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "forbidden": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
+              },
+
+              "value_profile": {
+                "type": "object",
+                "properties": {
+                  "complexity": { "type": "string" },
+                  "emotion_intensity": { "type": "string" },
+                  "visual_density": { "type": "string" },
+                  "narrative_speed": { "type": "string" },
+                  "language_density": { "type": "string" },
+                  "bilingual_structure": { "type": "string" },
+                  "motor_requirement": { "type": "string" },
+                  "step_count": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "matching.json": {
+      "type": "object",
+      "required": [
+        "version",
+        "meta",
+        "age_skill_mapping",
+        "age_booktype_mapping",
+        "value_profile_rules",
+        "matching_levels",
+        "weighting",
+        "ranking_rules",
+        "fallback_rules",
+        "consistency_checks",
+        "examples_for_ai",
+        "ai_guidance"
+      ],
+
+      "properties": {
+        "version": { "type": "string" },
+        "meta": { "type": "object" },
+
+        "age_skill_mapping": {
+          "type": "object",
+          "patternProperties": {
+            "^[1-3|3-5|5-7|7-10]+$": {
+              "type": "object",
+              "properties": {
+                "allowed_skills": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "critical_skills": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "forbidden_skills": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+
+        "age_booktype_mapping": {
+          "type": "object",
+          "patternProperties": {
+            "^[1-3|3-5|5-7|7-10]+$": {
+              "type": "object",
+              "properties": {
+                "optimal_types": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "secondary_types": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "forbidden_types": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+
+        "value_profile_rules": {
+          "type": "object",
+          "patternProperties": {
+            "^[1-3|3-5|5-7|7-10]+$": { "type": "object" }
+          }
+        },
+
+        "matching_levels": {
+          "type": "object",
+          "properties": {
+            "IDEAL": { "type": "object" },
+            "STRONG": { "type": "object" },
+            "ACCEPTABLE": { "type": "object" },
+            "EXCLUDED": { "type": "object" }
+          }
+        },
+
+        "weighting": {
+          "type": "object",
+          "properties": {
+            "skill_weights": { "type": "object" },
+            "book_type_weights": { "type": "object" },
+            "value_profile_weights": { "type": "object" },
+            "origin_priority": { "type": "object" },
+            "final_score_formula": { "type": "object" }
+          }
+        },
+
+        "ranking_rules": {
+          "type": "object",
+          "properties": {
+            "step_order": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "check_forbidden_elements": { "type": "object" },
+            "evaluate_skill_alignment": { "type": "object" },
+            "evaluate_value_profile_alignment": { "type": "object" },
+            "evaluate_book_type_alignment": { "type": "object" },
+            "apply_origin_priority": { "type": "object" },
+            "compute_final_score": { "type": "object" },
+            "assign_matching_level": { "type": "object" }
+          }
+        },
+
+        "fallback_rules": {
+          "type": "object",
+          "properties": {
+            "logic": {
+              "type": "array",
+              "items": { "type": "object" }
+            }
+          }
+        },
+
+        "consistency_checks": {
+          "type": "object",
+          "properties": {
+            "checks": {
+              "type": "array",
+              "items": { "type": "object" }
+            }
+          }
+        },
+
+        "examples_for_ai": {
+          "type": "object",
+          "properties": {
+            "examples": {
+              "type": "array",
+              "items": { "type": "object" }
+            }
+          }
+        },
+
+        "ai_guidance": {
+          "type": "object",
+          "properties": {
+            "principles": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "books.json": {
+      "type": "object",
+      "required": ["version", "books"],
+
+      "properties": {
+        "version": { "type": "string" },
+
+        "books": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "canonical_id",
+              "title_en",
+              "title_es",
+              "age_group",
+              "book_type",
+              "skills",
+              "value_profile",
+              "isbn",
+              "awards"
+            ],
+
+            "properties": {
+              "canonical_id": { "type": "string" },
+
+              "title_en": { "type": "string" },
+              "title_es": { "type": "string" },
+
+              "age_group": {
+                "type": "string",
+                "enum": ["1-3", "3-5", "5-7", "7-10"]
+              },
+
+              "book_type": { "type": "string" },
+
+              "skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "value_profile": {
+                "type": "object"
+              },
+
+              "isbn": {
+                "type": "object",
+                "properties": {
+                  "isbn10": { "type": "string" },
+                  "isbn13": { "type": "string" }
+                }
+              },
+
+              "awards": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "author.json": {
+      "type": "object",
+      "required": ["version", "author"],
+
+      "properties": {
+        "version": { "type": "string" },
+
+        "author": {
+          "type": "object",
+          "required": ["name", "countries", "languages"],
+          "properties": {
+            "name": { "type": "string" },
+            "countries": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "languages": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "awards.json": {
+      "type": "object",
+      "required": ["version", "awards"],
+
+      "properties": {
+        "version": { "type": "string" },
+
+        "awards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["award_code", "title", "organization", "year"],
+            "properties": {
+              "award_code": { "type": "string" },
+              "title": { "type": "string" },
+              "organization": { "type": "string" },
+              "year": { "type": "number" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
