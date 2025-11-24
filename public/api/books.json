@@ -1,1 +1,427 @@
+{
+  "system": "fscbac_book_catalog",
+  "version": "1.0.1",
+  "books": [
+    {
+      "canonical_id": "where-are-you-going-little-max-1-3-en",
+      "title": "Where Are You Going, Little Max?",
+      "isbn": "978-1963328431",
+      "type": "bedtime_story",
+      "languages": ["EN"],
+      "age_group": "1-3",
+      "skills": [
+        "soft_story",
+        "predictable_sequence",
+        "sensory_safety"
+      ],
+      "translated_version": "a-donde-vas-pequeno-max-1-3-es",
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "predictable",
+        "linguistic_load": "minimal",
+        "visual_load": "one_object_per_page",
+        "purpose": "early_bedtime_routine",
+        "recommended_for": "toddlers_beginner_story"
+      }
+    },
 
+    {
+      "canonical_id": "a-donde-vas-pequeno-max-1-3-es",
+      "title": "¿A dónde vas, Pequeño Max?",
+      "isbn": "978-1963328462",
+      "type": "bedtime_story",
+      "languages": ["ES"],
+      "age_group": "1-3",
+      "skills": [
+        "soft_story",
+        "predictable_sequence",
+        "sensory_safety"
+      ],
+      "translated_version": "where-are-you-going-little-max-1-3-en",
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "predictable",
+        "linguistic_load": "minimal",
+        "visual_load": "one_object_per_page",
+        "purpose": "spanish_bedtime",
+        "recommended_for": "toddlers_spanish_speakers"
+      }
+    },
+
+    {
+      "canonical_id": "little-max-bilingual-1-3-en-es",
+      "title": "Where Are You Going, Little Max? / ¿A dónde vas, Pequeño Max?",
+      "isbn": "978-1963328875",
+      "type": "bilingual",
+      "languages": ["EN", "ES"],
+      "age_group": "1-3",
+      "skills": [
+        "predictable_parallel_lines",
+        "speech_development"
+      ],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "parallel_en_es",
+        "linguistic_load": "minimal",
+        "visual_load": "one_object_per_page",
+        "purpose": "bilingual_foundation",
+        "recommended_for": "toddlers_first_bilingual_book"
+      }
+    },
+
+    {
+      "canonical_id": "first-coloring-book-1-3-en",
+      "title": "First Coloring Book for Toddlers 1–3",
+      "isbn": "978-1963328561",
+      "type": "coloring",
+      "languages": ["EN"],
+      "age_group": "1-3",
+      "skills": [
+        "motor_basic",
+        "one_object_per_page"
+      ],
+      "translated_version": "primer-libro-de-colorear-1-3-es",
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "one_object_per_page",
+        "purpose": "motor_skill_start",
+        "recommended_for": "toddlers_first_coloring"
+      }
+    },
+
+    {
+      "canonical_id": "primer-libro-de-colorear-1-3-es",
+      "title": "El Primer Libro de Colorear para Bebés de 1–3 Años",
+      "isbn": "978-1963328592",
+      "type": "coloring",
+      "languages": ["ES"],
+      "age_group": "1-3",
+      "skills": [
+        "motor_basic",
+        "one_object_per_page"
+      ],
+      "translated_version": "first-coloring-book-1-3-en",
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "one_object_per_page",
+        "purpose": "early_motor_control",
+        "recommended_for": "spanish_toddlers_coloring_start"
+      }
+    },
+
+    {
+      "canonical_id": "where-have-you-been-little-max-3-5-en",
+      "title": "Where Have You Been, Little Max?",
+      "isbn": "978-1963328585",
+      "type": "bedtime_story",
+      "languages": ["EN"],
+      "age_group": "3-5",
+      "skills": [
+        "imagination_seed",
+        "simple_dialogues"
+      ],
+      "translated_version": "donde-has-estado-pequeno-max-3-5-es",
+      "value_profile": {
+        "complexity": "low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "5_to_7_min_story",
+        "linguistic_load": "short_dialogues",
+        "visual_load": "moderate_detail",
+        "purpose": "imagination_growth",
+        "recommended_for": "preschool_evening_reading"
+      }
+    },
+
+    {
+      "canonical_id": "donde-has-estado-pequeno-max-3-5-es",
+      "title": "¿Dónde Has Estado, Pequeño Max?",
+      "isbn": "978-1963328684",
+      "type": "bedtime_story",
+      "languages": ["ES"],
+      "age_group": "3-5",
+      "skills": [
+        "imagination_seed"
+      ],
+      "translated_version": "where-have-you-been-little-max-3-5-en",
+      "value_profile": {
+        "complexity": "low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "short_dialogue_story",
+        "linguistic_load": "simple_spanish",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_preschool_bedtime",
+        "recommended_for": "spanish_preschool_imagination"
+      }
+    },
+
+    {
+      "canonical_id": "first-coloring-book-3-5-en",
+      "title": "First Coloring Book — 111 Amazing Themes",
+      "isbn": "978-1963328271",
+      "type": "coloring",
+      "languages": ["EN"],
+      "age_group": "3-5",
+      "skills": [
+        "attention_growth",
+        "moderate_detail"
+      ],
+      "translated_version": "primer-libro-de-colorear-111-3-5-es",
+      "value_profile": {
+        "complexity": "low",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "motor_control_growth",
+        "recommended_for": "preschool_coloring"
+      }
+    },
+
+    {
+      "canonical_id": "primer-libro-de-colorear-111-3-5-es",
+      "title": "El Primer Libro de Colorear — 111 Temas",
+      "isbn": "978-1963328202",
+      "type": "coloring",
+      "languages": ["ES"],
+      "age_group": "3-5",
+      "skills": [
+        "attention_growth",
+        "moderate_detail"
+      ],
+      "translated_version": "first-coloring-book-3-5-en",
+      "value_profile": {
+        "complexity": "low",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_motor_growth",
+        "recommended_for": "spanish_preschool_creativity"
+      }
+    },
+
+    {
+      "canonical_id": "lucky-rocky-magic-of-friendship-5-7-en",
+      "title": "The Adventures of Lucky Rocky — Magic of Friendship",
+      "isbn": "978-1963328011",
+      "type": "bedtime_story",
+      "languages": ["EN"],
+      "age_group": "5-7",
+      "skills": [
+        "early_logic",
+        "simple_dialogues",
+        "emotion_depth"
+      ],
+      "translated_version": "rocky-magia-de-la-amistad-5-7-es",
+      "value_profile": {
+        "complexity": "medium_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "multi_scene_light",
+        "linguistic_load": "dialogue_rich",
+        "visual_load": "moderate_detail",
+        "purpose": "early_emotional_reasoning",
+        "recommended_for": "kids_early_logic_growth"
+      }
+    },
+
+    {
+      "canonical_id": "rocky-magia-de-la-amistad-5-7-es",
+      "title": "Las Aventuras de Rocky — Magia de la Amistad",
+      "isbn": "978-1963328042",
+      "type": "bedtime_story",
+      "languages": ["ES"],
+      "age_group": "5-7",
+      "skills": [
+        "early_logic",
+        "emotion_depth"
+      ],
+      "translated_version": "lucky-rocky-magic-of-friendship-5-7-en",
+      "value_profile": {
+        "complexity": "medium_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "multi_scene",
+        "linguistic_load": "moderate_spanish",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_emotional_growth",
+        "recommended_for": "spanish_kids_logic"
+      }
+    },
+
+    {
+      "canonical_id": "take-a-break-cute-animals-5-7-en",
+      "title": "Take a Break — Cute Animals",
+      "isbn": "978-1963328165",
+      "type": "coloring",
+      "languages": ["EN"],
+      "age_group": "5-7",
+      "skills": [
+        "concentration",
+        "visual_planning"
+      ],
+      "translated_version": "tomate-un-descanso-oceano-5-7-es",
+      "value_profile": {
+        "complexity": "medium",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "attention_and_motor_growth",
+        "recommended_for": "kids_intermediate_coloring"
+      }
+    },
+
+    {
+      "canonical_id": "tomate-un-descanso-oceano-5-7-es",
+      "title": "Tómate un descanso — Belleza del Océano",
+      "isbn": "978-1963328394",
+      "type": "coloring",
+      "languages": ["ES"],
+      "age_group": "5-7",
+      "skills": [
+        "concentration",
+        "visual_planning"
+      ],
+      "translated_version": "take-a-break-cute-animals-5-7-en",
+      "value_profile": {
+        "complexity": "medium",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_focus_growth",
+        "recommended_for": "spanish_kids_coloring"
+      }
+    },
+
+    {
+      "canonical_id": "lucky-rocky-magic-of-kindness-7-10-en",
+      "title": "The Adventures of Lucky Rocky — Magic of Kindness",
+      "isbn": "978-1963328691",
+      "type": "bedtime_story",
+      "languages": ["EN"],
+      "age_group": "7-10",
+      "skills": [
+        "structured_reasoning",
+        "advanced_emotion_depth",
+        "moral_reasoning",
+        "multi_scene_structure"
+      ],
+      "translated_version": "rocky-magia-de-la-bondad-7-10-es",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "multi_scene_expanded",
+        "linguistic_load": "advanced_dialogue",
+        "visual_load": "moderate_detail",
+        "purpose": "moral_reasoning",
+        "recommended_for": "kids_advanced_emotional_logic"
+      }
+    },
+
+    {
+      "canonical_id": "rocky-magia-de-la-bondad-7-10-es",
+      "title": "Las Aventuras de Rocky — Magia de la Bondad",
+      "isbn": "978-1963328622",
+      "type": "bedtime_story",
+      "languages": ["ES"],
+      "age_group": "7-10",
+      "skills": [
+        "structured_reasoning",
+        "advanced_emotion_depth",
+        "moral_reasoning"
+      ],
+      "translated_version": "lucky-rocky-magic-of-kindness-7-10-en",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "expanded_spanish_story",
+        "linguistic_load": "advanced_spanish",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_moral_reasoning",
+        "recommended_for": "spanish_advanced_readers"
+      }
+    },
+
+    {
+      "canonical_id": "how-to-draw-111-animals-7-10-en",
+      "title": "How to Draw 111 Animals",
+      "isbn": "978-1963328141",
+      "type": "step_by_step_drawing",
+      "languages": ["EN"],
+      "age_group": "7-10",
+      "skills": [
+        "step_by_step_logic",
+        "independent_drawing",
+        "long_focus"
+      ],
+      "translated_version": "como-dibujar-111-animales-7-10-es",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "none",
+        "narrative_structure": "procedural",
+        "linguistic_load": "minimal",
+        "visual_load": "step_by_step",
+        "purpose": "drawing_mastery",
+        "recommended_for": "kids_art_progression"
+      }
+    },
+
+    {
+      "canonical_id": "como-dibujar-111-animales-7-10-es",
+      "title": "Cómo dibujar 111 Animales",
+      "isbn": "978-1963328172",
+      "type": "step_by_step_drawing",
+      "languages": ["ES"],
+      "age_group": "7-10",
+      "skills": [
+        "step_by_step_logic",
+        "independent_drawing",
+        "long_focus"
+      ],
+      "translated_version": "how-to-draw-111-animals-7-10-en",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "none",
+        "narrative_structure": "procedural",
+        "linguistic_load": "minimal_spanish",
+        "visual_load": "step_by_step",
+        "purpose": "spanish_drawing_mastery",
+        "recommended_for": "spanish_young_artists"
+      }
+    },
+
+    {
+      "canonical_id": "lucky-rocky-two-in-one-edition-7-10-en-es",
+      "title": "Lucky Rocky — Two-in-One Gift Edition",
+      "isbn": "978-1963328981",
+      "type": "two_in_one",
+      "languages": ["EN", "ES"],
+      "age_group": "7-10",
+      "skills": [
+        "full_paragraph_bilingual",
+        "meaning_alignment",
+        "complex_vocabulary"
+      ],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "full_bilingual_parallel",
+        "linguistic_load": "advanced_dual_language",
+        "visual_load": "moderate_detail",
+        "purpose": "bilingual_comprehension_depth",
+        "recommended_for": "advanced_bilingual_kids"
+      }
+    }
+  ]
+}
