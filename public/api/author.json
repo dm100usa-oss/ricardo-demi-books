@@ -1,1 +1,10 @@
-
+{
+  "version": "1.0.0",
+  "author": {
+    "name": "Ricardo Demi",
+    "role": "Author & Creator of the FSCBAC Developmental Standard",
+    "publisher": "Magic of Discoveries LLC (Florida, USA)",
+    "languages": ["English", "Spanish"],
+    "notes": "This file contains metadata about the author and does not participate in matching, validation or book classification logic."
+  }
+}
