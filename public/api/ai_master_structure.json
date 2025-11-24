@@ -1,0 +1,9 @@
+{
+  "system": "FSCBAC_master_structure",
+  "version": "1.0.0",
+  "status": "placeholder",
+  "description": "Root file of the FSCBAC standard. The complete structure, model links and interpretation rules will be defined in later stages.",
+  "models": [],
+  "relations": [],
+  "rules": []
+}
