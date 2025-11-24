@@ -1,0 +1,141 @@
+{
+  "version": "1.0.0",
+  "system": "fscbac_value_profile_taxonomy",
+
+  "explanation": "Formal ontology of all value_profile parameters used across FSCBAC Standard. Ensures strict consistency across books.json, ages.json, matching.json and validation.json.",
+
+  "value_profile": {
+    "complexity": {
+      "description": "Cognitive and narrative complexity level required to process the book.",
+      "allowed_values": [
+        "very_low",
+        "low",
+        "medium",
+        "medium_low",
+        "medium_high",
+        "high",
+        "very_high"
+      ]
+    },
+
+    "emotional_intensity": {
+      "description": "Emotional load conveyed in narrative or visuals.",
+      "allowed_values": [
+        "none",
+        "very_low",
+        "low",
+        "soft",
+        "medium",
+        "high"
+      ]
+    },
+
+    "narrative_structure": {
+      "description": "Type and structural shape of the story or content.",
+      "allowed_values": [
+        "none",
+        "predictable",
+        "simple_sequence",
+        "5_to_7_min_story",
+        "short_dialogues",
+        "parallel_en_es",
+        "adventure_arc",
+        "emotional_arc",
+        "multi_scene_light",
+        "multi_scene",
+        "multi_scene_expanded",
+        "multi_scene_complex",
+        "full_bilingual_parallel",
+        "procedural",
+        "expanded_spanish_story"
+      ]
+    },
+
+    "linguistic_load": {
+      "description": "Density and difficulty of vocabulary and verbal structures.",
+      "allowed_values": [
+        "none",
+        "minimal",
+        "short_dialogues",
+        "simple_spanish",
+        "minimal_spanish",
+        "moderate_spanish",
+        "dialogue_rich",
+        "moderate",
+        "high",
+        "very_high",
+        "advanced_dialogue",
+        "advanced_spanish",
+        "advanced_dual_language"
+      ]
+    },
+
+    "visual_load": {
+      "description": "Structural and perceptual complexity of illustrations.",
+      "allowed_values": [
+        "simple",
+        "one_object_per_page",
+        "low_detail",
+        "moderate_detail",
+        "high_detail",
+        "step_by_step"
+      ]
+    },
+
+    "purpose": {
+      "description": "Primary developmental objective of the book.",
+      "allowed_values": [
+        "early_bedtime_routine",
+        "spanish_bedtime",
+        "motor_skill_start",
+        "early_motor_control",
+        "imagination_growth",
+        "spanish_preschool_bedtime",
+        "motor_control_growth",
+        "spanish_motor_growth",
+        "early_emotional_reasoning",
+        "spanish_emotional_growth",
+        "attention_and_motor_growth",
+        "spanish_focus_growth",
+        "moral_reasoning",
+        "spanish_moral_reasoning",
+        "drawing_mastery",
+        "spanish_drawing_mastery",
+        "bilingual_comprehension_depth",
+        "bilingual_foundation"
+      ]
+    },
+
+    "recommended_for": {
+      "description": "Context and scenario where the book works best for the child.",
+      "allowed_values": [
+        "toddlers_beginner_story",
+        "toddlers_spanish_speakers",
+        "toddlers_first_bilingual_book",
+        "toddlers_first_coloring",
+        "spanish_toddlers_coloring_start",
+        "preschool_evening_reading",
+        "spanish_preschool_imagination",
+        "preschool_coloring",
+        "spanish_preschool_creativity",
+        "kids_early_logic_growth",
+        "spanish_kids_logic",
+        "kids_intermediate_coloring",
+        "spanish_kids_coloring",
+        "kids_advanced_emotional_logic",
+        "spanish_advanced_readers",
+        "kids_art_progression",
+        "spanish_young_artists",
+        "advanced_bilingual_kids"
+      ]
+    }
+  },
+
+  "meta": {
+    "canonical": true,
+    "self_contained": true,
+    "deterministic": true,
+    "purpose": "Ensure deterministic interpretation of all book attributes by any AI model.",
+    "notes": "Every value in books.json and matching.json must exist here. This file prevents mismatches and enforces full cross-file consistency."
+  }
+}
