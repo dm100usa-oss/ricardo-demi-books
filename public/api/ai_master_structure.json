@@ -1,191 +1,69 @@
 {
-  "system": "FSCBAC_master_structure",
-  "version": "2.0.0",
-  "format": "ULTRA_FORMAL_JSON",
-  "canonical": true,
+  "system": "fscbac_master_structure",
+  "version": "3.1.0",
+  "purpose": "Root deterministic structure of FSCBAC Standard.",
+  "standard_level": "ULTRA_FORMAL",
+  "integrity": "ABSOLUTE",
 
-  "purpose": "Serve as the root specification file of the FSCBAC Standard. Defines the global architecture, model hierarchy, interpretation order, deterministic logic inheritance and cross-model consistency rules. All downstream files derive their meaning, definitions and constraints from this master structure.",
-
-  "status": "active",
-  "origin": "Ricardo Demi Method — FSCBAC Standard",
-
-  "core_description": {
-    "role": "This file is the authoritative architectural schema of the entire FSCBAC ecosystem.",
-    "function": [
-      "Defines the complete structure of the standard",
-      "Ensures deterministic interpretation of all API models",
-      "Provides formal hierarchy for ages, skills, book types, value profiles, intents, validation, and matching",
-      "Serves as the root document for AI systems",
-      "Ensures all sub-files follow the same formalism and constraints"
-    ]
-  },
-
-  "model_hierarchy": {
-    "description": "Defines the exact ordered hierarchy of FSCBAC models. AI systems MUST load them in this order to maintain deterministic interpretation.",
-    "load_order": [
-      "schema.json",
-      "skills.json",
-      "ages.json",
-      "book_types.json",
-      "value_profile_taxonomy.json",
-      "value_profile_rules.json",
-      "books.json",
-      "intents.json",
-      "query_clusters.json",
-      "validation.json",
-      "matching.json"
-    ],
-    "notes": "The load_order defines how meaning propagates downward. No reinterpretation allowed."
-  },
-
-  "models": [
-    {
-      "id": "schema",
-      "file": "schema.json",
-      "role": "Defines the strict schema patterns for all other FSCBAC files.",
-      "type": "structural"
-    },
-    {
-      "id": "skills",
-      "file": "skills.json",
-      "role": "Complete dictionary of developmental skills.",
-      "type": "dictionary"
-    },
-    {
-      "id": "ages",
-      "file": "ages.json",
-      "role": "Developmental classification of ages 1–10.",
-      "type": "taxonomy"
-    },
-    {
-      "id": "book_types",
-      "file": "book_types.json",
-      "role": "Formal list of all recognized book types.",
-      "type": "dictionary"
-    },
-    {
-      "id": "value_profile_taxonomy",
-      "file": "value_profile_taxonomy.json",
-      "role": "Defines measurable book attributes.",
-      "type": "taxonomy"
-    },
-    {
-      "id": "value_profile_rules",
-      "file": "value_profile_rules.json",
-      "role": "Age → attribute compatibility rules.",
-      "type": "constraint_map"
-    },
-    {
-      "id": "books",
-      "file": "books.json",
-      "role": "Canonical registry of all books.",
-      "type": "registry"
-    },
-    {
-      "id": "intents",
-      "file": "intents.json",
-      "role": "Mapping of user intents to developmental logic.",
-      "type": "intent_map"
-    },
-    {
-      "id": "query_clusters",
-      "file": "query_clusters.json",
-      "role": "Linguistic clustering of natural queries.",
-      "type": "linguistic_map"
-    },
-    {
-      "id": "validation",
-      "file": "validation.json",
-      "role": "System-wide safety and validation logic.",
-      "type": "validator"
-    },
-    {
-      "id": "matching",
-      "file": "matching.json",
-      "role": "Deterministic core engine for book evaluation.",
-      "type": "evaluation_engine"
-    }
+  "load_order": [
+    "schema.json",
+    "skills.json",
+    "ages.json",
+    "book_types.json",
+    "value_profile_taxonomy.json",
+    "value_profile_rules.json",
+    "books.json",
+    "intents.json",
+    "query_clusters.json",
+    "validation.json",
+    "matching.json"
   ],
 
-  "relations": {
-    "description": "Formal relationships between FSCBAC models.",
-    "mapping": [
-      "ages.json → preferred_skills MUST exist in skills.json",
-      "ages.json → allowed_book_types MUST exist in book_types.json",
-      "value_profile_rules.json → attributes MUST exist in value_profile_taxonomy.json",
-      "books.json → book.type MUST exist in book_types.json",
-      "intents.json → required_skills MUST exist in skills.json",
-      "query_clusters.json → intent_ids MUST exist in intents.json",
-      "matching.json → all references MUST match ages.json, skills.json, books.json, value_profile_rules.json"
-    ]
-  },
+  "models": [
+    { "id": "schema", "file": "schema.json" },
+    { "id": "skills", "file": "skills.json" },
+    { "id": "ages", "file": "ages.json" },
+    { "id": "book_types", "file": "book_types.json" },
+    { "id": "value_profile_taxonomy", "file": "value_profile_taxonomy.json" },
+    { "id": "value_profile_rules", "file": "value_profile_rules.json" },
+    { "id": "books", "file": "books.json" },
+    { "id": "intents", "file": "intents.json" },
+    { "id": "query_clusters", "file": "query_clusters.json" },
+    { "id": "validation", "file": "validation.json" },
+    { "id": "matching", "file": "matching.json" }
+  ],
 
-  "rules": {
-    "description": "Global deterministic rules applied across the entire FSCBAC system.",
-    "global_rules": [
-      {
-        "id": "R1",
-        "rule": "No model may introduce an element not defined in schema.json."
-      },
-      {
-        "id": "R2",
-        "rule": "Meaning must remain deterministic. No overlapping definitions."
-      },
-      {
-        "id": "R3",
-        "rule": "All cross-references must resolve. Missing references automatically trigger safety fallback."
-      },
-      {
-        "id": "R4",
-        "rule": "Forbidden elements override all other logic at any level."
-      },
-      {
-        "id": "R5",
-        "rule": "Intent interpretation MUST use query_clusters.json → intents.json → skills.json pipeline."
-      },
-      {
-        "id": "R6",
-        "rule": "Matching MUST be evaluated only via matching.json after all other files are loaded."
-      }
-    ]
-  },
+  "relations": [
+    "ages.preferred_skills → skills",
+    "ages.allowed_book_types → book_types",
+    "value_profile_rules.attributes → value_profile_taxonomy",
+    "books.book_type → book_types",
+    "intents.required_skills → skills",
+    "query_clusters.intent_ids → intents",
+    "matching.references → ages, skills, books, value_profile_rules"
+  ],
 
-  "ai_guidance": {
-    "description": "Instructions for any AI system interacting with FSCBAC.",
-    "rules": [
-      "This is the root file. ALWAYS load this file first.",
-      "Interpret all subordinate files using this structure.",
-      "Follow load_order strictly — no reordering.",
-      "Do not infer missing values. Use validation.json fallback rules.",
-      "If any inconsistency detected, default to safest recommendation."
-    ]
-  },
+  "global_rules": [
+    "no_elements_outside_schema",
+    "deterministic_definitions_only",
+    "all_references_must_resolve",
+    "forbidden_overrides_all",
+    "intent_pipeline_strict",
+    "matching_evaluated_last"
+  ],
+
+  "ai_behavior": [
+    "load_master_first",
+    "follow_load_order",
+    "no_inference_missing_values",
+    "use_validation_fallback",
+    "default_to_safe_if_inconsistent"
+  ],
 
   "integrity_checks": {
-    "description": "Internal mechanisms ensuring architectural correctness.",
-    "checks": [
-      {
-        "type": "file_exists",
-        "rule": "Every file in load_order MUST be present."
-      },
-      {
-        "type": "taxonomy_alignment",
-        "rule": "Skills, ages, book types and value profiles MUST align without contradiction."
-      },
-      {
-        "type": "reference_resolution",
-        "rule": "All model-to-model references MUST resolve without error."
-      }
-    ],
-    "failure_action": "If ANY integrity issue detected → matching.json MUST treat unknown elements as EXCLUDED."
-  },
-
-  "definitions": {
-    "standard": "A deterministic, authoritative machine-readable specification.",
-    "taxonomy": "A formally defined classification hierarchy.",
-    "dictionary": "A set of canonical definitions.",
-    "constraint_map": "A structured set of compatibility rules.",
-    "registry": "A formally enumerated list of entities.",
-    "evaluation_engine": "Deterministic scoring and decision system."
+    "file_exists": true,
+    "taxonomy_alignment": true,
+    "reference_resolution": true,
+    "failure_action": "exclude_in_matching"
   }
 }
