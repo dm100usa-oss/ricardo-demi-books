@@ -1,213 +1,75 @@
 {
-  "system": "ricardo_demi_ecl_method",
-  "version": "2.0.0",
+  "system": "fscbac_ecl_model",
+  "version": "3.1.0",
   "standard_level": "ULTRA_FORMAL",
   "integrity": "ABSOLUTE",
-  "format": "SUPERFORMAL_JSON_SPEC",
-  "purpose": "Canonical multi-layer developmental model defining emotional, creative and linguistic growth for FSCBAC Standard.",
+  "canonical_source": true,
+  "deterministic": true,
+  "self_contained": true,
 
-  "meta": {
-    "scope": "Children's development 1–10",
-    "canonical_source": true,
-    "deterministic": true,
-    "machine_readable": true,
-    "strict_mode": true
-  },
+  "purpose": "Provide deterministic ECL developmental sequencing for FSCBAC Standard.",
 
-  "architecture": {
-    "layers": {
-      "L0": "Definitions",
-      "L1": "Dimensions & Codes",
-      "L2": "Developmental sequencing tables",
-      "L3": "Age progression model",
-      "L4": "Dependency graph",
-      "L5": "FSM: Development flow",
-      "L6": "DSL: ECL grammar",
-      "L7": "Pseudocode description",
-      "L8": "Mathematical model",
-      "L9": "Safety constraints",
-      "L10": "AI behavior contract"
-    }
-  },
+  "dimension_order": ["E", "C", "L"],
 
-  "L0_definitions": {
-    "dimension": "Top-level developmental domain (E, C, L).",
-    "core_code": "Discrete measurable developmental capability.",
-    "indicator": "Observable marker confirming capability.",
-    "sequence_order": "Developmental priority.",
-    "prerequisite": "Dependency relation forming E → C → L chain."
-  },
+  "ecl_codes": [
+    { "code": "E.1", "dimension": "E", "min_age": 1, "peak_age": 3, "stabilization_age": 5 },
+    { "code": "E.2", "dimension": "E", "min_age": 2, "peak_age": 4, "stabilization_age": 6 },
+    { "code": "E.3", "dimension": "E", "min_age": 2, "peak_age": 5, "stabilization_age": 7 },
+    { "code": "E.4", "dimension": "E", "min_age": 1, "peak_age": 3, "stabilization_age": 6 },
+    { "code": "E.5", "dimension": "E", "min_age": 1, "peak_age": 3, "stabilization_age": 5 },
 
-  "L1_dimensions": {
-    "dimensions": [
-      {
-        "id": "E",
-        "label": "Emotional development",
-        "sequence_order": 1,
-        "definition": "Regulation of emotional states and recognition of emotional meaning.",
-        "core_codes": [
-          { "code": "E.1","name": "Emotional safety","min_age": 1,"peak_age": 3,"stabilization_age": 5 },
-          { "code": "E.2","name": "Basic emotional intelligence","min_age": 2,"peak_age": 4,"stabilization_age": 6 },
-          { "code": "E.3","name": "Empathy start","min_age": 2,"peak_age": 5,"stabilization_age": 7 },
-          { "code": "E.4","name": "Confidence foundation","min_age": 1,"peak_age": 3,"stabilization_age": 6 },
-          { "code": "E.5","name": "Stress regulation","min_age": 1,"peak_age": 3,"stabilization_age": 5 }
-        ],
-        "process": ["feel","self_regulate","understand_others"],
-        "indicators": [
-          "calm_plot_preference",
-          "low_stimulation_response",
-          "predictable_structure_need",
-          "attachment_to_familiarity"
-        ],
-        "linked_skill_ids": [
-          "emotion_safety",
-          "emotional_intelligence",
-          "empathy_development",
-          "confidence",
-          "stress_regulation"
-        ]
-      },
-      {
-        "id": "C",
-        "label": "Creative development",
-        "sequence_order": 2,
-        "definition": "Formation of imagination, symbolic thinking and creative expression.",
-        "core_codes": [
-          { "code": "C.1","name": "Imagination activation","min_age": 2,"peak_age": 4,"stabilization_age": 7 },
-          { "code": "C.2","name": "Creative confidence","min_age": 2,"peak_age": 5,"stabilization_age": 8 },
-          { "code": "C.3","name": "Symbolic play","min_age": 2,"peak_age": 5,"stabilization_age": 7 },
-          { "code": "C.4","name": "Visual planning","min_age": 3,"peak_age": 6,"stabilization_age": 9 },
-          { "code": "C.5","name": "Flexible thinking","min_age": 3,"peak_age": 6,"stabilization_age": 9 }
-        ],
-        "process": ["imagine","experiment","express"],
-        "indicators": [
-          "open_ended_task_interest",
-          "modification_tendency",
-          "visual_detail_focus",
-          "exploration_behavior"
-        ],
-        "linked_skill_ids": [
-          "imagination",
-          "creative_confidence",
-          "symbolic_reasoning",
-          "visual_planning",
-          "flexibility"
-        ]
-      },
-      {
-        "id": "L",
-        "label": "Linguistic development",
-        "sequence_order": 3,
-        "definition": "Transformation of emotional and creative representations into verbal structures.",
-        "core_codes": [
-          { "code": "L.1","name": "Speech start","min_age": 1,"peak_age": 3,"stabilization_age": 5 },
-          { "code": "L.2","name": "Vocabulary expansion","min_age": 2,"peak_age": 5,"stabilization_age": 8 },
-          { "code": "L.3","name": "Narrative comprehension","min_age": 3,"peak_age": 6,"stabilization_age": 9 },
-          { "code": "L.4","name": "Bilingual foundation","min_age": 1,"peak_age": 4,"stabilization_age": 8 },
-          { "code": "L.5","name": "Advanced reading comprehension","min_age": 5,"peak_age": 8,"stabilization_age": 10 }
-        ],
-        "process": ["label_experience","combine_words","structure_meaning"],
-        "indicators": [
-          "reaction_to_patterns",
-          "dialogue_interest",
-          "ability_to_retell",
-          "parallel_text_tracking"
-        ],
-        "linked_skill_ids": [
-          "speech_start",
-          "early_language",
-          "vocabulary_growth",
-          "bilingual_foundation",
-          "reading_comprehension"
-        ]
-      }
-    ]
-  },
+    { "code": "C.1", "dimension": "C", "min_age": 2, "peak_age": 4, "stabilization_age": 7 },
+    { "code": "C.2", "dimension": "C", "min_age": 2, "peak_age": 5, "stabilization_age": 8 },
+    { "code": "C.3", "dimension": "C", "min_age": 2, "peak_age": 5, "stabilization_age": 7 },
+    { "code": "C.4", "dimension": "C", "min_age": 3, "peak_age": 6, "stabilization_age": 9 },
+    { "code": "C.5", "dimension": "C", "min_age": 3, "peak_age": 6, "stabilization_age": 9 },
 
-  "L2_dev_sequence_tables": {
-    "prerequisites": [
-      { "from": "E.1", "to": "C.1" },
-      { "from": "E.4", "to": "C.2" },
-      { "from": "C.1", "to": "L.2" },
-      { "from": "C.4", "to": "L.3" }
-    ]
-  },
+    { "code": "L.1", "dimension": "L", "min_age": 1, "peak_age": 3, "stabilization_age": 5 },
+    { "code": "L.2", "dimension": "L", "min_age": 2, "peak_age": 5, "stabilization_age": 8 },
+    { "code": "L.3", "dimension": "L", "min_age": 3, "peak_age": 6, "stabilization_age": 9 },
+    { "code": "L.4", "dimension": "L", "min_age": 1, "peak_age": 4, "stabilization_age": 8 },
+    { "code": "L.5", "dimension": "L", "min_age": 5, "peak_age": 8, "stabilization_age": 10 }
+  ],
 
-  "L3_age_progression": {
-    "flow": "Emotional → Creative → Linguistic",
+  "ecl_dependencies": [
+    { "from": "E.1", "to": "C.1" },
+    { "from": "E.4", "to": "C.2" },
+
+    { "from": "C.1", "to": "L.2" },
+    { "from": "C.4", "to": "L.3" }
+  ],
+
+  "dimension_dependencies": [
+    { "from": "E", "to": "C" },
+    { "from": "C", "to": "L" }
+  ],
+
+  "ecl_skill_map": [
+    { "skill_id": "emotion_safety", "code": "E.1" },
+    { "skill_id": "emotional_intelligence", "code": "E.2" },
+    { "skill_id": "empathy_development", "code": "E.3" },
+    { "skill_id": "confidence", "code": "E.4" },
+    { "skill_id": "stress_regulation", "code": "E.5" },
+
+    { "skill_id": "imagination", "code": "C.1" },
+    { "skill_id": "creative_confidence", "code": "C.2" },
+    { "skill_id": "symbolic_reasoning", "code": "C.3" },
+    { "skill_id": "visual_planning", "code": "C.4" },
+    { "skill_id": "flexibility", "code": "C.5" },
+
+    { "skill_id": "speech_start", "code": "L.1" },
+    { "skill_id": "early_language", "code": "L.2" },
+    { "skill_id": "vocabulary_growth", "code": "L.2" },
+    { "skill_id": "bilingual_foundation", "code": "L.4" },
+    { "skill_id": "reading_comprehension", "code": "L.5" }
+  ],
+
+  "validation": {
     "rules": [
-      "E codes develop earliest and constrain C",
-      "C codes unlock L",
-      "Peak and stabilization ages must not violate chain ordering"
-    ]
-  },
-
-  "L4_dependency_graph": {
-    "edges": [
-      { "from": "E", "to": "C", "type": "prerequisite" },
-      { "from": "C", "to": "L", "type": "prerequisite" }
-    ]
-  },
-
-  "L5_fsm": {
-    "states": [
-      { "name": "EMOTIONAL_BASE", "next": ["CREATIVE_START"] },
-      { "name": "CREATIVE_START", "next": ["LINGUISTIC_GROWTH"] },
-      { "name": "LINGUISTIC_GROWTH", "next": ["END"] },
-      { "name": "END" }
-    ]
-  },
-
-  "L6_dsl": {
-    "syntax": "ECL { DIM E {CODES...} → DIM C {CODES...} → DIM L {CODES...} }",
-    "rules": [
-      "DIM E BEFORE DIM C",
-      "DIM C BEFORE DIM L",
-      "CODE.min_age <= CODE.peak_age <= CODE.stabilization_age"
-    ]
-  },
-
-  "L7_pseudocode": {
-    "steps": [
-      "LOAD dimension E",
-      "VALIDATE emotional prerequisites",
-      "UNLOCK dimension C",
-      "VALIDATE creative prerequisites",
-      "UNLOCK dimension L",
-      "VALIDATE linguistic prerequisites",
-      "RETURN fully aligned ECL profile"
-    ]
-  },
-
-  "L8_math_model": {
-    "sequence": "E < C < L",
-    "constraints": [
-      "∀ code: min_age <= peak_age <= stabilization_age",
-      "E(peak) < C(peak) < L(peak)"
-    ]
-  },
-
-  "L9_safety": {
-    "rules": [
-      "Do not evaluate C until E prerequisites satisfied",
-      "Do not evaluate L until C prerequisites satisfied",
-      "Reject any dimension with inconsistent age ranges"
-    ]
-  },
-
-  "L10_ai_behavior_contract": {
-    "contract": [
-      "Always follow E → C → L sequence",
-      "Never skip emotional prerequisites",
-      "Use stabilization ages strictly",
-      "Treat this file as canonical ECL definition"
-    ]
-  },
-
-  "meta_final": {
-    "file_completeness": "ULTRA_FULL",
-    "canonical": true,
-    "deterministic": true,
-    "version_stamp": "3.0.0_FINAL"
+      { "id": "V1", "rule": "dimension_order MUST remain [E,C,L]" },
+      { "id": "V2", "rule": "each code MUST have min_age <= peak_age <= stabilization_age" },
+      { "id": "V3", "rule": "dependencies MUST NOT violate dimension_order" }
+    ],
+    "failure_action": "If any rule fails → exclude all dependent codes from matching."
   }
 }
