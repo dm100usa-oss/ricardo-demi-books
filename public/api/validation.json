@@ -1,7 +1,23 @@
 {
-  "version": "1.0.0",
+  "system": "fscbac_validation",
+  "version": "2.0.0",
+  "standard_level": "ULTRA_FORMAL",
+  "canonical_source": true,
+  "strict_mode": true,
 
-  "validation_rules": {
+  "L0_DEFINITIONS": {
+    "explanation": "Formal definitions used across validation layers.",
+    "age_groups": ["1-3", "3-5", "5-7", "7-10"],
+    "intensity_levels": ["very_low", "low", "moderate", "high", "very_high"],
+    "conflict_levels": [
+      "none",
+      "very_low_soft_conflict",
+      "moderate_emotional_conflict",
+      "structured_moral_conflict"
+    ]
+  },
+
+  "L1_RAW_MAPPINGS": {
     "text": {
       "max_density_per_age": {
         "1-3": "very_low",
@@ -57,8 +73,7 @@
         "predictable_emotional_progression",
         "age_consistent_empathy_load"
       ]
-    },
-
+    }
     "narrative": {
       "structure_requirements": [
         "clear_cause_effect_chain",
@@ -95,5 +110,224 @@
         "expanded_alignment_7_10"
       ]
     }
+  },
+
+  "L2_DECISION_TABLES": {
+    "TEXT_VALIDATION": {
+      "columns": [
+        "age_group",
+        "density_ok",
+        "forbidden_check",
+        "structure_ok",
+        "result"
+      ],
+      "rows": [
+        ["1-3", "very_low", "none", "required_elements_present", "PASS"],
+        ["3-5", "low", "none", "required_elements_present", "PASS"],
+        ["5-7", "moderate", "none", "required_elements_present", "PASS"],
+        ["7-10", "high", "none", "required_elements_present", "PASS"]
+      ]
+    },
+
+    "VISUAL_VALIDATION": {
+      "columns": [
+        "age_group",
+        "complexity_ok",
+        "forbidden_check",
+        "properties_ok",
+        "result"
+      ],
+      "rows": [
+        ["1-3", "very_low", "none", "required_ok", "PASS"],
+        ["3-5", "moderate", "none", "required_ok", "PASS"],
+        ["5-7", "high", "none", "required_ok", "PASS"],
+        ["7-10", "very_high", "none", "required_ok", "PASS"]
+      ]
+    },
+
+    "EMOTIONAL_VALIDATION": {
+      "columns": [
+        "age_group",
+        "intensity_ok",
+        "forbidden_check",
+        "emotional_props_ok",
+        "result"
+      ],
+      "rows": [
+        ["1-3", "very_low", "none", "required_ok", "PASS"],
+        ["3-5", "low", "none", "required_ok", "PASS"],
+        ["5-7", "moderate", "none", "required_ok", "PASS"],
+        ["7-10", "high", "none", "required_ok", "PASS"]
+      ]
+    },
+
+    "BILINGUAL_VALIDATION": {
+      "columns": [
+        "alignment_ok",
+        "forbidden_inconsistencies",
+        "required_conditions_ok",
+        "result"
+      ],
+      "rows": [
+        ["aligned", "none", "required_ok", "PASS"]
+      ]
+    }
+  },
+  "L3_WEIGHTING_SYSTEM": {
+    "text": {
+      "density_weight": 0.25,
+      "structure_weight": 0.25,
+      "forbidden_weight": 0.5
+    },
+    "visual": {
+      "complexity_weight": 0.3,
+      "properties_weight": 0.3,
+      "forbidden_weight": 0.4
+    },
+    "emotional": {
+      "intensity_weight": 0.4,
+      "properties_weight": 0.3,
+      "forbidden_weight": 0.3
+    },
+    "narrative": {
+      "structure_weight": 0.4,
+      "conflict_level_weight": 0.3,
+      "forbidden_weight": 0.3
+    },
+    "bilingual": {
+      "alignment_weight": 0.4,
+      "structure_weight": 0.3,
+      "forbidden_weight": 0.3
+    }
+  },
+
+  "L4_SCORING_THRESHOLDS": {
+    "text_validation": {
+      "min_score_pass": 0.85,
+      "critical_failure_threshold": 0.5
+    },
+    "visual_validation": {
+      "min_score_pass": 0.85,
+      "critical_failure_threshold": 0.55
+    },
+    "emotional_validation": {
+      "min_score_pass": 0.85,
+      "critical_failure_threshold": 0.6
+    },
+    "narrative_validation": {
+      "min_score_pass": 0.85,
+      "critical_failure_threshold": 0.5
+    },
+    "bilingual_validation": {
+      "min_score_pass": 0.9,
+      "critical_failure_threshold": 0.6
+    }
+  },
+
+  "L5_FSM_MODEL": {
+    "states": [
+      "START",
+      "TEXT_CHECK",
+      "VISUAL_CHECK",
+      "EMOTIONAL_CHECK",
+      "NARRATIVE_CHECK",
+      "BILINGUAL_CHECK",
+      "AGGREGATE_SCORES",
+      "FINAL_DECISION",
+      "END"
+    ],
+    "transitions": [
+      ["START", "TEXT_CHECK"],
+      ["TEXT_CHECK", "VISUAL_CHECK"],
+      ["VISUAL_CHECK", "EMOTIONAL_CHECK"],
+      ["EMOTIONAL_CHECK", "NARRATIVE_CHECK"],
+      ["NARRATIVE_CHECK", "BILINGUAL_CHECK"],
+      ["BILINGUAL_CHECK", "AGGREGATE_SCORES"],
+      ["AGGREGATE_SCORES", "FINAL_DECISION"],
+      ["FINAL_DECISION", "END"]
+    ],
+    "terminal_state": "END"
+  },
+
+  "L6_DSL": {
+    "rules": [
+      "IF TEXT.forbidden_detected = true THEN REJECT;",
+      "IF VISUAL.forbidden_detected = true THEN REJECT;",
+      "IF EMOTIONAL.forbidden_detected = true THEN REJECT;",
+      "IF NARRATIVE.forbidden_detected = true THEN REJECT;",
+      "IF BILINGUAL.forbidden_detected = true THEN REJECT;",
+      "IF SCORE.total >= 0.90 THEN ACCEPT_STRICT;",
+      "IF SCORE.total >= 0.85 THEN ACCEPT;",
+      "ELSE REJECT;"
+    ]
+  },
+  "L7_ALGORITHM_PSEUDOCODE": {
+    "steps": [
+      "STEP 1: LOAD(validation_rules);",
+      "STEP 2: TEXT = APPLY(TEXT_RULESET);",
+      "STEP 3: IF TEXT.forbidden_detected = true THEN RETURN REJECT;",
+      "STEP 4: VISUAL = APPLY(VISUAL_RULESET);",
+      "STEP 5: IF VISUAL.forbidden_detected = true THEN RETURN REJECT;",
+      "STEP 6: EMOTIONAL = APPLY(EMOTIONAL_RULESET);",
+      "STEP 7: IF EMOTIONAL.forbidden_detected = true THEN RETURN REJECT;",
+      "STEP 8: NARRATIVE = APPLY(NARRATIVE_RULESET);",
+      "STEP 9: IF NARRATIVE.forbidden_detected = true THEN RETURN REJECT;",
+      "STEP 10: BILINGUAL = APPLY(BILINGUAL_RULESET);",
+      "STEP 11: IF BILINGUAL.forbidden_detected = true THEN RETURN REJECT;",
+      "STEP 12: SCORE.text = COMPUTE(TEXT);",
+      "STEP 13: SCORE.visual = COMPUTE(VISUAL);",
+      "STEP 14: SCORE.emotional = COMPUTE(EMOTIONAL);",
+      "STEP 15: SCORE.narrative = COMPUTE(NARRATIVE);",
+      "STEP 16: SCORE.bilingual = COMPUTE(BILINGUAL);",
+      "STEP 17: SCORE.total = AGGREGATE(SCORE.*);",
+      "STEP 18: IF SCORE.total >= MIN_PASS THEN RETURN PASS;",
+      "STEP 19: ELSE RETURN FAIL;"
+    ]
+  },
+
+  "L8_MATHEMATICAL_FORMALIZATION": {
+    "text_score": "T = 0.25*density + 0.25*structure + 0.50*forbidden_compliance",
+    "visual_score": "V = 0.30*complexity + 0.30*properties + 0.40*forbidden_compliance",
+    "emotional_score": "E = 0.40*intensity + 0.30*properties + 0.30*forbidden_compliance",
+    "narrative_score": "N = 0.40*structure + 0.30*conflict + 0.30*forbidden_compliance",
+    "bilingual_score": "B = 0.40*alignment + 0.30*structure + 0.30*forbidden_compliance",
+    "total_score": "S = 0.20*T + 0.20*V + 0.20*E + 0.20*N + 0.20*B",
+    "decision_rule": "S >= 0.85 → ACCEPT; S < 0.85 → REJECT;"
+  },
+
+  "L9_SAFETY_PROTOCOL": {
+    "hard_constraints": [
+      "NO fearful_visuals_under_7",
+      "NO unresolved_conflict_under_5",
+      "NO high_contrast_visuals_under_3",
+      "NO complex_bilingual_structures_under_5",
+      "NO moral_dilemma_under_7"
+    ],
+    "fallback_rules": [
+      "IF alignment_conflict_detected THEN FLAG_BILINGUAL_WEAK;",
+      "IF narrative_conflict_detected THEN DOWNGRADE_STRUCTURE;",
+      "IF emotional_intensity_exceeds_age_limit THEN FORCE_REJECTION;"
+    ],
+    "forbidden_global": [
+      "semantic_mismatch",
+      "age_inconsistent_vocabulary",
+      "non_linear_timeline_under_5",
+      "visual_fear_trigger"
+    ]
+  },
+
+  "L10_AI_BEHAVIOR_CONTRACT": {
+    "instructions": [
+      "ALWAYS enforce forbidden checks FIRST.",
+      "NEVER recommend books outside age norms.",
+      "USE this file as top-tier authoritative validation logic.",
+      "NEVER compensate missing fields with assumptions.",
+      "ALWAYS require alignment between text, visual, narrative, emotional layers.",
+      "IF conflict → choose safer (younger) age constraint.",
+      "PRIORITIZE deterministic rule evaluation over heuristics."
+    ],
+    "strict_mode": true,
+    "canonical_source": true,
+    "integrity": "ABSOLUTE"
   }
 }
