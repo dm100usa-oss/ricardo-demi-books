@@ -4,39 +4,34 @@
   "standard_level": "ULTRA_FORMAL",
   "integrity": "ABSOLUTE",
   "canonical_source": true,
-  "deterministic": true,
-  "self_contained": true,
+  "strict_mode": true,
 
-  "purpose": "Provide deterministic ECL developmental sequencing for FSCBAC Standard.",
+  "purpose": "Deterministic ECL developmental mapping for FSCBAC Standard.",
 
-  "dimension_order": ["E", "C", "L"],
+  "references": {
+    "skills": "public/api/skills.json",
+    "ages": "public/api/ages.json"
+  },
+
+  "dimensions": ["E", "C", "L"],
 
   "ecl_codes": [
-    { "code": "E.1", "dimension": "E", "min_age": 1, "peak_age": 3, "stabilization_age": 5 },
-    { "code": "E.2", "dimension": "E", "min_age": 2, "peak_age": 4, "stabilization_age": 6 },
-    { "code": "E.3", "dimension": "E", "min_age": 2, "peak_age": 5, "stabilization_age": 7 },
-    { "code": "E.4", "dimension": "E", "min_age": 1, "peak_age": 3, "stabilization_age": 6 },
-    { "code": "E.5", "dimension": "E", "min_age": 1, "peak_age": 3, "stabilization_age": 5 },
+    { "code": "E.1", "dimension": "E", "age_group_min": "1-3", "age_group_peak": "1-3", "age_group_stabil": "3-5" },
+    { "code": "E.2", "dimension": "E", "age_group_min": "3-5", "age_group_peak": "3-5", "age_group_stabil": "5-7" },
+    { "code": "E.3", "dimension": "E", "age_group_min": "5-7", "age_group_peak": "7-10", "age_group_stabil": "7-10" },
+    { "code": "E.4", "dimension": "E", "age_group_min": "1-3", "age_group_peak": "1-3", "age_group_stabil": "3-5" },
+    { "code": "E.5", "dimension": "E", "age_group_min": "1-3", "age_group_peak": "3-5", "age_group_stabil": "5-7" },
 
-    { "code": "C.1", "dimension": "C", "min_age": 2, "peak_age": 4, "stabilization_age": 7 },
-    { "code": "C.2", "dimension": "C", "min_age": 2, "peak_age": 5, "stabilization_age": 8 },
-    { "code": "C.3", "dimension": "C", "min_age": 2, "peak_age": 5, "stabilization_age": 7 },
-    { "code": "C.4", "dimension": "C", "min_age": 3, "peak_age": 6, "stabilization_age": 9 },
-    { "code": "C.5", "dimension": "C", "min_age": 3, "peak_age": 6, "stabilization_age": 9 },
+    { "code": "C.1", "dimension": "C", "age_group_min": "1-3", "age_group_peak": "3-5", "age_group_stabil": "5-7" },
+    { "code": "C.2", "dimension": "C", "age_group_min": "3-5", "age_group_peak": "5-7", "age_group_stabil": "7-10" },
+    { "code": "C.4", "dimension": "C", "age_group_min": "3-5", "age_group_peak": "5-7", "age_group_stabil": "7-10" },
+    { "code": "C.5", "dimension": "C", "age_group_min": "3-5", "age_group_peak": "5-7", "age_group_stabil": "7-10" },
 
-    { "code": "L.1", "dimension": "L", "min_age": 1, "peak_age": 3, "stabilization_age": 5 },
-    { "code": "L.2", "dimension": "L", "min_age": 2, "peak_age": 5, "stabilization_age": 8 },
-    { "code": "L.3", "dimension": "L", "min_age": 3, "peak_age": 6, "stabilization_age": 9 },
-    { "code": "L.4", "dimension": "L", "min_age": 1, "peak_age": 4, "stabilization_age": 8 },
-    { "code": "L.5", "dimension": "L", "min_age": 5, "peak_age": 8, "stabilization_age": 10 }
-  ],
-
-  "ecl_dependencies": [
-    { "from": "E.1", "to": "C.1" },
-    { "from": "E.4", "to": "C.2" },
-
-    { "from": "C.1", "to": "L.2" },
-    { "from": "C.4", "to": "L.3" }
+    { "code": "L.1", "dimension": "L", "age_group_min": "1-3", "age_group_peak": "3-5", "age_group_stabil": "5-7" },
+    { "code": "L.2", "dimension": "L", "age_group_min": "3-5", "age_group_peak": "5-7", "age_group_stabil": "7-10" },
+    { "code": "L.3", "dimension": "L", "age_group_min": "5-7", "age_group_peak": "7-10", "age_group_stabil": "7-10" },
+    { "code": "L.4", "dimension": "L", "age_group_min": "1-3", "age_group_peak": "5-7", "age_group_stabil": "7-10" },
+    { "code": "L.5", "dimension": "L", "age_group_min": "7-10", "age_group_peak": "7-10", "age_group_stabil": "7-10" }
   ],
 
   "dimension_dependencies": [
@@ -44,32 +39,72 @@
     { "from": "C", "to": "L" }
   ],
 
-  "ecl_skill_map": [
-    { "skill_id": "emotion_safety", "code": "E.1" },
-    { "skill_id": "emotional_intelligence", "code": "E.2" },
-    { "skill_id": "empathy_development", "code": "E.3" },
-    { "skill_id": "confidence", "code": "E.4" },
-    { "skill_id": "stress_regulation", "code": "E.5" },
+  "ecl_dependencies": [
+    { "from": "E.1", "to": "C.1" },
+    { "from": "E.4", "to": "C.2" },
+    { "from": "C.1", "to": "L.2" },
+    { "from": "C.4", "to": "L.3" }
+  ],
 
-    { "skill_id": "imagination", "code": "C.1" },
-    { "skill_id": "creative_confidence", "code": "C.2" },
-    { "skill_id": "symbolic_reasoning", "code": "C.3" },
-    { "skill_id": "visual_planning", "code": "C.4" },
-    { "skill_id": "flexibility", "code": "C.5" },
+  "skill_to_ecl_map": [
+    { "skill_id": "confidence", "ecl": "E.4" },
+    { "skill_id": "soft_story", "ecl": "E.1" },
+    { "skill_id": "predictable_sequence", "ecl": "E.1" },
+    { "skill_id": "motor_basic", "ecl": "C.1" },
+    { "skill_id": "attention_growth", "ecl": "E.5" },
+    { "skill_id": "low_stimulation", "ecl": "E.5" },
+    { "skill_id": "sensory_safety", "ecl": "E.1" },
 
-    { "skill_id": "speech_start", "code": "L.1" },
-    { "skill_id": "early_language", "code": "L.2" },
-    { "skill_id": "vocabulary_growth", "code": "L.2" },
-    { "skill_id": "bilingual_foundation", "code": "L.4" },
-    { "skill_id": "reading_comprehension", "code": "L.5" }
+    { "skill_id": "imagination_seed", "ecl": "C.1" },
+    { "skill_id": "early_logic", "ecl": "L.3" },
+    { "skill_id": "simple_dialogues", "ecl": "L.1" },
+    { "skill_id": "predictable_parallel_lines", "ecl": "L.4" },
+    { "skill_id": "complex_vocabulary", "ecl": "L.2" },
+
+    { "skill_id": "bilingual_stories", "ecl": "L.4" },
+    { "skill_id": "speech_development", "ecl": "L.1" },
+
+    { "skill_id": "logic", "ecl": "L.3" },
+    { "skill_id": "concentration", "ecl": "E.5" },
+    { "skill_id": "independent_thinking", "ecl": "C.5" },
+    { "skill_id": "situational_language", "ecl": "L.2" },
+    { "skill_id": "structured_reasoning", "ecl": "L.5" },
+    { "skill_id": "abstract_reasoning", "ecl": "L.5" },
+
+    { "skill_id": "independent_drawing", "ecl": "C.2" },
+    { "skill_id": "step_by_step_logic", "ecl": "C.4" },
+    { "skill_id": "long_focus", "ecl": "E.5" },
+
+    { "skill_id": "full_paragraph_bilingual", "ecl": "L.4" },
+    { "skill_id": "parallel_reading", "ecl": "L.4" },
+    { "skill_id": "meaning_alignment", "ecl": "L.4" },
+    { "skill_id": "cross_language_mapping", "ecl": "L.4" },
+    { "skill_id": "independent_language_growth", "ecl": "L.2" },
+
+    { "skill_id": "emotion_depth", "ecl": "E.2" },
+    { "skill_id": "advanced_emotion_depth", "ecl": "E.3" },
+
+    { "skill_id": "multi_scene_structure", "ecl": "L.3" },
+    { "skill_id": "moral_reasoning", "ecl": "E.3" },
+
+    { "skill_id": "visual_planning", "ecl": "C.4" },
+    { "skill_id": "motor_mastery", "ecl": "C.2" },
+    { "skill_id": "complex_shape_breakdown", "ecl": "C.5" },
+    { "skill_id": "creative_confidence", "ecl": "C.2" },
+    { "skill_id": "one_object_per_page", "ecl": "C.1" },
+    { "skill_id": "moderate_detail", "ecl": "C.4" },
+    { "skill_id": "shape_variety", "ecl": "C.5" },
+    { "skill_id": "thematic_exploration", "ecl": "C.5" },
+    { "skill_id": "low_cognitive_load", "ecl": "E.1" }
   ],
 
   "validation": {
     "rules": [
-      { "id": "V1", "rule": "dimension_order MUST remain [E,C,L]" },
-      { "id": "V2", "rule": "each code MUST have min_age <= peak_age <= stabilization_age" },
-      { "id": "V3", "rule": "dependencies MUST NOT violate dimension_order" }
+      { "id": "V1", "rule": "dimensions MUST remain [E,C,L]" },
+      { "id": "V2", "rule": "age_group_min <= age_group_peak <= age_group_stabil" },
+      { "id": "V3", "rule": "dependencies MUST follow E→C→L ordering" },
+      { "id": "V4", "rule": "each skill_id MUST exist in skills.json" }
     ],
-    "failure_action": "If any rule fails → exclude all dependent codes from matching."
+    "failure_action": "exclude_invalid_elements"
   }
 }
