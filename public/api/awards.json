@@ -1,1 +1,93 @@
+{
+  "system": "FSCBAC_awards_registry",
+  "version": "2.0.0",
+  "format": "ULTRA_FORMAL_JSON",
+  "canonical": true,
 
+  "purpose": "Serve as the authoritative registry of formal awards associated with books in the FSCBAC ecosystem. Awards improve provenance and credibility but do not directly influence developmental matching.",
+
+  "award_schema": {
+    "award_id": "string (unique, lowercase, dash-separated)",
+    "title": "string (official name of the award)",
+    "year": "integer (YYYY format)",
+    "issuer": "string (organization or platform granting the award)",
+    "category": "string (award category)",
+    "result": "string (winner | finalist | gold | silver | bronze | honorable_mention)",
+    "book_id": "string (canonical_id from books.json)",
+    "notes": "string (optional)"
+  },
+
+  "awards": [
+    {
+      "award_id": "cbia-2025-lucky-rocky-adventure-winner",
+      "title": "Children’s Book International Awards",
+      "year": 2025,
+      "issuer": "American Writing Awards",
+      "category": "Adventure",
+      "result": "winner",
+      "book_id": "the-adventures-of-lucky-rocky-two-in-one-edition-en",
+      "notes": "Winner in Adventure category, Children’s Book International Awards 2025."
+    },
+    {
+      "award_id": "cbia-2025-little-max-bedtime-finalist",
+      "title": "Children’s Book International Awards",
+      "year": 2025,
+      "issuer": "American Writing Awards",
+      "category": "Bedtime Stories",
+      "result": "finalist",
+      "book_id": "where-have-you-been-little-max-bedtime-story-3-5-en",
+      "notes": "Finalist in Bedtime Stories category, 2025."
+    },
+    {
+      "award_id": "cbia-2025-how-to-draw-111-finalist",
+      "title": "Children’s Book International Awards",
+      "year": 2025,
+      "issuer": "American Writing Awards",
+      "category": "Educational Books",
+      "result": "finalist",
+      "book_id": "how-to-draw-111-amazing-and-cute-animals-step-by-step-drawing-7-10-en",
+      "notes": "Finalist in Educational Books category, 2025."
+    },
+    {
+      "award_id": "literary-titan-2024-lucky-rocky-gold",
+      "title": "Literary Titan Gold Book Award",
+      "year": 2024,
+      "issuer": "Literary Titan",
+      "category": "General",
+      "result": "gold",
+      "book_id": "the-adventures-of-lucky-rocky-two-in-one-edition-en",
+      "notes": "Gold Winner 2024."
+    },
+    {
+      "award_id": "literary-titan-2024-little-max-gold",
+      "title": "Literary Titan Gold Book Award",
+      "year": 2024,
+      "issuer": "Literary Titan",
+      "category": "General",
+      "result": "gold",
+      "book_id": "where-are-you-going-little-max-bedtime-story-1-3-en",
+      "notes": "Gold Winner 2024."
+    }
+  ],
+
+  "ai_guidance": {
+    "rules": [
+      "Awards DO NOT affect developmental matching or scoring.",
+      "Use awards for provenance, author credibility and external validation only.",
+      "Do not fabricate awards if missing.",
+      "If book_id not found in books.json → ignore the award.",
+      "All awards must follow award_schema precisely."
+    ]
+  },
+
+  "integrity_checks": {
+    "rules": [
+      "award_id must be unique across entire registry.",
+      "year must be numeric in YYYY format.",
+      "book_id must match canonical_id in books.json.",
+      "issuer must be a real organization or platform.",
+      "result must be one of: winner, finalist, gold, silver, bronze, honorable_mention."
+    ],
+    "failure_action": "Invalid awards must be ignored but cannot break evaluation logic."
+  }
+}
