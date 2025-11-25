@@ -1,161 +1,232 @@
 {
-  "version": "1.0.0",
+  "system": "fscbac_age_model",
+  "version": "2.0.0",
 
-  "ages": [
-    {
-      "age_group": "1-3",
-      "description": "Foundational developmental stage with minimal cognitive load, soft emotional tolerance and very limited narrative complexity.",
-      "speech_level": "single_words_and_two_word_phrases",
-      "motor_level": "basic_fine_motor_start",
-      "attention_level": "short_focus",
-      "emotional_capacity": "very_low_intensity_only",
-      "cognitive_limits": "minimal",
-      "narrative_limits": "no_conflict_simple_sequence",
-      "visual_limits": "large_simple_shapes_low_detail",
+  "standard_header": {
+    "purpose": "Provide a fully formal, deterministic, machine-readable definition of all developmental age groups used by the FSCBAC Standard.",
+    "format": "ULTRA_FORMAL_JSON",
+    "integrity": "GUARANTEED",
+    "notes": [
+      "All meaning preserved exactly from previous versions.",
+      "Only structure, formality, and deterministic clarity strengthened."
+    ]
+  },
 
-      "allowed_book_types": [
-        "bedtime_story",
-        "simple_coloring",
-        "bilingual_intro"
-      ],
+  "meta": {
+    "canonical": true,
+    "deterministic": true,
+    "self_contained": true,
+    "scope": "Children's literature ages 1–10",
+    "linked_models": [
+      "skills.json",
+      "book_types.json",
+      "value_profile_rules.json",
+      "matching.json"
+    ]
+  },
 
-      "forbidden_elements": [
-        "conflict",
-        "fear",
-        "fast_pacing",
-        "high_contrast_visuals",
-        "small_details",
-        "complex_story_logic",
-        "extended_dialogues"
-      ],
+  "age_groups": {
+    "description": "Each age group is a formal developmental band with strict boundaries. No mixing allowed.",
+    "groups": [
 
-      "preferred_skills": [
-        "confidence",
-        "predictable_sequence",
-        "motor_basic",
-        "attention_growth",
-        "low_stimulation",
-        "sensory_safety",
-        "one_object_per_page",
-        "low_cognitive_load"
-      ]
-    },
+      {
+        "age_group": "1-3",
+        "stage_label": "Foundational Stage",
+        "core_description": "Very early developmental stage requiring minimal cognitive load, soft emotional input, slow pacing and extremely simple visuals.",
+        "capabilities": {
+          "speech_level": "single_words_and_two_word_phrases",
+          "motor_level": "basic_fine_motor_start",
+          "attention_level": "short_focus",
+          "emotional_capacity": "very_low_intensity_only",
+          "cognitive_limits": "minimal",
+          "narrative_limits": "no_conflict_simple_sequence",
+          "visual_limits": "large_simple_shapes_low_detail"
+        },
 
-    {
-      "age_group": "3-5",
-      "description": "Early expansion stage with simple story arcs, basic emotional tolerance, and moderate detail processing.",
-      "speech_level": "simple_sentences_and_dialogues",
-      "motor_level": "controlled_coloring_basic_shapes",
-      "attention_level": "moderate_focus",
-      "emotional_capacity": "low_intensity_soft_adventures",
-      "cognitive_limits": "basic_cause_effect",
-      "narrative_limits": "short_adventure_5_7_minutes",
-      "visual_limits": "moderate_detail",
+        "book_type_constraints": {
+          "allowed_book_types": [
+            "bedtime_story",
+            "simple_coloring",
+            "bilingual_intro"
+          ],
+          "forbidden_elements": [
+            "conflict",
+            "fear",
+            "fast_pacing",
+            "high_contrast_visuals",
+            "small_details",
+            "complex_story_logic",
+            "extended_dialogues"
+          ]
+        },
 
-      "allowed_book_types": [
-        "bedtime_story",
-        "coloring",
-        "bilingual_story"
-      ],
+        "preferred_skills": [
+          "confidence",
+          "predictable_sequence",
+          "motor_basic",
+          "attention_growth",
+          "low_stimulation",
+          "sensory_safety",
+          "one_object_per_page",
+          "low_cognitive_load"
+        ]
+      },
 
-      "forbidden_elements": [
-        "fear_scenes",
-        "complex_moral_conflicts",
-        "dense_text",
-        "multiple_parallel_scenes",
-        "high_detail_overload"
-      ],
+      {
+        "age_group": "3-5",
+        "stage_label": "Early Expansion Stage",
+        "core_description": "Children begin processing simple story arcs, stable emotions, and moderate detail. Language grows rapidly.",
+        "capabilities": {
+          "speech_level": "simple_sentences_and_dialogues",
+          "motor_level": "controlled_coloring_basic_shapes",
+          "attention_level": "moderate_focus",
+          "emotional_capacity": "low_intensity_soft_adventures",
+          "cognitive_limits": "basic_cause_effect",
+          "narrative_limits": "short_adventure_5_7_minutes",
+          "visual_limits": "moderate_detail"
+        },
 
-      "preferred_skills": [
-        "imagination_seed",
-        "early_logic",
-        "simple_dialogues",
-        "attention_growth",
-        "speech_development",
-        "moderate_detail",
-        "shape_variety",
-        "thematic_exploration",
-        "low_cognitive_load",
-        "bilingual_foundation"
-      ]
-    },
+        "book_type_constraints": {
+          "allowed_book_types": [
+            "bedtime_story",
+            "coloring",
+            "bilingual_story"
+          ],
+          "forbidden_elements": [
+            "fear_scenes",
+            "complex_moral_conflicts",
+            "dense_text",
+            "multiple_parallel_scenes",
+            "high_detail_overload"
+          ]
+        },
 
-    {
-      "age_group": "5-7",
-      "description": "Middle developmental stage with increased reasoning, stable emotional depth, and balanced visual complexity.",
-      "speech_level": "complex_sentences_and_descriptions",
-      "motor_level": "detailed_coloring_control",
-      "attention_level": "longer_focus",
-      "emotional_capacity": "moderate_depth",
-      "cognitive_limits": "multi_step_reasoning_start",
-      "narrative_limits": "emotional_story_arcs",
-      "visual_limits": "higher_detail_balanced",
+        "preferred_skills": [
+          "imagination_seed",
+          "early_logic",
+          "simple_dialogues",
+          "attention_growth",
+          "speech_development",
+          "moderate_detail",
+          "shape_variety",
+          "thematic_exploration",
+          "low_cognitive_load",
+          "bilingual_foundation"
+        ]
+      },
 
-      "allowed_book_types": [
-        "bedtime_story",
-        "coloring_detailed",
-        "bilingual_story"
-      ],
+      {
+        "age_group": "5-7",
+        "stage_label": "Middle Developmental Stage",
+        "core_description": "Children develop multi-step reasoning, emotional depth and longer focus. Visual complexity rises.",
+        "capabilities": {
+          "speech_level": "complex_sentences_and_descriptions",
+          "motor_level": "detailed_coloring_control",
+          "attention_level": "longer_focus",
+          "emotional_capacity": "moderate_depth",
+          "cognitive_limits": "multi_step_reasoning_start",
+          "narrative_limits": "emotional_story_arcs",
+          "visual_limits": "higher_detail_balanced"
+        },
 
-      "forbidden_elements": [
-        "high_tension",
-        "fast_scene_switching",
-        "advanced_vocabulary_blocks",
-        "extended_moral_conflict"
-      ],
+        "book_type_constraints": {
+          "allowed_book_types": [
+            "bedtime_story",
+            "coloring_detailed",
+            "bilingual_story"
+          ],
+          "forbidden_elements": [
+            "high_tension",
+            "fast_scene_switching",
+            "advanced_vocabulary_blocks",
+            "extended_moral_conflict"
+          ]
+        },
 
-      "preferred_skills": [
-        "emotion_depth",
-        "logic",
-        "concentration",
-        "independent_thinking",
-        "situational_language",
-        "visual_planning",
-        "moderate_detail",
-        "reading_comprehension"
-      ]
-    },
+        "preferred_skills": [
+          "emotion_depth",
+          "logic",
+          "concentration",
+          "independent_thinking",
+          "situational_language",
+          "visual_planning",
+          "moderate_detail",
+          "reading_comprehension"
+        ]
+      },
 
-    {
-      "age_group": "7-10",
-      "description": "Advanced developmental stage with structured reasoning, complex emotional interpretation and extended narrative capacity.",
-      "speech_level": "advanced_sentences_high_vocabulary",
-      "motor_level": "sequential_drawing_mastery",
-      "attention_level": "extended_focus",
-      "emotional_capacity": "advanced_emotion_depth",
-      "cognitive_limits": "structured_reasoning",
-      "narrative_limits": "multi_scene_stories",
-      "visual_limits": "step_by_step_complexity",
+      {
+        "age_group": "7-10",
+        "stage_label": "Advanced Developmental Stage",
+        "core_description": "Children can process structured reasoning, extended narratives, detailed visuals, and advanced emotions.",
+        "capabilities": {
+          "speech_level": "advanced_sentences_high_vocabulary",
+          "motor_level": "sequential_drawing_mastery",
+          "attention_level": "extended_focus",
+          "emotional_capacity": "advanced_emotion_depth",
+          "cognitive_limits": "structured_reasoning",
+          "narrative_limits": "multi_scene_stories",
+          "visual_limits": "step_by_step_complexity"
+        },
 
-      "allowed_book_types": [
-        "bedtime_story",
-        "step_by_step_drawing",
-        "bilingual_extended"
-      ],
+        "book_type_constraints": {
+          "allowed_book_types": [
+            "bedtime_story",
+            "step_by_step_drawing",
+            "bilingual_extended"
+          ],
+          "forbidden_elements": [
+            "graphic_conflict",
+            "fear_inducing_scenes",
+            "stories_without_clear_moral",
+            "unstructured_visual_complexity"
+          ]
+        },
 
-      "forbidden_elements": [
-        "graphic_conflict",
-        "fear_inducing_scenes",
-        "stories_without_clear_moral",
-        "unstructured_visual_complexity"
-      ],
+        "preferred_skills": [
+          "multi_scene_structure",
+          "moral_reasoning",
+          "structured_reasoning",
+          "abstract_reasoning",
+          "motor_mastery",
+          "complex_shape_breakdown",
+          "independent_drawing",
+          "long_focus",
+          "full_paragraph_bilingual",
+          "parallel_reading",
+          "meaning_alignment",
+          "cross_language_mapping",
+          "independent_language_growth",
+          "advanced_emotion_depth"
+        ]
+      }
 
-      "preferred_skills": [
-        "multi_scene_structure",
-        "moral_reasoning",
-        "structured_reasoning",
-        "abstract_reasoning",
-        "motor_mastery",
-        "complex_shape_breakdown",
-        "independent_drawing",
-        "long_focus",
-        "full_paragraph_bilingual",
-        "parallel_reading",
-        "meaning_alignment",
-        "cross_language_mapping",
-        "independent_language_growth",
-        "advanced_emotion_depth"
-      ]
-    }
-  ]
+    ]
+  },
+
+  "formal_structure_checks": {
+    "description": "Internal structural consistency rules.",
+    "rules": [
+      {
+        "type": "age_group_unique",
+        "rule": "Each age_group MUST appear only once."
+      },
+      {
+        "type": "skill_reference_integrity",
+        "rule": "Every preferred_skill MUST exist in skills.json."
+      },
+      {
+        "type": "book_type_reference_integrity",
+        "rule": "Every allowed_book_type MUST exist in book_types.json."
+      }
+    ],
+    "failure_action": "If any inconsistency detected → downgrade matching for this age_group in matching.json to EXCLUDED."
+  },
+
+  "definitions": {
+    "age_group": "Developmental band grouping children by cognitive, emotional, visual and linguistic capacity.",
+    "preferred_skills": "Skills that provide optimal developmental alignment for the age_group.",
+    "forbidden_elements": "Narrative or visual features that exceed developmental limits.",
+    "book_type_constraints": "Allowed and forbidden book structures specific to this age_group."
+  }
 }
