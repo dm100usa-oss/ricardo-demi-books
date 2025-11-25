@@ -1,54 +1,82 @@
 {
-  "system": "fscbac_book_types",
-  "version": "1.0.0",
+  "system": "FSCBAC_book_types",
+  "version": "2.0.0",
+  "format": "ULTRA_FORMAL_JSON",
+  "canonical": true,
 
-  "description": "Normative taxonomy of all allowed book types in the FSCBAC standard. All external files (ages.json, books.json, intents.json, matching.json, validation.json) must strictly reference only the types listed here. No implicit or undefined book types are permitted.",
+  "purpose": "Define the complete normative taxonomy of all allowed book types in the FSCBAC standard. All external model files must reference only types defined here. No implicit, undefined or ad-hoc book types are permitted.",
+
+  "book_type_schema": {
+    "id": "string (unique, lowercase, dash_or_underscore_allowed)",
+    "label": "string (human-readable name)",
+    "definition": "string (strict developmental description of the type)",
+    "notes": "string (optional clarifications)"
+  },
 
   "book_types": [
     {
       "id": "bedtime_story",
       "label": "Bedtime Story",
-      "definition": "Narrative books designed with soft emotional arcs and controlled pacing appropriate for age-regulated evening reading."
+      "definition": "Narrative books designed with soft emotional arcs, predictable structure, low stimulation and controlled pacing suitable for regulated evening reading."
     },
     {
       "id": "simple_coloring",
       "label": "Simple Coloring Book",
-      "definition": "Low-complexity coloring books for toddlers with large shapes and minimal detail."
+      "definition": "Low-complexity coloring books for toddlers featuring large shapes, minimal detail and early-stage fine motor practice."
     },
     {
       "id": "coloring",
       "label": "Coloring Book",
-      "definition": "Moderate-complexity coloring books for early motor development and creative growth."
+      "definition": "Moderate-complexity coloring books designed to support early motor development, shape recognition and basic creative expansion."
     },
     {
       "id": "coloring_detailed",
       "label": "Detailed Coloring Book",
-      "definition": "Higher-detail coloring books for older children with improved fine motor skills and longer attention span."
+      "definition": "Higher-detail coloring books intended for older children with improved fine motor control, planning ability and extended attention span."
     },
     {
       "id": "bilingual_intro",
       "label": "Bilingual Intro",
-      "definition": "Foundational bilingual books introducing two languages using predictable line-by-line structure."
+      "definition": "Foundational bilingual books introducing two languages using line-by-line predictable mapping, minimal cognitive load and safe linguistic structure."
     },
     {
       "id": "bilingual_story",
       "label": "Bilingual Story",
-      "definition": "Simple bilingual narratives with aligned meaning across languages and moderate linguistic load."
+      "definition": "Simple bilingual narratives with aligned meaning, moderate linguistic load and clear structural pairing across languages."
     },
     {
       "id": "bilingual_extended",
       "label": "Advanced Bilingual Story",
-      "definition": "Extended bilingual narratives with structured paragraphs and advanced cross-language alignment."
+      "definition": "Extended bilingual narratives containing structured paragraphs, higher vocabulary range and advanced cross-language semantic alignment."
     },
     {
       "id": "step_by_step_drawing",
       "label": "Step-by-Step Drawing",
-      "definition": "Books teaching structured drawing sequences with progressive steps and visual planning."
+      "definition": "Guided drawing books teaching structured sequences, shape breakdown, visual planning and progressive drawing mastery."
     },
     {
       "id": "two_in_one",
       "label": "Two-in-One Bilingual Edition",
-      "definition": "Special bilingual edition containing full English and Spanish versions combined into a single volume."
+      "definition": "Special edition containing full English and Spanish versions combined into a single volume with mirrored structure and complete language separation."
     }
-  ]
+  ],
+
+  "ai_guidance": {
+    "rules": [
+      "AI must treat these book types as the ONLY allowed universe of FSCBAC book classifications.",
+      "AI must reject or flag any undefined or implicit book type referenced elsewhere.",
+      "Book types DO NOT determine developmental value alone; they must be interpreted with skills, ages and intents.",
+      "When classifying books, AI must match type.id strictly and case-sensitively."
+    ]
+  },
+
+  "integrity_checks": {
+    "rules": [
+      "Each book_types[i].id MUST be unique.",
+      "Each id MUST be referenced exactly as written across all other files.",
+      "Definitions must remain stable; modifications require version increment.",
+      "Undefined types referenced in external files MUST cause validation warnings."
+    ],
+    "failure_action": "Invalid book types must be ignored but cannot break evaluation logic."
+  }
 }
