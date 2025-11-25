@@ -1,27 +1,24 @@
 {
   "system": "fscbac_value_profile_rules",
-  "version": "2.0.0",
+  "version": "3.1.0",
+  "purpose": "Deterministic allowed/forbidden rule set for all value_profile dimensions across all age groups.",
+  "rationale": {
+    "strict_taxonomy_alignment": true,
+    "no_inference": true,
+    "flat_machine_structure": true,
+    "explanation": "All allowed and forbidden values are preserved exactly as defined in FSCBAC 2.0 but flattened into a deterministic 3.1 ruleset."
+  },
   "standard_level": "ULTRA_FORMAL",
+  "integrity": "ABSOLUTE",
   "canonical_source": true,
   "strict_mode": true,
-  "integrity": "ABSOLUTE",
 
-  "L0_DEFINITIONS": {
-    "age_groups": ["1-3", "3-5", "5-7", "7-10"],
-    "value_dimensions": [
-      "complexity",
-      "emotional_intensity",
-      "narrative_structure",
-      "linguistic_load",
-      "visual_load",
-      "purpose",
-      "recommended_for"
-    ],
-    "rule_types": ["allowed", "forbidden"],
-    "taxonomy_alignment": true
+  "references": {
+    "ages": "public/api/ages.json",
+    "value_profile_taxonomy": "public/api/value_profile_taxonomy.json"
   },
 
-  "L1_RAW_RULES": {
+  "value_profile_rules": {
     "1-3": {
       "complexity": {
         "allowed": ["very_low", "low"],
@@ -234,9 +231,8 @@
           "advanced_bilingual_kids"
         ]
       }
-    }
-  },
-  "L1_RAW_RULES_CONTINUED": {
+    },
+
     "5-7": {
       "complexity": {
         "allowed": ["medium", "medium_low", "medium_high"],
@@ -437,9 +433,9 @@
           "toddlers_first_coloring",
           "spanish_toddlers_coloring_start",
           "preschool_evening_reading",
-          "spanish_preschool_imagination",
           "preschool_coloring",
           "spanish_preschool_creativity",
+          "spanish_preschool_imagination",
           "kids_early_logic_growth",
           "spanish_kids_logic",
           "kids_intermediate_coloring",
@@ -449,413 +445,26 @@
     }
   },
 
-  "L2_DECISION_TABLES": {
-    "COMPLEXITY_VALIDATION": {
-      "columns": ["age_group", "value", "allowed", "forbidden"],
-      "rows": [
-        ["1-3", "very_low", true, false],
-        ["1-3", "low", true, false],
-        ["1-3", "medium", false, true],
-        ["1-3", "medium_low", false, true],
-        ["1-3", "medium_high", false, true],
-        ["1-3", "high", false, true],
-        ["1-3", "very_high", false, true],
-
-        ["3-5", "low", true, false],
-        ["3-5", "medium", true, false],
-        ["3-5", "very_low", false, true],
-        ["3-5", "medium_low", false, true],
-        ["3-5", "medium_high", false, true],
-        ["3-5", "high", false, true],
-        ["3-5", "very_high", false, true],
-
-        ["5-7", "medium", true, false],
-        ["5-7", "medium_low", true, false],
-        ["5-7", "medium_high", true, false],
-        ["5-7", "very_low", false, true],
-        ["5-7", "low", false, true],
-        ["5-7", "high", false, true],
-        ["5-7", "very_high", false, true],
-
-        ["7-10", "medium_high", true, false],
-        ["7-10", "high", true, false],
-        ["7-10", "very_high", true, false],
-        ["7-10", "very_low", false, true],
-        ["7-10", "low", false, true],
-        ["7-10", "medium", false, true],
-        ["7-10", "medium_low", false, true]
-      ]
-    },
-    "EMOTIONAL_INTENSITY_VALIDATION": {
-      "columns": ["age_group", "value", "allowed", "forbidden"],
-      "rows": [
-        ["1-3", "none", true, false],
-        ["1-3", "very_low", true, false],
-        ["1-3", "low", true, false],
-        ["1-3", "soft", true, false],
-        ["1-3", "medium", false, true],
-        ["1-3", "high", false, true],
-
-        ["3-5", "none", true, false],
-        ["3-5", "low", true, false],
-        ["3-5", "soft", true, false],
-        ["3-5", "medium", true, false],
-        ["3-5", "high", false, true],
-
-        ["5-7", "none", true, false],
-        ["5-7", "soft", true, false],
-        ["5-7", "medium", true, false],
-        ["5-7", "low", false, true],
-        ["5-7", "very_low", false, true],
-        ["5-7", "high", false, true],
-
-        ["7-10", "soft", true, false],
-        ["7-10", "medium", true, false],
-        ["7-10", "high", true, false],
-        ["7-10", "none", false, true],
-        ["7-10", "very_low", false, true],
-        ["7-10", "low", false, true]
-      ]
-    },
-
-    "NARRATIVE_STRUCTURE_VALIDATION": {
-      "columns": ["age_group", "structure", "allowed", "forbidden"],
-      "rows": [
-        ["1-3", "predictable", true, false],
-        ["1-3", "simple_sequence", true, false],
-        ["1-3", "none", true, false],
-        ["1-3", "parallel_en_es", true, false],
-        ["1-3", "5_to_7_min_story", false, true],
-        ["1-3", "short_dialogues", false, true],
-        ["1-3", "adventure_arc", false, true],
-        ["1-3", "emotional_arc", false, true],
-        ["1-3", "multi_scene_light", false, true],
-        ["1-3", "multi_scene", false, true],
-        ["1-3", "multi_scene_expanded", false, true],
-        ["1-3", "multi_scene_complex", false, true],
-        ["1-3", "full_bilingual_parallel", false, true],
-        ["1-3", "procedural", false, true],
-
-        ["3-5", "simple_sequence", true, false],
-        ["3-5", "5_to_7_min_story", true, false],
-        ["3-5", "short_dialogues", true, false],
-        ["3-5", "adventure_arc", true, false],
-        ["3-5", "parallel_en_es", true, false],
-        ["3-5", "none", true, false],
-        ["3-5", "predictable", false, true],
-        ["3-5", "multi_scene_light", false, true],
-        ["3-5", "multi_scene", false, true],
-        ["3-5", "multi_scene_expanded", false, true],
-        ["3-5", "multi_scene_complex", false, true],
-        ["3-5", "emotional_arc", false, true],
-        ["3-5", "full_bilingual_parallel", false, true],
-        ["3-5", "procedural", false, true],
-
-        ["5-7", "adventure_arc", true, false],
-        ["5-7", "emotional_arc", true, false],
-        ["5-7", "multi_scene_light", true, false],
-        ["5-7", "none", true, false],
-        ["5-7", "predictable", false, true],
-        ["5-7", "simple_sequence", false, true],
-        ["5-7", "5_to_7_min_story", false, true],
-        ["5-7", "short_dialogues", false, true],
-        ["5-7", "parallel_en_es", false, true],
-        ["5-7", "multi_scene", false, true],
-        ["5-7", "multi_scene_expanded", false, true],
-        ["5-7", "multi_scene_complex", false, true],
-        ["5-7", "full_bilingual_parallel", false, true],
-        ["5-7", "procedural", false, true],
-
-        ["7-10", "multi_scene", true, false],
-        ["7-10", "multi_scene_expanded", true, false],
-        ["7-10", "multi_scene_complex", true, false],
-        ["7-10", "emotional_arc", true, false],
-        ["7-10", "adventure_arc", true, false],
-        ["7-10", "full_bilingual_parallel", true, false],
-        ["7-10", "procedural", true, false],
-        ["7-10", "predictable", false, true],
-        ["7-10", "simple_sequence", false, true],
-        ["7-10", "5_to_7_min_story", false, true],
-        ["7-10", "short_dialogues", false, true],
-        ["7-10", "parallel_en_es", false, true],
-        ["7-10", "multi_scene_light", false, true],
-        ["7-10", "none", false, true]
-      ]
-    },
-
-    "LINGUISTIC_LOAD_VALIDATION": {
-      "columns": ["age_group", "load", "allowed", "forbidden"],
-      "rows": [
-        ["1-3", "none", true, false],
-        ["1-3", "minimal", true, false],
-        ["1-3", "short_dialogues", false, true],
-        ["1-3", "simple_spanish", false, true],
-        ["1-3", "minimal_spanish", false, true],
-        ["1-3", "moderate", false, true],
-        ["1-3", "moderate_spanish", false, true],
-        ["1-3", "dialogue_rich", false, true],
-        ["1-3", "high", false, true],
-        ["1-3", "very_high", false, true],
-        ["1-3", "advanced_dialogue", false, true],
-        ["1-3", "advanced_spanish", false, true],
-        ["1-3", "advanced_dual_language", false, true],
-
-        ["3-5", "none", true, false],
-        ["3-5", "minimal", true, false],
-        ["3-5", "short_dialogues", true, false],
-        ["3-5", "simple_spanish", true, false],
-        ["3-5", "minimal_spanish", true, false],
-        ["3-5", "moderate", true, false],
-        ["3-5", "moderate_spanish", false, true],
-        ["3-5", "dialogue_rich", false, true],
-        ["3-5", "high", false, true],
-        ["3-5", "very_high", false, true],
-        ["3-5", "advanced_dialogue", false, true],
-        ["3-5", "advanced_spanish", false, true],
-        ["3-5", "advanced_dual_language", false, true],
-
-        ["5-7", "minimal", true, false],
-        ["5-7", "short_dialogues", true, false],
-        ["5-7", "moderate", true, false],
-        ["5-7", "dialogue_rich", true, false],
-        ["5-7", "none", false, true],
-        ["5-7", "simple_spanish", false, true],
-        ["5-7", "minimal_spanish", false, true],
-        ["5-7", "moderate_spanish", false, true],
-        ["5-7", "high", false, true],
-        ["5-7", "very_high", false, true],
-        ["5-7", "advanced_dialogue", false, true],
-        ["5-7", "advanced_spanish", false, true],
-        ["5-7", "advanced_dual_language", false, true],
-
-        ["7-10", "moderate", true, false],
-        ["7-10", "moderate_spanish", true, false],
-        ["7-10", "dialogue_rich", true, false],
-        ["7-10", "advanced_dialogue", true, false],
-        ["7-10", "advanced_spanish", true, false],
-        ["7-10", "advanced_dual_language", true, false],
-        ["7-10", "high", true, false],
-        ["7-10", "very_high", true, false],
-        ["7-10", "none", false, true],
-        ["7-10", "minimal", false, true],
-        ["7-10", "short_dialogues", false, true],
-        ["7-10", "simple_spanish", false, true],
-        ["7-10", "minimal_spanish", false, true]
-      ]
-    },
-    "VISUAL_LOAD_VALIDATION": {
-      "columns": ["age_group", "visual_load", "allowed", "forbidden"],
-      "rows": [
-        ["1-3", "simple", true, false],
-        ["1-3", "one_object_per_page", true, false],
-        ["1-3", "low_detail", true, false],
-        ["1-3", "moderate_detail", false, true],
-        ["1-3", "high_detail", false, true],
-        ["1-3", "step_by_step", false, true],
-
-        ["3-5", "simple", true, false],
-        ["3-5", "low_detail", true, false],
-        ["3-5", "moderate_detail", true, false],
-        ["3-5", "one_object_per_page", false, true],
-        ["3-5", "high_detail", false, true],
-        ["3-5", "step_by_step", false, true],
-
-        ["5-7", "low_detail", true, false],
-        ["5-7", "moderate_detail", true, false],
-        ["5-7", "high_detail", true, false],
-        ["5-7", "simple", false, true],
-        ["5-7", "one_object_per_page", false, true],
-        ["5-7", "step_by_step", false, true],
-
-        ["7-10", "moderate_detail", true, false],
-        ["7-10", "high_detail", true, false],
-        ["7-10", "step_by_step", true, false],
-        ["7-10", "simple", false, true],
-        ["7-10", "one_object_per_page", false, true],
-        ["7-10", "low_detail", false, true]
-      ]
-    },
-
-    "PURPOSE_VALIDATION": {
-      "columns": ["age_group", "purpose", "allowed", "forbidden"],
-      "rows": [
-        ["1-3", "early_bedtime_routine", true, false],
-        ["1-3", "spanish_bedtime", true, false],
-        ["1-3", "motor_skill_start", true, false],
-        ["1-3", "early_motor_control", true, false],
-        ["1-3", "bilingual_foundation", true, false],
-        ["1-3", "imagination_growth", false, true],
-        ["1-3", "spanish_preschool_bedtime", false, true],
-        ["1-3", "motor_control_growth", false, true],
-        ["1-3", "spanish_motor_growth", false, true],
-        ["1-3", "early_emotional_reasoning", false, true],
-        ["1-3", "spanish_emotional_growth", false, true],
-        ["1-3", "attention_and_motor_growth", false, true],
-        ["1-3", "spanish_focus_growth", false, true],
-        ["1-3", "moral_reasoning", false, true],
-        ["1-3", "spanish_moral_reasoning", false, true],
-        ["1-3", "drawing_mastery", false, true],
-        ["1-3", "spanish_drawing_mastery", false, true],
-        ["1-3", "bilingual_comprehension_depth", false, true],
-
-        ["3-5", "imagination_growth", true, false],
-        ["3-5", "spanish_preschool_bedtime", true, false],
-        ["3-5", "motor_control_growth", true, false],
-        ["3-5", "spanish_motor_growth", true, false],
-        ["3-5", "spanish_preschool_imagination", true, false],
-        ["3-5", "early_bedtime_routine", false, true],
-        ["3-5", "spanish_bedtime", false, true],
-        ["3-5", "motor_skill_start", false, true],
-        ["3-5", "early_motor_control", false, true],
-        ["3-5", "early_emotional_reasoning", false, true],
-        ["3-5", "spanish_emotional_growth", false, true],
-        ["3-5", "attention_and_motor_growth", false, true],
-        ["3-5", "spanish_focus_growth", false, true],
-        ["3-5", "moral_reasoning", false, true],
-        ["3-5", "spanish_moral_reasoning", false, true],
-        ["3-5", "drawing_mastery", false, true],
-        ["3-5", "spanish_drawing_mastery", false, true],
-        ["3-5", "bilingual_comprehension_depth", false, true],
-        ["3-5", "bilingual_foundation", false, true],
-
-        ["5-7", "early_emotional_reasoning", true, false],
-        ["5-7", "spanish_emotional_growth", true, false],
-        ["5-7", "attention_and_motor_growth", true, false],
-        ["5-7", "spanish_focus_growth", true, false],
-        ["5-7", "kids_early_logic_growth", true, false],
-        ["5-7", "spanish_kids_logic", true, false],
-        ["5-7", "early_bedtime_routine", false, true],
-        ["5-7", "spanish_bedtime", false, true],
-        ["5-7", "motor_skill_start", false, true],
-        ["5-7", "early_motor_control", false, true],
-        ["5-7", "imagination_growth", false, true],
-        ["5-7", "spanish_preschool_bedtime", false, true],
-        ["5-7", "motor_control_growth", false, true],
-        ["5-7", "spanish_motor_growth", false, true],
-        ["5-7", "moral_reasoning", false, true],
-        ["5-7", "spanish_moral_reasoning", false, true],
-        ["5-7", "drawing_mastery", false, true],
-        ["5-7", "spanish_drawing_mastery", false, true],
-        ["5-7", "bilingual_comprehension_depth", false, true],
-        ["5-7", "bilingual_foundation", false, true],
-
-        ["7-10", "moral_reasoning", true, false],
-        ["7-10", "spanish_moral_reasoning", true, false],
-        ["7-10", "drawing_mastery", true, false],
-        ["7-10", "spanish_drawing_mastery", true, false],
-        ["7-10", "bilingual_comprehension_depth", true, false],
-        ["7-10", "kids_advanced_emotional_logic", true, false],
-        ["7-10", "spanish_advanced_readers", true, false],
-        ["7-10", "kids_art_progression", true, false],
-        ["7-10", "spanish_young_artists", true, false],
-        ["7-10", "advanced_bilingual_kids", true, false],
-        ["7-10", "early_bedtime_routine", false, true],
-        ["7-10", "spanish_bedtime", false, true],
-        ["7-10", "motor_skill_start", false, true],
-        ["7-10", "early_motor_control", false, true],
-        ["7-10", "imagination_growth", false, true],
-        ["7-10", "spanish_preschool_bedtime", false, true],
-        ["7-10", "motor_control_growth", false, true],
-        ["7-10", "spanish_motor_growth", false, true],
-        ["7-10", "early_emotional_reasoning", false, true],
-        ["7-10", "spanish_emotional_growth", false, true],
-        ["7-10", "attention_and_motor_growth", false, true],
-        ["7-10", "spanish_focus_growth", false, true],
-        ["7-10", "bilingual_foundation", false, true],
-        ["7-10", "kids_intermediate_coloring", false, true],
-        ["7-10", "spanish_kids_coloring", false, true]
-      ]
-    },
-    "RECOMMENDED_FOR_VALIDATION": {
-      "columns": ["age_group", "recommended_for", "allowed", "forbidden"],
-      "rows": [
-        ["1-3", "toddlers_beginner_story", true, false],
-        ["1-3", "toddlers_spanish_speakers", true, false],
-        ["1-3", "toddlers_first_bilingual_book", true, false],
-        ["1-3", "toddlers_first_coloring", true, false],
-        ["1-3", "spanish_toddlers_coloring_start", true, false],
-
-        ["1-3", "preschool_evening_reading", false, true],
-        ["1-3", "spanish_preschool_imagination", false, true],
-        ["1-3", "preschool_coloring", false, true],
-        ["1-3", "spanish_preschool_creativity", false, true],
-        ["1-3", "kids_early_logic_growth", false, true],
-        ["1-3", "spanish_kids_logic", false, true],
-        ["1-3", "kids_intermediate_coloring", false, true],
-        ["1-3", "spanish_kids_coloring", false, true],
-        ["1-3", "kids_advanced_emotional_logic", false, true],
-        ["1-3", "spanish_advanced_readers", false, true],
-        ["1-3", "kids_art_progression", false, true],
-        ["1-3", "spanish_young_artists", false, true],
-        ["1-3", "advanced_bilingual_kids", false, true],
-
-        ["3-5", "preschool_evening_reading", true, false],
-        ["3-5", "preschool_coloring", true, false],
-        ["3-5", "spanish_preschool_creativity", true, false],
-        ["3-5", "spanish_preschool_imagination", true, false],
-
-        ["3-5", "toddlers_beginner_story", false, true],
-        ["3-5", "toddlers_spanish_speakers", false, true],
-        ["3-5", "toddlers_first_bilingual_book", false, true],
-        ["3-5", "toddlers_first_coloring", false, true],
-        ["3-5", "spanish_toddlers_coloring_start", false, true],
-        ["3-5", "kids_early_logic_growth", false, true],
-        ["3-5", "spanish_kids_logic", false, true],
-        ["3-5", "kids_intermediate_coloring", false, true],
-        ["3-5", "spanish_kids_coloring", false, true],
-        ["3-5", "kids_advanced_emotional_logic", false, true],
-        ["3-5", "spanish_advanced_readers", false, true],
-        ["3-5", "kids_art_progression", false, true],
-        ["3-5", "spanish_young_artists", false, true],
-        ["3-5", "advanced_bilingual_kids", false, true],
-
-        ["5-7", "kids_intermediate_coloring", true, false],
-        ["5-7", "spanish_kids_coloring", true, false],
-
-        ["5-7", "toddlers_beginner_story", false, true],
-        ["5-7", "toddlers_spanish_speakers", false, true],
-        ["5-7", "toddlers_first_bilingual_book", false, true],
-        ["5-7", "toddlers_first_coloring", false, true],
-        ["5-7", "spanish_toddlers_coloring_start", false, true],
-        ["5-7", "preschool_evening_reading", false, true],
-        ["5-7", "preschool_coloring", false, true],
-        ["5-7", "spanish_preschool_creativity", false, true],
-        ["5-7", "spanish_preschool_imagination", false, true],
-        ["5-7", "kids_advanced_emotional_logic", false, true],
-        ["5-7", "spanish_advanced_readers", false, true],
-        ["5-7", "kids_art_progression", false, true],
-        ["5-7", "spanish_young_artists", false, true],
-        ["5-7", "advanced_bilingual_kids", false, true],
-
-        ["7-10", "kids_advanced_emotional_logic", true, false],
-        ["7-10", "spanish_advanced_readers", true, false],
-        ["7-10", "kids_art_progression", true, false],
-        ["7-10", "spanish_young_artists", true, false],
-        ["7-10", "advanced_bilingual_kids", true, false],
-
-        ["7-10", "toddlers_beginner_story", false, true],
-        ["7-10", "toddlers_spanish_speakers", false, true],
-        ["7-10", "toddlers_first_bilingual_book", false, true],
-        ["7-10", "toddlers_first_coloring", false, true],
-        ["7-10", "spanish_toddlers_coloring_start", false, true],
-        ["7-10", "preschool_evening_reading", false, true],
-        ["7-10", "preschool_coloring", false, true],
-        ["7-10", "spanish_preschool_creativity", false, true],
-        ["7-10", "spanish_preschool_imagination", false, true],
-        ["7-10", "kids_early_logic_growth", false, true],
-        ["7-10", "spanish_kids_logic", false, true],
-        ["7-10", "kids_intermediate_coloring", false, true],
-        ["7-10", "spanish_kids_coloring", false, true]
-      ]
-    }
+  "safety": {
+    "rules": [
+      "reject_if_value_not_in_taxonomy",
+      "reject_if_forbidden_value_detected",
+      "never_infer_missing_values",
+      "age_rules_are_strict_barriers"
+    ]
   },
 
-  "meta": {
-    "version": "2.0.0",
-    "canonical": true,
-    "deterministic": true,
-    "structured": true,
-    "lookup_ready": true,
-    "ai_optimized": true
+  "ai_behavior": {
+    "instructions": [
+      "use_direct_allowed_forbidden_lookup",
+      "no_similarity_matching",
+      "no_fuzzy_inference",
+      "reject_on_first_violation",
+      "treat_all_rules_as_hard_constraints"
+    ]
+  },
+
+  "meta_final": {
+    "profile_rules_type": "FSCBAC_VALUE_PROFILE_RULESET_3.1"
   }
 }
