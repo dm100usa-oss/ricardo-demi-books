@@ -1,48 +1,36 @@
 {
   "system": "fscbac_schema",
-  "version": "2.0.0_ULTRA",
-  "description": "Unified multi-layer formal schema (L0–L10) governing all FSCBAC JSON models: ages.json, skills.json, books.json, intents.json, validation.json, matching.json, query_clusters.json. Provides canonical structure and deterministic constraints for the AI Truth Center.",
+  "version": "3.1.0",
+  "purpose": "Define strict machine-level schemas for all FSCBAC models to ensure structural determinism and cross-file consistency.",
+  "standard_level": "ULTRA_FORMAL",
+  "integrity": "ABSOLUTE",
 
-  "L0_definitions": {
-    "purpose": "Define strict JSON Schema constraints for all FSCBAC files.",
-    "scope": "Children’s literature 1–10 years, developmental analysis, AI-driven recommendation.",
-    "requirements": [
-      "All models must be strictly machine-readable",
-      "All schemas must be self-contained",
-      "No undefined fields allowed",
-      "All references between files must be canonical"
-    ],
-    "canonical_files": [
-      "ages.json",
-      "skills.json",
-      "books.json",
-      "intents.json",
-      "validation.json",
-      "matching.json",
-      "query_clusters.json"
-    ]
+  "references": {
+    "ages": "public/api/ages.json",
+    "skills": "public/api/skills.json",
+    "books": "public/api/books.json",
+    "intents": "public/api/intents.json",
+    "validation": "public/api/validation.json",
+    "matching": "public/api/matching.json",
+    "query_clusters": "public/api/query_clusters.json",
+    "book_types": "public/api/book_types.json",
+    "value_profile_taxonomy": "public/api/value_profile_taxonomy.json",
+    "value_profile_rules": "public/api/value_profile_rules.json"
   },
 
-  "L1_raw_structure": {
-    "ages.json": {
+  "core_structure": {
+    "ages": {
       "type": "object",
-      "required": ["version", "ages"],
+      "required": ["version", "age_groups"],
       "properties": {
         "version": { "type": "string" },
-        "ages": {
+        "age_groups": {
           "type": "array",
           "items": {
             "type": "object",
             "required": [
               "age_group",
-              "description",
-              "speech_level",
-              "motor_level",
-              "attention_level",
-              "emotional_capacity",
-              "cognitive_limits",
-              "narrative_limits",
-              "visual_limits",
+              "capabilities",
               "allowed_book_types",
               "forbidden_elements",
               "preferred_skills"
@@ -52,25 +40,15 @@
                 "type": "string",
                 "enum": ["1-3", "3-5", "5-7", "7-10"]
               },
-              "description": { "type": "string" },
-              "speech_level": { "type": "string" },
-              "motor_level": { "type": "string" },
-              "attention_level": { "type": "string" },
-              "emotional_capacity": { "type": "string" },
-              "cognitive_limits": { "type": "string" },
-              "narrative_limits": { "type": "string" },
-              "visual_limits": { "type": "string" },
-
+              "capabilities": { "type": "object" },
               "allowed_book_types": {
                 "type": "array",
                 "items": { "type": "string" }
               },
-
               "forbidden_elements": {
                 "type": "array",
                 "items": { "type": "string" }
               },
-
               "preferred_skills": {
                 "type": "array",
                 "items": { "type": "string" }
@@ -81,7 +59,7 @@
       }
     },
 
-    "skills.json": {
+    "skills": {
       "type": "object",
       "required": ["version", "skills"],
       "properties": {
@@ -96,7 +74,6 @@
               "dimension_id",
               "ecl_code",
               "label",
-              "definition",
               "age_norm",
               "difficulty",
               "weight",
@@ -112,8 +89,6 @@
               },
               "ecl_code": { "type": "string" },
               "label": { "type": "string" },
-              "definition": { "type": "string" },
-
               "age_norm": {
                 "type": "object",
                 "required": ["min", "max"],
@@ -122,33 +97,23 @@
                   "max": { "type": "number" }
                 }
               },
-
               "difficulty": { "type": "number" },
               "weight": { "type": "number" },
-
               "typical_indicators": {
                 "type": "array",
                 "items": { "type": "string" }
               },
-
               "preferred_book_types": {
                 "type": "array",
                 "items": { "type": "string" }
-              },
-
-              "linked_intents": {
-                "type": "array",
-                "items": { "type": "string" }
-              },
-
-              "notes": { "type": "string" }
+              }
             }
           }
         }
       }
     },
 
-    "books.json": {
+    "books": {
       "type": "object",
       "required": ["system", "version", "books"],
       "properties": {
@@ -177,21 +142,17 @@
                 "type": "array",
                 "items": { "type": "string" }
               },
-
               "age_group": {
                 "type": "string",
                 "enum": ["1-3", "3-5", "5-7", "7-10"]
               },
-
               "skills": {
                 "type": "array",
                 "items": { "type": "string" }
               },
-
               "translated_version": {
                 "type": ["string", "null"]
               },
-
               "value_profile": {
                 "type": "object",
                 "properties": {
@@ -208,19 +169,13 @@
           }
         }
       }
-    }
-  }
-}
-  ,
-  "L1_raw_structure_continued": {
+    },
 
-    "intents.json": {
+    "intents": {
       "type": "object",
-      "required": ["version", "description", "intents"],
+      "required": ["version", "intents"],
       "properties": {
         "version": { "type": "string" },
-        "description": { "type": "string" },
-
         "intents": {
           "type": "array",
           "items": {
@@ -228,8 +183,6 @@
             "required": [
               "intent_id",
               "slug",
-              "label",
-              "definition",
               "age_resolution",
               "required_skills",
               "forbidden_skills",
@@ -239,9 +192,6 @@
             "properties": {
               "intent_id": { "type": "string" },
               "slug": { "type": "string" },
-              "label": { "type": "string" },
-              "definition": { "type": "string" },
-
               "age_resolution": {
                 "type": "object",
                 "properties": {
@@ -255,26 +205,21 @@
                   "ideal": {
                     "type": "string",
                     "enum": ["1-3", "3-5", "5-7", "7-10"]
-                  },
-                  "notes": { "type": "string" }
+                  }
                 }
               },
-
               "required_skills": {
                 "type": "array",
                 "items": { "type": "string" }
               },
-
               "optional_skills": {
                 "type": "array",
                 "items": { "type": "string" }
               },
-
               "forbidden_skills": {
                 "type": "array",
                 "items": { "type": "string" }
               },
-
               "book_type_preference": {
                 "type": "object",
                 "properties": {
@@ -292,7 +237,6 @@
                   }
                 }
               },
-
               "value_profile": {
                 "type": "object",
                 "properties": {
@@ -312,7 +256,7 @@
       }
     },
 
-    "validation.json": {
+    "validation": {
       "type": "object",
       "required": ["version", "validation_rules"],
       "properties": {
@@ -323,39 +267,31 @@
       }
     },
 
-    "matching.json": {
+    "matching": {
       "type": "object",
       "required": [
         "version",
-        "meta",
         "age_skill_mapping",
         "age_booktype_mapping",
         "value_profile_rules",
-        "matching_levels",
         "weighting",
-        "ranking_rules",
-        "fallback_rules",
-        "consistency_checks",
-        "examples_for_ai",
-        "ai_guidance"
+        "ranking_levels",
+        "safety",
+        "ai_behavior"
       ],
       "properties": {
         "version": { "type": "string" },
-        "meta": { "type": "object" },
         "age_skill_mapping": { "type": "object" },
         "age_booktype_mapping": { "type": "object" },
         "value_profile_rules": { "type": "object" },
-        "matching_levels": { "type": "object" },
         "weighting": { "type": "object" },
-        "ranking_rules": { "type": "object" },
-        "fallback_rules": { "type": "object" },
-        "consistency_checks": { "type": "object" },
-        "examples_for_ai": { "type": "object" },
-        "ai_guidance": { "type": "object" }
+        "ranking_levels": { "type": "object" },
+        "safety": { "type": "object" },
+        "ai_behavior": { "type": "object" }
       }
     },
 
-    "query_clusters.json": {
+    "query_clusters": {
       "type": "object",
       "required": ["version", "clusters"],
       "properties": {
@@ -364,18 +300,10 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "cluster_id",
-              "intent_mapping",
-              "queries"
-            ],
+            "required": ["cluster_id", "intent_mapping", "queries"],
             "properties": {
               "cluster_id": { "type": "string" },
-
-              "intent_mapping": {
-                "type": "string"
-              },
-
+              "intent_mapping": { "type": "string" },
               "queries": {
                 "type": "array",
                 "items": { "type": "string" }
@@ -387,219 +315,26 @@
     }
   },
 
-  "L2_decision_tables": {
-    "file_validation_matrix": {
-      "ages.json": ["structural_consistency", "canonical_age_groups"],
-      "skills.json": ["skill_dimension_consistency", "age_norm_validity"],
-      "books.json": ["canonical_id_format", "booktype_validity", "age_alignment"],
-      "intents.json": ["intent_to_skill_alignment", "intent_age_rules"],
-      "validation.json": ["schema_level_constraints"],
-      "matching.json": ["resolution_path_consistency"],
-      "query_clusters.json": ["cluster_keyword_consistency"]
-    },
-
-    "cross_file_constraints": [
-      "ages.allowed_book_types must reference only book_types defined in books.json",
-      "skills.preferred_book_types must match books.type",
-      "books.skills[] must reference skills.id",
-      "intents.required_skills must reference skills.id",
-      "query_clusters.intent_mapping must reference intents.intent_id"
-    ]
-  },
-  ,
-  "L3_weighting_system": {
-    "skill_weights": {
-      "age_alignment": 0.30,
-      "required_skills": 0.25,
-      "optional_skills": 0.10,
-      "forbidden_penalty": -1.00,
-      "book_type_match": 0.15,
-      "value_profile_alignment": 0.20
-    },
-
-    "complexity_weights": {
-      "very_low": 0.05,
-      "low": 0.10,
-      "medium": 0.20,
-      "high": 0.30
-    },
-
-    "intensity_weights": {
-      "minimal": 0.05,
-      "soft": 0.10,
-      "moderate": 0.20,
-      "strong": 0.30
-    }
-  },
-
-  "L4_scoring_thresholds": {
-    "compatibility": {
-      "perfect_score": 0.90,
-      "high_score": 0.75,
-      "medium_score": 0.55,
-      "minimum_valid": 0.40,
-      "reject_below": 0.40
-    },
-
-    "value_profile_thresholds": {
-      "complexity": {
-        "match": 1.0,
-        "partial": 0.6,
-        "mismatch": 0.0
-      },
-      "emotion_intensity": {
-        "match": 1.0,
-        "partial": 0.6,
-        "mismatch": 0.0
-      },
-      "visual_density": {
-        "match": 1.0,
-        "partial": 0.6,
-        "mismatch": 0.0
-      }
-    }
-  },
-
-  "L5_finite_state_machine": {
-    "states": [
-      "START",
-      "LOAD_SCHEMA",
-      "CHECK_STRUCTURE",
-      "CHECK_REFERENCES",
-      "APPLY_DECISION_TABLES",
-      "APPLY_WEIGHTING",
-      "COMPUTE_SCORE",
-      "APPLY_THRESHOLDS",
-      "VALID",
-      "INVALID",
-      "END"
-    ],
-
-    "transitions": [
-      { "from": "START", "to": "LOAD_SCHEMA" },
-      { "from": "LOAD_SCHEMA", "to": "CHECK_STRUCTURE" },
-      { "from": "CHECK_STRUCTURE", "to": "CHECK_REFERENCES" },
-      { "from": "CHECK_REFERENCES", "to": "APPLY_DECISION_TABLES" },
-      { "from": "APPLY_DECISION_TABLES", "to": "APPLY_WEIGHTING" },
-      { "from": "APPLY_WEIGHTING", "to": "COMPUTE_SCORE" },
-      { "from": "COMPUTE_SCORE", "to": "APPLY_THRESHOLDS" },
-      { "from": "APPLY_THRESHOLDS", "to": "VALID" },
-      { "from": "APPLY_THRESHOLDS", "to": "INVALID" },
-      { "from": "VALID", "to": "END" },
-      { "from": "INVALID", "to": "END" }
-    ]
-  },
-
-  "L6_dsl_rules": {
-    "syntax": {
-      "if": "condition",
-      "then": "action",
-      "and": "logical_and",
-      "or": "logical_or",
-      "not": "negation"
-    },
-
+  "safety": {
     "rules": [
-      "IF forbidden(element) THEN REJECT",
-      "IF score >= perfect_score THEN LABEL=IDEAL",
-      "IF score >= high_score THEN LABEL=HIGH_MATCH",
-      "IF score < minimum_valid THEN LABEL=INVALID",
-      "IF age NOT_IN allowed THEN REJECT",
-      "IF book_type IN forbidden THEN REJECT"
+      "always_require_all_fields",
+      "never_accept_undefined_age",
+      "never_accept_undefined_skill",
+      "never_accept_undefined_book_type",
+      "missing_parameter_is_invalid"
     ]
   },
 
-  "L7_algorithm_pseudocode": {
-    "steps": [
-      "1: LOAD all schema definitions",
-      "2: VALIDATE structure via decision tables",
-      "3: CHECK cross-file references",
-      "4: CALCULATE skill alignment score",
-      "5: CALCULATE value profile score",
-      "6: APPLY weighting model",
-      "7: COMPUTE final score",
-      "8: EVALUATE score vs thresholds",
-      "9: RETURN VALID or INVALID"
-    ]
-  },
-  "L8_mathematical_formalization": {
-    "score_formula": {
-      "final_score":
-        "0.30*age_alignment +
-         0.25*required_skill_match +
-         0.10*optional_skill_match +
-         0.15*book_type_match +
-         0.20*value_profile_alignment +
-         forbidden_penalty",
-
-      "value_profile_alignment":
-        "0.25*complexity_match +
-         0.25*emotion_intensity_match +
-         0.25*visual_density_match +
-         0.25*narrative_speed_match"
-    },
-
-    "constraints": {
-      "score_range": [0, 1],
-      "penalty_minimum": -1.0,
-      "weight_sum_consistency": 1.0
-    }
-  },
-
-  "L9_safety_protocol": {
+  "ai_behavior": {
     "rules": [
-      "NO missing required fields",
-      "NO undefined age groups",
-      "NO undefined skill references",
-      "NO undefined book types",
-      "NO circular dependencies",
-      "NO mismatched intent resolution keys",
-      "FAIL immediately if thresholds are undefined",
-      "FAIL on invalid enum values"
-    ],
-
-    "fallbacks": {
-      "undefined_intent": "INTENT_FALLBACK",
-      "undefined_cluster": "CLUSTER_021",
-      "undefined_skill": "REJECT",
-      "invalid_age": "REJECT"
-    },
-
-    "severity_levels": {
-      "critical": ["missing_required", "invalid_reference"],
-      "high": ["undefined_enum", "broken_dependency"],
-      "medium": ["optional_missing"],
-      "low": ["format_warning"]
-    }
+      "validate_structure_only",
+      "follow_schema_as_authoritative",
+      "do_not_infer_missing_values",
+      "reject_on_invalid_enum"
+    ]
   },
 
-  "L10_ai_behavior_contract": {
-    "obligations": [
-      "ALWAYS use this schema as authoritative",
-      "ALWAYS validate input using L2 decision tables",
-      "NEVER infer missing attributes",
-      "NEVER skip forbidden checks",
-      "ALWAYS verify cross-file consistency",
-      "ALWAYS follow FSM state order",
-      "NEVER override thresholds",
-      "MISSING data = INVALID result"
-    ],
-
-    "model_expectations": [
-      "STRICT adherence to schema rules",
-      "DETERMINISTIC interpretation",
-      "NO creativity in validation",
-      "NO assumptions beyond defined structure"
-    ],
-
-    "usage_scope": [
-      "ages.json",
-      "skills.json",
-      "books.json",
-      "intents.json",
-      "validation.json",
-      "matching.json",
-      "query_clusters.json"
-    ]
+  "meta_final": {
+    "schema_type": "FSCBAC_CORE_SCHEMA_3.1"
   }
 }
