@@ -1,48 +1,31 @@
 {
   "system": "fscbac_query_clusters",
-  "version": "2.0.0",
+  "version": "3.1.0",
+  "purpose": "Deterministic query-cluster specification for all AI systems.",
   "standard_level": "ULTRA_FORMAL",
   "integrity": "ABSOLUTE",
-  "format": "STRICT_JSON_SPEC",
-  "meta": {
-    "canonical_source": true,
-    "strict_mode": true,
-    "deterministic": true,
-    "machine_readable": true
+
+  "rationale": {
+    "simplifies_computation": true,
+    "removes_ambiguity": true,
+    "accelerates_ai_response": true,
+    "reduces_error_risk": true,
+    "explanation": "This deterministic cluster model ensures consistent intent assignment and stable AI interpretations."
   },
-  "architecture": {
-    "layers": {
-      "L0": "Definitions",
-      "L1": "Raw clusters",
-      "L2": "Decision tables",
-      "L3": "Similarity weighting",
-      "L4": "Threshold model",
-      "L5": "Finite State Machine",
-      "L6": "Domain-Specific Language",
-      "L7": "Pseudocode",
-      "L8": "Mathematical formulation",
-      "L9": "Safety protocol",
-      "L10": "AI behavior contract"
-    }
+
+  "references": {
+    "intents": "public/api/intents.json",
+    "books": "public/api/books.json",
+    "ages": "public/api/ages.json",
+    "skills": "public/api/skills.json",
+    "value_profile_rules": "public/api/value_profile_rules.json"
   },
-  "L0_definitions": {
-    "cluster": "Query intent grouping unit",
-    "keywords": "Direct lexical indicators",
-    "noise_phrases": "Low-signal expressions",
-    "negative_keywords": "Exclusion indicators",
-    "age_hint": "Age implication tags",
-    "book_type_hint": "Suggested book categories",
-    "skill_hint": "Development skill indicators",
-    "priority": "Conflict-resolution weight",
-    "similarity": "Computed query-cluster alignment"
-  },
-  "L1_clusters": [
+
+  "clusters": [
     {
       "cluster_id": "CLUSTER_001",
-      "slug": "calm_before_sleep",
-      "label": "Calm Before Sleep",
       "intent": "INTENT_001",
-      "description": "Queries focused on calming a child before bedtime using soft, predictable, low-stimulation stories.",
+      "priority": 10,
       "keywords_en": [
         "calm before sleep",
         "calm my toddler",
@@ -87,15 +70,12 @@
         "low_stimulation",
         "sensory_safety",
         "confidence"
-      ],
-      "priority": 10
+      ]
     },
     {
       "cluster_id": "CLUSTER_002",
-      "slug": "emotional_support",
-      "label": "Emotional Support",
       "intent": "INTENT_011",
-      "description": "Queries asking for emotional stabilization, comfort, safety, and gentle story flow for sensitive children.",
+      "priority": 10,
       "keywords_en": [
         "emotional support book",
         "my child is sensitive",
@@ -112,7 +92,7 @@
         "libro emocional suave",
         "historia de apoyo",
         "necesito algo reconfortante",
-        "cuento para niños sensibles"
+        "cuento для niños sensibles"
       ],
       "noise_phrases": [
         "make child feel safe",
@@ -130,15 +110,12 @@
         "confidence",
         "sensory_safety",
         "soft_story"
-      ],
-      "priority": 10
+      ]
     },
     {
       "cluster_id": "CLUSTER_003",
-      "slug": "fear_reduction",
-      "label": "Fear Reduction",
       "intent": "INTENT_011",
-      "description": "Queries focused on reducing fear, anxiety, overstimulation, or bedtime tension.",
+      "priority": 9,
       "keywords_en": [
         "reduce fear",
         "something not scary",
@@ -174,15 +151,12 @@
         "soft_story",
         "sensory_safety",
         "low_stimulation"
-      ],
-      "priority": 9
+      ]
     },
     {
       "cluster_id": "CLUSTER_004",
-      "slug": "easy_coloring",
-      "label": "Easy Coloring",
       "intent": "INTENT_002",
-      "description": "Queries asking for extremely simple coloring tasks for toddlers 1–3.",
+      "priority": 10,
       "keywords_en": [
         "easy coloring",
         "simple coloring pages",
@@ -217,15 +191,12 @@
         "motor_basic",
         "one_object_per_page",
         "low_cognitive_load"
-      ],
-      "priority": 10
+      ]
     },
     {
       "cluster_id": "CLUSTER_005",
-      "slug": "moderate_coloring",
-      "label": "Moderate Coloring",
       "intent": "INTENT_006",
-      "description": "Queries asking for coloring books with moderate detail for ages 3–5 and 5–7.",
+      "priority": 9,
       "keywords_en": [
         "moderate coloring book",
         "coloring with some details",
@@ -257,19 +228,12 @@
         "moderate_detail",
         "shape_variety",
         "creative_confidence"
-      ],
-      "priority": 9
-    }
-  ]
-}
-{
-  "L1_clusters_continued": [
+      ]
+    },
     {
       "cluster_id": "CLUSTER_006",
-      "slug": "imagination_growth",
-      "label": "Early Imagination Growth",
       "intent": "INTENT_003",
-      "description": "Queries asking for imagination-building stories for ages 3–5.",
+      "priority": 8,
       "keywords_en": [
         "imagination growth",
         "boost imagination",
@@ -282,7 +246,7 @@
       ],
       "keywords_es": [
         "desarrollo de imaginación",
-        "historia para imaginar",
+        "historia для imaginar",
         "cuento creativo",
         "imaginación para niños",
         "libro para imaginar 3-5"
@@ -303,15 +267,12 @@
         "imagination_seed",
         "simple_dialogues",
         "speech_development"
-      ],
-      "priority": 8
+      ]
     },
     {
       "cluster_id": "CLUSTER_007",
-      "slug": "speech_development",
-      "label": "Speech Development",
       "intent": "INTENT_004",
-      "description": "Queries asking for speech development through simple dialogues and repetition.",
+      "priority": 9,
       "keywords_en": [
         "speech development",
         "help child speak",
@@ -343,15 +304,12 @@
         "simple_dialogues",
         "speech_development",
         "predictable_sequence"
-      ],
-      "priority": 9
+      ]
     },
     {
       "cluster_id": "CLUSTER_008",
-      "slug": "bilingual_intro",
-      "label": "First Bilingual Exposure",
       "intent": "INTENT_005",
-      "description": "Queries asking for first bilingual exposure for toddlers or preschoolers.",
+      "priority": 10,
       "keywords_en": [
         "bilingual book",
         "first bilingual",
@@ -384,15 +342,12 @@
         "predictable_parallel_lines",
         "bilingual_stories",
         "simple_dialogues"
-      ],
-      "priority": 10
+      ]
     },
     {
       "cluster_id": "CLUSTER_009",
-      "slug": "simple_story_5_7",
-      "label": "Simple Story 5–7",
       "intent": "INTENT_007",
-      "description": "Queries asking for simple but meaningful stories suitable for ages 5–7.",
+      "priority": 8,
       "keywords_en": [
         "story for 5 year old",
         "simple story 5-7",
@@ -407,7 +362,7 @@
         "historia simple 5-7",
         "emocional suave",
         "cuento no complejo",
-        "historia для 7 años"
+        "historia para 7 años"
       ],
       "noise_phrases": [
         "something not difficult"
@@ -423,15 +378,12 @@
         "emotion_depth",
         "logic",
         "concentration"
-      ],
-      "priority": 8
+      ]
     },
     {
       "cluster_id": "CLUSTER_010",
-      "slug": "advanced_story",
-      "label": "Advanced Story 7–10",
       "intent": "INTENT_008",
-      "description": "Queries asking for complex emotional and logical stories for 7–10.",
+      "priority": 9,
       "keywords_en": [
         "advanced story",
         "story for 7 year old",
@@ -463,15 +415,12 @@
         "structured_reasoning",
         "moral_reasoning",
         "multi_scene_structure"
-      ],
-      "priority": 9
+      ]
     },
     {
       "cluster_id": "CLUSTER_011",
-      "slug": "first_step_by_step_drawing",
-      "label": "First Step-by-Step Drawing",
       "intent": "INTENT_009",
-      "description": "Queries asking for structured drawing steps for ages 7–10.",
+      "priority": 9,
       "keywords_en": [
         "step by step drawing",
         "how to draw for kids",
@@ -501,15 +450,12 @@
         "motor_mastery",
         "complex_shape_breakdown",
         "long_focus"
-      ],
-      "priority": 9
+      ]
     },
     {
       "cluster_id": "CLUSTER_012",
-      "slug": "bilingual_extended",
-      "label": "Extended Bilingual Reading",
       "intent": "INTENT_010",
-      "description": "Queries asking for advanced bilingual reading with full paragraphs and alignment.",
+      "priority": 10,
       "keywords_en": [
         "advanced bilingual",
         "bilingual extended",
@@ -540,19 +486,12 @@
         "parallel_reading",
         "meaning_alignment",
         "cross_language_mapping"
-      ],
-      "priority": 10
-    }
-  ]
-}
-{
-  "L1_clusters_continued_2": [
+      ]
+    },
     {
       "cluster_id": "CLUSTER_013",
-      "slug": "emotional_support_secondary",
-      "label": "Emotional Support Story",
       "intent": "INTENT_011",
-      "description": "Queries asking for emotional stabilization, soft emotions, and predictable stories.",
+      "priority": 7,
       "keywords_en": [
         "emotional support",
         "calm emotions",
@@ -584,15 +523,12 @@
         "confidence",
         "sensory_safety",
         "soft_story"
-      ],
-      "priority": 7
+      ]
     },
     {
       "cluster_id": "CLUSTER_014",
-      "slug": "calm_before_sleep_secondary",
-      "label": "Calm Before Sleep (Alt)",
       "intent": "INTENT_012",
-      "description": "Alternative cluster for bedtime calming queries with minimal stimulation.",
+      "priority": 6,
       "keywords_en": [
         "calm before sleep",
         "bedtime calm",
@@ -603,7 +539,7 @@
       ],
       "keywords_es": [
         "calmar antes de dormir",
-        "historia para dormir",
+        "historia для dormir",
         "relajar niño",
         "libro suave noche"
       ],
@@ -622,15 +558,12 @@
         "soft_story",
         "low_stimulation",
         "sensory_safety"
-      ],
-      "priority": 6
+      ]
     },
     {
       "cluster_id": "CLUSTER_015",
-      "slug": "general_color_books",
-      "label": "General Coloring Query",
       "intent": "INTENT_006",
-      "description": "Parents asking broadly for coloring books without specifying complexity.",
+      "priority": 7,
       "keywords_en": [
         "coloring book for kids",
         "kids coloring",
@@ -643,7 +576,7 @@
       "keywords_es": [
         "libro para colorear",
         "colorear niños",
-        "páginas для colorear",
+        "páginas para colorear",
         "colorear fácil"
       ],
       "noise_phrases": [
@@ -660,15 +593,12 @@
         "moderate_detail",
         "shape_variety",
         "creative_confidence"
-      ],
-      "priority": 7
+      ]
     },
     {
       "cluster_id": "CLUSTER_016",
-      "slug": "coloring_for_toddlers_broad",
-      "label": "Coloring for Toddlers (General)",
       "intent": "INTENT_002",
-      "description": "Broad queries where parents ask for coloring books for very young children.",
+      "priority": 6,
       "keywords_en": [
         "coloring for toddlers",
         "coloring book 1-3",
@@ -697,15 +627,12 @@
         "motor_basic",
         "one_object_per_page",
         "low_stimulation"
-      ],
-      "priority": 6
-    },
+      ]
+    }
     {
       "cluster_id": "CLUSTER_017",
-      "slug": "bilingual_general",
-      "label": "General Bilingual Request",
       "intent": "INTENT_005",
-      "description": "General bilingual queries without specifying level or complexity.",
+      "priority": 8,
       "keywords_en": [
         "english spanish book",
         "kids bilingual book",
@@ -733,15 +660,12 @@
         "predictable_parallel_lines",
         "bilingual_stories",
         "simple_dialogues"
-      ],
-      "priority": 8
+      ]
     },
     {
       "cluster_id": "CLUSTER_018",
-      "slug": "story_generic",
-      "label": "General Story Query",
       "intent": null,
-      "description": "Generic 'story for kids' queries. Routed through fallback intent mapping.",
+      "priority": 5,
       "keywords_en": [
         "story for kids",
         "kids story",
@@ -766,15 +690,12 @@
       ],
       "age_hint": [],
       "book_type_hint": ["bedtime_story"],
-      "skill_hint": [],
-      "priority": 5
+      "skill_hint": []
     },
     {
       "cluster_id": "CLUSTER_019",
-      "slug": "drawing_general",
-      "label": "General Drawing Request",
       "intent": "INTENT_009",
-      "description": "Parents asking broadly for drawing books or how-to-draw materials for ages 7–10.",
+      "priority": 9,
       "keywords_en": [
         "how to draw for kids",
         "kids drawing book",
@@ -804,19 +725,12 @@
         "motor_mastery",
         "complex_shape_breakdown",
         "long_focus"
-      ],
-      "priority": 9
-    }
-  ]
-}
-{
-  "L1_clusters_continued_3": [
+      ]
+    },
     {
       "cluster_id": "CLUSTER_020",
-      "slug": "advanced_bilingual",
-      "label": "Advanced Bilingual Query",
       "intent": "INTENT_010",
-      "description": "Queries asking for complex bilingual reading for advanced children 7–10.",
+      "priority": 10,
       "keywords_en": [
         "advanced bilingual",
         "bilingual paragraphs",
@@ -846,189 +760,91 @@
         "parallel_reading",
         "meaning_alignment",
         "cross_language_mapping"
-      ],
-      "priority": 10
+      ]
     },
     {
       "cluster_id": "CLUSTER_021",
-      "slug": "fallback_unknown",
-      "label": "Fallback: Unknown Query",
       "intent": null,
-      "description": "Fallback cluster for unexpected or malformed user queries.",
+      "priority": 1,
       "keywords_en": [],
       "keywords_es": [],
       "noise_phrases": [],
       "negative_keywords": [],
       "age_hint": [],
       "book_type_hint": [],
-      "skill_hint": [],
-      "priority": 1
+      "skill_hint": []
     }
   ],
-  "L2_decision_tables": {
-    "INTENT_ASSIGNMENT": [
-      {
-        "id": "I1",
-        "condition": "similarity >= thresholds.high_confidence AND priority >= 9",
-        "action": "assign_intent(cluster.intent)"
-      },
-      {
-        "id": "I2",
-        "condition": "similarity >= thresholds.medium_confidence",
-        "action": "assign_intent(cluster.intent)"
-      },
-      {
-        "id": "I3",
-        "condition": "similarity < thresholds.minimum",
-        "action": "route_to(CLUSTER_021)"
-      }
-    ],
-    "PRIORITY_RESOLUTION": [
-      {
-        "id": "P1",
-        "condition": "multiple_clusters_detected",
-        "action": "choose_highest_priority"
-      }
-    ],
-    "FALLBACK_RESOLUTION": [
-      {
-        "id": "F1",
-        "condition": "intent == null",
-        "action": "assign_intent(INTENT_011)"
-      }
-    ]
-  },
-  "L3_weighting_system": {
-    "similarity_weights": {
-      "keywords_en": 0.25,
-      "keywords_es": 0.25,
-      "noise_phrases": 0.05,
-      "negative_keywords": 0.1,
-      "age_hint": 0.1,
-      "book_type_hint": 0.15,
-      "skill_hint": 0.1
+  "intent_assignment_rules": [
+    {
+      "rule_id": "I1",
+      "condition": "similarity >= high_confidence AND priority >= 9",
+      "action": "assign_intent"
     },
-    "priority_weight": 0.15
+    {
+      "rule_id": "I2",
+      "condition": "similarity >= medium_confidence",
+      "action": "assign_intent"
+    },
+    {
+      "rule_id": "I3",
+      "condition": "similarity < minimum",
+      "action": "route_to_cluster_021"
+    }
+  ],
+  "priority_resolution_rules": [
+    {
+      "rule_id": "P1",
+      "condition": "multiple_clusters",
+      "action": "choose_highest_priority"
+    }
+  ],
+  "fallback_rules": [
+    {
+      "rule_id": "F1",
+      "condition": "intent_is_null",
+      "action": "assign_INTENT_011"
+    }
+  ],
+  "similarity_weights": {
+    "keywords_en": 0.25,
+    "keywords_es": 0.25,
+    "noise_phrases": 0.05,
+    "negative_keywords": 0.1,
+    "age_hint": 0.1,
+    "book_type_hint": 0.15,
+    "skill_hint": 0.1,
+    "priority": 0.15
   },
-  "L4_thresholds": {
+  "thresholds": {
     "high_confidence": 0.65,
     "medium_confidence": 0.45,
     "minimum": 0.25
   },
-  "L5_fsm": {
-    "states": [
-      {
-        "name": "START",
-        "next": ["MATCH"]
-      },
-      {
-        "name": "MATCH",
-        "on_enter": "compute_similarity",
-        "next": ["PRIORITY_CHECK"]
-      },
-      {
-        "name": "PRIORITY_CHECK",
-        "on_enter": "resolve_priority",
-        "next": ["INTENT_ASSIGN"]
-      },
-      {
-        "name": "INTENT_ASSIGN",
-        "on_enter": "assign_intent_via_decision_tables",
-        "next": ["FALLBACK"]
-      },
-      {
-        "name": "FALLBACK",
-        "on_enter": "apply_fallback_rules",
-        "next": ["END"]
-      },
-      {
-        "name": "END"
-      }
-    ]
-  }
-}
-{
-  "L6_dsl": {
-    "syntax": "CLUSTER_MAP { CLUSTER {...} MATCH {...} FALLBACK {...} }",
+  "safety": {
     "rules": [
-      "CLUSTER_MAP {",
-      "  CLUSTER(id) {",
-      "    KEYWORDS: keywords_en + keywords_es;",
-      "    AGE_HINT: age_hint;",
-      "    BOOKTYPE_HINT: book_type_hint;",
-      "    SKILL_HINT: skill_hint;",
-      "  }",
-      "  MATCH {",
-      "    IF similarity(id) >= HIGH AND priority(id) >= 9 → assign_intent(id.intent);",
-      "    IF similarity(id) >= MEDIUM → assign_intent(id.intent);",
-      "    IF similarity(id) < MINIMUM → route_to(CLUSTER_021);",
-      "  }",
-      "  FALLBACK {",
-      "    IF intent==NULL → assign_intent(INTENT_011);",
-      "  }",
-      "}"
+      "never_assign_advanced_for_under_7",
+      "never_assign_step_by_step_under_7",
+      "never_assign_bilingual_extended_if_simple_flag",
+      "fallback_to_INTENT_011_if_uncertain",
+      "resolve_conflicts_by_priority"
     ]
   },
-
-  "L7_pseudocode": {
-    "steps": [
-      "INPUT(user_query)",
-      "clusters = LOAD_ALL_CLUSTERS()",
-      "scores = {}",
-      "FOR each cluster:",
-      "    sim = CALCULATE_SIMILARITY(user_query, cluster)",
-      "    weighted_score = sim + (cluster.priority * priority_weight)",
-      "    scores[cluster] = weighted_score",
-      "best_cluster = SELECT_MAX(scores)",
-      "IF best_cluster.similarity < thresholds.minimum:",
-      "    RETURN CLUSTER_021",
-      "IF multiple_clusters_with_same_score:",
-      "    best_cluster = RESOLVE_BY_PRIORITY()",
-      "intent = best_cluster.intent",
-      "IF intent == null:",
-      "    intent = INTENT_011",
-      "RETURN intent"
-    ]
-  },
-
-  "L8_math_formal": {
-    "similarity_function": "S = Σ(weight_i * feature_match_i)",
-    "weighted_similarity": "WS = S + (priority * priority_weight)",
-    "intent_assignment": {
-      "IDEAL": "WS >= high_confidence AND priority >= 9",
-      "MEDIUM": "WS >= medium_confidence",
-      "FALLBACK": "WS < minimum"
-    }
-  },
-
-  "L9_safety_protocol": {
+  "ai_behavior": {
     "rules": [
-      "NEVER assign INTENT_010 for ages < 7",
-      "NEVER assign step_by_step_drawing for ages < 7",
-      "NEVER assign bilingual_extended if negative_keywords include 'simple'",
-      "ALWAYS fallback to INTENT_011 for malformed queries",
-      "ALWAYS resolve conflicts by highest priority cluster"
+      "use_all_clusters",
+      "always_compute_similarity",
+      "never_skip_decision_rules",
+      "respect_age_boundaries",
+      "unknown_cluster_is_invalid",
+      "missing_features_reduce_confidence",
+      "fallback_if_uncertain"
     ]
   },
-
-  "L10_ai_behavior_contract": {
-    "contract": [
-      "Use this file as authoritative source",
-      "Always calculate similarity with all clusters",
-      "Never skip decision tables",
-      "Never assign intents outside allowed age ranges",
-      "Never use unknown clusters",
-      "Missing features → reduce confidence",
-      "If uncertain → use fallback INTENT_011"
-    ]
-  },
-
   "meta_final": {
-    "version": "2.0.0",
-    "standard_level": "ULTRA_FORMAL",
-    "integrity": "ABSOLUTE",
+    "version": "3.1.0",
     "canonical_source": true,
-    "machine_interpretable": true,
-    "complete": true
+    "complete": true,
+    "machine_interpretable": true
   }
 }
