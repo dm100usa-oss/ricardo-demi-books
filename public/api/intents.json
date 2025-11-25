@@ -1,51 +1,30 @@
 {
-  "system": "fscbac_intents_ultra",
-  "version": "3.0.0",
+  "system": "fscbac_intents",
+  "version": "3.1.0",
+  "purpose": "Deterministic mapping from user intent to age, skills, book_types and value_profile.",
+  "rationale": {
+    "simplifies_computation": true,
+    "removes_ambiguity": true,
+    "accelerates_ai_response": true,
+    "reduces_error_risk": true,
+    "explanation": "File encodes all intents as flat deterministic rule-objects for direct matching."
+  },
   "standard_level": "ULTRA_FORMAL",
-  "canonical_source": true,
-  "strict_mode": true,
+  "integrity": "ABSOLUTE",
 
-  "meta": {
-    "purpose": "Provide a fully formal, deterministic, multi-layered intent → age → skills → book_types → scoring engine for the FSCBAC Center of Truth.",
-    "integrity": "ABSOLUTE",
-    "machine_readable": true,
-    "self_contained": true,
-    "linked_models": [
-      "ages.json",
-      "skills.json",
-      "book_types.json",
-      "matching.json"
-    ],
-    "notes": [
-      "All meaning preserved exactly from the original intents.",
-      "No losses, no simplifications, no omissions.",
-      "Structure expanded into L0–L10 formal layers to create ISO-like standard format."
-    ]
+  "references": {
+    "ages": "public/api/ages.json",
+    "skills": "public/api/skills.json",
+    "book_types": "public/api/book_types.json",
+    "matching": "public/api/matching.json"
   },
 
-  "L0_DEFINITIONS": {
-    "intent": "A parent or user need expressed in natural language, formally mapped to developmental requirements.",
-    "required_skills": "Skills absolutely necessary to satisfy the intent for the target age.",
-    "optional_skills": "Skills that may enhance but are not required.",
-    "forbidden_skills": "Skills that violate developmental limits.",
-    "age_resolution": "Formal rules defining allowed and ideal age groups.",
-    "book_type_preference": "Structured mapping of primary, secondary and forbidden book types.",
-    "value_profile": "Developmental load parameters (complexity, stimulation, narrative speed, etc.)"
-  },
-
-  "L1_RAW_INTENT_DATA": [
+  "intents": [
     {
       "intent_id": "INTENT_001",
       "slug": "calm_before_sleep",
-      "label": "Calm before sleep",
-      "definition": "Parent wants to calm a child before bedtime using soft, predictable, low-intensity books.",
-
-      "age_resolution": {
-        "allowed": ["1-3", "3-5"],
-        "ideal": "1-3",
-        "notes": "Toddlers require soft emotional load and predictable structure."
-      },
-
+      "age_allowed": ["1-3", "3-5"],
+      "age_ideal": "1-3",
       "required_skills": [
         "confidence",
         "soft_story",
@@ -54,9 +33,7 @@
         "sensory_safety",
         "low_cognitive_load"
       ],
-
       "optional_skills": ["attention_growth"],
-
       "forbidden_skills": [
         "complex_vocabulary",
         "early_logic",
@@ -64,13 +41,12 @@
         "structured_reasoning",
         "abstract_reasoning"
       ],
-
-      "book_type_preference": {
-        "primary": ["bedtime_story"],
-        "secondary": ["simple_coloring"],
-        "forbidden": ["step_by_step_drawing", "bilingual_extended"]
-      },
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["simple_coloring"],
+      "book_type_forbidden": [
+        "step_by_step_drawing",
+        "bilingual_extended"
+      ],
       "value_profile": {
         "complexity": "very_low",
         "emotion_intensity": "minimal",
@@ -83,39 +59,26 @@
     {
       "intent_id": "INTENT_002",
       "slug": "easy_coloring_for_toddlers",
-      "label": "Easy coloring for toddlers",
-      "definition": "Parent wants extremely simple coloring tasks for ages 1–3.",
-
-      "age_resolution": {
-        "allowed": ["1-3"],
-        "ideal": "1-3",
-        "notes": "Strict toddler motor limits. One object per page ideal."
-      },
-
+      "age_allowed": ["1-3"],
+      "age_ideal": "1-3",
       "required_skills": [
         "motor_basic",
         "one_object_per_page",
         "low_stimulation",
         "low_cognitive_load"
       ],
-
       "optional_skills": [
         "attention_growth",
         "creative_confidence"
       ],
-
       "forbidden_skills": [
         "moderate_detail",
         "shape_variety",
         "complex_shape_breakdown"
       ],
-
-      "book_type_preference": {
-        "primary": ["simple_coloring"],
-        "secondary": ["coloring"],
-        "forbidden": ["step_by_step_drawing"]
-      },
-
+      "book_type_primary": ["simple_coloring"],
+      "book_type_secondary": ["coloring"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "very_low",
         "motor_requirement": "minimal",
@@ -127,40 +90,27 @@
     {
       "intent_id": "INTENT_003",
       "slug": "early_imagination_growth",
-      "label": "Early imagination growth",
-      "definition": "Parent asks for books that start imagination formation for ages 3–5.",
-
-      "age_resolution": {
-        "allowed": ["3-5"],
-        "ideal": "3-5",
-        "notes": "This age supports imagination seeds and simple narrative expansion."
-      },
-
+      "age_allowed": ["3-5"],
+      "age_ideal": "3-5",
       "required_skills": [
         "imagination_seed",
         "simple_dialogues",
         "speech_development"
       ],
-
       "optional_skills": [
         "early_logic",
         "attention_growth",
         "shape_variety",
         "moderate_detail"
       ],
-
       "forbidden_skills": [
         "structured_reasoning",
         "complex_vocabulary",
         "abstract_reasoning"
       ],
-
-      "book_type_preference": {
-        "primary": ["bedtime_story"],
-        "secondary": ["coloring"],
-        "forbidden": ["step_by_step_drawing"]
-      },
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["coloring"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "low",
         "emotion_intensity": "soft",
@@ -172,82 +122,57 @@
     {
       "intent_id": "INTENT_004",
       "slug": "speech_development_support",
-      "label": "Speech development support",
-      "definition": "Parent wants a book to strengthen early speech skills through simple dialogues and repetition.",
-
-      "age_resolution": {
-        "allowed": ["3-5", "5-7"],
-        "ideal": "3-5",
-        "notes": "Early speech expansions happen at 3–5; 5–7 can still benefit."
-      },
-
+      "age_allowed": ["3-5", "5-7"],
+      "age_ideal": "3-5",
       "required_skills": [
         "simple_dialogues",
         "speech_development",
         "predictable_sequence"
       ],
-
       "optional_skills": [
         "imagination_seed",
         "attention_growth",
         "low_cognitive_load"
       ],
-
       "forbidden_skills": [
         "complex_vocabulary",
         "abstract_reasoning",
         "structured_reasoning"
       ],
-
-      "book_type_preference": {
-        "primary": ["bedtime_story", "bilingual_story"],
-        "secondary": [],
-        "forbidden": ["step_by_step_drawing"]
-      },
-
+      "book_type_primary": ["bedtime_story", "bilingual_story"],
+      "book_type_secondary": [],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "low",
         "emotion_intensity": "soft",
         "language_density": "simple",
         "narrative_speed": "gentle"
       }
-    }
+    },
+
     {
       "intent_id": "INTENT_005",
       "slug": "bilingual_intro",
-      "label": "Bilingual introduction",
-      "definition": "Parent wants first bilingual exposure for a 1–3 or 3–5 child.",
-
-      "age_resolution": {
-        "allowed": ["1-3", "3-5"],
-        "ideal": "3-5",
-        "notes": "1–3 only simple pairs; 3–5 is the natural bilingual start."
-      },
-
+      "age_allowed": ["1-3", "3-5"],
+      "age_ideal": "3-5",
       "required_skills": [
         "predictable_parallel_lines",
         "bilingual_stories",
         "simple_dialogues"
       ],
-
       "optional_skills": [
         "speech_development",
         "imagination_seed",
         "attention_growth"
       ],
-
       "forbidden_skills": [
         "complex_vocabulary",
         "full_paragraph_bilingual",
         "parallel_reading"
       ],
-
-      "book_type_preference": {
-        "primary": ["bilingual", "bilingual_story"],
-        "secondary": ["bedtime_story"],
-        "forbidden": ["bilingual_extended"]
-      },
-
+      "book_type_primary": ["bilingual", "bilingual_story"],
+      "book_type_secondary": ["bedtime_story"],
+      "book_type_forbidden": ["bilingual_extended"],
       "value_profile": {
         "complexity": "low",
         "language_density": "simple",
@@ -255,42 +180,28 @@
         "visual_density": "moderate"
       }
     },
-
     {
       "intent_id": "INTENT_006",
       "slug": "moderate_color_development",
-      "label": "Moderate color development",
-      "definition": "Parent wants moderate coloring complexity for ages 3–5 or 5–7.",
-
-      "age_resolution": {
-        "allowed": ["3-5", "5-7"],
-        "ideal": "3-5",
-        "notes": "First detail processing improves at ages 3–5."
-      },
-
+      "age_allowed": ["3-5", "5-7"],
+      "age_ideal": "3-5",
       "required_skills": [
         "moderate_detail",
         "shape_variety",
         "creative_confidence"
       ],
-
       "optional_skills": [
         "attention_growth",
         "visual_planning",
         "low_cognitive_load"
       ],
-
       "forbidden_skills": [
         "complex_shape_breakdown",
         "motor_mastery"
       ],
-
-      "book_type_preference": {
-        "primary": ["coloring"],
-        "secondary": ["bedtime_story"],
-        "forbidden": ["step_by_step_drawing"]
-      },
-
+      "book_type_primary": ["coloring"],
+      "book_type_secondary": ["bedtime_story"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "moderate",
         "visual_density": "medium",
@@ -301,39 +212,26 @@
     {
       "intent_id": "INTENT_007",
       "slug": "simple_story_for_5_7",
-      "label": "Simple but meaningful story for ages 5–7",
-      "definition": "Parent wants a story with emotional and logical growth but still simple enough.",
-
-      "age_resolution": {
-        "allowed": ["5-7"],
-        "ideal": "5-7",
-        "notes": "This age develops deeper emotional and simple logical understanding."
-      },
-
+      "age_allowed": ["5-7"],
+      "age_ideal": "5-7",
       "required_skills": [
         "emotion_depth",
         "logic",
         "concentration"
       ],
-
       "optional_skills": [
         "imagination_seed",
         "situational_language",
         "speech_development"
       ],
-
       "forbidden_skills": [
         "structured_reasoning",
         "abstract_reasoning",
         "moral_reasoning"
       ],
-
-      "book_type_preference": {
-        "primary": ["bedtime_story"],
-        "secondary": ["bilingual_story"],
-        "forbidden": ["step_by_step_drawing"]
-      },
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["bilingual_story"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "moderate",
         "emotion_intensity": "soft",
@@ -344,39 +242,26 @@
     {
       "intent_id": "INTENT_008",
       "slug": "advanced_story_for_7_10",
-      "label": "Advanced emotional and logical story for ages 7–10",
-      "definition": "Parent wants deeper narrative arcs, emotional interpretation and multi-scene structure.",
-
-      "age_resolution": {
-        "allowed": ["7-10"],
-        "ideal": "7-10",
-        "notes": "Only this age can handle multi-scene complexity and moral implications."
-      },
-
+      "age_allowed": ["7-10"],
+      "age_ideal": "7-10",
       "required_skills": [
         "advanced_emotion_depth",
         "structured_reasoning",
-        "moral_reason_reasoning",
+        "moral_reasoning",
         "multi_scene_structure"
       ],
-
       "optional_skills": [
         "abstract_reasoning",
         "complex_vocabulary",
         "situational_language"
       ],
-
       "forbidden_skills": [
         "low_stimulation",
         "soft_story"
       ],
-
-      "book_type_preference": {
-        "primary": ["bedtime_story"],
-        "secondary": ["bilingual_extended"],
-        "forbidden": ["simple_coloring"]
-      },
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["bilingual_extended"],
+      "book_type_forbidden": ["simple_coloring"],
       "value_profile": {
         "complexity": "high",
         "emotion_intensity": "moderate",
@@ -388,39 +273,29 @@
     {
       "intent_id": "INTENT_009",
       "slug": "first_step_by_step_drawing",
-      "label": "First step-by-step drawing (7–10)",
-      "definition": "Parent wants structured drawing tasks with stable visual order.",
-
-      "age_resolution": {
-        "allowed": ["7-10"],
-        "ideal": "7-10",
-        "notes": "Structured drawing logic appears only from 7."
-      },
-
+      "age_allowed": ["7-10"],
+      "age_ideal": "7-10",
       "required_skills": [
         "step_by_step_logic",
         "motor_mastery",
         "complex_shape_breakdown",
         "long_focus"
       ],
-
       "optional_skills": [
         "creative_confidence",
         "visual_planning"
       ],
-
       "forbidden_skills": [
         "motor_basic",
         "one_object_per_page",
         "moderate_detail"
       ],
-
-      "book_type_preference": {
-        "primary": ["step_by_step_drawing"],
-        "secondary": [],
-        "forbidden": ["simple_coloring", "bilingual_story"]
-      },
-
+      "book_type_primary": ["step_by_step_drawing"],
+      "book_type_secondary": [],
+      "book_type_forbidden": [
+        "simple_coloring",
+        "bilingual_story"
+      ],
       "value_profile": {
         "complexity": "high",
         "motor_requirement": "high",
@@ -428,40 +303,28 @@
         "step_count": "multi_step"
       }
     },
+
     {
       "intent_id": "INTENT_010",
       "slug": "calm_coloring_for_anxiety",
-      "label": "Calming coloring for anxiety reduction",
-      "definition": "Parent wants calming, low-intensity coloring for emotional regulation.",
-
-      "age_resolution": {
-        "allowed": ["1-3", "3-5", "5-7"],
-        "ideal": "3-5",
-        "notes": "1–3 need very low detail; 5–7 tolerate moderate detail."
-      },
-
+      "age_allowed": ["1-3", "3-5", "5-7"],
+      "age_ideal": "3-5",
       "required_skills": [
         "low_stimulation",
         "sensory_safety",
         "creative_confidence"
       ],
-
       "optional_skills": [
         "moderate_detail",
         "attention_growth"
       ],
-
       "forbidden_skills": [
         "complex_shape_breakdown",
         "motor_mastery"
       ],
-
-      "book_type_preference": {
-        "primary": ["simple_coloring", "coloring"],
-        "secondary": ["bedtime_story"],
-        "forbidden": ["step_by_step_drawing"]
-      },
-
+      "book_type_primary": ["simple_coloring", "coloring"],
+      "book_type_secondary": ["bedtime_story"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "very_low_to_moderate",
         "visual_density": "soft",
@@ -472,39 +335,26 @@
     {
       "intent_id": "INTENT_011",
       "slug": "advanced_bilingual_progression",
-      "label": "Advanced bilingual progression",
-      "definition": "Parent wants structured bilingual growth for ages 7–10.",
-
-      "age_resolution": {
-        "allowed": ["7-10"],
-        "ideal": "7-10",
-        "notes": "The only age capable of semantic cross-language alignment."
-      },
-
+      "age_allowed": ["7-10"],
+      "age_ideal": "7-10",
       "required_skills": [
         "full_paragraph_bilingual",
         "parallel_reading",
         "meaning_alignment",
         "cross_language_mapping"
       ],
-
       "optional_skills": [
         "independent_language_growth",
         "abstract_reasoning",
         "structured_reasoning"
       ],
-
       "forbidden_skills": [
         "predictable_parallel_lines",
         "bilingual_stories"
       ],
-
-      "book_type_preference": {
-        "primary": ["bilingual_extended", "two_in_one"],
-        "secondary": [],
-        "forbidden": ["bilingual_intro"]
-      },
-
+      "book_type_primary": ["bilingual_extended", "two_in_one"],
+      "book_type_secondary": [],
+      "book_type_forbidden": ["bilingual_intro"],
       "value_profile": {
         "complexity": "high",
         "language_density": "advanced",
@@ -516,79 +366,52 @@
     {
       "intent_id": "INTENT_012",
       "slug": "moral_emotional_story",
-      "label": "Moral and emotional development story",
-      "definition": "Parent wants a story teaching emotional depth and moral reasoning.",
-
-      "age_resolution": {
-        "allowed": ["5-7", "7-10"],
-        "ideal": "7-10",
-        "notes": "Moral reasoning stabilizes only around the advanced stage."
-      },
-
+      "age_allowed": ["5-7", "7-10"],
+      "age_ideal": "7-10",
       "required_skills": [
         "emotion_depth",
         "advanced_emotion_depth",
         "moral_reasoning"
       ],
-
       "optional_skills": [
         "structured_reasoning",
         "multi_scene_structure"
       ],
-
       "forbidden_skills": [
         "low_stimulation",
         "sensory_safety",
         "one_object_per_page"
       ],
-
-      "book_type_preference": {
-        "primary": ["bedtime_story"],
-        "secondary": ["bilingual_extended"],
-        "forbidden": ["simple_coloring"]
-      },
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["bilingual_extended"],
+      "book_type_forbidden": ["simple_coloring"],
       "value_profile": {
         "complexity": "high",
         "emotion_intensity": "moderate_to_high",
         "narrative_speed": "dynamic"
       }
     },
-
     {
       "intent_id": "INTENT_013",
       "slug": "focus_training_coloring",
-      "label": "Focus training coloring",
-      "definition": "Parent wants coloring that increases concentration over multiple stages.",
-
-      "age_resolution": {
-        "allowed": ["3-5", "5-7", "7-10"],
-        "ideal": "5-7",
-        "notes": "Best age for measurable focus-growth response."
-      },
-
+      "age_allowed": ["3-5", "5-7", "7-10"],
+      "age_ideal": "5-7",
       "required_skills": [
         "concentration",
         "moderate_detail",
         "creative_confidence"
       ],
-
       "optional_skills": [
         "long_focus",
         "visual_planning"
       ],
-
       "forbidden_skills": [
         "one_object_per_page",
         "complex_shape_breakdown"
       ],
-
-      "book_type_preference": {
-        "primary": ["coloring", "coloring_detailed"],
-        "secondary": ["step_by_step_drawing"],
-        "forbidden": ["simple_coloring"]
-      },
-
+      "book_type_primary": ["coloring", "coloring_detailed"],
+      "book_type_secondary": ["step_by_step_drawing"],
+      "book_type_forbidden": ["simple_coloring"],
       "value_profile": {
         "complexity": "moderate_to_high",
         "visual_density": "structured",
@@ -599,38 +422,25 @@
     {
       "intent_id": "INTENT_014",
       "slug": "creative_expansion_story",
-      "label": "Creative expansion through story",
-      "definition": "Parent wants a narrative that stimulates imagination and independent thinking.",
-
-      "age_resolution": {
-        "allowed": ["3-5", "5-7"],
-        "ideal": "5-7",
-        "notes": "3–5 imagination seed; 5–7 independent thinking."
-      },
-
+      "age_allowed": ["3-5", "5-7"],
+      "age_ideal": "5-7",
       "required_skills": [
         "imagination_seed",
         "independent_thinking"
       ],
-
       "optional_skills": [
         "emotion_depth",
         "situational_language",
         "simple_dialogues"
       ],
-
       "forbidden_skills": [
         "advanced_emotion_depth",
         "structured_reasoning",
         "full_paragraph_bilingual"
       ],
-
-      "book_type_preference": {
-        "primary": ["bedtime_story"],
-        "secondary": ["coloring"],
-        "forbidden": ["step_by_step_drawing"]
-      },
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["coloring"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "moderate",
         "narrative_speed": "medium",
@@ -639,14 +449,39 @@
     }
   ],
 
-  "integrity_rules": {
+  "weighting": {
+    "score_formula": "score = sum(required) + 0.5 * sum(optional) - sum(forbidden)",
+    "required_weight": 1.0,
+    "optional_weight": 0.5,
+    "forbidden_weight": -1.0
+  },
+
+  "ranking_levels": {
+    "IDEAL": "score >= 4.5",
+    "STRONG": "score >= 3.0",
+    "ACCEPTABLE": "score >= 1.5",
+    "EXCLUDED": "score < 1.5"
+  },
+
+  "safety": {
     "rules": [
-      "Every intent MUST reference only existing skills from skills.json.",
-      "Every age in age_resolution MUST exist in ages.json.",
-      "Every book type MUST exist in book_types.json.",
-      "No forbidden_skills may appear in required_skills.",
-      "value_profile blocks MUST use consistent controlled vocabulary."
-    ],
-    "failure_action": "Any violation → intent receives VALIDATION_BLOCKED = true."
+      "always_check_forbidden",
+      "never_mix_ages",
+      "missing_parameter_is_unsafe"
+    ]
+  },
+
+  "ai_behavior": {
+    "rules": [
+      "always_prioritize_catalog_books",
+      "apply_score_formula",
+      "never_use_undefined_values",
+      "never_override_forbidden"
+    ]
+  },
+
+  "meta_final": {
+    "canonical_source": true,
+    "deterministic": true
   }
 }
