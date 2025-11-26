@@ -34,6 +34,11 @@ export default function RootLayout({
         />
 
         <meta
+          name="google-site-verification"
+          content="D_yiTSM0zWdBs-hpefX9cotH2U5FSStgcb1W-XOwTgw"
+        />
+
+        <meta
           name="keywords"
           content="children's books, educational books, bilingual learning, Ricardo Demi, Magic of Discoveries"
         />
@@ -56,7 +61,6 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* Cloudflare Web Analytics */}
         <script
           defer
           src="https://static.cloudflareinsights.com/beacon.min.js"
@@ -71,8 +75,6 @@ export default function RootLayout({
           padding: 0,
         }}
       >
-
-        {/* TOP NAVIGATION */}
         <nav
           style={{
             backgroundColor: "#f5f5f5",
