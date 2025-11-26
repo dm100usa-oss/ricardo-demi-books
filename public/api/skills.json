@@ -18,7 +18,7 @@
       "id": "confidence",
       "dimension": "E",
       "ecl_code": "E.4",
-      "age_norm": { "group": "1-3", "stage_min": 2, "stage_max": 3 },
+      "age_norm": { "min": 1, "max": 3 },
       "difficulty": 1,
       "weight": 0.60,
       "preferred_book_types": ["bedtime_story"]
@@ -28,7 +28,7 @@
       "id": "soft_story",
       "dimension": "E",
       "ecl_code": "E.1",
-      "age_norm": { "group": "1-3", "stage_min": 1, "stage_max": 2 },
+      "age_norm": { "min": 1, "max": 2 },
       "difficulty": 1,
       "weight": 0.50,
       "preferred_book_types": ["bedtime_story"]
@@ -38,7 +38,7 @@
       "id": "predictable_sequence",
       "dimension": "E",
       "ecl_code": "E.1",
-      "age_norm": { "group": "1-3", "stage_min": 1, "stage_max": 3 },
+      "age_norm": { "min": 1, "max": 3 },
       "difficulty": 1,
       "weight": 0.55,
       "preferred_book_types": ["bedtime_story"]
@@ -48,7 +48,7 @@
       "id": "motor_basic",
       "dimension": "C",
       "ecl_code": "C.1",
-      "age_norm": { "group": "1-3", "stage_min": 1, "stage_max": 2 },
+      "age_norm": { "min": 1, "max": 2 },
       "difficulty": 1,
       "weight": 0.40,
       "preferred_book_types": ["coloring"]
@@ -58,7 +58,7 @@
       "id": "attention_growth",
       "dimension": "E",
       "ecl_code": "E.5",
-      "age_norm": { "group": "1-5", "stage_min": 1, "stage_max": 5 },
+      "age_norm": { "min": 1, "max": 5 },
       "difficulty": 1,
       "weight": 0.65,
       "preferred_book_types": ["bedtime_story", "coloring"]
@@ -68,7 +68,7 @@
       "id": "low_stimulation",
       "dimension": "E",
       "ecl_code": "E.5",
-      "age_norm": { "group": "1-3", "stage_min": 1, "stage_max": 2 },
+      "age_norm": { "min": 1, "max": 3 },
       "difficulty": 1,
       "weight": 0.55,
       "preferred_book_types": ["bedtime_story", "coloring"]
@@ -78,7 +78,7 @@
       "id": "sensory_safety",
       "dimension": "E",
       "ecl_code": "E.1",
-      "age_norm": { "group": "1-3", "stage_min": 1, "stage_max": 3 },
+      "age_norm": { "min": 1, "max": 3 },
       "difficulty": 1,
       "weight": 0.60,
       "preferred_book_types": ["bedtime_story", "coloring"]
@@ -88,7 +88,7 @@
       "id": "imagination_seed",
       "dimension": "C",
       "ecl_code": "C.1",
-      "age_norm": { "group": "3-5", "stage_min": 3, "stage_max": 4 },
+      "age_norm": { "min": 3, "max": 5 },
       "difficulty": 2,
       "weight": 0.70,
       "preferred_book_types": ["bedtime_story", "coloring"]
@@ -98,7 +98,7 @@
       "id": "early_logic",
       "dimension": "L",
       "ecl_code": "L.3",
-      "age_norm": { "group": "3-5", "stage_min": 4, "stage_max": 5 },
+      "age_norm": { "min": 4, "max": 5 },
       "difficulty": 2,
       "weight": 0.70,
       "preferred_book_types": ["bedtime_story"]
@@ -108,61 +108,57 @@
       "id": "simple_dialogues",
       "dimension": "L",
       "ecl_code": "L.1",
-      "age_norm": { "group": "3-7", "stage_min": 3, "stage_max": 7 },
+      "age_norm": { "min": 3, "max": 7 },
       "difficulty": 2,
       "weight": 0.75,
-      "preferred_book_types": ["bedtime_story", "bilingual"]
+      "preferred_book_types": ["bedtime_story", "bilingual_story"]
     },
     {
       "canonical_id": "SKILL_011",
       "id": "predictable_parallel_lines",
       "dimension": "L",
       "ecl_code": "L.4",
-      "age_norm": { "group": "1-5", "stage_min": 2, "stage_max": 5 },
+      "age_norm": { "min": 2, "max": 5 },
       "difficulty": 2,
       "weight": 0.60,
-      "preferred_book_types": ["bilingual"]
+      "preferred_book_types": ["bilingual_intro", "bilingual_story"]
     },
     {
       "canonical_id": "SKILL_012",
       "id": "complex_vocabulary",
       "dimension": "L",
       "ecl_code": "L.2",
-      "age_norm": { "group": "5-10", "stage_min": 5, "stage_max": 9 },
+      "age_norm": { "min": 5, "max": 10 },
       "difficulty": 3,
       "weight": 0.85,
-      "preferred_book_types": ["bedtime_story", "bilingual"]
-    }
-  ]
-}
-{
-  "skills_continued": [
+      "preferred_book_types": ["bedtime_story", "bilingual_extended"]
+    },
     {
       "canonical_id": "SKILL_013",
       "id": "bilingual_stories",
       "dimension": "L",
       "ecl_code": "L.4",
-      "age_norm": { "group": "3-5", "stage_min": 3, "stage_max": 5 },
+      "age_norm": { "min": 3, "max": 5 },
       "difficulty": 2,
       "weight": 0.70,
-      "preferred_book_types": ["bilingual"]
+      "preferred_book_types": ["bilingual_story"]
     },
     {
       "canonical_id": "SKILL_014",
       "id": "speech_development",
       "dimension": "L",
       "ecl_code": "L.1",
-      "age_norm": { "group": "3-5", "stage_min": 3, "stage_max": 5 },
+      "age_norm": { "min": 3, "max": 5 },
       "difficulty": 2,
       "weight": 0.75,
-      "preferred_book_types": ["bedtime_story", "bilingual"]
+      "preferred_book_types": ["bedtime_story", "bilingual_story"]
     },
     {
       "canonical_id": "SKILL_015",
       "id": "logic",
       "dimension": "L",
       "ecl_code": "L.3",
-      "age_norm": { "group": "5-7", "stage_min": 5, "stage_max": 7 },
+      "age_norm": { "min": 5, "max": 7 },
       "difficulty": 3,
       "weight": 0.80,
       "preferred_book_types": ["bedtime_story"]
@@ -172,7 +168,7 @@
       "id": "concentration",
       "dimension": "E",
       "ecl_code": "E.5",
-      "age_norm": { "group": "5-7", "stage_min": 5, "stage_max": 6 },
+      "age_norm": { "min": 5, "max": 7 },
       "difficulty": 2,
       "weight": 0.75,
       "preferred_book_types": ["bedtime_story", "coloring"]
@@ -182,7 +178,7 @@
       "id": "independent_thinking",
       "dimension": "C",
       "ecl_code": "C.5",
-      "age_norm": { "group": "5-7", "stage_min": 6, "stage_max": 7 },
+      "age_norm": { "min": 6, "max": 7 },
       "difficulty": 3,
       "weight": 0.80,
       "preferred_book_types": ["bedtime_story"]
@@ -192,17 +188,17 @@
       "id": "situational_language",
       "dimension": "L",
       "ecl_code": "L.2",
-      "age_norm": { "group": "5-7", "stage_min": 6, "stage_max": 7 },
+      "age_norm": { "min": 6, "max": 7 },
       "difficulty": 3,
       "weight": 0.85,
-      "preferred_book_types": ["bedtime_story", "bilingual"]
+      "preferred_book_types": ["bedtime_story", "bilingual_story"]
     },
     {
       "canonical_id": "SKILL_019",
       "id": "structured_reasoning",
       "dimension": "L",
       "ecl_code": "L.5",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 10 },
+      "age_norm": { "min": 7, "max": 10 },
       "difficulty": 4,
       "weight": 0.90,
       "preferred_book_types": ["bedtime_story"]
@@ -212,7 +208,7 @@
       "id": "abstract_reasoning",
       "dimension": "L",
       "ecl_code": "L.5",
-      "age_norm": { "group": "7-10", "stage_min": 8, "stage_max": 10 },
+      "age_norm": { "min": 8, "max": 10 },
       "difficulty": 4,
       "weight": 0.90,
       "preferred_book_types": ["bedtime_story"]
@@ -222,7 +218,7 @@
       "id": "independent_drawing",
       "dimension": "C",
       "ecl_code": "C.2",
-      "age_norm": { "group": "7-10", "stage_min": 8, "stage_max": 10 },
+      "age_norm": { "min": 8, "max": 10 },
       "difficulty": 4,
       "weight": 0.85,
       "preferred_book_types": ["step_by_step_drawing"]
@@ -232,7 +228,7 @@
       "id": "step_by_step_logic",
       "dimension": "C",
       "ecl_code": "C.4",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 10 },
+      "age_norm": { "min": 7, "max": 10 },
       "difficulty": 4,
       "weight": 0.85,
       "preferred_book_types": ["step_by_step_drawing"]
@@ -242,7 +238,7 @@
       "id": "long_focus",
       "dimension": "E",
       "ecl_code": "E.5",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 9 },
+      "age_norm": { "min": 7, "max": 9 },
       "difficulty": 3,
       "weight": 0.80,
       "preferred_book_types": ["step_by_step_drawing"]
@@ -252,7 +248,7 @@
       "id": "full_paragraph_bilingual",
       "dimension": "L",
       "ecl_code": "L.4",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 10 },
+      "age_norm": { "min": 7, "max": 10 },
       "difficulty": 4,
       "weight": 0.90,
       "preferred_book_types": ["bilingual_extended"]
@@ -262,7 +258,7 @@
       "id": "parallel_reading",
       "dimension": "L",
       "ecl_code": "L.4",
-      "age_norm": { "group": "7-10", "stage_min": 8, "stage_max": 10 },
+      "age_norm": { "min": 8, "max": 10 },
       "difficulty": 4,
       "weight": 0.85,
       "preferred_book_types": ["bilingual_extended"]
@@ -272,7 +268,7 @@
       "id": "meaning_alignment",
       "dimension": "L",
       "ecl_code": "L.4",
-      "age_norm": { "group": "7-10", "stage_min": 8, "stage_max": 10 },
+      "age_norm": { "min": 8, "max": 10 },
       "difficulty": 4,
       "weight": 0.90,
       "preferred_book_types": ["bilingual_extended"]
@@ -282,7 +278,7 @@
       "id": "cross_language_mapping",
       "dimension": "L",
       "ecl_code": "L.4",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 10 },
+      "age_norm": { "min": 7, "max": 10 },
       "difficulty": 4,
       "weight": 0.90,
       "preferred_book_types": ["bilingual_extended", "two_in_one"]
@@ -292,7 +288,7 @@
       "id": "independent_language_growth",
       "dimension": "L",
       "ecl_code": "L.2",
-      "age_norm": { "group": "7-10", "stage_min": 8, "stage_max": 10 },
+      "age_norm": { "min": 8, "max": 10 },
       "difficulty": 4,
       "weight": 0.85,
       "preferred_book_types": ["bilingual_extended", "two_in_one"]
@@ -302,21 +298,17 @@
       "id": "emotion_depth",
       "dimension": "E",
       "ecl_code": "E.2",
-      "age_norm": { "group": "5-7", "stage_min": 5, "stage_max": 7 },
+      "age_norm": { "min": 5, "max": 7 },
       "difficulty": 3,
       "weight": 0.75,
       "preferred_book_types": ["bedtime_story"]
-    }
-  ]
-}
-{
-  "skills_final": [
+    },
     {
       "canonical_id": "SKILL_030",
       "id": "advanced_emotion_depth",
       "dimension": "E",
       "ecl_code": "E.3",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 10 },
+      "age_norm": { "min": 7, "max": 10 },
       "difficulty": 4,
       "weight": 0.85,
       "preferred_book_types": ["bedtime_story"]
@@ -326,7 +318,7 @@
       "id": "multi_scene_structure",
       "dimension": "L",
       "ecl_code": "L.3",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 10 },
+      "age_norm": { "min": 7, "max": 10 },
       "difficulty": 4,
       "weight": 0.85,
       "preferred_book_types": ["bedtime_story"]
@@ -336,7 +328,7 @@
       "id": "moral_reasoning",
       "dimension": "E",
       "ecl_code": "E.3",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 10 },
+      "age_norm": { "min": 7, "max": 10 },
       "difficulty": 4,
       "weight": 0.90,
       "preferred_book_types": ["bedtime_story"]
@@ -346,7 +338,7 @@
       "id": "visual_planning",
       "dimension": "C",
       "ecl_code": "C.4",
-      "age_norm": { "group": "5-7", "stage_min": 5, "stage_max": 7 },
+      "age_norm": { "min": 5, "max": 7 },
       "difficulty": 3,
       "weight": 0.80,
       "preferred_book_types": ["coloring"]
@@ -356,7 +348,7 @@
       "id": "motor_mastery",
       "dimension": "C",
       "ecl_code": "C.2",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 10 },
+      "age_norm": { "min": 7, "max": 10 },
       "difficulty": 4,
       "weight": 0.85,
       "preferred_book_types": ["step_by_step_drawing"]
@@ -366,7 +358,7 @@
       "id": "complex_shape_breakdown",
       "dimension": "C",
       "ecl_code": "C.5",
-      "age_norm": { "group": "7-10", "stage_min": 7, "stage_max": 10 },
+      "age_norm": { "min": 7, "max": 10 },
       "difficulty": 4,
       "weight": 0.90,
       "preferred_book_types": ["step_by_step_drawing"]
@@ -376,7 +368,7 @@
       "id": "creative_confidence",
       "dimension": "C",
       "ecl_code": "C.2",
-      "age_norm": { "group": "1-10", "stage_min": 1, "stage_max": 10 },
+      "age_norm": { "min": 1, "max": 10 },
       "difficulty": 1,
       "weight": 0.80,
       "preferred_book_types": ["coloring", "step_by_step_drawing"]
@@ -386,7 +378,7 @@
       "id": "one_object_per_page",
       "dimension": "C",
       "ecl_code": "C.1",
-      "age_norm": { "group": "1-3", "stage_min": 1, "stage_max": 3 },
+      "age_norm": { "min": 1, "max": 3 },
       "difficulty": 1,
       "weight": 0.45,
       "preferred_book_types": ["coloring"]
@@ -396,7 +388,7 @@
       "id": "moderate_detail",
       "dimension": "C",
       "ecl_code": "C.4",
-      "age_norm": { "group": "3-7", "stage_min": 3, "stage_max": 7 },
+      "age_norm": { "min": 3, "max": 7 },
       "difficulty": 2,
       "weight": 0.75,
       "preferred_book_types": ["coloring"]
@@ -406,7 +398,7 @@
       "id": "shape_variety",
       "dimension": "C",
       "ecl_code": "C.5",
-      "age_norm": { "group": "3-5", "stage_min": 3, "stage_max": 5 },
+      "age_norm": { "min": 3, "max": 5 },
       "difficulty": 2,
       "weight": 0.70,
       "preferred_book_types": ["coloring"]
@@ -416,7 +408,7 @@
       "id": "thematic_exploration",
       "dimension": "C",
       "ecl_code": "C.5",
-      "age_norm": { "group": "3-5", "stage_min": 3, "stage_max": 5 },
+      "age_norm": { "min": 3, "max": 5 },
       "difficulty": 2,
       "weight": 0.70,
       "preferred_book_types": ["coloring"]
@@ -426,10 +418,10 @@
       "id": "low_cognitive_load",
       "dimension": "E",
       "ecl_code": "E.1",
-      "age_norm": { "group": "1-5", "stage_min": 1, "stage_max": 5 },
+      "age_norm": { "min": 1, "max": 5 },
       "difficulty": 1,
       "weight": 0.70,
-      "preferred_book_types": ["bedtime_story", "bilingual", "coloring"]
+      "preferred_book_types": ["bedtime_story", "bilingual_story", "coloring"]
     }
   ]
 }
