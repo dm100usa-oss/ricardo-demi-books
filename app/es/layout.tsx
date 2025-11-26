@@ -21,6 +21,16 @@ export default function RootLayoutES({
     <html lang="es">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta
+          name="msvalidate.01"
+          content="7A3E245327DA485A41AE5DFAC5449599"
+        />
+
+        <meta
+          name="google-site-verification"
+          content="D_yiTSM0zWdBs-hpefX9cotH2U5FSStgcb1W-XOwTgw"
+        />
       </head>
 
       <body
@@ -30,8 +40,6 @@ export default function RootLayoutES({
           padding: 0,
         }}
       >
-
-        {/* TOP NAVIGATION */}
         <nav
           style={{
             backgroundColor: "#f5f5f5",
@@ -87,9 +95,8 @@ export default function RootLayoutES({
             Edad 7–10
           </a>
 
-          {/* ONLY ENGLISH HERE */}
           <a href="/" style={{ color: "#333", textDecoration: "none" }}>
-            English&nbsp;&nbsp;🇺🇸
+            English
           </a>
         </nav>
 
