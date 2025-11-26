@@ -11,11 +11,13 @@ export async function middleware(req) {
 
   if (url.startsWith("/public/api/")) {
     const ua = req.headers.get("user-agent") || "unknown";
+
     const item = {
       time: new Date().toISOString(),
       file: url.replace("/public/api/", ""),
       ua
     };
+
     await redis.lpush("ai_monitor_logs", JSON.stringify(item));
     await redis.ltrim("ai_monitor_logs", 0, 500);
   }
