@@ -18,142 +18,66 @@
 
   "age_skill_matrix": {
     "1-3": {
-      "critical": [
-        "confidence",
-        "soft_story",
-        "predictable_sequence",
-        "sensory_safety"
-      ],
+      "critical": ["confidence", "soft_story", "predictable_sequence", "sensory_safety"],
       "allowed": [
-        "confidence",
-        "soft_story",
-        "predictable_sequence",
-        "motor_basic",
-        "attention_growth",
-        "low_stimulation",
-        "sensory_safety",
-        "one_object_per_page",
-        "low_cognitive_load"
+        "confidence", "soft_story", "predictable_sequence",
+        "motor_basic", "attention_growth", "low_stimulation",
+        "sensory_safety", "one_object_per_page", "low_cognitive_load"
       ],
       "forbidden": [
-        "early_logic",
-        "simple_dialogues",
-        "imagination_seed",
-        "logic",
-        "concentration",
-        "independent_thinking",
-        "situational_language",
-        "multi_scene_structure",
-        "moral_reasoning",
-        "structured_reasoning",
-        "abstract_reasoning",
-        "motor_mastery",
-        "complex_shape_breakdown",
-        "moderate_detail",
-        "shape_variety",
-        "thematic_exploration",
-        "advanced_emotion_depth",
-        "emotion_depth",
-        "long_focus",
-        "full_paragraph_bilingual",
-        "parallel_reading",
-        "meaning_alignment",
-        "cross_language_mapping",
-        "independent_language_growth"
+        "early_logic", "simple_dialogues", "imagination_seed", "logic",
+        "concentration", "independent_thinking", "situational_language",
+        "multi_scene_structure", "moral_reasoning", "structured_reasoning",
+        "abstract_reasoning", "motor_mastery", "complex_shape_breakdown",
+        "moderate_detail", "shape_variety", "thematic_exploration",
+        "advanced_emotion_depth", "emotion_depth", "long_focus",
+        "full_paragraph_bilingual", "parallel_reading", "meaning_alignment",
+        "cross_language_mapping", "independent_language_growth"
       ]
     },
 
     "3-5": {
-      "critical": [
-        "imagination_seed",
-        "early_logic",
-        "simple_dialogues"
-      ],
+      "critical": ["imagination_seed", "early_logic", "simple_dialogues"],
       "allowed": [
-        "imagination_seed",
-        "early_logic",
-        "simple_dialogues",
-        "attention_growth",
-        "speech_development",
-        "moderate_detail",
-        "shape_variety",
-        "thematic_exploration",
-        "low_cognitive_load",
-        "predictable_parallel_lines",
-        "bilingual_stories"
+        "imagination_seed", "early_logic", "simple_dialogues",
+        "attention_growth", "speech_development", "moderate_detail",
+        "shape_variety", "thematic_exploration", "low_cognitive_load",
+        "predictable_parallel_lines", "bilingual_stories"
       ],
       "forbidden": [
-        "structured_reasoning",
-        "abstract_reasoning",
-        "advanced_emotion_depth",
-        "motor_mastery",
-        "complex_shape_breakdown",
-        "full_paragraph_bilingual",
-        "parallel_reading",
-        "meaning_alignment",
-        "cross_language_mapping",
+        "structured_reasoning", "abstract_reasoning", "advanced_emotion_depth",
+        "motor_mastery", "complex_shape_breakdown", "full_paragraph_bilingual",
+        "parallel_reading", "meaning_alignment", "cross_language_mapping",
         "independent_language_growth"
       ]
     },
 
     "5-7": {
-      "critical": [
-        "logic",
-        "concentration",
-        "situational_language"
-      ],
+      "critical": ["logic", "concentration", "situational_language"],
       "allowed": [
-        "emotion_depth",
-        "logic",
-        "concentration",
-        "independent_thinking",
-        "situational_language",
-        "visual_planning",
-        "moderate_detail",
-        "creative_confidence"
+        "emotion_depth", "logic", "concentration",
+        "independent_thinking", "situational_language",
+        "visual_planning", "moderate_detail", "creative_confidence"
       ],
       "forbidden": [
-        "structured_reasoning",
-        "abstract_reasoning",
-        "moral_reasoning",
-        "multi_scene_structure",
-        "advanced_emotion_depth",
-        "complex_shape_breakdown",
-        "full_paragraph_bilingual",
-        "parallel_reading",
-        "meaning_alignment",
-        "cross_language_mapping",
+        "structured_reasoning", "abstract_reasoning", "moral_reasoning",
+        "multi_scene_structure", "advanced_emotion_depth",
+        "complex_shape_breakdown", "full_paragraph_bilingual",
+        "parallel_reading", "meaning_alignment", "cross_language_mapping",
         "independent_language_growth"
       ]
     },
 
     "7-10": {
-      "critical": [
-        "structured_reasoning",
-        "abstract_reasoning",
-        "moral_reasoning"
-      ],
+      "critical": ["structured_reasoning", "abstract_reasoning", "moral_reasoning"],
       "allowed": [
-        "structured_reasoning",
-        "abstract_reasoning",
-        "moral_reasoning",
-        "multi_scene_structure",
-        "motor_mastery",
-        "complex_shape_breakdown",
-        "long_focus",
-        "advanced_emotion_depth",
-        "full_paragraph_bilingual",
-        "parallel_reading",
-        "meaning_alignment",
-        "cross_language_mapping",
-        "independent_language_growth",
-        "creative_confidence"
+        "structured_reasoning", "abstract_reasoning", "moral_reasoning",
+        "multi_scene_structure", "motor_mastery", "complex_shape_breakdown",
+        "long_focus", "advanced_emotion_depth", "full_paragraph_bilingual",
+        "parallel_reading", "meaning_alignment", "cross_language_mapping",
+        "independent_language_growth", "creative_confidence"
       ],
-      "forbidden": [
-        "soft_story",
-        "one_object_per_page",
-        "predictable_sequence"
-      ]
+      "forbidden": ["soft_story", "one_object_per_page", "predictable_sequence"]
     }
   },
 
@@ -181,78 +105,61 @@
   },
 
   "forbidden_logic": [
-    {
-      "id": "F1",
-      "when": {
-        "emotional_intensity": "high",
-        "age_in": ["1-3", "3-5"]
-      },
-      "result": "EXCLUDED"
-    },
-    {
-      "id": "F2",
-      "when": {
-        "visual_load": "high_detail",
-        "age_in": ["1-3"]
-      },
-      "result": "EXCLUDED"
-    },
-    {
-      "id": "F3",
-      "when": {
-        "narrative_structure": "multi_scene_complex",
-        "age_in": ["1-3", "3-5"]
-      },
-      "result": "EXCLUDED"
-    }
+    { "id": "F1", "match": { "emotional_intensity": "high", "age_in": ["1-3", "3-5"] }, "result": "EXCLUDED" },
+    { "id": "F2", "match": { "visual_load": "high_detail", "age_in": ["1-3"] }, "result": "EXCLUDED" },
+    { "id": "F3", "match": { "narrative_structure": "multi_scene_complex", "age_in": ["1-3", "3-5"] }, "result": "EXCLUDED" }
   ],
 
   "value_profile_check": [
-    { "attribute": "complexity", "allowed_ref": "value_profile_rules[age].complexity", "penalty": -1.0 },
-    { "attribute": "emotional_intensity", "allowed_ref": "value_profile_rules[age].emotional_intensity", "penalty": -1.0 },
-    { "attribute": "narrative_structure", "allowed_ref": "value_profile_rules[age].narrative_structure", "penalty": -1.0 },
-    { "attribute": "linguistic_load", "allowed_ref": "value_profile_rules[age].linguistic_load", "penalty": -1.0 },
-    { "attribute": "visual_load", "allowed_ref": "value_profile_rules[age].visual_load", "penalty": -1.0 }
+    { "attribute": "complexity", "allowed": "value_profile_rules[age].complexity", "penalty": -1.0 },
+    { "attribute": "emotional_intensity", "allowed": "value_profile_rules[age].emotional_intensity", "penalty": -1.0 },
+    { "attribute": "narrative_structure", "allowed": "value_profile_rules[age].narrative_structure", "penalty": -1.0 },
+    { "attribute": "linguistic_load", "allowed": "value_profile_rules[age].linguistic_load", "penalty": -1.0 },
+    { "attribute": "visual_load", "allowed": "value_profile_rules[age].visual_load", "penalty": -1.0 }
   ],
 
   "weights": {
     "skills": { "critical": 1.0, "allowed": 0.6, "forbidden": -1.0 },
     "book_types": { "optimal": 1.0, "secondary": 0.6, "forbidden": -1.0 },
     "value_profile": { "full": 1.0, "compatible": 0.7, "partial": 0.4, "incompatible": -1.0 },
-    "origin": { "catalog": 1.0, "external": 0.0 },
-    "formula": "F = 0.4*S + 0.3*V + 0.2*T + 0.1*O"
+    "origin": { "catalog": 1.0, "external": 0.0 }
+  },
+
+  "formula": {
+    "F": {
+      "weights": { "skills": 0.4, "value_profile": 0.3, "book_types": 0.2, "origin": 0.1 }
+    }
   },
 
   "ranking": {
-    "IDEAL": { "condition": "F >= 0.85 AND origin == 'catalog'" },
-    "STRONG": { "condition": "0.65 <= F < 0.85" },
-    "ACCEPTABLE": { "condition": "0.35 <= F < 0.65" },
-    "EXCLUDED": { "condition": "F < 0.35" }
+    "IDEAL": { "range": ["F >= 0.85", "origin == catalog"] },
+    "STRONG": { "range": ["0.65 <= F < 0.85"] },
+    "ACCEPTABLE": { "range": ["0.35 <= F < 0.65"] },
+    "EXCLUDED": { "range": ["F < 0.35"] }
   },
 
   "safety": {
     "rules": [
-      "HIGH emotional_intensity forbidden age 1–5",
-      "HIGH_DETAIL visual_load forbidden age 1–3",
-      "multi_scene_complex forbidden age 1–5",
-      "Missing attributes = unsafe"
+      { "id": "S1", "match": { "emotional_intensity": "high", "age_in": ["1-5"] }, "result": "FORBIDDEN" },
+      { "id": "S2", "match": { "visual_load": "high_detail", "age_in": ["1-3"] }, "result": "FORBIDDEN" },
+      { "id": "S3", "match": { "narrative_structure": "multi_scene_complex", "age_in": ["1-5"] }, "result": "FORBIDDEN" },
+      { "id": "S4", "match": { "missing_attributes": true }, "result": "UNSAFE" }
     ]
   },
 
   "ai_contract": {
     "rules": [
-      "Use this file as canonical",
-      "Always check forbidden first",
-      "Never mix age groups",
-      "Apply weights exactly as defined",
-      "Always prioritize safety",
-      "Catalog books receive origin bonus"
+      "CHECK_FORBIDDEN_FIRST",
+      "APPLY_WEIGHTS_EXACT",
+      "NO_AGE_MIXING",
+      "PRIORITIZE_SAFETY",
+      "ORIGIN_BONUS_FOR_CATALOG"
     ]
   },
 
-  "meta_final": {
-    "machine_interpretable": true,
+  "meta": {
     "deterministic": true,
+    "machine_interpretable": true,
     "canonical": true,
     "version_stamp": "3.1.0_FINAL"
   }
