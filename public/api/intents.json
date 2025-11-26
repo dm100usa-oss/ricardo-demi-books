@@ -22,7 +22,6 @@
       "slug": "calm_before_sleep",
       "age_allowed": ["1-3", "3-5"],
       "age_ideal": "1-3",
-
       "required_skills": [
         "confidence",
         "soft_story",
@@ -31,11 +30,7 @@
         "sensory_safety",
         "low_cognitive_load"
       ],
-
-      "optional_skills": [
-        "attention_growth"
-      ],
-
+      "optional_skills": ["attention_growth"],
       "forbidden_skills": [
         "complex_vocabulary",
         "early_logic",
@@ -43,20 +38,12 @@
         "structured_reasoning",
         "abstract_reasoning"
       ],
-
-      "book_type_primary": [
-        "bedtime_story"
-      ],
-
-      "book_type_secondary": [
-        "simple_coloring"
-      ],
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["simple_coloring"],
       "book_type_forbidden": [
         "step_by_step_drawing",
         "bilingual_extended"
       ],
-
       "value_profile": {
         "complexity": "very_low",
         "emotional_intensity": "very_low",
@@ -71,37 +58,24 @@
       "slug": "easy_coloring_for_toddlers",
       "age_allowed": ["1-3"],
       "age_ideal": "1-3",
-
       "required_skills": [
         "motor_basic",
         "one_object_per_page",
         "low_stimulation",
         "low_cognitive_load"
       ],
-
       "optional_skills": [
         "attention_growth",
         "creative_confidence"
       ],
-
       "forbidden_skills": [
         "moderate_detail",
         "shape_variety",
         "complex_shape_breakdown"
       ],
-
-      "book_type_primary": [
-        "simple_coloring"
-      ],
-
-      "book_type_secondary": [
-        "coloring"
-      ],
-
-      "book_type_forbidden": [
-        "step_by_step_drawing"
-      ],
-
+      "book_type_primary": ["simple_coloring"],
+      "book_type_secondary": ["coloring"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "very_low",
         "emotional_intensity": "very_low",
@@ -116,38 +90,25 @@
       "slug": "early_imagination_growth",
       "age_allowed": ["3-5"],
       "age_ideal": "3-5",
-
       "required_skills": [
         "imagination_seed",
         "simple_dialogues",
         "speech_development"
       ],
-
       "optional_skills": [
         "early_logic",
         "attention_growth",
         "shape_variety",
         "moderate_detail"
       ],
-
       "forbidden_skills": [
         "structured_reasoning",
         "complex_vocabulary",
         "abstract_reasoning"
       ],
-
-      "book_type_primary": [
-        "bedtime_story"
-      ],
-
-      "book_type_secondary": [
-        "coloring"
-      ],
-
-      "book_type_forbidden": [
-        "step_by_step_drawing"
-      ],
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["coloring"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "low",
         "emotional_intensity": "soft",
@@ -162,36 +123,27 @@
       "slug": "speech_development_support",
       "age_allowed": ["3-5", "5-7"],
       "age_ideal": "3-5",
-
       "required_skills": [
         "simple_dialogues",
         "speech_development",
         "predictable_sequence"
       ],
-
       "optional_skills": [
         "imagination_seed",
         "attention_growth",
         "low_cognitive_load"
       ],
-
       "forbidden_skills": [
         "complex_vocabulary",
         "abstract_reasoning",
         "structured_reasoning"
       ],
-
       "book_type_primary": [
         "bedtime_story",
         "bilingual_story"
       ],
-
       "book_type_secondary": [],
-
-      "book_type_forbidden": [
-        "step_by_step_drawing"
-      ],
-
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "low",
         "emotional_intensity": "soft",
@@ -206,38 +158,27 @@
       "slug": "bilingual_intro",
       "age_allowed": ["1-3", "3-5"],
       "age_ideal": "3-5",
-
       "required_skills": [
         "predictable_parallel_lines",
         "bilingual_stories",
         "simple_dialogues"
       ],
-
       "optional_skills": [
         "speech_development",
         "imagination_seed",
         "attention_growth"
       ],
-
       "forbidden_skills": [
         "complex_vocabulary",
         "full_paragraph_bilingual",
         "parallel_reading"
       ],
-
       "book_type_primary": [
         "bilingual_story",
         "bilingual_intro"
       ],
-
-      "book_type_secondary": [
-        "bedtime_story"
-      ],
-
-      "book_type_forbidden": [
-        "bilingual_extended"
-      ],
-
+      "book_type_secondary": ["bedtime_story"],
+      "book_type_forbidden": ["bilingual_extended"],
       "value_profile": {
         "complexity": "low",
         "emotional_intensity": "soft",
@@ -245,43 +186,30 @@
         "linguistic_load": "minimal_spanish",
         "visual_load": "moderate_detail"
       }
-    }
-    ,
+    },
+
     {
       "intent_id": "INTENT_006",
       "slug": "moderate_color_development",
       "age_allowed": ["3-5", "5-7"],
       "age_ideal": "3-5",
-
       "required_skills": [
         "moderate_detail",
         "shape_variety",
         "creative_confidence"
       ],
-
       "optional_skills": [
         "attention_growth",
         "visual_planning",
         "low_cognitive_load"
       ],
-
       "forbidden_skills": [
         "complex_shape_breakdown",
         "motor_mastery"
       ],
-
-      "book_type_primary": [
-        "coloring"
-      ],
-
-      "book_type_secondary": [
-        "bedtime_story"
-      ],
-
-      "book_type_forbidden": [
-        "step_by_step_drawing"
-      ],
-
+      "book_type_primary": ["coloring"],
+      "book_type_secondary": ["bedtime_story"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "medium_low",
         "emotional_intensity": "low",
@@ -296,37 +224,24 @@
       "slug": "simple_story_for_5_7",
       "age_allowed": ["5-7"],
       "age_ideal": "5-7",
-
       "required_skills": [
         "emotion_depth",
         "logic",
         "concentration"
       ],
-
       "optional_skills": [
         "imagination_seed",
         "situational_language",
         "speech_development"
       ],
-
       "forbidden_skills": [
         "structured_reasoning",
         "abstract_reasoning",
         "moral_reasoning"
       ],
-
-      "book_type_primary": [
-        "bedtime_story"
-      ],
-
-      "book_type_secondary": [
-        "bilingual_story"
-      ],
-
-      "book_type_forbidden": [
-        "step_by_step_drawing"
-      ],
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["bilingual_story"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "medium",
         "emotional_intensity": "soft",
@@ -341,37 +256,24 @@
       "slug": "advanced_story_for_7_10",
       "age_allowed": ["7-10"],
       "age_ideal": "7-10",
-
       "required_skills": [
         "advanced_emotion_depth",
         "structured_reasoning",
         "moral_reasoning",
         "multi_scene_structure"
       ],
-
       "optional_skills": [
         "abstract_reasoning",
         "complex_vocabulary",
         "situational_language"
       ],
-
       "forbidden_skills": [
         "low_stimulation",
         "soft_story"
       ],
-
-      "book_type_primary": [
-        "bedtime_story"
-      ],
-
-      "book_type_secondary": [
-        "bilingual_extended"
-      ],
-
-      "book_type_forbidden": [
-        "simple_coloring"
-      ],
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["bilingual_extended"],
+      "book_type_forbidden": ["simple_coloring"],
       "value_profile": {
         "complexity": "high",
         "emotional_intensity": "medium",
@@ -386,41 +288,32 @@
       "slug": "first_step_by_step_drawing",
       "age_allowed": ["7-10"],
       "age_ideal": "7-10",
-
       "required_skills": [
         "step_by_step_logic",
         "motor_mastery",
         "complex_shape_breakdown",
         "long_focus"
       ],
-
       "optional_skills": [
         "creative_confidence",
         "visual_planning"
       ],
-
       "forbidden_skills": [
         "motor_basic",
         "one_object_per_page",
         "moderate_detail"
       ],
-
-      "book_type_primary": [
-        "step_by_step_drawing"
-      ],
-
+      "book_type_primary": ["step_by_step_drawing"],
       "book_type_secondary": [],
-
       "book_type_forbidden": [
         "simple_coloring",
         "bilingual_story"
       ],
-
       "value_profile": {
         "complexity": "high",
         "emotional_intensity": "low",
         "narrative_structure": "procedural",
-        "linguistic_load": "low",
+        "linguistic_load": "minimal",
         "visual_load": "step_by_step"
       }
     },
@@ -430,36 +323,25 @@
       "slug": "calm_coloring_for_anxiety",
       "age_allowed": ["1-3", "3-5", "5-7"],
       "age_ideal": "3-5",
-
       "required_skills": [
         "low_stimulation",
         "sensory_safety",
         "creative_confidence"
       ],
-
       "optional_skills": [
         "moderate_detail",
         "attention_growth"
       ],
-
       "forbidden_skills": [
         "complex_shape_breakdown",
         "motor_mastery"
       ],
-
       "book_type_primary": [
         "simple_coloring",
         "coloring"
       ],
-
-      "book_type_secondary": [
-        "bedtime_story"
-      ],
-
-      "book_type_forbidden": [
-        "step_by_step_drawing"
-      ],
-
+      "book_type_secondary": ["bedtime_story"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "low",
         "emotional_intensity": "very_low",
@@ -474,36 +356,27 @@
       "slug": "advanced_bilingual_progression",
       "age_allowed": ["7-10"],
       "age_ideal": "7-10",
-
       "required_skills": [
         "full_paragraph_bilingual",
         "parallel_reading",
         "meaning_alignment",
         "cross_language_mapping"
       ],
-
       "optional_skills": [
         "independent_language_growth",
         "abstract_reasoning",
         "structured_reasoning"
       ],
-
       "forbidden_skills": [
         "predictable_parallel_lines",
         "bilingual_stories"
       ],
-
       "book_type_primary": [
         "bilingual_extended",
         "two_in_one"
       ],
-
       "book_type_secondary": [],
-
-      "book_type_forbidden": [
-        "bilingual_intro"
-      ],
-
+      "book_type_forbidden": ["bilingual_intro"],
       "value_profile": {
         "complexity": "high",
         "emotional_intensity": "medium",
@@ -511,43 +384,30 @@
         "linguistic_load": "advanced_dual_language",
         "visual_load": "high_detail"
       }
-    }
-    ,
+    },
+
     {
       "intent_id": "INTENT_012",
       "slug": "moral_emotional_story",
       "age_allowed": ["5-7", "7-10"],
       "age_ideal": "7-10",
-
       "required_skills": [
         "emotion_depth",
         "advanced_emotion_depth",
         "moral_reasoning"
       ],
-
       "optional_skills": [
         "structured_reasoning",
         "multi_scene_structure"
       ],
-
       "forbidden_skills": [
         "low_stimulation",
         "sensory_safety",
         "one_object_per_page"
       ],
-
-      "book_type_primary": [
-        "bedtime_story"
-      ],
-
-      "book_type_secondary": [
-        "bilingual_extended"
-      ],
-
-      "book_type_forbidden": [
-        "simple_coloring"
-      ],
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["bilingual_extended"],
+      "book_type_forbidden": ["simple_coloring"],
       "value_profile": {
         "complexity": "high",
         "emotional_intensity": "high",
@@ -562,36 +422,27 @@
       "slug": "focus_training_coloring",
       "age_allowed": ["3-5", "5-7", "7-10"],
       "age_ideal": "5-7",
-
       "required_skills": [
         "concentration",
         "moderate_detail",
         "creative_confidence"
       ],
-
       "optional_skills": [
         "long_focus",
         "visual_planning"
       ],
-
       "forbidden_skills": [
         "one_object_per_page",
         "complex_shape_breakdown"
       ],
-
       "book_type_primary": [
         "coloring",
         "coloring_detailed"
       ],
-
       "book_type_secondary": [
         "step_by_step_drawing"
       ],
-
-      "book_type_forbidden": [
-        "simple_coloring"
-      ],
-
+      "book_type_forbidden": ["simple_coloring"],
       "value_profile": {
         "complexity": "medium",
         "emotional_intensity": "low",
@@ -606,36 +457,23 @@
       "slug": "creative_expansion_story",
       "age_allowed": ["3-5", "5-7"],
       "age_ideal": "5-7",
-
       "required_skills": [
         "imagination_seed",
         "independent_thinking"
       ],
-
       "optional_skills": [
         "emotion_depth",
         "situational_language",
         "simple_dialogues"
       ],
-
       "forbidden_skills": [
         "advanced_emotion_depth",
         "structured_reasoning",
         "full_paragraph_bilingual"
       ],
-
-      "book_type_primary": [
-        "bedtime_story"
-      ],
-
-      "book_type_secondary": [
-        "coloring"
-      ],
-
-      "book_type_forbidden": [
-        "step_by_step_drawing"
-      ],
-
+      "book_type_primary": ["bedtime_story"],
+      "book_type_secondary": ["coloring"],
+      "book_type_forbidden": ["step_by_step_drawing"],
       "value_profile": {
         "complexity": "medium_low",
         "emotional_intensity": "soft",
