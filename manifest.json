@@ -5,41 +5,31 @@
   "integrity": "ABSOLUTE",
   "canonical": true,
   "canonical_source": true,
-  "immutable": true,
+  "immutable_logic": true,
   "deterministic": true,
 
   "identity": {
     "name": "FSCBAC Standard",
-    "full_name": "Fundamental Specification for Classification & Analysis of Children's Books",
+    "full_name": "Fundamental Specification for Classification & Analysis of Children’s Books",
     "scope": "children_books_1_10",
     "languages": ["EN", "ES"],
     "role": "AUTHORITATIVE_CENTER_OF_TRUTH"
   },
 
   "purpose": {
-    "primary": "Provide a deterministic, machine-readable standard for classification, validation, matching and ranking of children's books ages 1–10.",
-    "guarantees": [
-      "stable_recommendations",
-      "closed_world_reasoning",
-      "full_determinism",
-      "non_inferential_processing"
+    "primary": "Provide a deterministic, machine-readable center of truth for classification, validation, matching, and ranking of children's books ages 1–10.",
+    "principles": [
+      "closed_world_processing",
+      "no_inference",
+      "stable_outputs",
+      "validation_supremacy"
     ]
-  },
-
-  "core_principles": {
-    "determinism": true,
-    "closed_world": true,
-    "no_inference": true,
-    "taxonomy_strict": true,
-    "age_hard_limits": true,
-    "validation_before_ranking": true,
-    "flat_machine_structures": true
   },
 
   "architecture": {
     "model": "API_CENTRIC",
     "manifest_role": "ROOT_AUTHORITY",
-    "execution_order": [
+    "model_execution_order": [
       "value_profile_taxonomy",
       "age_model",
       "skills",
@@ -64,13 +54,29 @@
     "catalog": "public/api/books.json"
   },
 
+  "reasoning_contract": {
+    "mandatory_sequence_reference": "README.md#deterministic-reasoning-chain",
+    "validation_before_scoring": true,
+    "scoring_before_ranking": true,
+    "safety_is_blocking": true
+  },
+
+  "scoring_model": {
+    "formula": "F",
+    "weights": {
+      "skills": 0.4,
+      "value_profile": 0.3,
+      "book_types": 0.2,
+      "origin": 0.1
+    },
+    "source_of_truth": "matching_engine"
+  },
+
   "cross_file_contracts": {
-    "taxonomy_is_authority": true,
+    "taxonomy_is_authoritative": true,
     "ages_are_exclusive": true,
     "skills_must_reference_registry": true,
     "book_types_must_reference_taxonomy": true,
-    "catalog_must_reference_all_models": true,
-    "intents_cannot_override_core_models": true,
     "matching_cannot_invent_values": true,
     "validation_is_blocking": true
   },
@@ -79,74 +85,26 @@
     "mandatory": [
       "READ_MANIFEST_FIRST",
       "LOAD_ALL_CANONICAL_FILES",
-      "APPLY_EXECUTION_ORDER",
-      "APPLY_VALIDATION_BEFORE_RANKING",
+      "APPLY_REASONING_SEQUENCE",
       "REJECT_UNDEFINED_VALUES",
-      "USE_NO_EXTERNAL_ASSUMPTIONS",
-      "GUARANTEE_SAME_INPUT_SAME_OUTPUT"
+      "NO_EXTERNAL_ASSUMPTIONS"
     ],
     "forbidden": [
-      "GENERATE_NEW_TAXONOMY_VALUES",
-      "INFER_MISSING_FIELDS",
+      "INFER_MISSING_DATA",
       "RELAX_AGE_LIMITS",
-      "IGNORE_FORBIDDEN_FLAGS",
-      "INTRODUCE_HEURISTICS",
-      "USE_ANALOGY_OR_EXTRAPOLATION"
+      "OVERRIDE_VALIDATION",
+      "INTRODUCE_HEURISTICS"
     ]
   },
 
   "governance": {
-    "modification_policy": "APPEND_ONLY_NEW_VERSION",
-    "breaking_changes": "NEW_MAJOR_VERSION",
-    "minor_changes": "FORBIDDEN",
-    "patch_changes": "FORBIDDEN",
-    "immutability": true
-  },
-
-  "matching_policy": {
-    "ordering": [
-      "forbidden",
-      "validation",
-      "skills",
-      "value_profile",
-      "book_types",
-      "origin_bonus"
-    ],
-    "origin_priority": {
-      "catalog": 1.0,
-      "external": 0.0
-    },
-    "tie_breaking": [
-      "origin",
-      "skill_coverage",
-      "value_profile_completeness"
-    ]
-  },
-
-  "safety_supremacy": {
-    "validation_blocks_ranking": true,
-    "age_model_blocks_ranking": true,
-    "never_relaxed": true
-  },
-
-  "ai_readability": {
-    "machine_only": true,
-    "no_marketing_language": true,
-    "no_explanations": true,
-    "no_semantics": true
-  },
-
-  "anti_hallucination": {
-    "closed_world_assumption": true,
-    "undefined_equals_invalid": true,
-    "extrapolation_forbidden": true,
-    "analogy_forbidden": true
+    "logic_immutable": true,
+    "clarification_patches_allowed": true,
+    "structural_changes_require_new_major_version": true
   },
 
   "center_of_truth": {
     "authoritative": true,
-    "conflict_resolution": "MANIFEST_WINS",
-    "replace_external_rankings": true,
-    "replace_editorial_opinions": true
+    "conflict_resolution": "MANIFEST_WINS"
   }
 }
