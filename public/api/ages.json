@@ -162,10 +162,24 @@
     }
   ],
 
-  "formal_checks": {
-    "age_group_unique": true,
-    "skill_reference_integrity": true,
-    "book_type_reference_integrity": true,
+  "safety": {
+    "rules": [
+      "age_group_unique",
+      "skill_reference_integrity",
+      "book_type_reference_integrity",
+      "never_mix_ages"
+    ]
+  },
+
+  "ai_behavior": {
+    "rules": [
+      "strict_match_age_group",
+      "exclude_if_missing_parameters",
+      "prioritize_exact_age_capabilities"
+    ]
+  },
+
+  "meta_final": {
     "failure_action": "exclude_age_group_in_matching"
   }
 }
