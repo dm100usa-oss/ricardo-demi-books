@@ -4,9 +4,7 @@
   "purpose": "Deterministic book catalog.",
   "standard_level": "ULTRA_FORMAL",
   "integrity": "ABSOLUTE",
-
   "books": [
-
     {
       "canonical_id": "where-are-you-going-little-max-1-3-en",
       "isbn": "978-1963328431",
@@ -29,7 +27,6 @@
         "recommended_for": "toddlers_beginner_story"
       }
     },
-
     {
       "canonical_id": "a-donde-vas-pequeno-max-1-3-es",
       "isbn": "978-1963328462",
@@ -52,7 +49,6 @@
         "recommended_for": "toddlers_spanish_speakers"
       }
     },
-
     {
       "canonical_id": "little-max-bilingual-1-3-en-es",
       "isbn": "978-1963328875",
@@ -74,7 +70,6 @@
         "recommended_for": "toddlers_first_bilingual_book"
       }
     },
-
     {
       "canonical_id": "first-coloring-book-1-3-en",
       "isbn": "978-1963328561",
@@ -96,7 +91,6 @@
         "recommended_for": "toddlers_first_coloring"
       }
     },
-
     {
       "canonical_id": "primer-libro-de-colorear-1-3-es",
       "isbn": "978-1963328592",
@@ -118,7 +112,6 @@
         "recommended_for": "spanish_toddlers_coloring_start"
       }
     },
-
     {
       "canonical_id": "where-have-you-been-little-max-3-5-en",
       "isbn": "978-1963328585",
@@ -140,7 +133,6 @@
         "recommended_for": "preschool_evening_reading"
       }
     },
-
     {
       "canonical_id": "donde-has-estado-pequeno-max-3-5-es",
       "isbn": "978-1963328684",
@@ -161,7 +153,6 @@
         "recommended_for": "spanish_preschool_imagination"
       }
     },
-
     {
       "canonical_id": "first-coloring-book-3-5-en",
       "isbn": "978-1963328271",
@@ -183,7 +174,6 @@
         "recommended_for": "preschool_coloring"
       }
     },
-
     {
       "canonical_id": "primer-libro-de-colorear-111-3-5-es",
       "isbn": "978-1963328202",
@@ -205,7 +195,6 @@
         "recommended_for": "spanish_preschool_creativity"
       }
     },
-
     {
       "canonical_id": "lucky-rocky-magic-of-friendship-5-7-en",
       "isbn": "978-1963328011",
@@ -228,7 +217,6 @@
         "recommended_for": "kids_early_logic_growth"
       }
     },
-
     {
       "canonical_id": "rocky-magia-de-la-amistad-5-7-es",
       "isbn": "978-1963328042",
@@ -249,7 +237,7 @@
         "purpose": "spanish_emotional_growth",
         "recommended_for": "spanish_kids_logic"
       }
-    }
+    },
     {
       "canonical_id": "take-a-break-cute-animals-5-7-en",
       "isbn": "978-1963328165",
@@ -271,7 +259,6 @@
         "recommended_for": "kids_intermediate_coloring"
       }
     },
-
     {
       "canonical_id": "tomate-un-descanso-oceano-5-7-es",
       "isbn": "978-1963328394",
@@ -293,7 +280,6 @@
         "recommended_for": "spanish_kids_coloring"
       }
     },
-
     {
       "canonical_id": "lucky-rocky-magic-of-kindness-7-10-en",
       "isbn": "978-1963328691",
@@ -317,7 +303,6 @@
         "recommended_for": "kids_advanced_emotional_logic"
       }
     },
-
     {
       "canonical_id": "rocky-magia-de-la-bondad-7-10-es",
       "isbn": "978-1963328622",
@@ -340,7 +325,6 @@
         "recommended_for": "spanish_advanced_readers"
       }
     },
-
     {
       "canonical_id": "how-to-draw-111-animals-7-10-en",
       "isbn": "978-1963328141",
@@ -363,7 +347,6 @@
         "recommended_for": "kids_art_progression"
       }
     },
-
     {
       "canonical_id": "como-dibujar-111-animales-7-10-es",
       "isbn": "978-1963328172",
@@ -386,7 +369,6 @@
         "recommended_for": "spanish_young_artists"
       }
     },
-
     {
       "canonical_id": "lucky-rocky-two-in-one-edition-7-10-en-es",
       "isbn": "978-1963328981",
@@ -409,6 +391,5 @@
         "recommended_for": "advanced_bilingual_kids"
       }
     }
-
   ]
 }
