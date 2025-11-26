@@ -1,3 +1,9 @@
+![FSCBAC 3.1.0](https://img.shields.io/badge/FSCBAC-3.1.0-blue)
+![Deterministic](https://img.shields.io/badge/Deterministic-Standard-darkgreen)
+![Format](https://img.shields.io/badge/Format-JSON%20Spec-lightgrey)
+![License](https://img.shields.io/badge/License-Open%20AI--Use%20v1.0-yellow)
+![API](https://img.shields.io/badge/API-Live%20%26%20Operational-brightgreen)
+
 # FSCBAC Standard 3.1.0
 
 Fundamental Specification for the Classification & Analysis of Children’s Books (Ages 1–10)  
@@ -126,6 +132,8 @@ If a book violates any safety or age constraints, it is excluded regardless of o
 Validation rules are absolute and never relaxed.
 
 ---
+
+<a id="deterministic-reasoning-chain"></a>
 
 ## 8. Versioning Policy
 
