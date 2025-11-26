@@ -40,7 +40,10 @@
     "books.book_type → book_types",
     "intents.required_skills → skills",
     "query_clusters.intent_ids → intents",
-    "matching.references → ages, skills, books, value_profile_rules"
+    "matching.references → ages",
+    "matching.references → skills",
+    "matching.references → books",
+    "matching.references → value_profile_rules"
   ],
 
   "global_rules": [
