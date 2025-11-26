@@ -6,21 +6,26 @@ const redis = new Redis({
   token: process.env.UPSTASH_REDIS_REST_TOKEN
 });
 
-export async function middleware(req) {
-  const url = req.nextUrl.pathname;
+export async function middleware(request) {
+  try {
+    const url = request.nextUrl.pathname;
+    const ua = request.headers.get("user-agent") || "unknown";
 
-  if (url.startsWith("/public/api/")) {
-    const ua = req.headers.get("user-agent") || "unknown";
-
-    const item = {
-      time: new Date().toISOString(),
-      file: url.replace("/public/api/", ""),
-      ua
+    const entry = {
+      time: Date.now(),
+      file: url,
+      ua: ua
     };
 
-    await redis.lpush("ai_monitor_logs", JSON.stringify(item));
-    await redis.ltrim("ai_monitor_logs", 0, 500);
+    await redis.lpush("rd_logs", JSON.stringify(entry));
+    await redis.ltrim("rd_logs", 0, 999);
+  } catch (err) {
+    console.error("Middleware error:", err);
   }
 
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: ["/(.*)"]
+};
