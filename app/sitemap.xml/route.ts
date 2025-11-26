@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const baseUrl = 'https://ricardo-demi-books.vercel.app'
+  const baseUrl = 'https://www.ricardo-demi.com'
 
   const staticPages = [
     '',
