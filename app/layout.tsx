@@ -30,11 +30,6 @@ export default function RootLayout({
 
         <meta
           name="google-site-verification"
-          content="Rt1gDbfw5skme01n3RiGPBFYEXhr5FmpaBruJpTE6gY"
-        />
-
-        <meta
-          name="google-site-verification"
           content="D_yiTSM0zWdBs-hpefX9cotH2U5FSStgcb1W-XOwTgw"
         />
 
@@ -113,7 +108,7 @@ export default function RootLayout({
           </a>
 
           <a href="/es" style={{ color: "#333", textDecoration: "none" }}>
-            Español&nbsp;&nbsp;🇪🇸
+            Español
           </a>
         </nav>
 
