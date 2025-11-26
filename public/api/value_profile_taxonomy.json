@@ -48,8 +48,7 @@
       "multi_scene_expanded",
       "multi_scene_complex",
       "full_bilingual_parallel",
-      "procedural",
-      "expanded_spanish_story"
+      "procedural"
     ],
 
     "linguistic_load": [
