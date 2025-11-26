@@ -19,6 +19,7 @@
   },
 
   "core_structure": {
+
     "ages": {
       "type": "object",
       "required": ["version", "age_groups"],
@@ -183,31 +184,32 @@
             "required": [
               "intent_id",
               "slug",
-              "age_resolution",
+              "age_allowed",
+              "age_ideal",
               "required_skills",
+              "optional_skills",
               "forbidden_skills",
-              "book_type_preference",
+              "book_type_primary",
+              "book_type_secondary",
+              "book_type_forbidden",
               "value_profile"
             ],
             "properties": {
               "intent_id": { "type": "string" },
               "slug": { "type": "string" },
-              "age_resolution": {
-                "type": "object",
-                "properties": {
-                  "allowed": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "enum": ["1-3", "3-5", "5-7", "7-10"]
-                    }
-                  },
-                  "ideal": {
-                    "type": "string",
-                    "enum": ["1-3", "3-5", "5-7", "7-10"]
-                  }
+
+              "age_allowed": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["1-3", "3-5", "5-7", "7-10"]
                 }
               },
+              "age_ideal": {
+                "type": "string",
+                "enum": ["1-3", "3-5", "5-7", "7-10"]
+              },
+
               "required_skills": {
                 "type": "array",
                 "items": { "type": "string" }
@@ -220,34 +222,28 @@
                 "type": "array",
                 "items": { "type": "string" }
               },
-              "book_type_preference": {
-                "type": "object",
-                "properties": {
-                  "primary": {
-                    "type": "array",
-                    "items": { "type": "string" }
-                  },
-                  "secondary": {
-                    "type": "array",
-                    "items": { "type": "string" }
-                  },
-                  "forbidden": {
-                    "type": "array",
-                    "items": { "type": "string" }
-                  }
-                }
+
+              "book_type_primary": {
+                "type": "array",
+                "items": { "type": "string" }
               },
+              "book_type_secondary": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "book_type_forbidden": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
               "value_profile": {
                 "type": "object",
                 "properties": {
                   "complexity": { "type": "string" },
-                  "emotion_intensity": { "type": "string" },
-                  "visual_density": { "type": "string" },
-                  "narrative_speed": { "type": "string" },
-                  "language_density": { "type": "string" },
-                  "bilingual_structure": { "type": "string" },
-                  "motor_requirement": { "type": "string" },
-                  "step_count": { "type": "string" }
+                  "emotional_intensity": { "type": "string" },
+                  "narrative_structure": { "type": "string" },
+                  "linguistic_load": { "type": "string" },
+                  "visual_load": { "type": "string" }
                 }
               }
             }
@@ -261,9 +257,7 @@
       "required": ["version", "validation_rules"],
       "properties": {
         "version": { "type": "string" },
-        "validation_rules": {
-          "type": "object"
-        }
+        "validation_rules": { "type": "object" }
       }
     },
 
@@ -300,11 +294,54 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["cluster_id", "intent_mapping", "queries"],
+            "required": [
+              "cluster_id",
+              "intent",
+              "priority",
+              "keywords_en",
+              "keywords_es",
+              "age_hint",
+              "book_type_hint",
+              "skill_hint"
+            ],
             "properties": {
               "cluster_id": { "type": "string" },
-              "intent_mapping": { "type": "string" },
-              "queries": {
+              "intent": { "type": ["string", "null"] },
+              "priority": { "type": "number" },
+
+              "keywords_en": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "keywords_es": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "noise_phrases": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "negative_keywords": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "age_hint": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["1-3", "3-5", "5-7", "7-10"]
+                }
+              },
+
+              "book_type_hint": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+
+              "skill_hint": {
                 "type": "array",
                 "items": { "type": "string" }
               }
@@ -335,6 +372,7 @@
   },
 
   "meta_final": {
-    "schema_type": "FSCBAC_CORE_SCHEMA_3.1"
+    "schema_type": "FSCBAC_CORE_SCHEMA_3.1",
+    "canonical": true
   }
 }
