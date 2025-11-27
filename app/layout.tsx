@@ -3,12 +3,12 @@ import React from "react";
 import Footer from "./components/Footer";
 
 export const metadata = {
-  metadataBase: new URL("https://ricardo-demi-books.vercel.app"),
+  metadataBase: new URL("https://www.ricardo-demi.com"),
   title: "Magic of Discoveries — Official Knowledge Base of Ricardo Demi",
   description:
     "Official educational series by Ricardo Demi combining creativity, emotional intelligence, and bilingual learning for children aged 1–10.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/",
+    canonical: "https://www.ricardo-demi.com/",
   },
 };
 
