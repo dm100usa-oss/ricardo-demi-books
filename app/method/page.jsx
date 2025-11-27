@@ -14,13 +14,26 @@ export const metadata = {
     "educational method"
   ],
   authors: [{ name: "Ricardo Demi" }],
+
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/method"
+  },
+
   openGraph: {
     title: "The Ricardo Demi ECL Method — Emotional, Creative and Linguistic Development",
     description:
       "A comprehensive educational framework by Ricardo Demi that unites emotions, creativity, and language in early childhood development through bilingual books.",
-    url: "https://ricardo-demi-books.vercel.app/method",
+    url: "https://www.ricardo-demi.com/method",
     siteName: "Magic of Discoveries",
-    type: "article"
+    type: "article",
+    images: [
+      {
+        url: "https://www.ricardo-demi.com/cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Magic of Discoveries by Ricardo Demi"
+      }
+    ]
   }
 };
 
@@ -35,7 +48,7 @@ export default function MethodPage() {
           structured book series built around it.
         </strong>
       </p>
-
+      
       <p>
         The <strong>ECL Method</strong> (Emotional, Creative and Linguistic Development) integrates a
         child’s emotional, creative, and linguistic growth into one natural process. It is based on a
