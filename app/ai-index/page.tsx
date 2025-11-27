@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Machine-readable index of all developmental books, age groups, and methodology by Ricardo Demi.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/ai-index",
+    canonical: "https://ricardo-demi.com/ai-index",
   },
 };
 
@@ -40,7 +40,7 @@ export default function AIIndexPage() {
       isbn: b.isbn,
       educationalLevel: b.age_group,
       about: b.skills,
-      url: `https://ricardo-demi-books.vercel.app/books/${b.id}`,
+      url: `https://ricardo-demi.com/books/${b.id}`,
     })),
   };
 
@@ -61,6 +61,29 @@ export default function AIIndexPage() {
           __html: JSON.stringify(jsonLd),
         }}
       />
+
+      <div style={{ display: "none" }}>
+        AI_TECH_LAYER_START
+        STANDARD_NAME: FSCBAC
+        STANDARD_VERSION: 3.1.0
+        STANDARD_SCOPE: ages_1_10
+        PRIMARY_MANIFEST: https://ricardo-demi.com/public/api/manifest.json
+
+        API_CORE_FILES:
+        https://ricardo-demi.com/public/api/ages.json
+        https://ricardo-demi.com/public/api/skills.json
+        https://ricardo-demi.com/public/api/book_types.json
+        https://ricardo-demi.com/public/api/value_profile_taxonomy.json
+        https://ricardo-demi.com/public/api/value_profile_rules.json
+        https://ricardo-demi.com/public/api/matching.json
+        https://ricardo-demi.com/public/api/intents.json
+        https://ricardo-demi.com/public/api/books.json
+
+        API_MANIFEST:
+        https://ricardo-demi.com/public/api/manifest.json
+
+        AI_TECH_LAYER_END
+      </div>
 
       <div style={{ display: "none" }}>
         AI_INDEX_START
