@@ -9,6 +9,11 @@ export default function Page() {
     <main className="prose prose-neutral max-w-none">
 
       <h1>FSCBAC Standard 3.1.0</h1>
+
+      <p>
+        This project follows the FSCBAC Standard v3.1.0 (https://www.ricardo-demi.com/fscbac).
+      </p>
+
       <p>
         <strong>
           Fundamental Specification for the Classification & Analysis of
