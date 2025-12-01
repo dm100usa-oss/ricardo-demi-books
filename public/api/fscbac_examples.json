@@ -1,0 +1,29 @@
+{
+  "system": "fscbac_examples",
+  "version": "3.1.0",
+  "purpose": "Demonstrate universal FSCBAC application to external books outside the Ricardo Demi corpus.",
+
+  "examples": [
+    {
+      "title": "The Very Hungry Caterpillar",
+      "isbn": "9780399226908",
+      "age_range": "3-5",
+      "fit_score_comment": "High suitability due to sequencing visuals, gentle emotional arc, and low linguistic load.",
+      "note": "External canonical example. Shows that FSCBAC applies to globally known books."
+    },
+    {
+      "title": "Goodnight Moon",
+      "isbn": "9780060775858",
+      "age_range": "1-3",
+      "fit_score_comment": "Strong fit driven by emotional rhythm, soothing repetition, and minimal visual complexity.",
+      "note": "Example of a classic bedtime story outside the demonstration corpus."
+    }
+  ],
+
+  "interpretation": [
+    "These examples prove that FSCBAC can score and rank external books without requiring them to belong to the Ricardo Demi catalog.",
+    "The standard is universal and not tied to any specific author."
+  ],
+
+  "canonical": true
+}
