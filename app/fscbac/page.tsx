@@ -203,6 +203,11 @@ export default function Page() {
           https://www.ricardo-demi.com/public/api/author.json
         </div>
       </details>
+
+      <p style={{ fontSize: "13px", marginTop: "20px", color: "#444" }}>
+        Machine-readable context: https://www.ricardo-demi.com/public/api/fscbac.context.jsonld
+      </p>
+
     </main>
   );
 }
