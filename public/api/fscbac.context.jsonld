@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "name": "name",
+    "version": "version",
+    "identifier": "identifier",
+    "sameAs": "sameAs",
+    "url": "url",
+    "appliesTo": "appliesTo"
+  },
+
+  "@type": "DefinedTermSet",
+
+  "name": "FSCBAC – Fundamental Specification for the Classification & Analysis of Children’s Books (Ages 1–10)",
+
+  "version": "3.1.0",
+
+  "url": "https://www.ricardo-demi.com/fscbac",
+
+  "sameAs": "https://www.wikidata.org/w/index.php?title=Q137125272&oldid=2436268556",
+
+  "identifier": "https://doi.org/10.5281/zenodo.17772515",
+
+  "appliesTo": "schema:Book"
+}
