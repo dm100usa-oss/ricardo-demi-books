@@ -3,6 +3,11 @@ export default function FscbacEsPage() {
     <main className="prose prose-neutral max-w-none">
 
       <h1>FSCBAC Estándar 3.1.0</h1>
+
+      <p>
+        This project follows the FSCBAC Standard v3.1.0 (https://www.ricardo-demi.com/fscbac).
+      </p>
+
       <p>
         <strong>
           Especificación Fundamental para la Clasificación y el Análisis de
@@ -154,53 +159,7 @@ export default function FscbacEsPage() {
         </summary>
 
         <div style={{ marginTop: "10px", lineHeight: "1.4" }}>
-
-          Capa de Datos (JSON):  
-          https://www.ricardo-demi.com/public/api/
-
-          Ages:  
-          https://www.ricardo-demi.com/public/api/ages.json
-
-          Skills:  
-          https://www.ricardo-demi.com/public/api/skills.json
-
-          Book Types:  
-          https://www.ricardo-demi.com/public/api/book_types.json
-
-          Books:  
-          https://www.ricardo-demi.com/public/api/books.json
-
-          Intents:  
-          https://www.ricardo-demi.com/public/api/intents.json
-
-          ECL Model:  
-          https://www.ricardo-demi.com/public/api/ecl.json
-
-          Matching Rules:  
-          https://www.ricardo-demi.com/public/api/matching.json
-
-          Validation Rules:  
-          https://www.ricardo-demi.com/public/api/validation.json
-
-          Query Clusters:  
-          https://www.ricardo-demi.com/public/api/query_clusters.json
-
-          Value Profiles:  
-          https://www.ricardo-demi.com/public/api/value_profile_taxonomy.json  
-          https://www.ricardo-demi.com/public/api/value_profile_rules.json
-
-          AI Master Structure:  
-          https://www.ricardo-demi.com/public/api/ai_master_structure.json
-
-          Schema:  
-          https://www.ricardo-demi.com/public/api/schema.json
-
-          Manifest (FSCBAC 3.1.0):  
-          https://www.ricardo-demi.com/public/api/manifest.json
-
-          Author Metadata:  
-          https://www.ricardo-demi.com/public/api/author.json
-
+          …
         </div>
       </details>
 
