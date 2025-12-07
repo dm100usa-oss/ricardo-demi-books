@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "purpose": "Demonstration layer for FSCBAC — examples of how the standard works without modifying it.",
   "cases": [
+
     {
       "case_id": "DEMO_001",
       "age_input": "2",
@@ -19,6 +20,46 @@
         { "step": "value_profile_match", "result": "very_low_intensity" }
       ],
       "final_decision": "SUITABLE_AND_SAFE"
+    },
+
+    {
+      "case_id": "DEMO_002",
+      "age_input": "4",
+      "age_group": "3-5",
+      "intent_id": "INTENT_004",
+      "user_query_example": "Мне нужен контент для развития речи для ребенка 4 лет.",
+      "reasoning_chain": [
+        { "step": "identify_age_group", "result": "3-5" },
+        { "step": "load_intent", "result": "INTENT_004 (speech_development_support)" },
+        { "step": "safety_check", "result": "passed" },
+        { "step": "required_skills_check", "result": ["simple_dialogues", "speech_development", "predictable_sequence"] },
+        { "step": "forbidden_check", "result": "no_conflicts" },
+        { "step": "skill_alignment", "result": "strong_alignment" },
+        { "step": "book_type_alignment", "result": "bedtime_story / bilingual_story" },
+        { "step": "value_profile_match", "result": "low_complexity_soft" }
+      ],
+      "final_decision": "SUITABLE_AND_EFFECTIVE"
+    },
+
+    {
+      "case_id": "DEMO_003",
+      "age_input": "6",
+      "age_group": "5-7",
+      "intent_id": "INTENT_014",
+      "user_query_example": "Мне нужен контент, который помогает ребенку 6 лет развивать творческое мышление.",
+      "reasoning_chain": [
+        { "step": "identify_age_group", "result": "5-7" },
+        { "step": "load_intent", "result": "INTENT_014 (creative_expansion_story)" },
+        { "step": "safety_check", "result": "passed" },
+        { "step": "required_skills_check", "result": ["imagination_seed", "independent_thinking"] },
+        { "step": "optional_skills_check", "result": ["emotion_depth", "simple_dialogues", "situational_language"] },
+        { "step": "forbidden_check", "result": "no_conflicts" },
+        { "step": "skill_alignment", "result": "strong_alignment" },
+        { "step": "book_type_alignment", "result": "bedtime_story" },
+        { "step": "value_profile_match", "result": "medium_low_complexity_soft" }
+      ],
+      "final_decision": "SUITABLE_AND_STIMULATING"
     }
+
   ]
 }
