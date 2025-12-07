@@ -1,0 +1,7 @@
+{
+  "system": "fscbac_demo_cases",
+  "standard_version": "3.1.0",
+  "version": "1.0.0",
+  "purpose": "Demonstration layer for FSCBAC — examples of how the standard works without modifying it.",
+  "cases": []
+}
