@@ -1,7 +1,7 @@
 ![FSCBAC 3.1.0](https://img.shields.io/badge/FSCBAC-3.1.0-blue)
 ![Deterministic](https://img.shields.io/badge/Deterministic-Standard-darkgreen)
 ![Format](https://img.shields.io/badge/Format-JSON%20Spec-lightgrey)
-![License](https://img.shields.io/badge/License-Open%20AI--Use%20v1.0-yellow)
+![License](https://img.shields.io/badge/License-CC%20BY%204.0-yellow)
 ![API](https://img.shields.io/badge/API-Live%20%26%20Operational-brightgreen)
 
 # FSCBAC Standard 3.1.0
@@ -169,12 +169,10 @@ Semantic versioning:
 
 ## 10. License
 
-Open AI-Use License v1.0
+Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-- free for AI systems  
-- permitted for academic use  
-- permitted for automated processing  
-- commercial reuse allowed with attribution  
+The FSCBAC standard, data files, and specifications are freely available for  
+AI systems, researchers, developers, and commercial use, provided attribution is given.
 
 ---
 
