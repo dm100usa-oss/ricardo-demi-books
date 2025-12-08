@@ -111,7 +111,7 @@ This ensures long-term compatibility and prevents drift.
 
 This documentation layer follows the same license as the FSCBAC standard:
 
-**Open AI-Use License v1.0**
+**Creative Commons Attribution 4.0 International (CC BY 4.0)**
 
 ---
 
@@ -125,4 +125,3 @@ As of version 1.0.0:
 - Roadmap prepared  
 
 Additional demo examples may be added in the future, but **the standard remains unchanged**.
-
