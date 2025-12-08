@@ -1,0 +1,36 @@
+{
+  "system": "fscbac_demo_api_example",
+  "standard_version": "3.1.0",
+  "version": "1.0.0",
+  "purpose": "Demonstration of how an external service could request and receive structured output from FSCBAC. Not an actual API implementation.",
+
+  "example_request": {
+    "age": 2,
+    "intent_slug": "calm_before_sleep"
+  },
+
+  "example_internal_process": [
+    { "step": "load_master_structure", "result": "OK" },
+    { "step": "validate_parameters", "result": "OK" },
+    { "step": "identify_age_group", "result": "1-3" },
+    { "step": "load_intent", "result": "INTENT_001" },
+    { "step": "run_safety_checks", "result": "passed" },
+    { "step": "compute_skill_alignment", "result": "ideal" },
+    { "step": "select_book_types", "result": ["bedtime_story"] },
+    { "step": "assemble_value_profile", "result": "very_low_intensity" }
+  ],
+
+  "example_response": {
+    "age_group": "1-3",
+    "intent_id": "INTENT_001",
+    "compatibility": "IDEAL",
+    "recommended_book_types": ["bedtime_story"],
+    "value_profile": {
+      "complexity": "very_low",
+      "emotional_intensity": "very_low",
+      "narrative_structure": "simple_sequence",
+      "linguistic_load": "minimal",
+      "visual_load": "low_detail"
+    }
+  }
+}
