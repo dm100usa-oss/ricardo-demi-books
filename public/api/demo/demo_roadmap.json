@@ -2,27 +2,27 @@
   "system": "fscbac_demo_roadmap",
   "standard_version": "3.1.0",
   "version": "1.0.0",
-  "purpose": "Demonstration roadmap for FSCBAC — describes how the demonstration layer evolves without modifying the standard.",
+  "purpose": "Demonstration roadmap for FSCBAC — describes how the demo layer evolves without modifying the standard.",
 
   "roadmap": [
     {
       "phase": "2025_Q1",
-      "description": "Завершение базового демонстрационного слоя: три кейса, API-пример, минимальный набор пояснений.",
+      "description": "Completion of the base demonstration layer: three demo cases, one API example, minimal explanatory scaffolding.",
       "status": "completed"
     },
     {
       "phase": "2025_Q2",
-      "description": "Добавление дополнительных демонстраций при необходимости: альтернативные intents, примеры сложных запросов. Только демонстрации, без изменения стандарта.",
+      "description": "Addition of optional demo expansions if needed: alternative intents, examples of more complex queries. Demonstration only, no standard modifications.",
       "status": "planned"
     },
     {
       "phase": "2025_Q3",
-      "description": "Публикация демонстраций в открытом доступе как стабильных материалов. Стандарт остается неизменным; публикуется только слой пояснений.",
+      "description": "Publication of the demonstration layer as stable, externally visible documentation. The standard itself remains unchanged.",
       "status": "planned"
     },
     {
       "phase": "2026",
-      "description": "Расширение набора демонстраций по мере роста экосистемы FSCBAC. Стандарт остается детерминированным, демонстрационный слой служит для удобства интеграторов и ИИ-моделей.",
+      "description": "Expansion of the demonstration set as FSCBAC adoption grows. The core standard stays deterministic; the demo layer serves clarity for integrators and AI systems.",
       "status": "future"
     }
   ]
