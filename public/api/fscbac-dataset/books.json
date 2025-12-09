@@ -1,0 +1,427 @@
+{
+  "system": "fscbac_book_metadata_dataset",
+  "version": "1.0.0",
+  "standard": "FSCBAC 3.1.0",
+  "purpose": "Autonomous metadata dataset aligned with the FSCBAC standard. Pure book-level data without modifying or extending the core specification.",
+  "books": [
+
+    {
+      "canonical_id": "where-are-you-going-little-max-bedtime-story-1-3-en",
+      "title": "Where Are You Going, Little Max? The Magic of Discoveries for Kids: For Toddlers 1–3 years (US Edition)",
+      "isbn": "978-1963328431",
+      "languages": ["EN"],
+      "type": "bedtime_story",
+      "age_group": "1-3",
+      "skills": ["soft_story", "predictable_sequence", "sensory_safety"],
+      "translated_version": "a-donde-vas-pequeno-max-bedtime-story-1-3-es",
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "predictable",
+        "linguistic_load": "minimal",
+        "visual_load": "one_object_per_page",
+        "purpose": "early_bedtime_routine",
+        "recommended_for": "toddlers_beginner_story"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328434"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "a-donde-vas-pequeno-max-bedtime-story-1-3-es",
+      "title": "¿A dónde vas, Pequeño Max? La magia de los descubrimientos para los niños: Para Bebés de 1 a 3 años (Spanish Edition)",
+      "isbn": "978-1963328462",
+      "languages": ["ES"],
+      "type": "bedtime_story",
+      "age_group": "1-3",
+      "skills": ["soft_story", "predictable_sequence", "sensory_safety"],
+      "translated_version": "where-are-you-going-little-max-bedtime-story-1-3-en",
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "predictable",
+        "linguistic_load": "minimal",
+        "visual_load": "one_object_per_page",
+        "purpose": "spanish_bedtime",
+        "recommended_for": "toddlers_spanish_speakers"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328469"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "first-coloring-book-little-max-coloring-book-1-3-en",
+      "title": "First Coloring Book for Toddlers Ages 1–3 by Little Max: 111 Easy, Big, Cute and Cozy Drawings. The Magic of Creativity for Kids (US Edition)",
+      "isbn": "978-1963328561",
+      "languages": ["EN"],
+      "type": "coloring",
+      "age_group": "1-3",
+      "skills": ["motor_basic", "one_object_per_page"],
+      "translated_version": "el-primer-libro-de-colorear-pequeno-max-coloring-book-1-3-es",
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "one_object_per_page",
+        "purpose": "motor_skill_start",
+        "recommended_for": "toddlers_first_coloring"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328566"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "el-primer-libro-de-colorear-pequeno-max-coloring-book-1-3-es",
+      "title": "El Primer Libro de Colorear para Bebés de 1–3 Años de Pequeño Max: 111 Dibujos Simples, Grandes, Adorables y Acogedores. La Magia de la Creatividad para Niños (Spanish Edition)",
+      "isbn": "978-1963328592",
+      "languages": ["ES"],
+      "type": "coloring",
+      "age_group": "1-3",
+      "skills": ["motor_basic", "one_object_per_page"],
+      "translated_version": "first-coloring-book-little-max-coloring-book-1-3-en",
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "one_object_per_page",
+        "purpose": "early_motor_control",
+        "recommended_for": "spanish_toddlers_coloring_start"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328590"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "where-are-you-going-little-max-bilingual-1-3-bi",
+      "title": "Where Are You Going, Little Max? / ¿A dónde vas, Pequeño Max? (Bilingual Edition)",
+      "isbn": "978-1963328875",
+      "languages": ["EN", "ES"],
+      "type": "bilingual_intro",
+      "age_group": "1-3",
+      "skills": ["predictable_parallel_lines", "speech_development"],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "parallel_en_es",
+        "linguistic_load": "minimal",
+        "visual_load": "one_object_per_page",
+        "purpose": "bilingual_foundation",
+        "recommended_for": "toddlers_first_bilingual_book"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328876"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "where-have-you-been-little-max-bedtime-story-3-5-en",
+      "title": "Where Have You Been, Little Max? Bedtime Stories for Kids (US Edition)",
+      "isbn": "978-1963328585",
+      "languages": ["EN"],
+      "type": "bedtime_story",
+      "age_group": "3-5",
+      "skills": ["imagination_seed", "simple_dialogues"],
+      "translated_version": "donde-has-estado-pequeno-max-bedtime-story-3-5-es",
+      "value_profile": {
+        "complexity": "low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "5_to_7_min_story",
+        "linguistic_load": "short_dialogues",
+        "visual_load": "moderate_detail",
+        "purpose": "imagination_growth",
+        "recommended_for": "preschool_evening_reading"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328582"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "donde-has-estado-pequeno-max-bedtime-story-3-5-es",
+      "title": "¿Dónde Has Estado, Pequeño Max? Cuentos para Dormir: Para Niños (Spanish Edition)",
+      "isbn": "978-1963328684",
+      "languages": ["ES"],
+      "type": "bedtime_story",
+      "age_group": "3-5",
+      "skills": ["imagination_seed"],
+      "translated_version": "where-have-you-been-little-max-bedtime-story-3-5-en",
+      "value_profile": {
+        "complexity": "low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "short_dialogue_story",
+        "linguistic_load": "simple_spanish",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_preschool_bedtime",
+        "recommended_for": "spanish_preschool_imagination"
+      },
+      "source_links": ["https://www.amazon.com/dp/196332868X"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "first-coloring-book-amazing-animals-coloring-book-3-5-en",
+      "title": "First Coloring Book for Toddlers Ages 1–3. 111 Amazing and Cute Animals, Fairy tale Characters, Flowers, Foods, Gifts and other Themes. Magic of Creativity for Kids",
+      "isbn": "978-1963328271",
+      "languages": ["EN"],
+      "type": "coloring",
+      "age_group": "3-5",
+      "skills": ["attention_growth", "moderate_detail"],
+      "translated_version": "el-primer-libro-de-colorear-sorprendentes-animales-coloring-book-3-5-es",
+      "value_profile": {
+        "complexity": "low",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "motor_control_growth",
+        "recommended_for": "preschool_coloring"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328272"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "el-primer-libro-de-colorear-sorprendentes-animales-coloring-book-3-5-es",
+      "title": "El Primer Libro de Colorear para Bebés de 1–3 Años: 111 Sorprendentes y Adorables Animales, Personajes de Cuentos, Flores, Alimentos, Regalos y Otros Temas. La Magia de la Creatividad для Niños",
+      "isbn": "978-1963328202",
+      "languages": ["ES"],
+      "type": "coloring",
+      "age_group": "3-5",
+      "skills": ["attention_growth", "moderate_detail"],
+      "translated_version": "first-coloring-book-amazing-animals-coloring-book-3-5-en",
+      "value_profile": {
+        "complexity": "low",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_motor_growth",
+        "recommended_for": "spanish_preschool_creativity"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328205"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "the-adventures-of-lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
+      "title": "The Adventures of Lucky Rocky. The Magic of Friendship: Short Stories for Kids Ages 3+ (US Edition, Illustrated and Colored)",
+      "isbn": "978-1963328011",
+      "languages": ["EN"],
+      "type": "bedtime_story",
+      "age_group": "5-7",
+      "skills": ["early_logic", "simple_dialogues", "emotion_depth"],
+      "translated_version": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-amistad-bedtime-story-5-7-es",
+      "value_profile": {
+        "complexity": "medium_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "multi_scene_light",
+        "linguistic_load": "dialogue_rich",
+        "visual_load": "moderate_detail",
+        "purpose": "early_emotional_reasoning",
+        "recommended_for": "kids_early_logic_growth"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328019"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-amistad-bedtime-story-5-7-es",
+      "title": "Las Aventuras de Rocky, el Afortunado. La Magia de la Amistad: Cuentos en español para niños de 3+ años",
+      "isbn": "978-1963328042",
+      "languages": ["ES"],
+      "type": "bedtime_story",
+      "age_group": "5-7",
+      "skills": ["early_logic", "emotion_depth"],
+      "translated_version": "the-adventures-of-lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
+      "value_profile": {
+        "complexity": "medium_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "multi_scene",
+        "linguistic_load": "moderate_spanish",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_emotional_growth",
+        "recommended_for": "spanish_kids_logic"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328043"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "take-a-break-cute-animals-coloring-book-5-7-en",
+      "title": "Take a Break: Easy Coloring Book for Adults and Kids, Cute Animals. 50 Cute Designs",
+      "isbn": "978-1963328165",
+      "languages": ["EN"],
+      "type": "coloring",
+      "age_group": "5-7",
+      "skills": ["concentration", "visual_planning"],
+      "translated_version": "tomate-un-descanso-belleza-del-oceano-coloring-book-5-7-es",
+      "value_profile": {
+        "complexity": "medium",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "attention_and_motor_growth",
+        "recommended_for": "kids_intermediate_coloring"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328167"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "tomate-un-descanso-belleza-del-oceano-coloring-book-5-7-es",
+      "title": "Tómate un descanso: Libro de colorear fácil для adultos y niños, Serie Belleza del Océano",
+      "isbn": "978-1963328394",
+      "languages": ["ES"],
+      "type": "coloring",
+      "age_group": "5-7",
+      "skills": ["concentration", "visual_planning"],
+      "translated_version": "take-a-break-cute-animals-coloring-book-5-7-en",
+      "value_profile": {
+        "complexity": "medium",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_focus_growth",
+        "recommended_for": "spanish_kids_coloring"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328396"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "the-adventures-of-lucky-rocky-the-magic-of-kindness-bedtime-story-7-10-en",
+      "title": "The Adventures of Lucky Rocky. The Magic of Kindness: Short Stories for Kids Ages 3+ (US Edition, Illustrated and Colored)",
+      "isbn": "978-1963328691",
+      "languages": ["EN"],
+      "type": "bedtime_story",
+      "age_group": "7-10",
+      "skills": ["structured_reasoning", "advanced_emotion_depth", "moral_reasoning", "multi_scene_structure"],
+      "translated_version": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-бондad-bedtime-story-7-10-es",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "multi_scene_expanded",
+        "linguistic_load": "advanced_dialogue",
+        "visual_load": "moderate_detail",
+        "purpose": "moral_reasoning",
+        "recommended_for": "kids_advanced_emotional_logic"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328698"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-bondad-bedtime-story-7-10-es",
+      "title": "Las Aventuras de Rocky, el Afortunado. La Magia de la Bondad: Cuentos en español для niños de 3+ años",
+      "isbn": "978-1963328622",
+      "languages": ["ES"],
+      "type": "bedtime_story",
+      "age_group": "7-10",
+      "skills": ["structured_reasoning", "advanced_emotion_depth", "moral_reasoning"],
+      "translated_version": "the-adventures-of-lucky-rocky-the-magic-of-kindness-bedtime-story-7-10-en",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "expanded_spanish_story",
+        "linguistic_load": "advanced_spanish",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_moral_reasoning",
+        "recommended_for": "spanish_advanced_readers"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328620"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "how-to-draw-111-amazing-and-cute-animals-step-by-step-drawing-7-10-en",
+      "title": "How to Draw 111 Amazing and Cute Animals, Fairy tale Characters, Flowers, Foods, Gifts and other Themes. The Magic of Creativity for Kids: Easy Step by Step",
+      "isbn": "978-1963328141",
+      "languages": ["EN"],
+      "type": "step_by_step_drawing",
+      "age_group": "7-10",
+      "skills": ["step_by_step_logic", "independent_drawing", "long_focus"],
+      "translated_version": "como-dibujar-111-sorprendentes-y-adorables-animales-step-by-step-drawing-7-10-es",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "none",
+        "narrative_structure": "procedural",
+        "linguistic_load": "minimal",
+        "visual_load": "step_by_step",
+        "purpose": "drawing_mastery",
+        "recommended_for": "kids_art_progression"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328140"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "como-dibujar-111-sorprendentes-y-adorables-animales-step-by-step-drawing-7-10-es",
+      "title": "Cómo dibujar 111 Sorprendentes y Adorables Animales, Personajes de Cuentos, Flores, Alimentos, Regalos y Otros Temas: Fácilmente Paso a Paso",
+      "isbn": "978-1963328172",
+      "languages": ["ES"],
+      "type": "step_by_step_drawing",
+      "age_group": "7-10",
+      "skills": ["step_by_step_logic", "independent_drawing", "long_focus"],
+      "translated_version": "how-to-draw-111-amazing-and-cute-animals-step-by-step-drawing-7-10-en",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "none",
+        "narrative_structure": "procedural",
+        "linguistic_load": "minimal_spanish",
+        "visual_load": "step_by_step",
+        "purpose": "spanish_drawing_mastery",
+        "recommended_for": "spanish_young_artists"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328175"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "the-adventures-of-lucky-rocky-two-in-one-edition-bilingual-transition-7-10-en",
+      "title": "The Adventures of Lucky Rocky: Two in One Edition. Short Stories for Kids Ages 3+ (US Edition, Illustrated and Colored)",
+      "isbn": "978-1963328981",
+      "languages": ["EN"],
+      "type": "two_in_one",
+      "age_group": "7-10",
+      "skills": ["full_paragraph_bilingual", "meaning_alignment", "complex_vocabulary"],
+      "translated_version": "las-aventuras-de-rocky-el-afortunado-edicion-dos-en-uno-bilingual-transition-7-10-es",
+      "value_profile": {
+        "complexity": "high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "full_bilingual_parallel",
+        "linguistic_load": "advanced_dual_language",
+        "visual_load": "moderate_detail",
+        "purpose": "bilingual_comprehension_depth",
+        "recommended_for": "advanced_bilingual_kids"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328981"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "las-aventuras-de-rocky-el-afortunado-edicion-dos-en-uno-bilingual-transition-7-10-es",
+      "title": "Las Aventuras de Rocky, el Afortunado: Edición Dos en Uno (Spanish Edition, Illustrated and Colored)",
+      "isbn": "978-1963328004",
+      "languages": ["ES"],
+      "type": "two_in_one",
+      "age_group": "7-10",
+      "skills": ["full_paragraph_bilingual", "meaning_alignment", "complex_vocabulary"],
+      "translated_version": "the-adventures-of-lucky-rocky-two-in-one-edition-bilingual-transition-7-10-en",
+      "value_profile": {
+        "complexity": "high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "full_bilingual_parallel",
+        "linguistic_load": "advanced_spanish",
+        "visual_load": "moderate_detail",
+        "purpose": "bilingual_comprehension_depth",
+        "recommended_for": "spanish_advanced_bilingual_kids"
+      },
+      "source_links": ["https://www.amazon.com/dp/B0DD6M59PH"],
+      "notes": ""
+    }
+
+  ]
+}
