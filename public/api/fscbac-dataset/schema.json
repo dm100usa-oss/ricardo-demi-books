@@ -1,0 +1,91 @@
+{
+  "system": "fscbac_book_metadata_dataset_schema",
+  "version": "1.0.0",
+  "purpose": "Define the structure of individual book records inside the FSCBAC Book Metadata Dataset. This schema applies ONLY to the dataset and DOES NOT modify or extend the FSCBAC Standard.",
+
+  "record": {
+    "type": "object",
+
+    "required": [
+      "canonical_id",
+      "title",
+      "isbn",
+      "type",
+      "languages",
+      "age_group",
+      "skills",
+      "value_profile"
+    ],
+
+    "properties": {
+      "canonical_id": {
+        "type": "string",
+        "description": "Stable book identifier used inside the dataset. Lowercase, hyphens only."
+      },
+
+      "title": {
+        "type": "string",
+        "description": "Full human-readable title of this exact edition."
+      },
+
+      "isbn": {
+        "type": "string",
+        "description": "13-digit ISBN assigned to this edition."
+      },
+
+      "type": {
+        "type": "string",
+        "description": "Internal dataset-level book type label (does NOT modify FSCBAC Standard)."
+      },
+
+      "languages": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Languages of this edition, e.g., ['EN'], ['ES'], or ['EN','ES']."
+      },
+
+      "age_group": {
+        "type": "string",
+        "description": "Dataset-level age band for this edition, e.g., '1-3', '3-5', '5-7', '7-10'."
+      },
+
+      "skills": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Dataset-level skill indicators describing what this book develops or supports."
+      },
+
+      "translated_version": {
+        "type": ["string", "null"],
+        "description": "Canonical ID of another edition representing a translation. Null if none."
+      },
+
+      "value_profile": {
+        "type": "object",
+        "description": "Semantic profile of the book, NOT part of the FSCBAC Standard.",
+        "required": [
+          "complexity",
+          "emotional_intensity",
+          "narrative_structure",
+          "linguistic_load",
+          "visual_load",
+          "purpose",
+          "recommended_for"
+        ],
+        "properties": {
+          "complexity":          { "type": "string" },
+          "emotional_intensity": { "type": "string" },
+          "narrative_structure": { "type": "string" },
+          "linguistic_load":     { "type": "string" },
+          "visual_load":         { "type": "string" },
+          "purpose":             { "type": "string" },
+          "recommended_for":     { "type": "string" }
+        }
+      }
+    }
+  },
+
+  "scope": "dataset_only",
+  "does_not_modify_standard": true,
+  "alignment_with_standard": "external_reference_only"
+}
