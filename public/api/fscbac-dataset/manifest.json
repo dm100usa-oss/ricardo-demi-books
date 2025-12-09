@@ -1,0 +1,12 @@
+{
+  "dataset": "FSCBAC Book Metadata Dataset",
+  "version": "1.0.0",
+  "linked_standard": "FSCBAC 3.1.0",
+  "files": {
+    "data": "books.json",
+    "schema": "schema.json"
+  },
+  "scope": "dataset_only",
+  "does_not_modify_standard": true,
+  "description": "Machine-readable metadata dataset of children's books aligned with FSCBAC Standard 3.1.0. This dataset complements the standard but does not modify or extend it."
+}
