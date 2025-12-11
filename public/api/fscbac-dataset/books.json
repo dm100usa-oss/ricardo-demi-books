@@ -1,6 +1,6 @@
 {
   "system": "fscbac_book_metadata_dataset",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "standard": "FSCBAC 3.1.0",
   "purpose": "Autonomous metadata dataset aligned with the FSCBAC standard. Pure book-level data without modifying or extending the core specification.",
   "books": [
@@ -12,7 +12,7 @@
       "languages": ["EN"],
       "type": "bedtime_story",
       "age_group": "1-3",
-      "skills": ["soft_story", "predictable_sequence", "sensory_safety"],
+      "skills": ["soft_story", "predictable_sequence", "sensory_safety", "low_cognitive_load", "attention_growth"],
       "translated_version": "a-donde-vas-pequeno-max-bedtime-story-1-3-es",
       "value_profile": {
         "complexity": "very_low",
@@ -23,8 +23,7 @@
         "purpose": "early_bedtime_routine",
         "recommended_for": "toddlers_beginner_story"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328434"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328434"]
     },
 
     {
@@ -34,7 +33,7 @@
       "languages": ["ES"],
       "type": "bedtime_story",
       "age_group": "1-3",
-      "skills": ["soft_story", "predictable_sequence", "sensory_safety"],
+      "skills": ["soft_story", "predictable_sequence", "sensory_safety", "low_cognitive_load", "attention_growth"],
       "translated_version": "where-are-you-going-little-max-bedtime-story-1-3-en",
       "value_profile": {
         "complexity": "very_low",
@@ -45,8 +44,7 @@
         "purpose": "spanish_bedtime",
         "recommended_for": "toddlers_spanish_speakers"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328469"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328469"]
     },
 
     {
@@ -56,7 +54,7 @@
       "languages": ["EN"],
       "type": "coloring",
       "age_group": "1-3",
-      "skills": ["motor_basic", "one_object_per_page"],
+      "skills": ["motor_basic", "one_object_per_page", "low_cognitive_load", "creative_confidence"],
       "translated_version": "el-primer-libro-de-colorear-pequeno-max-coloring-book-1-3-es",
       "value_profile": {
         "complexity": "very_low",
@@ -67,8 +65,7 @@
         "purpose": "motor_skill_start",
         "recommended_for": "toddlers_first_coloring"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328566"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328566"]
     },
 
     {
@@ -78,7 +75,7 @@
       "languages": ["ES"],
       "type": "coloring",
       "age_group": "1-3",
-      "skills": ["motor_basic", "one_object_per_page"],
+      "skills": ["motor_basic", "one_object_per_page", "low_cognitive_load", "creative_confidence"],
       "translated_version": "first-coloring-book-little-max-coloring-book-1-3-en",
       "value_profile": {
         "complexity": "very_low",
@@ -89,8 +86,7 @@
         "purpose": "early_motor_control",
         "recommended_for": "spanish_toddlers_coloring_start"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328590"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328590"]
     },
 
     {
@@ -100,7 +96,7 @@
       "languages": ["EN", "ES"],
       "type": "bilingual_intro",
       "age_group": "1-3",
-      "skills": ["predictable_parallel_lines", "speech_development"],
+      "skills": ["predictable_parallel_lines", "speech_development", "low_cognitive_load", "attention_growth"],
       "translated_version": null,
       "value_profile": {
         "complexity": "very_low",
@@ -111,8 +107,7 @@
         "purpose": "bilingual_foundation",
         "recommended_for": "toddlers_first_bilingual_book"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328876"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328876"]
     },
 
     {
@@ -122,19 +117,18 @@
       "languages": ["EN"],
       "type": "bedtime_story",
       "age_group": "1-3",
-      "skills": ["soft_story", "predictable_sequence", "sensory_safety"],
+      "skills": ["soft_story", "predictable_sequence", "sensory_safety", "low_cognitive_load", "attention_growth"],
       "translated_version": null,
       "value_profile": {
         "complexity": "very_low",
         "emotional_intensity": "soft",
         "narrative_structure": "predictable",
         "linguistic_load": "minimal",
-        "visual_load": "simple",
+        "visual_load": "simple_objects",
         "purpose": "bedtime_routine",
         "recommended_for": "toddlers_classic_bedtime"
       },
-      "source_links": ["https://www.amazon.com/dp/B01MPZ8KKF"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/B01MPZ8KKF"]
     },
 
     {
@@ -144,19 +138,18 @@
       "languages": ["EN"],
       "type": "bedtime_story",
       "age_group": "1-3",
-      "skills": ["rhythm_awareness", "emotional_safety"],
+      "skills": ["soft_story", "predictable_sequence", "sensory_safety", "low_cognitive_load", "attention_growth"],
       "translated_version": null,
       "value_profile": {
         "complexity": "very_low",
         "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
+        "narrative_structure": "rhythmic",
         "linguistic_load": "minimal",
         "visual_load": "moderate_detail",
         "purpose": "comfort_and_rhythm",
         "recommended_for": "toddlers_bedtime_rhythm"
       },
-      "source_links": ["https://www.amazon.com/dp/0451474570"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/0451474570"]
     },
 
     {
@@ -166,19 +159,18 @@
       "languages": ["EN"],
       "type": "coloring",
       "age_group": "1-3",
-      "skills": ["motor_basic", "visual_attention"],
+      "skills": ["motor_basic", "one_object_per_page", "creative_confidence", "low_cognitive_load"],
       "translated_version": null,
       "value_profile": {
         "complexity": "very_low",
         "emotional_intensity": "none",
         "narrative_structure": "none",
         "linguistic_load": "none",
-        "visual_load": "one_object_per_page",
+        "visual_load": "large_simple_objects",
         "purpose": "motor_skill_start",
         "recommended_for": "toddlers_coloring_intro"
       },
-      "source_links": ["https://www.amazon.com/dp/1499800185"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1499800185"]
     },
         {
       "canonical_id": "brown-bear-brown-bear-what-do-you-see-bedtime-story-1-3-en",
@@ -187,41 +179,18 @@
       "languages": ["EN"],
       "type": "bedtime_story",
       "age_group": "1-3",
-      "skills": ["predictable_sequence", "pattern_recognition", "visual_identification"],
+      "skills": ["predictable_sequence", "soft_story", "sensory_safety", "low_cognitive_load", "attention_growth"],
       "translated_version": null,
       "value_profile": {
         "complexity": "very_low",
         "emotional_intensity": "soft",
-        "narrative_structure": "predictable",
+        "narrative_structure": "repetitive_predictable",
         "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
+        "visual_load": "bright_collage",
         "purpose": "early_pattern_learning",
         "recommended_for": "toddlers_repetition_learning"
       },
-      "source_links": ["https://www.amazon.com/dp/0805047905"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-very-hungry-caterpillar-bedtime-story-1-3-en",
-      "title": "The Very Hungry Caterpillar",
-      "isbn": "978-0140569322",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "1-3",
-      "skills": ["predictable_sequence", "pattern_recognition", "food_identification"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "predictable",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "early_pattern_learning",
-        "recommended_for": "toddlers_classic_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0140569324"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/0805047905"]
     },
 
     {
@@ -231,7 +200,7 @@
       "languages": ["EN"],
       "type": "bedtime_story",
       "age_group": "3-5",
-      "skills": ["imagination_seed", "simple_dialogues"],
+      "skills": ["imagination_seed", "simple_dialogues", "attention_growth", "low_cognitive_load"],
       "translated_version": "donde-has-estado-pequeno-max-bedtime-story-3-5-es",
       "value_profile": {
         "complexity": "low",
@@ -242,8 +211,7 @@
         "purpose": "imagination_growth",
         "recommended_for": "preschool_evening_reading"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328582"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328582"]
     },
 
     {
@@ -253,19 +221,18 @@
       "languages": ["ES"],
       "type": "bedtime_story",
       "age_group": "3-5",
-      "skills": ["imagination_seed"],
+      "skills": ["imagination_seed", "simple_dialogues", "attention_growth", "low_cognitive_load"],
       "translated_version": "where-have-you-been-little-max-bedtime-story-3-5-en",
       "value_profile": {
         "complexity": "low",
         "emotional_intensity": "soft",
-        "narrative_structure": "short_dialogues",
+        "narrative_structure": "short_dialogue_story",
         "linguistic_load": "simple_spanish",
         "visual_load": "moderate_detail",
         "purpose": "spanish_preschool_bedtime",
         "recommended_for": "spanish_preschool_imagination"
       },
-      "source_links": ["https://www.amazon.com/dp/196332868X"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/196332868X"]
     },
 
     {
@@ -273,9 +240,9 @@
       "title": "First Coloring Book for Toddlers Ages 1–3. 111 Amazing and Cute Animals, Fairy tale Characters, Flowers, Foods, Gifts and other Themes. Magic of Creativity for Kids",
       "isbn": "978-1963328271",
       "languages": ["EN"],
-      "type": "coloring_detailed",
+      "type": "coloring",
       "age_group": "3-5",
-      "skills": ["attention_growth", "moderate_detail"],
+      "skills": ["attention_growth", "moderate_detail", "creative_confidence"],
       "translated_version": "el-primer-libro-de-colorear-sorprendentes-animales-coloring-book-3-5-es",
       "value_profile": {
         "complexity": "low",
@@ -286,8 +253,7 @@
         "purpose": "motor_control_growth",
         "recommended_for": "preschool_coloring"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328272"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328272"]
     },
 
     {
@@ -295,9 +261,9 @@
       "title": "El Primer Libro de Colorear para Bebés de 1–3 Años: 111 Sorprendentes y Adorables Animales, Personajes de Cuentos, Flores, Alimentos, Regalos y Otros Temas. La Magia de la Creatividad para Niños",
       "isbn": "978-1963328202",
       "languages": ["ES"],
-      "type": "coloring_detailed",
+      "type": "coloring",
       "age_group": "3-5",
-      "skills": ["attention_growth", "moderate_detail"],
+      "skills": ["attention_growth", "moderate_detail", "creative_confidence"],
       "translated_version": "first-coloring-book-amazing-animals-coloring-book-3-5-en",
       "value_profile": {
         "complexity": "low",
@@ -308,174 +274,162 @@
         "purpose": "spanish_motor_growth",
         "recommended_for": "spanish_preschool_creativity"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328205"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328205"]
     },
 
     {
-      "canonical_id": "the-gruffalo-bedtime-story-3-5-en",
-      "title": "The Gruffalo",
-      "isbn": "978-0142403877",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["rhythm_awareness", "story_sequence", "emotional_safety"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "adventure_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0142403873"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "frog-and-toad-are-friends-bedtime-story-3-5-en",
-      "title": "Frog and Toad Are Friends",
-      "isbn": "978-0064440202",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["story_sequence", "friendship_understanding", "early_dialogue"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "multi_scene_light",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "classic_beginner_reader"
-      },
-      "source_links": ["https://www.amazon.com/dp/0064440206"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "how-do-dinosaurs-play-with-their-friends-bedtime-story-3-5-en",
-      "title": "How Do Dinosaurs Play with Their Friends?",
-      "isbn": "978-0439856546",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["friendship_skills", "behavior_modeling", "emotional_expression"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "playful",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/B00ERJSGFG"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "press-here-bedtime-story-3-5-en",
-      "title": "Press Here",
-      "isbn": "978-0811879545",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["interaction_basic", "cause_effect", "fine_motor_engagement"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "playful",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "simple",
-        "purpose": "interactive_engagement",
-        "recommended_for": "early_interactive_learning"
-      },
-      "source_links": ["https://www.amazon.com/dp/0811879542"],
-      "notes": ""
-    },
-        {
-      "canonical_id": "las-aventuras-de-rocky-el-afortunado-edicion-dos-en-uno-bilingual-transition-7-10-es",
-      "title": "Las Aventuras de Rocky el Afortunado. Edición Dos en Uno (Bilingual Transition Edition)",
-      "isbn": "978-1963328264",
-      "languages": ["ES", "EN"],
-      "type": "two_in_one",
-      "age_group": "7-10",
-      "skills": ["cross_language_mapping", "independent_language_growth", "full_paragraph_bilingual"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium_high",
-        "emotional_intensity": "medium",
-        "narrative_structure": "full_bilingual_parallel",
-        "linguistic_load": "advanced_dual_language",
-        "visual_load": "moderate_detail",
-        "purpose": "bilingual_comprehension_depth",
-        "recommended_for": "advanced_bilingual_kids"
-      },
-      "source_links": ["https://www.amazon.com/dp/1963328264"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
-      "title": "Lucky Rocky. The Magic of Friendship",
-      "isbn": "978-1963328554",
+      "canonical_id": "the-adventures-of-lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
+      "title": "The Adventures of Lucky Rocky. The Magic of Friendship: Short Stories for Kids Ages 3+ (US Edition, Illustrated and Colored)",
+      "isbn": "978-1963328011",
       "languages": ["EN"],
       "type": "bedtime_story",
       "age_group": "5-7",
-      "skills": ["logic", "emotion_depth", "simple_dialogues"],
-      "translated_version": "rocky-el-afortunado-la-magia-de-la-amistad-bedtime-story-5-7-es",
+      "skills": ["early_logic", "simple_dialogues", "emotion_depth", "attention_growth"],
+      "translated_version": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-amistad-bedtime-story-5-7-es",
       "value_profile": {
         "complexity": "medium_low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene",
+        "emotional_intensity": "soft",
+        "narrative_structure": "multi_scene_light",
         "linguistic_load": "dialogue_rich",
         "visual_load": "moderate_detail",
         "purpose": "early_emotional_reasoning",
         "recommended_for": "kids_early_logic_growth"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328550"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328019"]
     },
 
     {
-      "canonical_id": "rocky-el-afortunado-la-magia-de-la-amistad-bedtime-story-5-7-es",
-      "title": "Rocky el Afortunado. La Magia de la Amistad",
-      "isbn": "978-1963328608",
+      "canonical_id": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-amistad-bedtime-story-5-7-es",
+      "title": "Las Aventuras de Rocky, el Afortunado. La Magia de la Amistad: Cuentos en español para niños de 3+ años",
+      "isbn": "978-1963328042",
       "languages": ["ES"],
       "type": "bedtime_story",
       "age_group": "5-7",
-      "skills": ["emotion_depth", "simple_dialogues"],
-      "translated_version": "lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
+      "skills": ["early_logic", "emotion_depth", "simple_dialogues", "attention_growth"],
+      "translated_version": "the-adventures-of-lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
       "value_profile": {
         "complexity": "medium_low",
-        "emotional_intensity": "medium",
+        "emotional_intensity": "soft",
         "narrative_structure": "multi_scene",
         "linguistic_load": "moderate_spanish",
         "visual_load": "moderate_detail",
         "purpose": "spanish_emotional_growth",
         "recommended_for": "spanish_kids_logic"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328607"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328043"]
     },
 
     {
-      "canonical_id": "my-big-step-by-step-drawing-book-animals-drawing-7-10-en",
-      "title": "My Big Step-By-Step Drawing Book: Animals, Creative Growth for Kids",
-      "isbn": "978-1963328882",
+      "canonical_id": "take-a-break-cute-animals-coloring-book-5-7-en",
+      "title": "Take a Break: Easy Coloring Book for Adults and Kids, Cute Animals. 50 Cute Designs",
+      "isbn": "978-1963328165",
+      "languages": ["EN"],
+      "type": "coloring",
+      "age_group": "5-7",
+      "skills": ["concentration", "visual_planning", "creative_confidence", "moderate_detail"],
+      "translated_version": "tomate-un-descanso-belleza-del-oceano-coloring-book-5-7-es",
+      "value_profile": {
+        "complexity": "medium",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "attention_and_motor_growth",
+        "recommended_for": "kids_intermediate_coloring"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328167"]
+    },
+
+    {
+      "canonical_id": "tomate-un-descanso-belleza-del-oceano-coloring-book-5-7-es",
+      "title": "Tómate un descanso: Libro de colorear fácil para adultos y niños, Serie Belleza del Océano",
+      "isbn": "978-1963328394",
+      "languages": ["ES"],
+      "type": "coloring",
+      "age_group": "5-7",
+      "skills": ["concentration", "visual_planning", "creative_confidence", "moderate_detail"],
+      "translated_version": "take-a-break-cute-animals-coloring-book-5-7-en",
+      "value_profile": {
+        "complexity": "medium",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_focus_growth",
+        "recommended_for": "spanish_kids_coloring"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328396"]
+    },
+        {
+      "canonical_id": "the-adventures-of-lucky-rocky-the-magic-of-kindness-bedtime-story-7-10-en",
+      "title": "The Adventures of Lucky Rocky. The Magic of Kindness: Short Stories for Kids Ages 3+ (US Edition, Illustrated and Colored)",
+      "isbn": "978-1963328691",
+      "languages": ["EN"],
+      "type": "bedtime_story",
+      "age_group": "7-10",
+      "skills": [
+        "structured_reasoning",
+        "advanced_emotion_depth",
+        "moral_reasoning",
+        "multi_scene_structure",
+        "simple_dialogues"
+      ],
+      "translated_version": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-bondad-bedtime-story-7-10-es",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "multi_scene_expanded",
+        "linguistic_load": "advanced_dialogue",
+        "visual_load": "moderate_detail",
+        "purpose": "moral_reasoning",
+        "recommended_for": "kids_advanced_emotional_logic"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328698"]
+    },
+
+    {
+      "canonical_id": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-bondad-bedtime-story-7-10-es",
+      "title": "Las Aventuras de Rocky, el Afortunado. La Magia de la Bondad: Cuentos en español para niños de 3+ años",
+      "isbn": "978-1963328622",
+      "languages": ["ES"],
+      "type": "bedtime_story",
+      "age_group": "7-10",
+      "skills": [
+        "structured_reasoning",
+        "advanced_emotion_depth",
+        "moral_reasoning",
+        "multi_scene_structure",
+        "simple_dialogues"
+      ],
+      "translated_version": "the-adventures-of-lucky-rocky-the-magic-of-kindness-bedtime-story-7-10-en",
+      "value_profile": {
+        "complexity": "medium_high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "expanded_spanish_story",
+        "linguistic_load": "advanced_spanish",
+        "visual_load": "moderate_detail",
+        "purpose": "spanish_moral_reasoning",
+        "recommended_for": "spanish_advanced_readers"
+      },
+      "source_links": ["https://www.amazon.com/dp/1963328620"]
+    },
+
+    {
+      "canonical_id": "how-to-draw-111-amazing-and-cute-animals-step-by-step-drawing-7-10-en",
+      "title": "How to Draw 111 Amazing and Cute Animals, Fairy tale Characters, Flowers, Foods, Gifts and other Themes. The Magic of Creativity for Kids: Easy Step by Step",
+      "isbn": "978-1963328141",
       "languages": ["EN"],
       "type": "step_by_step_drawing",
       "age_group": "7-10",
-      "skills": ["independent_drawing", "step_by_step_logic", "long_focus"],
-      "translated_version": "mi-gran-libro-de-dibujo-paso-a-paso-animales-drawing-7-10-es",
+      "skills": [
+        "step_by_step_logic",
+        "independent_drawing",
+        "long_focus",
+        "creative_confidence"
+      ],
+      "translated_version": "como-dibujar-111-sorprendentes-y-adorables-animales-step-by-step-drawing-7-10-es",
       "value_profile": {
-        "complexity": "medium",
+        "complexity": "medium_high",
         "emotional_intensity": "none",
         "narrative_structure": "procedural",
         "linguistic_load": "minimal",
@@ -483,1630 +437,397 @@
         "purpose": "drawing_mastery",
         "recommended_for": "kids_art_progression"
       },
-      "source_links": ["https://www.amazon.com/dp/196332888X"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328140"]
     },
 
     {
-      "canonical_id": "mi-gran-libro-de-dibujo-paso-a-paso-animales-drawing-7-10-es",
-      "title": "Mi Gran Libro de Dibujo Paso a Paso: Animales, Creatividad para Niños",
-      "isbn": "978-1963328899",
+      "canonical_id": "como-dibujar-111-sorprendentes-y-adorables-animales-step-by-step-drawing-7-10-es",
+      "title": "Cómo dibujar 111 Sorprendentes y Adorables Animales, Personajes de Cuentos, Flores, Alimentos, Regalos y Otros Temas: Fácilmente Paso a Paso",
+      "isbn": "978-1963328172",
       "languages": ["ES"],
       "type": "step_by_step_drawing",
       "age_group": "7-10",
-      "skills": ["independent_drawing", "step_by_step_logic", "long_focus"],
-      "translated_version": "my-big-step-by-step-drawing-book-animals-drawing-7-10-en",
+      "skills": [
+        "step_by_step_logic",
+        "independent_drawing",
+        "long_focus",
+        "creative_confidence"
+      ],
+      "translated_version": "how-to-draw-111-amazing-and-cute-animals-step-by-step-drawing-7-10-en",
       "value_profile": {
-        "complexity": "medium",
+        "complexity": "medium_high",
         "emotional_intensity": "none",
         "narrative_structure": "procedural",
-        "linguistic_load": "simple_spanish",
+        "linguistic_load": "minimal_spanish",
         "visual_load": "step_by_step",
         "purpose": "spanish_drawing_mastery",
         "recommended_for": "spanish_young_artists"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328898"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328175"]
     },
 
     {
-      "canonical_id": "charlottes-web-bedtime-story-7-10-en",
-      "title": "Charlotte's Web",
-      "isbn": "978-0064400558",
+      "canonical_id": "the-adventures-of-lucky-rocky-two-in-one-edition-bilingual-transition-7-10-en",
+      "title": "The Adventures of Lucky Rocky: Two in One Edition. Short Stories for Kids Ages 3+ (US Edition, Illustrated and Colored)",
+      "isbn": "978-1963328981",
       "languages": ["EN"],
-      "type": "bedtime_story",
+      "type": "two_in_one",
       "age_group": "7-10",
-      "skills": ["structured_reasoning", "moral_reasoning", "advanced_emotion_depth"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium_high",
-        "emotional_intensity": "high",
-        "narrative_structure": "multi_scene_expanded",
-        "linguistic_load": "high",
-        "visual_load": "high_detail",
-        "purpose": "kids_advanced_emotional_logic",
-        "recommended_for": "spanish_advanced_readers"
-      },
-      "source_links": ["https://www.amazon.com/dp/0064400557"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "harry-potter-and-the-sorcerers-stone-bedtime-story-7-10-en",
-      "title": "Harry Potter and the Sorcerer's Stone",
-      "isbn": "978-0590353427",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "7-10",
-      "skills": ["abstract_reasoning", "logical_combat", "multi_scene_structure"],
-      "translated_version": null,
+      "skills": [
+        "full_paragraph_bilingual",
+        "meaning_alignment",
+        "complex_vocabulary",
+        "cross_language_mapping"
+      ],
+      "translated_version": "las-aventuras-de-rocky-el-afortunado-edicion-dos-en-uno-bilingual-transition-7-10-es",
       "value_profile": {
         "complexity": "high",
-        "emotional_intensity": "high",
-        "narrative_structure": "multi_scene_complex",
-        "linguistic_load": "very_high",
-        "visual_load": "high_detail",
-        "purpose": "moral_reasoning",
-        "recommended_for": "kids_advanced_emotional_logic"
-      },
-      "source_links": ["https://www.amazon.com/dp/059035342X"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "matilda-bedtime-story-7-10-en",
-      "title": "Matilda",
-      "isbn": "978-0142410370",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "7-10",
-      "skills": ["independent_thinking", "structured_reasoning", "emotion_depth"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium_high",
-        "emotional_intensity": "high",
-        "narrative_structure": "multi_scene",
-        "linguistic_load": "high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "full_bilingual_parallel",
+        "linguistic_load": "advanced_dual_language",
         "visual_load": "moderate_detail",
-        "purpose": "kids_advanced_emotional_logic",
-        "recommended_for": "kids_intermediate_coloring"
-      },
-      "source_links": ["https://www.amazon.com/dp/0142410373"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "diary-of-a-wimpy-kid-bedtime-story-7-10-en",
-      "title": "Diary of a Wimpy Kid",
-      "isbn": "978-1419749155",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "7-10",
-      "skills": ["situational_language", "logic", "emotion_depth"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene_light",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "kids_early_logic_growth",
-        "recommended_for": "kids_advanced_emotional_logic"
-      },
-      "source_links": ["https://www.amazon.com/dp/1419749153"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-lightning-thief-percy-jackson-bedtime-story-7-10-en",
-      "title": "Percy Jackson and the Olympians: The Lightning Thief",
-      "isbn": "978-0786838653",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "7-10",
-      "skills": ["abstract_reasoning", "structured_reasoning", "moral_reasoning"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "high",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene_complex",
-        "linguistic_load": "high",
-        "visual_load": "high_detail",
-        "purpose": "kids_advanced_emotional_logic",
+        "purpose": "bilingual_comprehension_depth",
         "recommended_for": "advanced_bilingual_kids"
       },
-      "source_links": ["https://www.amazon.com/dp/0786838655"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/1963328981"]
     },
-        {
-      "canonical_id": "the-secret-garden-bedtime-story-7-10-en",
-      "title": "The Secret Garden",
-      "isbn": "978-0064401883",
-      "languages": ["EN"],
-      "type": "bedtime_story",
+
+    {
+      "canonical_id": "las-aventuras-de-rocky-el-afortunado-edicion-dos-en-uno-bilingual-transition-7-10-es",
+      "title": "Las Aventuras de Rocky, el Afortunado: Edición Dos en Uno (Spanish Edition, Illustrated and Colored)",
+      "isbn": "978-1963328004",
+      "languages": ["ES"],
+      "type": "two_in_one",
       "age_group": "7-10",
-      "skills": ["advanced_emotion_depth", "structured_reasoning", "abstract_reasoning"],
-      "translated_version": null,
+      "skills": [
+        "full_paragraph_bilingual",
+        "meaning_alignment",
+        "complex_vocabulary",
+        "cross_language_mapping"
+      ],
+      "translated_version": "the-adventures-of-lucky-rocky-two-in-one-edition-bilingual-transition-7-10-en",
       "value_profile": {
-        "complexity": "medium_high",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene_expanded",
-        "linguistic_load": "high",
-        "visual_load": "moderate_detail",
-        "purpose": "moral_reasoning",
-        "recommended_for": "kids_advanced_emotional_logic"
-      },
-      "source_links": ["https://www.amazon.com/dp/006440188X"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-lorax-emotional-learning-5-7-en",
-      "title": "The Lorax",
-      "isbn": "978-0394823379",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["emotion_identification", "color_association", "emotional_expression"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "emotional_awareness",
-        "recommended_for": "kids_emotion_learning"
-      },
-      "source_links": ["https://www.amazon.com/dp/0394823370"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "oh-the-places-youll-go-emotional-learning-5-7-en",
-      "title": "Oh, the Places You'll Go!",
-      "isbn": "978-0679805274",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["emotion_identification", "confidence", "creative_confidence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "emotional_awareness",
-        "recommended_for": "kids_emotion_learning"
-      },
-      "source_links": ["https://www.amazon.com/dp/0679805273"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-rainbow-fish-emotional-learning-3-5-en",
-      "title": "The Rainbow Fish",
-      "isbn": "978-1558580091",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["friendship_skills", "emotional_expression", "visual_attention"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
+        "complexity": "high",
         "emotional_intensity": "soft",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/1558580093"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "if-you-give-a-mouse-a-cookie-story-sequence-3-5-en",
-      "title": "If You Give a Mouse a Cookie",
-      "isbn": "978-0064434096",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["story_sequence", "predictable_sequence", "cause_effect"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
+        "narrative_structure": "full_bilingual_parallel",
+        "linguistic_load": "advanced_spanish",
         "visual_load": "moderate_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
+        "purpose": "bilingual_comprehension_depth",
+        "recommended_for": "spanish_advanced_bilingual_kids"
       },
-      "source_links": ["https://www.amazon.com/dp/0064434096"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/B0DD6M59PH"]
     },
 
     {
-      "canonical_id": "the-snowy-day-bedtime-story-1-3-en",
-      "title": "The Snowy Day",
-      "isbn": "978-0140501827",
+      "canonical_id": "the-very-hungry-caterpillar-bedtime-story-1-3-en",
+      "title": "The Very Hungry Caterpillar",
+      "isbn": "978-0140569322",
       "languages": ["EN"],
       "type": "bedtime_story",
       "age_group": "1-3",
-      "skills": ["soft_story", "predictable_sequence", "sensory_safety"],
+      "skills": [
+        "predictable_sequence",
+        "pattern_recognition",
+        "food_identification", 
+        "attention_growth",
+        "low_cognitive_load"
+      ],
       "translated_version": null,
       "value_profile": {
         "complexity": "very_low",
         "emotional_intensity": "soft",
-        "narrative_structure": "predictable",
+        "narrative_structure": "repetitive_predictable",
         "linguistic_load": "minimal",
-        "visual_load": "simple",
-        "purpose": "early_bedtime_routine",
-        "recommended_for": "toddlers_beginner_story"
+        "visual_load": "bright_collage",
+        "purpose": "early_pattern_learning",
+        "recommended_for": "toddlers_classic_story"
       },
-      "source_links": ["https://www.amazon.com/dp/0140501827"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/Very-Hungry-Caterpillar-Picture-Puffins/dp/0140569324/ref=tmm_pap_swatch_0"]
     },
 
     {
-      "canonical_id": "goodnight-goodnight-construction-site-bedtime-story-3-5-en",
-      "title": "Goodnight, Goodnight Construction Site",
-      "isbn": "978-1452111735",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["predictable_sequence", "rhythm_awareness", "emotional_safety"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "preschool_evening_reading",
-        "recommended_for": "preschool_evening_reading"
-      },
-      "source_links": ["https://www.amazon.com/dp/1452111733"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "green-eggs-and-ham-rhythmic-story-3-5-en",
-      "title": "Green Eggs and Ham",
-      "isbn": "978-0394800166",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["rhythm_awareness", "pattern_recognition", "speech_development"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "rhythmic",
-        "linguistic_load": "simple_sentences",
-        "visual_load": "moderate_detail",
-        "purpose": "preschool_evening_reading",
-        "recommended_for": "kids_intermediate_coloring"
-      },
-      "source_links": ["https://www.amazon.com/dp/0394800168"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "room-on-the-broom-adventure-short-3-5-en",
-      "title": "Room on the Broom",
-      "isbn": "978-0142501122",
+      "canonical_id": "the-gruffalo-adventure-short-3-5-en",
+      "title": "The Gruffalo",
+      "isbn": "978-0142403877",
       "languages": ["EN"],
       "type": "adventure_short",
       "age_group": "3-5",
-      "skills": ["story_sequence", "rhythm_awareness", "friendship_understanding"],
+      "skills": [
+        "rhythm_awareness",
+        "story_sequence",
+        "emotional_safety",
+        "attention_growth"
+      ],
       "translated_version": null,
       "value_profile": {
         "complexity": "low",
-        "emotional_intensity": "soft",
+        "emotional_intensity": "moderate",
         "narrative_structure": "linear_with_repetition",
         "linguistic_load": "moderate",
-        "visual_load": "high_detail",
+        "visual_load": "rich_detail",
         "purpose": "early_story_engagement",
         "recommended_for": "preschool_classic_adventure"
       },
-      "source_links": ["https://www.amazon.com/dp/0142501123"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-giving-tree-emotional-learning-5-7-en",
-      "title": "The Giving Tree",
-      "isbn": "978-0060256654",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["emotion_identification", "advanced_emotion_depth", "moral_reasoning"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium",
-        "emotional_intensity": "high",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "simple",
-        "purpose": "emotional_awareness",
-        "recommended_for": "kids_emotion_learning"
-      },
-      "source_links": ["https://www.amazon.com/dp/0060256656"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/Gruffalo-Julia-Donaldson/dp/0142403873"]
     },
         {
-      "canonical_id": "the-paper-bag-princess-adventure-short-5-7-en",
-      "title": "The Paper Bag Princess",
-      "isbn": "978-0920236253",
+      "canonical_id": "pete-the-cat-white-shoes-bedtime-story-5-7-en",
+      "title": "Pete the Cat: I Love My White Shoes",
+      "isbn": "978-0545419666",
       "languages": ["EN"],
-      "type": "adventure_short",
+      "type": "bedtime_story",
       "age_group": "5-7",
-      "skills": ["story_sequence", "early_logic", "confidence"],
+      "skills": [
+        "rhythm_awareness",
+        "emotional_regulation",
+        "pattern_recognition",
+        "attention_growth"
+      ],
       "translated_version": null,
       "value_profile": {
         "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "linear_with_repetition",
+        "emotional_intensity": "soft",
+        "narrative_structure": "rhythmic_repetitive",
         "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
+        "visual_load": "bright_bold",
+        "purpose": "confidence_and_resilience",
+        "recommended_for": "early_readers_rhythm_fun"
       },
-      "source_links": ["https://www.amazon.com/dp/0920236254"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/Pete-Cat-Love-White-Shoes/dp/0545419662/ref=tmm_pap_swatch_0"]
     },
 
     {
-      "canonical_id": "the-little-prince-multi-scene-7-10-en",
-      "title": "The Little Prince",
-      "isbn": "978-0156012195",
+      "canonical_id": "winnie-the-pooh-bedtime-story-7-10-en",
+      "title": "Winnie-the-Pooh",
+      "isbn": "978-0142404676",
       "languages": ["EN"],
       "type": "bedtime_story",
       "age_group": "7-10",
-      "skills": ["abstract_reasoning", "advanced_emotion_depth", "structured_reasoning"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium_high",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene_complex",
-        "linguistic_load": "high",
-        "visual_load": "low_detail",
-        "purpose": "moral_reasoning",
-        "recommended_for": "kids_advanced_emotional_logic"
-      },
-      "source_links": ["https://www.amazon.com/dp/0156012197"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-tail-of-peter-rabbit-bedtime-story-3-5-en",
-      "title": "The Tale of Peter Rabbit",
-      "isbn": "978-0723247708",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["story_sequence", "visual_attention", "emotional_safety"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0723247706"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-ugly-duckling-emotional-learning-3-5-en",
-      "title": "The Ugly Duckling",
-      "isbn": "978-1409546163",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["emotion_identification", "emotional_expression", "friendship_skills"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/140954616X"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "madeline-adventure-short-3-5-en",
-      "title": "Madeline",
-      "isbn": "978-0670445806",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["story_sequence", "visual_attention", "friendship_skills"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "linear_with_repetition",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0670445800"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-lion-and-the-mouse-emotional-learning-3-5-en",
-      "title": "The Lion and the Mouse",
-      "isbn": "978-0316013567",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["emotion_identification", "emotional_expression", "friendship_skills"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/0316013560"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "charlottes-web-multi-scene-7-10-en",
-      "title": "Charlotte’s Web",
-      "isbn": "978-0064400558",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "7-10",
-      "skills": ["advanced_emotion_depth", "structured_reasoning", "abstract_reasoning"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium_high",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene_expanded",
-        "linguistic_load": "high",
-        "visual_load": "moderate_detail",
-        "purpose": "moral_reasoning",
-        "recommended_for": "kids_advanced_emotional_logic"
-      },
-      "source_links": ["https://www.amazon.com/dp/0064400557"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "mr-brown-can-moo-can-you-rhythmic-story-1-3-en",
-      "title": "Mr. Brown Can Moo! Can You?",
-      "isbn": "978-0679882824",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "1-3",
-      "skills": ["rhythm_awareness", "speech_development", "sound_identification"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "rhythmic",
-        "linguistic_load": "minimal",
-        "visual_load": "simple",
-        "purpose": "early_bedtime_routine",
-        "recommended_for": "toddlers_beginner_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0679882820"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "giraffes-cant-dance-emotional-learning-5-7-en",
-      "title": "Giraffes Can't Dance",
-      "isbn": "978-0439287197",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["confidence", "emotional_expression", "creative_confidence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "emotional_awareness",
-        "recommended_for": "kids_emotion_learning"
-      },
-      "source_links": ["https://www.amazon.com/dp/0439287197"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "harold-and-the-purple-crayon-creative-story-3-5-en",
-      "title": "Harold and the Purple Crayon",
-      "isbn": "978-0064430227",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["creative_confidence", "imagination_seed", "story_sequence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "simple",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0064430227"],
-      "notes": ""
-    },
-        {
-      "canonical_id": "the-bfg-adventure-7-10-en",
-      "title": "The BFG",
-      "isbn": "978-0142410387",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "7-10",
-      "skills": ["early_logic", "structured_reasoning", "creative_confidence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "imagination_growth",
-        "recommended_for": "kids_early_logic_growth"
-      },
-      "source_links": ["https://www.amazon.com/dp/0142410381"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-cat-in-the-hat-rhythmic-story-3-5-en",
-      "title": "The Cat in the Hat",
-      "isbn": "978-0394800011",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["rhythm_awareness", "speech_development", "story_sequence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "rhythmic",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "preschool_evening_reading",
-        "recommended_for": "preschool_evening_reading"
-      },
-      "source_links": ["https://www.amazon.com/dp/039480001X"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "guess-how-much-i-love-you-bedtime-story-1-3-en",
-      "title": "Guess How Much I Love You",
-      "isbn": "978-0763642648",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "1-3",
-      "skills": ["soft_story", "sensory_safety", "emotional_safety"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "predictable",
-        "linguistic_load": "minimal",
-        "visual_load": "simple",
-        "purpose": "early_bedtime_routine",
-        "recommended_for": "toddlers_beginner_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0763642649"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "love-you-forever-emotional-learning-3-5-en",
-      "title": "Love You Forever",
-      "isbn": "978-0920668374",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["emotion_identification", "emotional_expression", "emotional_safety"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/0920668372"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-very-busy-spider-simple-sequence-1-3-en",
-      "title": "The Very Busy Spider",
-      "isbn": "978-0399211668",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "1-3",
-      "skills": ["predictable_sequence", "pattern_recognition", "sensory_safety"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "one_object_per_page",
-        "purpose": "early_bedtime_routine",
-        "recommended_for": "toddlers_beginner_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0399211667"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "we-are-going-on-a-bear-hunt-rhythmic-story-3-5-en",
-      "title": "We're Going on a Bear Hunt",
-      "isbn": "978-0689815812",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["rhythm_awareness", "story_sequence", "visual_attention"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "linear_with_repetition",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "preschool_evening_reading",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0689815813"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-tale-of-despereaux-multi-scene-7-10-en",
-      "title": "The Tale of Despereaux",
-      "isbn": "978-0763617226",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "7-10",
-      "skills": ["advanced_emotion_depth", "structured_reasoning", "abstract_reasoning"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium_high",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene_complex",
-        "linguistic_load": "high",
-        "visual_load": "moderate_detail",
-        "purpose": "moral_reasoning",
-        "recommended_for": "kids_advanced_emotional_logic"
-      },
-      "source_links": ["https://www.amazon.com/dp/0763617229"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-mouse-and-the-motorcycle-adventure-7-10-en",
-      "title": "The Mouse and the Motorcycle",
-      "isbn": "978-0064400553",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "7-10",
-      "skills": ["structured_reasoning", "story_sequence", "creative_confidence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "imagination_growth",
-        "recommended_for": "kids_early_logic_growth"
-      },
-      "source_links": ["https://www.amazon.com/dp/0064400550"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "alexander-and-the-terrible-horrible-no-good-very-bad-day-emotional-learning-3-5-en",
-      "title": "Alexander and the Terrible, Horrible, No Good, Very Bad Day",
-      "isbn": "978-0689711732",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["emotion_identification", "emotional_expression", "emotional_safety"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/0689711735"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-true-story-of-the-3-little-pigs-adventure-short-5-7-en",
-      "title": "The True Story of the 3 Little Pigs",
-      "isbn": "978-0140544512",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "5-7",
-      "skills": ["story_sequence", "early_logic", "creative_confidence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "linear_with_repetition",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0140544518"],
-      "notes": ""
-    },
-        {
-      "canonical_id": "where-the-wild-things-are-adventure-short-3-5-en",
-      "title": "Where the Wild Things Are",
-      "isbn": "978-0060254927",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["imagination_seed", "story_sequence", "visual_attention"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0060254920"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "cloudy-with-a-chance-of-meatballs-adventure-short-5-7-en",
-      "title": "Cloudy with a Chance of Meatballs",
-      "isbn": "978-0689707490",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "5-7",
-      "skills": ["story_sequence", "creative_confidence", "imagination_seed"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "linear_with_repetition",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "imagination_growth",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0689707495"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-crayons-quit-emotional-learning-5-7-en",
-      "title": "The Day the Crayons Quit",
-      "isbn": "978-0399255372",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["emotion_identification", "creative_confidence", "emotional_expression"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "emotional_awareness",
-        "recommended_for": "kids_emotion_learning"
-      },
-      "source_links": ["https://www.amazon.com/dp/0399255370"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-mitchells-vs-the-machines-adventure-short-7-10-en",
-      "title": "The Mitchells vs The Machines (Picture Book Adaptation)",
-      "isbn": "978-1534494068",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "7-10",
-      "skills": ["story_sequence", "structured_reasoning", "creative_confidence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium",
-        "emotional_intensity": "medium",
-        "narrative_structure": "multi_scene_light",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "imagination_growth",
-        "recommended_for": "kids_early_logic_growth"
-      },
-      "source_links": ["https://www.amazon.com/dp/1534494065"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "dragons-love-tacos-fun-story-3-5-en",
-      "title": "Dragons Love Tacos",
-      "isbn": "978-0803736801",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["imagination_seed", "story_sequence", "rhythm_awareness"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0803736800"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-gruffalos-child-adventure-short-3-5-en",
-      "title": "The Gruffalo’s Child",
-      "isbn": "978-0142407545",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["story_sequence", "rhythm_awareness", "visual_attention"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "linear_with_repetition",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0142407542"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-snail-and-the-whale-adventure-short-3-5-en",
-      "title": "The Snail and the Whale",
-      "isbn": "978-0142405800",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["story_sequence", "rhythm_awareness", "imagination_seed"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "linear_with_repetition",
-        "linguistic_load": "moderate",
-        "visual_load": "high_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0142405809"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-smartest-giant-in-town-adventure-short-3-5-en",
-      "title": "The Smartest Giant in Town",
-      "isbn": "978-0142402755",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["story_sequence", "imagination_seed", "visual_attention"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0142402755"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "tikki-tikki-tembo-folklore-story-5-7-en",
-      "title": "Tikki Tikki Tembo",
-      "isbn": "978-0805006629",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "5-7",
-      "skills": ["rhythm_awareness", "story_sequence", "speech_development"],
+      "skills": [
+        "narrative_reasoning",
+        "emotional_reflection",
+        "character_understanding",
+        "structured_reasoning"
+      ],
       "translated_version": null,
       "value_profile": {
         "complexity": "medium",
         "emotional_intensity": "soft",
-        "narrative_structure": "rhythmic",
+        "narrative_structure": "episodic_classic",
         "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
+        "visual_load": "minimal",
+        "purpose": "deep_story_comprehension",
+        "recommended_for": "classic_reading_growth"
       },
-      "source_links": ["https://www.amazon.com/dp/0805006621"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/Winnie-Pooh-Puffin-Modern-Classics/dp/0142404675"]
     },
 
     {
-      "canonical_id": "the-velveteen-rabbit-emotional-learning-5-7-en",
-      "title": "The Velveteen Rabbit",
-      "isbn": "978-0385077255",
+      "canonical_id": "frog-and-toad-are-friends-adventure-short-3-5-en",
+      "title": "Frog and Toad Are Friends",
+      "isbn": "978-0064440202",
       "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["advanced_emotion_depth", "emotion_identification", "moral_reasoning"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium",
-        "emotional_intensity": "high",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "low_detail",
-        "purpose": "emotional_awareness",
-        "recommended_for": "kids_emotion_learning"
-      },
-      "source_links": ["https://www.amazon.com/dp/0385077254"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-berenstain-bears-trouble-with-friends-social-skills-3-5-en",
-      "title": "The Berenstain Bears: Trouble with Friends",
-      "isbn": "978-0394873398",
-      "languages": ["EN"],
-      "type": "emotional_learning",
+      "type": "adventure_short",
       "age_group": "3-5",
-      "skills": ["friendship_skills", "behavior_modeling", "emotional_expression"],
+      "skills": [
+        "story_sequence",
+        "friendship_understanding",
+        "early_dialogue",
+        "attention_growth"
+      ],
       "translated_version": null,
       "value_profile": {
         "complexity": "low",
         "emotional_intensity": "soft",
+        "narrative_structure": "episodic_linear",
+        "linguistic_load": "moderate",
+        "visual_load": "moderate_detail",
+        "purpose": "early_story_engagement",
+        "recommended_for": "classic_beginner_reader"
+      },
+      "source_links": ["https://www.amazon.com/dp/0064440206"]
+    },
+
+    {
+      "canonical_id": "how-do-dinosaurs-play-with-their-friends-social-skills-3-5-en",
+      "title": "How Do Dinosaurs Play with Their Friends?",
+      "isbn": "978-0439856546",
+      "languages": ["EN"],
+      "type": "social_skills",
+      "age_group": "3-5",
+      "skills": [
+        "friendship_skills",
+        "behavior_modeling",
+        "emotional_expression",
+        "attention_growth"
+      ],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "low",
+        "emotional_intensity": "playful",
         "narrative_structure": "behavior_scenario",
         "linguistic_load": "minimal",
         "visual_load": "moderate_detail",
         "purpose": "social_learning",
         "recommended_for": "early_social_skills"
       },
-      "source_links": ["https://www.amazon.com/dp/0394873391"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/How-Dinosaurs-Play-Their-Friends/dp/B00ERJSGFG"]
     },
 
     {
-      "canonical_id": "the-kissing-hand-emotional-learning-3-5-en",
-      "title": "The Kissing Hand",
-      "isbn": "978-1933718002",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["emotional_safety", "emotion_identification", "emotional_expression"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/193371800X"],
-      "notes": ""
-    },
-        {
-      "canonical_id": "last-stop-on-market-street-social-learning-5-7-en",
-      "title": "Last Stop on Market Street",
-      "isbn": "978-0399257742",
+      "canonical_id": "the-colour-monster-emotional-learning-5-7-en",
+      "title": "The Colour Monster",
+      "isbn": "978-1783704231",
       "languages": ["EN"],
       "type": "emotional_learning",
       "age_group": "5-7",
-      "skills": ["emotional_expression", "empathy_growth", "social_awareness"],
+      "skills": [
+        "emotion_identification",
+        "emotional_expression",
+        "color_association",
+        "attention_growth"
+      ],
       "translated_version": null,
       "value_profile": {
-        "complexity": "medium_low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
+        "complexity": "low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "emotion_mapping",
+        "linguistic_load": "simple_sentences",
+        "visual_load": "high_color_focus",
+        "purpose": "emotional_awareness",
+        "recommended_for": "kids_emotion_learning"
+      },
+      "source_links": ["https://www.amazon.com/Colour-Monster-Anna-Llenas-illustrator/dp/1783704233"]
+    },
+
+    {
+      "canonical_id": "magic-school-bus-inside-the-earth-science-discovery-7-10-en",
+      "title": "The Magic School Bus Inside the Earth",
+      "isbn": "978-0590407601",
+      "languages": ["EN"],
+      "type": "science_discovery",
+      "age_group": "7-10",
+      "skills": [
+        "science_intro",
+        "earth_layers",
+        "curiosity_development",
+        "structured_reasoning"
+      ],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "medium",
+        "emotional_intensity": "neutral",
+        "narrative_structure": "guided_discovery",
         "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "early_emotional_reasoning",
-        "recommended_for": "kids_advanced_emotional_logic"
+        "visual_load": "high",
+        "purpose": "early_science_learning",
+        "recommended_for": "STEM_curiosity"
       },
-      "source_links": ["https://www.amazon.com/dp/0399257748"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/0590407600"]
     },
 
     {
-      "canonical_id": "the-lion-and-the-mouse-fable-3-5-en",
-      "title": "The Lion & the Mouse",
-      "isbn": "978-0316013567",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["moral_reasoning", "visual_attention", "emotion_identification"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_emotional_reasoning",
-        "recommended_for": "preschool_evening_reading"
-      },
-      "source_links": ["https://www.amazon.com/dp/0316013560"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-rainbow-fish-emotional-learning-3-5-en",
-      "title": "The Rainbow Fish",
-      "isbn": "978-1558580091",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["sharing_behavior", "friendship_skills", "emotional_expression"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_emotional_reasoning",
-        "recommended_for": "preschool_evening_reading"
-      },
-      "source_links": ["https://www.amazon.com/dp/1558580093"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "elmer-friendship-story-3-5-en",
-      "title": "Elmer",
-      "isbn": "978-0064430914",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["friendship_skills", "social_awareness", "emotion_identification"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "early_emotional_reasoning",
-        "recommended_for": "preschool_evening_reading"
-      },
-      "source_links": ["https://www.amazon.com/dp/0064430913"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "owl-babies-emotional-learning-3-5-en",
-      "title": "Owl Babies",
-      "isbn": "978-0763611296",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["separation_comfort", "emotional_safety", "emotion_identification"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "predictable",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "early_bedtime_routine",
-        "recommended_for": "toddlers_beginner_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0763611297"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "room-on-the-broom-adventure-story-3-5-en",
-      "title": "Room on the Broom",
-      "isbn": "978-0142501120",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["rhythm_awareness", "story_sequence", "imagination_seed"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "rhythmic",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0142501123"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "stuck-creative-story-3-5-en",
-      "title": "Stuck",
-      "isbn": "978-0399162411",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["imagination_seed", "visual_attention", "story_sequence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "imagination_growth",
-        "recommended_for": "preschool_evening_reading"
-      },
-      "source_links": ["https://www.amazon.com/dp/0399162410"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-gruffalo-adventure-3-5-en",
-      "title": "The Gruffalo",
-      "isbn": "978-0142403875",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["story_sequence", "rhythm_awareness", "imagination_seed"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "rhythmic",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "preschool_classic_adventure"
-      },
-      "source_links": ["https://www.amazon.com/dp/0142403873"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-little-engine-that-could-classic-3-5-en",
-      "title": "The Little Engine That Could",
-      "isbn": "978-0448405209",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["confidence", "motivation_growth", "story_sequence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "predictable",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "early_emotional_reasoning",
-        "recommended_for": "preschool_evening_reading"
-      },
-      "source_links": ["https://www.amazon.com/dp/0448405202"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "pete-the-cat-i-love-my-white-shoes-3-5-en",
-      "title": "Pete the Cat: I Love My White Shoes",
-      "isbn": "978-0061906221",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "3-5",
-      "skills": ["rhythm_awareness", "predictable_sequence", "emotion_identification"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "rhythmic",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "early_story_engagement",
-        "recommended_for": "toddlers_beginner_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0061906220"],
-      "notes": ""
-    },
-        {
-      "canonical_id": "press-here-interactive-3-5-en",
+      "canonical_id": "press-here-interactive-story-3-5-en",
       "title": "Press Here",
       "isbn": "978-0811879545",
       "languages": ["EN"],
       "type": "interactive_story",
       "age_group": "3-5",
-      "skills": ["visual_attention", "motor_basic", "predictable_sequence"],
+      "skills": [
+        "interaction_basic",
+        "cause_effect",
+        "fine_motor_engagement",
+        "attention_growth"
+      ],
       "translated_version": null,
       "value_profile": {
         "complexity": "very_low",
-        "emotional_intensity": "none",
-        "narrative_structure": "interactive_minimal",
+        "emotional_intensity": "playful",
+        "narrative_structure": "interactive_sequence",
         "linguistic_load": "minimal",
-        "visual_load": "low_detail",
-        "purpose": "motor_skill_start",
-        "recommended_for": "toddlers_first_bilingual_book"
+        "visual_load": "minimal_graphic",
+        "purpose": "interactive_engagement",
+        "recommended_for": "early_interactive_learning"
       },
-      "source_links": ["https://www.amazon.com/dp/0811879542"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/0811879542"]
     },
 
     {
-      "canonical_id": "mix-it-up-interactive-3-5-en",
-      "title": "Mix It Up!",
-      "isbn": "978-1452137353",
+      "canonical_id": "dont-let-the-pigeon-drive-the-bus-interactive-story-3-5-en",
+      "title": "Don't Let the Pigeon Drive the Bus!",
+      "isbn": "9780786819881",
       "languages": ["EN"],
       "type": "interactive_story",
       "age_group": "3-5",
-      "skills": ["motor_basic", "visual_attention", "creative_confidence"],
+      "skills": [
+        "interaction_response",
+        "emotional_expression",
+        "predictable_humor",
+        "attention_growth"
+      ],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "moderate",
+        "narrative_structure": "direct_interaction",
+        "linguistic_load": "minimal",
+        "visual_load": "simple_cartoon",
+        "purpose": "interactive_play",
+        "recommended_for": "preschool_interaction_fun"
+      },
+      "source_links": ["https://www.amazon.com/Dont-Let-Pigeon-Drive-Bus/dp/B00SQBMB20/ref=tmm_pap_swatch_0"]
+    },
+
+    {
+      "canonical_id": "first-100-words-bilingual-intro-1-3-en-es",
+      "title": "First 100 Words / Primeras 100 palabras (Bilingual Edition)",
+      "isbn": "978-0312515836",
+      "languages": ["EN", "ES"],
+      "type": "bilingual_intro",
+      "age_group": "1-3",
+      "skills": [
+        "object_recognition",
+        "first_words",
+        "parallel_labeling",
+        "predictable_parallel_lines"
+      ],
       "translated_version": null,
       "value_profile": {
         "complexity": "very_low",
         "emotional_intensity": "none",
-        "narrative_structure": "interactive_minimal",
-        "linguistic_load": "minimal",
-        "visual_load": "low_detail",
-        "purpose": "motor_skill_start",
-        "recommended_for": "toddlers_first_coloring"
+        "narrative_structure": "none",
+        "linguistic_load": "single_words",
+        "visual_load": "photographic_objects",
+        "purpose": "bilingual_vocabulary_foundation",
+        "recommended_for": "toddlers_first_bilingual_words"
       },
-      "source_links": ["https://www.amazon.com/dp/1452137358"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "good-night-good-night-construction-site-bedtime-story-3-5-en",
-      "title": "Goodnight, Goodnight Construction Site",
-      "isbn": "978-0811877824",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "3-5",
-      "skills": ["soft_story", "predictable_sequence", "attention_growth"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "predictable",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "early_bedtime_routine",
-        "recommended_for": "preschool_evening_reading"
-      },
-      "source_links": ["https://www.amazon.com/dp/0811877825"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "grumpy-monkey-emotional-learning-3-5-en",
-      "title": "Grumpy Monkey",
-      "isbn": "978-0553537864",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["emotion_identification", "emotional_expression", "social_awareness"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "behavior_scenario",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/0553537863"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "how-to-catch-a-unicorn-fun-story-5-7-en",
-      "title": "How to Catch a Unicorn",
-      "isbn": "978-1492669739",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "5-7",
-      "skills": ["story_sequence", "visual_planning", "creative_confidence"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "simple_sequence",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "imagination_growth",
-        "recommended_for": "kids_intermediate_coloring"
-      },
-      "source_links": ["https://www.amazon.com/dp/1492669735"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "not-quite-narwhal-emotional-learning-3-5-en",
-      "title": "Not Quite Narwhal",
-      "isbn": "978-1534413892",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["emotion_identification", "belonging_sense", "friendship_skills"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/1534413897"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-day-you-begin-emotional-learning-5-7-en",
-      "title": "The Day You Begin",
-      "isbn": "978-0399581107",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["emotional_expression", "self_identity", "empathy_growth"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "early_emotional_reasoning",
-        "recommended_for": "kids_advanced_emotional_logic"
-      },
-      "source_links": ["https://www.amazon.com/dp/0399581101"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "hair-love-emotional-learning-3-5-en",
-      "title": "Hair Love",
-      "isbn": "978-0525553366",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["family_bonding", "emotion_identification", "visual_attention"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_emotional_reasoning",
-        "recommended_for": "preschool_evening_reading"
-      },
-      "source_links": ["https://www.amazon.com/dp/0525553363"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "i-am-enough-emotional-learning-3-5-en",
-      "title": "I Am Enough",
-      "isbn": "978-0062667121",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["self_identity", "confidence", "emotional_expression"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "early_social_skills"
-      },
-      "source_links": ["https://www.amazon.com/dp/0062667122"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-color-monster-emotional-learning-3-5-en",
-      "title": "The Color Monster: A Story About Emotions",
-      "isbn": "978-0735845644",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "3-5",
-      "skills": ["emotion_identification", "emotional_expression", "visual_attention"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "behavior_scenario",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_emotional_reasoning",
-        "recommended_for": "toddlers_beginner_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0735845648"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-remember-balloon-emotional-learning-5-7-en",
-      "title": "The Remember Balloons",
-      "isbn": "978-1481489157",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["advanced_emotion_depth", "family_bonding", "empathy_growth"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium",
-        "emotional_intensity": "high",
-        "narrative_structure": "emotional_arc",
-        "linguistic_load": "moderate",
-        "visual_load": "moderate_detail",
-        "purpose": "early_emotional_reasoning",
-        "recommended_for": "kids_advanced_emotional_logic"
-      },
-      "source_links": ["https://www.amazon.com/dp/1481489150"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/0312515839"]
     },
         {
-      "canonical_id": "the-bad-seed-emotional-learning-5-7-en",
-      "title": "The Bad Seed",
-      "isbn": "978-0062467769",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["behavior_modeling", "emotion_identification", "emotional_expression"],
-      "translated_version": null,
+      "canonical_id": "las-aventuras-de-rocky-el-afortunado-edicion-dos-en-uno-bilingual-transition-7-10-es",
+      "title": "Las Aventuras de Rocky, el Afortunado: Edición Dos en Uno (Spanish Edition, Illustrated and Colored)",
+      "isbn": "978-1963328004",
+      "languages": ["ES"],
+      "type": "two_in_one",
+      "age_group": "7-10",
+      "skills": [
+        "full_paragraph_bilingual",
+        "meaning_alignment",
+        "complex_vocabulary",
+        "cross_language_mapping"
+      ],
+      "translated_version": "the-adventures-of-lucky-rocky-two-in-one-edition-bilingual-transition-7-10-en",
       "value_profile": {
-        "complexity": "medium_low",
-        "emotional_intensity": "medium",
-        "narrative_structure": "behavior_scenario",
-        "linguistic_load": "minimal",
+        "complexity": "high",
+        "emotional_intensity": "soft",
+        "narrative_structure": "full_bilingual_parallel",
+        "linguistic_load": "advanced_spanish",
         "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "kids_advanced_emotional_logic"
+        "purpose": "bilingual_comprehension_depth",
+        "recommended_for": "spanish_advanced_bilingual_kids"
       },
-      "source_links": ["https://www.amazon.com/dp/006246776X"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-good-egg-emotional-learning-5-7-en",
-      "title": "The Good Egg",
-      "isbn": "978-0062866005",
-      "languages": ["EN"],
-      "type": "emotional_learning",
-      "age_group": "5-7",
-      "skills": ["behavior_modeling", "emotional_expression", "self_identity"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "medium_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "behavior_scenario",
-        "linguistic_load": "minimal",
-        "visual_load": "moderate_detail",
-        "purpose": "social_learning",
-        "recommended_for": "kids_advanced_emotional_logic"
-      },
-      "source_links": ["https://www.amazon.com/dp/0062866000"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-very-lonely-firefly-adventure-1-3-en",
-      "title": "The Very Lonely Firefly",
-      "isbn": "978-0399227746",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "1-3",
-      "skills": ["visual_attention", "predictable_sequence", "soft_story"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "predictable",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_bedtime_routine",
-        "recommended_for": "toddlers_beginner_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0399227741"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "the-very-quiet-cricket-adventure-1-3-en",
-      "title": "The Very Quiet Cricket",
-      "isbn": "978-0399226848",
-      "languages": ["EN"],
-      "type": "adventure_short",
-      "age_group": "1-3",
-      "skills": ["visual_attention", "predictable_sequence", "soft_story"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "soft",
-        "narrative_structure": "predictable",
-        "linguistic_load": "minimal",
-        "visual_load": "high_detail",
-        "purpose": "early_bedtime_routine",
-        "recommended_for": "toddlers_beginner_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0399226842"],
-      "notes": ""
-    },
-
-    {
-      "canonical_id": "brown-bear-brown-bear-rhythm-1-3-en",
-      "title": "Brown Bear, Brown Bear, What Do You See?",
-      "isbn": "978-0805047905",
-      "languages": ["EN"],
-      "type": "bedtime_story",
-      "age_group": "1-3",
-      "skills": ["predictable_sequence", "rhythm_awareness", "attention_growth"],
-      "translated_version": null,
-      "value_profile": {
-        "complexity": "very_low",
-        "emotional_intensity": "none",
-        "narrative_structure": "rhythmic",
-        "linguistic_load": "minimal",
-        "visual_load": "simple",
-        "purpose": "early_bedtime_routine",
-        "recommended_for": "toddlers_beginner_story"
-      },
-      "source_links": ["https://www.amazon.com/dp/0805047905"],
-      "notes": ""
+      "source_links": ["https://www.amazon.com/dp/B0DD6M59PH"]
     }
 
-  ]  
+  ]
 }
