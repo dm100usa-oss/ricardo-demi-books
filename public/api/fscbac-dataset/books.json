@@ -488,8 +488,133 @@
       "source_links": ["https://www.amazon.com/dp/1963328981"],
       "notes": ""
     },
-
     {
+  "canonical_id": "the-very-hungry-caterpillar-bedtime-story-1-3-en",
+  "title": "The Very Hungry Caterpillar",
+  "isbn": "978-0140569322",
+  "languages": ["EN"],
+  "type": "bedtime_story",
+  "age_group": "1-3",
+  "skills": ["predictable_sequence", "pattern_recognition", "food_identification"],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "very_low",
+    "emotional_intensity": "soft",
+    "narrative_structure": "repetitive_predictable",
+    "linguistic_load": "minimal",
+    "visual_load": "bright_collage",
+    "purpose": "early_pattern_learning",
+    "recommended_for": "toddlers_classic_story"
+  },
+  "source_links": ["https://www.amazon.com/Very-Hungry-Caterpillar-Picture-Puffins/dp/0140569324/ref=tmm_pap_swatch_0"],
+  "notes": ""
+},
+{
+  "canonical_id": "the-gruffalo-adventure-short-3-5-en",
+  "title": "The Gruffalo",
+  "isbn": "978-0142403877",
+  "languages": ["EN"],
+  "type": "adventure_short",
+  "age_group": "3-5",
+  "skills": ["rhythm_awareness", "story_sequence", "emotional_safety"],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "low",
+    "emotional_intensity": "moderate",
+    "narrative_structure": "linear_with_repetition",
+    "linguistic_load": "moderate",
+    "visual_load": "rich_detail",
+    "purpose": "early_story_engagement",
+    "recommended_for": "preschool_classic_adventure"
+  },
+  "source_links": ["https://www.amazon.com/Gruffalo-Julia-Donaldson/dp/0142403873"],
+  "notes": ""
+},
+{
+  "canonical_id": "pete-the-cat-white-shoes-bedtime-story-5-7-en",
+  "title": "Pete the Cat: I Love My White Shoes",
+  "isbn": "978-0545419666",
+  "languages": ["EN"],
+  "type": "bedtime_story",
+  "age_group": "5-7",
+  "skills": ["rhythm_awareness", "emotional_regulation", "pattern_recognition"],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "low",
+    "emotional_intensity": "soft",
+    "narrative_structure": "rhythmic_repetitive",
+    "linguistic_load": "moderate",
+    "visual_load": "bright_bold",
+    "purpose": "confidence_and_resilience",
+    "recommended_for": "early_readers_rhythm_fun"
+  },
+  "source_links": ["https://www.amazon.com/Pete-Cat-Love-White-Shoes/dp/0545419662/ref=tmm_pap_swatch_0"],
+  "notes": ""
+},
+{
+  "canonical_id": "winnie-the-pooh-bedtime-story-7-10-en",
+  "title": "Winnie-the-Pooh",
+  "isbn": "978-0142404676",
+  "languages": ["EN"],
+  "type": "bedtime_story",
+  "age_group": "7-10",
+  "skills": ["narrative_reasoning", "emotional_reflection", "character_understanding"],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "medium",
+    "emotional_intensity": "soft",
+    "narrative_structure": "episodic_classic",
+    "linguistic_load": "moderate",
+    "visual_load": "minimal",
+    "purpose": "deep_story_comprehension",
+    "recommended_for": "classic_reading_growth"
+  },
+  "source_links": ["https://www.amazon.com/Winnie-Pooh-Puffin-Modern-Classics/dp/0142404675"],
+  "notes": ""
+},
+{
+  "canonical_id": "dont-let-the-pigeon-drive-the-bus-interactive-story-3-5-en",
+  "title": "Don't Let the Pigeon Drive the Bus!",
+  "isbn": "9780786819881",
+  "languages": ["EN"],
+  "type": "interactive_story",
+  "age_group": "3-5",
+  "skills": ["interaction_response", "emotional_expression", "predictable_humor"],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "very_low",
+    "emotional_intensity": "moderate",
+    "narrative_structure": "direct_interaction",
+    "linguistic_load": "minimal",
+    "visual_load": "simple_cartoon",
+    "purpose": "interactive_play",
+    "recommended_for": "preschool_interaction_fun"
+  },
+  "source_links": ["https://www.amazon.com/Dont-Let-Pigeon-Drive-Bus/dp/B00SQBMB20/ref=tmm_pap_swatch_0"],
+  "notes": ""
+},
+{
+  "canonical_id": "first-100-words-bilingual-intro-1-3-en-es",
+  "title": "First 100 Words / Primeras 100 palabras (Bilingual Edition)",
+  "isbn": "978-0312515836",
+  "languages": ["EN", "ES"],
+  "type": "bilingual_intro",
+  "age_group": "1-3",
+  "skills": ["object_recognition", "first_words", "parallel_labeling"],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "very_low",
+    "emotional_intensity": "none",
+    "narrative_structure": "none",
+    "linguistic_load": "single_words",
+    "visual_load": "photographic_objects",
+    "purpose": "bilingual_vocabulary_foundation",
+    "recommended_for": "toddlers_first_bilingual_words"
+  },
+  "source_links": ["https://www.amazon.com/dp/0312515839"],
+  "notes": ""
+},
+ {
       "canonical_id": "las-aventuras-de-rocky-el-afortunado-edicion-dos-en-uno-bilingual-transition-7-10-es",
       "title": "Las Aventuras de Rocky, el Afortunado: Edición Dos en Uno (Spanish Edition, Illustrated and Colored)",
       "isbn": "978-1963328004",
