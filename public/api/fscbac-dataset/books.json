@@ -802,31 +802,7 @@
         "recommended_for": "toddlers_first_bilingual_words"
       },
       "source_links": ["https://www.amazon.com/dp/0312515839"]
-    },
-        {
-      "canonical_id": "las-aventuras-de-rocky-el-afortunado-edicion-dos-en-uno-bilingual-transition-7-10-es",
-      "title": "Las Aventuras de Rocky, el Afortunado: Edición Dos en Uno (Spanish Edition, Illustrated and Colored)",
-      "isbn": "978-1963328004",
-      "languages": ["ES"],
-      "type": "two_in_one",
-      "age_group": "7-10",
-      "skills": [
-        "full_paragraph_bilingual",
-        "meaning_alignment",
-        "complex_vocabulary",
-        "cross_language_mapping"
-      ],
-      "translated_version": "the-adventures-of-lucky-rocky-two-in-one-edition-bilingual-transition-7-10-en",
-      "value_profile": {
-        "complexity": "high",
-        "emotional_intensity": "soft",
-        "narrative_structure": "full_bilingual_parallel",
-        "linguistic_load": "advanced_spanish",
-        "visual_load": "moderate_detail",
-        "purpose": "bilingual_comprehension_depth",
-        "recommended_for": "spanish_advanced_bilingual_kids"
-      },
-      "source_links": ["https://www.amazon.com/dp/B0DD6M59PH"]
+   
     }
 
   ]
