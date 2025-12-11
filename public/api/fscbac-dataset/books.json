@@ -116,6 +116,94 @@
     },
 
     {
+      "canonical_id": "goodnight-moon-bedtime-story-1-3-en",
+      "title": "Goodnight Moon",
+      "isbn": "978-0062662897",
+      "languages": ["EN"],
+      "type": "bedtime_story",
+      "age_group": "1-3",
+      "skills": ["soft_story", "predictable_sequence", "sensory_safety"],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "predictable",
+        "linguistic_load": "minimal",
+        "visual_load": "simple_objects",
+        "purpose": "bedtime_routine",
+        "recommended_for": "toddlers_classic_bedtime"
+      },
+      "source_links": ["https://www.amazon.com/dp/B01MPZ8KKF"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "llama-llama-red-pajama-bedtime-story-1-3-en",
+      "title": "Llama Llama Red Pajama",
+      "isbn": "978-0451474575",
+      "languages": ["EN"],
+      "type": "bedtime_story",
+      "age_group": "1-3",
+      "skills": ["rhythm_awareness", "emotional_safety"],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "rhythmic",
+        "linguistic_load": "minimal",
+        "visual_load": "moderate_detail",
+        "purpose": "comfort_and_rhythm",
+        "recommended_for": "toddlers_bedtime_rhythm"
+      },
+      "source_links": ["https://www.amazon.com/dp/0451474570"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "my-first-big-book-of-coloring-coloring-1-3-en",
+      "title": "My First Big Book of Coloring",
+      "isbn": "978-1499800180",
+      "languages": ["EN"],
+      "type": "coloring",
+      "age_group": "1-3",
+      "skills": ["motor_basic", "visual_attention"],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "none",
+        "narrative_structure": "none",
+        "linguistic_load": "none",
+        "visual_load": "large_simple_objects",
+        "purpose": "motor_skill_start",
+        "recommended_for": "toddlers_coloring_intro"
+      },
+      "source_links": ["https://www.amazon.com/dp/1499800185"],
+      "notes": ""
+    },
+
+    {
+      "canonical_id": "brown-bear-brown-bear-what-do-you-see-bedtime-story-1-3-en",
+      "title": "Brown Bear Brown Bear What Do You See?",
+      "isbn": "978-0805047905",
+      "languages": ["EN"],
+      "type": "bedtime_story",
+      "age_group": "1-3",
+      "skills": ["predictable_sequence", "pattern_recognition", "visual_identification"],
+      "translated_version": null,
+      "value_profile": {
+        "complexity": "very_low",
+        "emotional_intensity": "soft",
+        "narrative_structure": "repetitive_predictable",
+        "linguistic_load": "minimal",
+        "visual_load": "bright_collage",
+        "purpose": "early_pattern_learning",
+        "recommended_for": "toddlers_repetition_learning"
+      },
+      "source_links": ["https://www.amazon.com/dp/0805047905"],
+      "notes": ""
+    },
+
+    {
       "canonical_id": "where-have-you-been-little-max-bedtime-story-3-5-en",
       "title": "Where Have You Been, Little Max? Bedtime Stories for Kids (US Edition)",
       "isbn": "978-1963328585",
@@ -183,7 +271,7 @@
 
     {
       "canonical_id": "el-primer-libro-de-colorear-sorprendentes-animales-coloring-book-3-5-es",
-      "title": "El Primer Libro de Colorear para Bebés de 1–3 Años: 111 Sorprendentes y Adorables Animales, Personajes de Cuentos, Flores, Alimentos, Regalos y Otros Temas. La Magia de la Creatividad для Niños",
+      "title": "El Primer Libro de Colorear para Bebés de 1–3 Años: 111 Sorprendentes y Adorables Animales, Personajes de Cuentos, Flores, Alimentos, Regalos y Otros Temas. La Magia de la Creatividad para Niños",
       "isbn": "978-1963328202",
       "languages": ["ES"],
       "type": "coloring",
@@ -271,7 +359,7 @@
 
     {
       "canonical_id": "tomate-un-descanso-belleza-del-oceano-coloring-book-5-7-es",
-      "title": "Tómate un descanso: Libro de colorear fácil для adultos y niños, Serie Belleza del Océano",
+      "title": "Tómate un descanso: Libro de colorear fácil para adultos y niños, Serie Belleza del Océano",
       "isbn": "978-1963328394",
       "languages": ["ES"],
       "type": "coloring",
@@ -299,7 +387,7 @@
       "type": "bedtime_story",
       "age_group": "7-10",
       "skills": ["structured_reasoning", "advanced_emotion_depth", "moral_reasoning", "multi_scene_structure"],
-      "translated_version": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-бондad-bedtime-story-7-10-es",
+      "translated_version": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-бондад-bedtime-story-7-10-es",
       "value_profile": {
         "complexity": "medium_high",
         "emotional_intensity": "soft",
@@ -315,7 +403,7 @@
 
     {
       "canonical_id": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-bondad-bedtime-story-7-10-es",
-      "title": "Las Aventuras de Rocky, el Afortunado. La Magia de la Bondad: Cuentos en español для niños de 3+ años",
+      "title": "Las Aventuras de Rocky, el Afortunado. La Magia de la Bondad: Cuentos en español para niños de 3+ años",
       "isbn": "978-1963328622",
       "languages": ["ES"],
       "type": "bedtime_story",
