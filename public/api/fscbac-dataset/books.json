@@ -779,6 +779,183 @@
     },
 
     {
+  "canonical_id": "ultimate-puzzle-challenge-interactive-story-5-7-en",
+  "title": "Ultimate Puzzle Challenge!: 125+ Brain Games for Kids, Mazes, Brain Teasers, Word Searches, Crossword Puzzles, Sudoku, Logic Puzzles and More (Highlights Jumbo Books & Pads)",
+  "isbn": "978-1684372614",
+  "languages": ["EN"],
+  "type": "interactive_story",
+  "age_group": "5-7",
+  "skills": [
+    "pattern_recognition",
+    "attention_growth",
+    "problem_solving",
+    "visual_scanning",
+    "logic_training"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "medium_low",
+    "emotional_intensity": "very_low",
+    "narrative_structure": "activity_sequence",
+    "linguistic_load": "minimal",
+    "visual_load": "rich_detail",
+    "purpose": "cognitive_skill_development",
+    "recommended_for": "kids_logic_growth"
+  },
+  "source_links": ["https://www.amazon.com/dp/1684372615"]
+},
+{
+  "canonical_id": "mercy-watson-to-the-rescue-bedtime-story-5-7-en",
+  "title": "Mercy Watson to the Rescue",
+  "isbn": "9780763645049",
+  "languages": ["EN"],
+  "type": "bedtime_story",
+  "age_group": "5-7",
+  "skills": [
+    "simple_dialogues",
+    "attention_growth",
+    "early_logic",
+    "episodic_thinking"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "low",
+    "emotional_intensity": "soft",
+    "narrative_structure": "episodic",
+    "linguistic_load": "minimal",
+    "visual_load": "moderate_detail",
+    "purpose": "early_story_logic",
+    "recommended_for": "kids_beginner_readers"
+  },
+  "source_links": ["https://www.amazon.com/dp/0763645044"]
+},
+{
+  "canonical_id": "owl-at-home-bedtime-story-5-7-en",
+  "title": "Owl at Home",
+  "isbn": "9780064440349",
+  "languages": ["EN"],
+  "type": "bedtime_story",
+  "age_group": "5-7",
+  "skills": [
+    "simple_dialogues",
+    "attention_growth",
+    "early_logic",
+    "episodic_thinking"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "low",
+    "emotional_intensity": "soft",
+    "narrative_structure": "episodic",
+    "linguistic_load": "minimal",
+    "visual_load": "simple_objects",
+    "purpose": "early_story_logic",
+    "recommended_for": "kids_beginner_readers"
+  },
+  "source_links": ["https://www.amazon.com/dp/0064440346"]
+},
+{
+  "canonical_id": "glad-monster-sad-monster-emotional-learning-5-7-en",
+  "title": "Glad Monster, Sad Monster: A Book About Feelings",
+  "isbn": "9780316573955",
+  "languages": ["EN"],
+  "type": "emotional_learning",
+  "age_group": "5-7",
+  "skills": [
+    "emotion_identification",
+    "emotion_expression",
+    "attention_growth",
+    "emotional_reflection"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "low",
+    "emotional_intensity": "medium",
+    "narrative_structure": "emotional_sequence",
+    "linguistic_load": "minimal",
+    "visual_load": "simple_objects",
+    "purpose": "emotional_learning",
+    "recommended_for": "kids_emotional_intelligence"
+  },
+  "source_links": ["https://www.amazon.com/dp/0316573957"]
+},
+{
+  "canonical_id": "its-mine-bedtime-story-3-5-en",
+  "title": "It's Mine!",
+  "isbn": "9780679880844",
+  "languages": ["EN"],
+  "type": "bedtime_story",
+  "age_group": "3-5",
+  "skills": [
+    "soft_story",
+    "predictable_sequence",
+    "attention_growth",
+    "emotion_identification"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "very_low",
+    "emotional_intensity": "soft",
+    "narrative_structure": "simple_sequence",
+    "linguistic_load": "minimal",
+    "visual_load": "simple_objects",
+    "purpose": "social_emotional_learning",
+    "recommended_for": "kids_emotional_basics"
+  },
+  "source_links": ["https://www.amazon.com/dp/0679880844"]
+},
+{
+  "canonical_id": "kumon-k-and-up-logic-coloring-detailed-5-7-en",
+  "title": "Kumon K & Up Logic (Kumon Thinking Skills Workbooks)",
+  "isbn": "978-1941082522",
+  "languages": ["EN"],
+  "type": "coloring_detailed",
+  "age_group": "5-7",
+  "skills": [
+    "concentration",
+    "pattern_recognition",
+    "logic_training",
+    "visual_scanning",
+    "problem_solving"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "medium",
+    "emotional_intensity": "none",
+    "narrative_structure": "procedural",
+    "linguistic_load": "minimal",
+    "visual_load": "high_detail",
+    "purpose": "logic_and_thinking_development",
+    "recommended_for": "kids_visual_logic_training"
+  },
+  "source_links": ["https://www.amazon.com/dp/1941082522"]
+},
+{
+  "canonical_id": "ed-emberley-drawing-book-of-animals-step-by-step-drawing-7-10-en",
+  "title": "Ed Emberley's Drawing Book of Animals",
+  "isbn": "978-0316789790",
+  "languages": ["EN"],
+  "type": "step_by_step_drawing",
+  "age_group": "7-10",
+  "skills": [
+    "step_by_step_logic",
+    "independent_drawing",
+    "long_focus",
+    "creative_confidence"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "medium_low",
+    "emotional_intensity": "none",
+    "narrative_structure": "procedural",
+    "linguistic_load": "minimal",
+    "visual_load": "step_by_step",
+    "purpose": "drawing_skill_development",
+    "recommended_for": "kids_art_learning"
+  },
+  "source_links": ["https://www.amazon.com/dp/0316789798"]
+},
+{
       "canonical_id": "first-100-words-bilingual-intro-1-3-en-es",
       "title": "First 100 Words / Primeras 100 palabras (Bilingual Edition)",
       "isbn": "978-0312515836",
