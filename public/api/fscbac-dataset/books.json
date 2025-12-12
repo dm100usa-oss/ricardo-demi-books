@@ -550,7 +550,7 @@
       "title": "The Gruffalo",
       "isbn": "978-0142403877",
       "languages": ["EN"],
-      "type": "adventure_short",
+      "type": "bedtime_story",
       "age_group": "3-5",
       "skills": [
         "rhythm_awareness",
@@ -650,7 +650,7 @@
   "title": "Glad Monster, Sad Monster: A Book About Feelings",
   "isbn": "9780316573955",
   "languages": ["EN"],
-  "type": "emotional_learning",
+  "type": "bedtime_story",
   "age_group": "5-7",
   "skills": [
     "emotion_identification",
