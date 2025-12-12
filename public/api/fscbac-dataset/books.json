@@ -955,6 +955,136 @@
   },
   "source_links": ["https://www.amazon.com/dp/0316789798"]
 },
+    {
+  "canonical_id": "magic-tree-house-dinosaurs-before-dark-bilingual-extended-7-10-en",
+  "title": "Dinosaurs Before Dark (Magic Tree House #1)",
+  "isbn": "978-1439589212",
+  "languages": ["EN"],
+  "type": "bilingual_extended",
+  "age_group": "7-10",
+  "skills": [
+    "complex_vocabulary",
+    "structured_reasoning",
+    "multi_scene_structure",
+    "attention_growth",
+    "meaning_alignment"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "medium",
+    "emotional_intensity": "medium",
+    "narrative_structure": "multi_scene",
+    "linguistic_load": "moderate",
+    "visual_load": "low_detail",
+    "purpose": "bilingual_comprehension_depth",
+    "recommended_for": "advanced_bilingual_kids"
+  },
+  "source_links": ["https://www.amazon.com/dp/1439589216"]
+},
+{
+  "canonical_id": "national-geographic-little-kids-first-big-book-of-why-bilingual-extended-7-10-en",
+  "title": "National Geographic Little Kids First Big Book of Why",
+  "isbn": "978-0545787802",
+  "languages": ["EN"],
+  "type": "bilingual_extended",
+  "age_group": "7-10",
+  "skills": [
+    "structured_reasoning",
+    "visual_scanning",
+    "attention_growth",
+    "complex_vocabulary",
+    "cross_language_mapping"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "medium",
+    "emotional_intensity": "none",
+    "narrative_structure": "procedural",
+    "linguistic_load": "moderate",
+    "visual_load": "high_detail",
+    "purpose": "bilingual_comprehension_depth",
+    "recommended_for": "advanced_bilingual_kids"
+  },
+  "source_links": ["https://www.amazon.com/dp/0545787802"]
+},
+{
+  "canonical_id": "ada-twist-scientist-bilingual-extended-stem-story-7-10-en",
+  "title": "Ada Twist, Scientist",
+  "isbn": "978-1419721373",
+  "languages": ["EN"],
+  "type": "bilingual_extended",
+  "age_group": "7-10",
+  "skills": [
+    "structured_reasoning",
+    "attention_growth",
+    "problem_solving",
+    "meaning_alignment",
+    "multi_scene_structure"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "medium",
+    "emotional_intensity": "soft",
+    "narrative_structure": "multi_scene_light",
+    "linguistic_load": "moderate",
+    "visual_load": "moderate_detail",
+    "purpose": "bilingual_comprehension_depth",
+    "recommended_for": "advanced_bilingual_kids"
+  },
+  "source_links": ["https://www.amazon.com/dp/1419721372"]
+},
+{
+  "canonical_id": "the-pout-pout-fish-bedtime-story-3-5-en",
+  "title": "The Pout-Pout Fish",
+  "isbn": "978-0374360979",
+  "languages": ["EN"],
+  "type": "bedtime_story",
+  "age_group": "3-5",
+  "skills": [
+    "soft_story",
+    "emotion_identification",
+    "predictable_sequence",
+    "attention_growth",
+    "simple_dialogues"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "very_low",
+    "emotional_intensity": "soft",
+    "narrative_structure": "simple_sequence",
+    "linguistic_load": "minimal",
+    "visual_load": "moderate_detail",
+    "purpose": "imagination_growth",
+    "recommended_for": "preschool_evening_reading"
+  },
+  "source_links": ["https://www.amazon.com/dp/0374360979"]
+},
+{
+  "canonical_id": "rosie-revere-engineer-bilingual-extended-engineering-story-7-10-en",
+  "title": "Rosie Revere, Engineer",
+  "isbn": "978-1419784088",
+  "languages": ["EN"],
+  "type": "bilingual_extended",
+  "age_group": "7-10",
+  "skills": [
+    "structured_reasoning",
+    "problem_solving",
+    "creative_confidence",
+    "meaning_alignment",
+    "multi_scene_structure"
+  ],
+  "translated_version": null,
+  "value_profile": {
+    "complexity": "medium",
+    "emotional_intensity": "soft",
+    "narrative_structure": "multi_scene_light",
+    "linguistic_load": "moderate",
+    "visual_load": "moderate_detail",
+    "purpose": "bilingual_comprehension_depth",
+    "recommended_for": "advanced_bilingual_kids"
+  },
+  "source_links": ["https://www.amazon.com/dp/1419784080"]
+},
 {
       "canonical_id": "first-100-words-bilingual-intro-1-3-en-es",
       "title": "First 100 Words / Primeras 100 palabras (Bilingual Edition)",
