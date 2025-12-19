@@ -23,14 +23,26 @@ type Book = {
 };
 
 function getTasks(): Task[] {
-  const filePath = path.join(process.cwd(), "public", "api", "recommendations", "tasks.json");
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "api",
+    "recommendations",
+    "tasks.json"
+  );
   const json = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(json);
   return data.tasks;
 }
 
 function getBooks(): Book[] {
-  const filePath = path.join(process.cwd(), "public", "api", "fscbac-dataset", "books.json");
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "api",
+    "fscbac-dataset",
+    "books.json"
+  );
   const json = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(json);
   return data.books;
@@ -49,7 +61,7 @@ export default function TaskPage({
   }
 
   const allBooks = getBooks();
-  const taskBooks = allBooks.filter((book) => 
+  const taskBooks = allBooks.filter((book) =>
     task.book_ids.includes(book.canonical_id)
   );
 
@@ -115,16 +127,22 @@ export default function TaskPage({
           Related tasks
         </h2>
         <ul className="list-disc pl-5">
-          {task.related_tasks.map((slug) => (
-            <li key={slug}>
-              <Link
-                href={`/recommendations/tasks/${slug}`}
-                className="text-blue-600 underline"
-              >
-                {slug}
-              </Link>
-            </li>
-          ))}
+          {task.related_tasks.map((relatedSlug) => {
+            const relatedTask = tasks.find(
+              (t) => t.slug === relatedSlug
+            );
+
+            return (
+              <li key={relatedSlug}>
+                <Link
+                  href={`/recommendations/tasks/${relatedSlug}`}
+                  className="text-blue-600 underline"
+                >
+                  {relatedTask ? relatedTask.title : relatedSlug}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </section>
 
