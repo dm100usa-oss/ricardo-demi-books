@@ -1,244 +1,45 @@
-{
-  "system": "recommendations_tasks_dataset",
-  "version": "1.0.0",
-  "tasks": [
-    {
-      "id": "bedtime-routine-1-3",
-      "slug": "books-for-a-bedtime-routine",
-      "title": "Books for a Bedtime Routine",
-      "age_bands": ["1-3"],
-      "context": "A calm and predictable bedtime routine helps toddlers transition from active play to sleep. Books selected for this task should support emotional safety and low stimulation.",
-      "selection_criteria": [
-        "Very low emotional intensity",
-        "Predictable narrative structure",
-        "Minimal linguistic and visual load",
-        "No conflict or tension"
-      ],
-      "parameters": {
-        "age_applicability": "1-3",
-        "key_task": "Establishing a calm bedtime routine",
-        "emotional_impact": "Soft and reassuring",
-        "skills_developed": "soft_story, predictable_sequence, sensory_safety, attention_growth, low_cognitive_load",
-        "stimulation_level": "Very low",
-        "interaction_format": "Shared reading with an adult",
-        "usage_context": "Evening wind-down before sleep",
-        "limitations": "Not suitable for stimulating or high-energy reading"
-      },
-      "book_ids": [
-        "goodnight-moon-bedtime-story-1-3-en",
-        "where-are-you-going-little-max-bedtime-story-1-3-en",
-        "llama-llama-red-pajama-bedtime-story-1-3-en",
-        "brown-bear-brown-bear-what-do-you-see-bedtime-story-1-3-en",
-        "the-very-hungry-caterpillar-bedtime-story-1-3-en"
-      ],
-      "related_tasks": ["gentle-start-reading-1-3"]
-    },
+import Link from "next/link";
+import fs from "fs";
+import path from "path";
 
-    {
-      "id": "gentle-start-reading-1-3",
-      "slug": "books-for-a-gentle-start-with-reading",
-      "title": "Books for a Gentle Start with Reading",
-      "age_bands": ["1-3"],
-      "context": "Early interaction with books should feel safe and pressure-free. This task focuses on simple, predictable book experiences.",
-      "selection_criteria": [
-        "One object per page",
-        "Minimal text",
-        "No narrative conflict"
-      ],
-      "parameters": {
-        "age_applicability": "1-3",
-        "key_task": "Introducing books as a safe object",
-        "emotional_impact": "Neutral to soft",
-        "skills_developed": "attention_growth, low_cognitive_load, sensory_safety",
-        "stimulation_level": "Very low",
-        "interaction_format": "Shared looking and naming",
-        "usage_context": "Calm daytime or evening moments",
-        "limitations": "Not suitable for independent reading"
-      },
-      "book_ids": [
-        "brown-bear-brown-bear-what-do-you-see-bedtime-story-1-3-en",
-        "first-coloring-book-little-max-coloring-book-1-3-en",
-        "where-are-you-going-little-max-bedtime-story-1-3-en",
-        "my-first-big-book-of-coloring-coloring-1-3-en",
-        "where-are-you-going-little-max-bilingual-1-3-bi"
-      ],
-      "related_tasks": ["bedtime-routine-1-3"]
-    },
+type Task = {
+  id: string;
+  slug: string;
+  title: string;
+  age_bands: string[];
+};
 
-    {
-      "id": "reduce-anxiety-3-5",
-      "slug": "books-to-reduce-child-anxiety",
-      "title": "Books to Reduce Child Anxiety",
-      "age_bands": ["3-5"],
-      "context": "Books can help children process mild anxiety related to daily changes through familiar and reassuring stories.",
-      "selection_criteria": [
-        "Low emotional intensity",
-        "Reassuring story resolution",
-        "Simple dialogues"
-      ],
-      "parameters": {
-        "age_applicability": "3-5",
-        "key_task": "Reducing mild anxiety",
-        "emotional_impact": "Reassuring",
-        "skills_developed": "imagination_seed, simple_dialogues, attention_growth",
-        "stimulation_level": "Low",
-        "interaction_format": "Shared reading with discussion",
-        "usage_context": "After stressful moments or before sleep",
-        "limitations": "Not suitable for high-energy reading"
-      },
-      "book_ids": [
-        "the-pout-pout-fish-bedtime-story-3-5-en",
-        "where-have-you-been-little-max-bedtime-story-3-5-en",
-        "its-mine-bedtime-story-3-5-en",
-        "the-gruffalo-adventure-short-3-5-en"
-      ],
-      "related_tasks": ["emotional-safety-3-5"]
-    },
+function getTasks(): Task[] {
+  const filePath = path.join(process.cwd(), "public", "api", "recommendations", "tasks.json");
+  const json = fs.readFileSync(filePath, "utf-8");
+  const data = JSON.parse(json);
+  return data.tasks;
+}
 
-    {
-      "id": "emotional-safety-3-5",
-      "slug": "books-to-build-a-sense-of-emotional-safety",
-      "title": "Books to Build a Sense of Emotional Safety",
-      "age_bands": ["3-5"],
-      "context": "Emotional safety develops through stable and predictable storytelling experiences.",
-      "selection_criteria": [
-        "Predictable structure",
-        "Soft emotional tone",
-        "Clear resolution"
-      ],
-      "parameters": {
-        "age_applicability": "3-5",
-        "key_task": "Building emotional safety",
-        "emotional_impact": "Soft and stabilizing",
-        "skills_developed": "imagination_seed, attention_growth, low_cognitive_load",
-        "stimulation_level": "Low",
-        "interaction_format": "Shared reading with an adult",
-        "usage_context": "Daily reading routines",
-        "limitations": "Not suitable for children seeking excitement"
-      },
-      "book_ids": [
-        "the-gruffalo-adventure-short-3-5-en",
-        "where-have-you-been-little-max-bedtime-story-3-5-en",
-        "the-pout-pout-fish-bedtime-story-3-5-en",
-        "its-mine-bedtime-story-3-5-en"
-      ],
-      "related_tasks": ["reduce-anxiety-3-5"]
-    },
+export default function TasksPage() {
+  const tasks = getTasks();
 
-    {
-      "id": "emotional-vocabulary-5-7",
-      "slug": "books-to-grow-an-emotional-vocabulary",
-      "title": "Books to Grow an Emotional Vocabulary",
-      "age_bands": ["5-7"],
-      "context": "Children begin to identify and name emotions more clearly through story-based exposure.",
-      "selection_criteria": [
-        "Clear emotional situations",
-        "Simple but meaningful dialogues",
-        "Moderate emotional depth"
-      ],
-      "parameters": {
-        "age_applicability": "5-7",
-        "key_task": "Expanding emotional vocabulary",
-        "emotional_impact": "Moderate and reflective",
-        "skills_developed": "emotion_depth, simple_dialogues, attention_growth",
-        "stimulation_level": "Moderate",
-        "interaction_format": "Shared reading with reflection",
-        "usage_context": "Discussion-oriented reading",
-        "limitations": "Not suitable for younger children"
-      },
-      "book_ids": [
-        "glad-monster-sad-monster-emotional-learning-5-7-en",
-        "the-adventures-of-lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
-        "pete-the-cat-white-shoes-bedtime-story-5-7-en",
-        "mercy-watson-to-the-rescue-bedtime-story-5-7-en"
-      ],
-      "related_tasks": ["shared-reading-5-7"]
-    },
+  return (
+    <main className="container mx-auto px-4 py-10">
+      <h1 className="text-3xl font-semibold mb-6">
+        Recommendation tasks
+      </h1>
 
-    {
-      "id": "shared-reading-5-7",
-      "slug": "books-for-parent-child-shared-reading",
-      "title": "Books for Parent-Child Shared Reading",
-      "age_bands": ["5-7"],
-      "context": "Shared reading strengthens comprehension and emotional connection.",
-      "selection_criteria": [
-        "Dialogue-rich structure",
-        "Moderate narrative complexity"
-      ],
-      "parameters": {
-        "age_applicability": "5-7",
-        "key_task": "Strengthening shared reading",
-        "emotional_impact": "Engaging but safe",
-        "skills_developed": "simple_dialogues, attention_growth, emotion_depth",
-        "stimulation_level": "Moderate",
-        "interaction_format": "Adult-child dialogue",
-        "usage_context": "Evening or weekend reading",
-        "limitations": "Not suitable for independent reading"
-      },
-      "book_ids": [
-        "owl-at-home-bedtime-story-5-7-en",
-        "the-adventures-of-lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
-        "mercy-watson-to-the-rescue-bedtime-story-5-7-en",
-        "pete-the-cat-white-shoes-bedtime-story-5-7-en"
-      ],
-      "related_tasks": ["emotional-vocabulary-5-7"]
-    },
-
-    {
-      "id": "independent-focus-7-10",
-      "slug": "books-for-calm-independent-looking",
-      "title": "Books for Calm Independent Looking",
-      "age_bands": ["7-10"],
-      "context": "Older children can engage independently with structured materials that support extended focus.",
-      "selection_criteria": [
-        "Clear structure",
-        "Support for extended focus"
-      ],
-      "parameters": {
-        "age_applicability": "7-10",
-        "key_task": "Supporting independent focus",
-        "emotional_impact": "Neutral",
-        "skills_developed": "long_focus, step_by_step_logic, independent_drawing",
-        "stimulation_level": "Moderate",
-        "interaction_format": "Independent engagement",
-        "usage_context": "Quiet individual activity",
-        "limitations": "Not suitable for group reading"
-      },
-      "book_ids": [
-        "ed-emberley-drawing-book-of-animals-step-by-step-drawing-7-10-en",
-        "how-to-draw-111-amazing-and-cute-animals-step-by-step-drawing-7-10-en",
-        "national-geographic-little-kids-first-big-book-of-why-bilingual-extended-7-10-en"
-      ],
-      "related_tasks": ["independent-reading-7-10"]
-    },
-
-    {
-      "id": "independent-reading-7-10",
-      "slug": "books-for-independent-reading",
-      "title": "Books for Independent Reading",
-      "age_bands": ["7-10"],
-      "context": "Independent reading supports reasoning and narrative continuity.",
-      "selection_criteria": [
-        "Multi-scene structure",
-        "Clear moral or narrative arc"
-      ],
-      "parameters": {
-        "age_applicability": "7-10",
-        "key_task": "Encouraging independent reading",
-        "emotional_impact": "Moderate",
-        "skills_developed": "structured_reasoning, moral_reasoning, attention_growth",
-        "stimulation_level": "Moderate",
-        "interaction_format": "Independent reading",
-        "usage_context": "Self-directed reading time",
-        "limitations": "Not suitable for early readers"
-      },
-      "book_ids": [
-        "magic-tree-house-dinosaurs-before-dark-bilingual-extended-7-10-en",
-        "the-adventures-of-lucky-rocky-the-magic-of-kindness-bedtime-story-7-10-en",
-        "ada-twist-scientist-bilingual-extended-stem-story-7-10-en",
-        "rosie-revere-engineer-bilingual-extended-engineering-story-7-10-en"
-      ],
-      "related_tasks": ["independent-focus-7-10"]
-    }
-  ]
+      <ul className="space-y-4">
+        {tasks.map((task) => (
+          <li key={task.id}>
+            <Link
+              href={`/recommendations/tasks/${task.slug}`}
+              className="text-blue-600 underline"
+            >
+              {task.title}
+            </Link>
+            <div className="text-sm text-gray-600">
+              Ages: {task.age_bands.join(", ")}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
 }
