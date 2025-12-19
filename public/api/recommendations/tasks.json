@@ -25,7 +25,11 @@
         "limitations": "Not suitable for stimulating or high-energy reading"
       },
       "book_ids": [
-        "where-are-you-going-little-max-1-3-en"
+        "goodnight-moon-bedtime-story-1-3-en",
+        "where-are-you-going-little-max-bedtime-story-1-3-en",
+        "llama-llama-red-pajama-bedtime-story-1-3-en",
+        "brown-bear-brown-bear-what-do-you-see-bedtime-story-1-3-en",
+        "the-very-hungry-caterpillar-bedtime-story-1-3-en"
       ],
       "related_tasks": ["gentle-start-reading-1-3"]
     },
@@ -52,8 +56,11 @@
         "limitations": "Not suitable for independent reading"
       },
       "book_ids": [
-        "where-are-you-going-little-max-1-3-en",
-        "first-coloring-book-1-3-en"
+        "brown-bear-brown-bear-what-do-you-see-bedtime-story-1-3-en",
+        "first-coloring-book-little-max-coloring-book-1-3-en",
+        "where-are-you-going-little-max-bedtime-story-1-3-en",
+        "my-first-big-book-of-coloring-coloring-1-3-en",
+        "where-are-you-going-little-max-bilingual-1-3-bi"
       ],
       "related_tasks": ["bedtime-routine-1-3"]
     },
@@ -80,7 +87,10 @@
         "limitations": "Not suitable for high-energy reading"
       },
       "book_ids": [
-        "where-have-you-been-little-max-3-5-en"
+        "the-pout-pout-fish-bedtime-story-3-5-en",
+        "where-have-you-been-little-max-bedtime-story-3-5-en",
+        "its-mine-bedtime-story-3-5-en",
+        "the-gruffalo-adventure-short-3-5-en"
       ],
       "related_tasks": ["emotional-safety-3-5"]
     },
@@ -107,7 +117,10 @@
         "limitations": "Not suitable for children seeking excitement"
       },
       "book_ids": [
-        "where-have-you-been-little-max-3-5-en"
+        "the-gruffalo-adventure-short-3-5-en",
+        "where-have-you-been-little-max-bedtime-story-3-5-en",
+        "the-pout-pout-fish-bedtime-story-3-5-en",
+        "its-mine-bedtime-story-3-5-en"
       ],
       "related_tasks": ["reduce-anxiety-3-5"]
     },
@@ -134,7 +147,10 @@
         "limitations": "Not suitable for younger children"
       },
       "book_ids": [
-        "lucky-rocky-magic-of-friendship-5-7-en"
+        "glad-monster-sad-monster-emotional-learning-5-7-en",
+        "the-adventures-of-lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
+        "pete-the-cat-white-shoes-bedtime-story-5-7-en",
+        "mercy-watson-to-the-rescue-bedtime-story-5-7-en"
       ],
       "related_tasks": ["shared-reading-5-7"]
     },
@@ -160,7 +176,10 @@
         "limitations": "Not suitable for independent reading"
       },
       "book_ids": [
-        "lucky-rocky-magic-of-friendship-5-7-en"
+        "owl-at-home-bedtime-story-5-7-en",
+        "the-adventures-of-lucky-rocky-the-magic-of-friendship-bedtime-story-5-7-en",
+        "mercy-watson-to-the-rescue-bedtime-story-5-7-en",
+        "pete-the-cat-white-shoes-bedtime-story-5-7-en"
       ],
       "related_tasks": ["emotional-vocabulary-5-7"]
     },
@@ -186,7 +205,9 @@
         "limitations": "Not suitable for group reading"
       },
       "book_ids": [
-        "how-to-draw-111-animals-7-10-en"
+        "ed-emberley-drawing-book-of-animals-step-by-step-drawing-7-10-en",
+        "how-to-draw-111-amazing-and-cute-animals-step-by-step-drawing-7-10-en",
+        "national-geographic-little-kids-first-big-book-of-why-bilingual-extended-7-10-en"
       ],
       "related_tasks": ["independent-reading-7-10"]
     },
@@ -212,7 +233,10 @@
         "limitations": "Not suitable for early readers"
       },
       "book_ids": [
-        "lucky-rocky-magic-of-kindness-7-10-en"
+        "magic-tree-house-dinosaurs-before-dark-bilingual-extended-7-10-en",
+        "the-adventures-of-lucky-rocky-the-magic-of-kindness-bedtime-story-7-10-en",
+        "ada-twist-scientist-bilingual-extended-stem-story-7-10-en",
+        "rosie-revere-engineer-bilingual-extended-engineering-story-7-10-en"
       ],
       "related_tasks": ["independent-focus-7-10"]
     }
