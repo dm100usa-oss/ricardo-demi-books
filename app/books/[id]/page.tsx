@@ -1,25 +1,20 @@
 import fs from "fs";
 import path from "path";
-import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export const dynamic = "force-static";
 
 type Book = {
   canonical_id: string;
   title: string;
-  age_group: string;
+  isbn: string;
+  languages: string[];
   type: string;
-  languages?: string[];
-  isbn?: string;
+  age_group: string;
+  skills: string[];
+  translated_version: string | null;
+  value_profile?: Record<string, string>;
   source_links?: string[];
-  skills?: string[];
-};
-
-type Task = {
-  id: string;
-  slug: string;
-  title: string;
-  book_ids: string[];
 };
 
 function getBooks(): Book[] {
@@ -35,22 +30,11 @@ function getBooks(): Book[] {
   return json.books;
 }
 
-function getTasks(): Task[] {
-  const filePath = path.join(
-    process.cwd(),
-    "public",
-    "api",
-    "recommendations",
-    "tasks.json"
-  );
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const json = JSON.parse(raw);
-  return json.tasks;
-}
-
 export async function generateStaticParams() {
   const books = getBooks();
-  return books.map((book) => ({ id: book.canonical_id }));
+  return books.map((book) => ({
+    id: book.canonical_id,
+  }));
 }
 
 export default function BookPage({
@@ -62,80 +46,79 @@ export default function BookPage({
   const book = books.find((b) => b.canonical_id === params.id);
 
   if (!book) {
-    return (
-      <main className="prose prose-neutral max-w-none">
-        <h1>Book not found</h1>
-      </main>
-    );
+    notFound();
   }
 
-  const tasks = getTasks().filter((task) =>
-    task.book_ids.includes(book.canonical_id)
-  );
-
   return (
-    <main className="prose prose-neutral max-w-none">
-      <h1>{book.title}</h1>
+    <main className="max-w-3xl mx-auto px-4 py-10">
+      <h1 className="text-3xl font-semibold mb-6">
+        {book.title}
+      </h1>
 
-      <p>
-        <strong>Age group:</strong> {book.age_group}
-      </p>
-
-      <p>
-        <strong>Type:</strong> {book.type}
-      </p>
-
-      {book.languages && (
-        <p>
+      <ul className="space-y-2 text-gray-700">
+        <li>
+          <strong>Age group:</strong> {book.age_group}
+        </li>
+        <li>
+          <strong>Type:</strong> {book.type}
+        </li>
+        <li>
           <strong>Languages:</strong> {book.languages.join(", ")}
-        </p>
-      )}
-
-      {book.isbn && (
-        <p>
+        </li>
+        <li>
           <strong>ISBN:</strong> {book.isbn}
-        </p>
+        </li>
+      </ul>
+
+      {book.skills && book.skills.length > 0 && (
+        <section className="mt-6">
+          <h2 className="text-xl font-semibold mb-2">
+            Skills
+          </h2>
+          <ul className="list-disc pl-5 text-gray-700">
+            {book.skills.map((skill) => (
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </section>
       )}
 
-      {Array.isArray(book.skills) && book.skills.length > 0 && (
-        <p>
-          <strong>Skills:</strong> {book.skills.join(", ")}
-        </p>
-      )}
-
-      {Array.isArray(book.source_links) && book.source_links.length > 0 && (
-        <p>
-          <a
-            className="text-blue-600 underline"
-            href={book.source_links[0]}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Source link
-          </a>
-        </p>
-      )}
-
-      <section>
-        <h2>Fits these tasks</h2>
-
-        {tasks.length === 0 ? (
-          <p>No related recommendation tasks.</p>
-        ) : (
-          <ul>
-            {tasks.map((task) => (
-              <li key={task.id}>
-                <Link
-                  href={`/recommendations/tasks/${task.slug}`}
-                  className="text-blue-600 underline"
-                >
-                  {task.title}
-                </Link>
+      {book.value_profile && (
+        <section className="mt-6">
+          <h2 className="text-xl font-semibold mb-2">
+            Value profile
+          </h2>
+          <ul className="space-y-1 text-gray-700">
+            {Object.entries(book.value_profile).map(([key, value]) => (
+              <li key={key}>
+                <strong>{key.replace(/_/g, " ")}:</strong> {value}
               </li>
             ))}
           </ul>
-        )}
-      </section>
+        </section>
+      )}
+
+      {book.source_links && book.source_links.length > 0 && (
+        <section className="mt-6">
+          <h2 className="text-xl font-semibold mb-2">
+            Sources
+          </h2>
+          <ul className="list-disc pl-5">
+            {book.source_links.map((link) => (
+              <li key={link}>
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline"
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </main>
   );
 }
