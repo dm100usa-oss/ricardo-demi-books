@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const dynamic = "force-static";
@@ -17,6 +18,13 @@ type Book = {
   source_links?: string[];
 };
 
+type Task = {
+  id: string;
+  slug: string;
+  title: string;
+  book_ids: string[];
+};
+
 function getBooks(): Book[] {
   const filePath = path.join(
     process.cwd(),
@@ -28,6 +36,19 @@ function getBooks(): Book[] {
   const raw = fs.readFileSync(filePath, "utf-8");
   const json = JSON.parse(raw);
   return json.books;
+}
+
+function getTasks(): Task[] {
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "api",
+    "recommendations",
+    "tasks.json"
+  );
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const json = JSON.parse(raw);
+  return json.tasks;
 }
 
 export async function generateStaticParams() {
@@ -48,6 +69,11 @@ export default function BookPage({
   if (!book) {
     notFound();
   }
+
+  const tasks = getTasks();
+  const relatedTasks = tasks.filter((task) =>
+    task.book_ids.includes(book.canonical_id)
+  );
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-10">
@@ -92,6 +118,26 @@ export default function BookPage({
             {Object.entries(book.value_profile).map(([key, value]) => (
               <li key={key}>
                 <strong>{key.replace(/_/g, " ")}:</strong> {value}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {relatedTasks.length > 0 && (
+        <section className="mt-6">
+          <h2 className="text-xl font-semibold mb-2">
+            Fits these tasks
+          </h2>
+          <ul className="list-disc pl-5">
+            {relatedTasks.map((task) => (
+              <li key={task.id}>
+                <Link
+                  href={`/recommendations/tasks/${task.slug}`}
+                  className="text-blue-600 underline"
+                >
+                  {task.title}
+                </Link>
               </li>
             ))}
           </ul>
