@@ -1,4 +1,7 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import fs from "fs";
+import path from "path";
 
 type Task = {
   id: string;
@@ -7,29 +10,48 @@ type Task = {
   context: string;
   selection_criteria: string[];
   parameters: Record<string, string>;
+  book_ids: string[];
   related_tasks: string[];
   age_bands: string[];
 };
 
-async function getTasks(): Promise<Task[]> {
-  const res = await fetch(
-    "/api/recommendations/tasks.json",
-    { cache: "no-store" }
-  );
-  return res.json();
+type Book = {
+  canonical_id: string;
+  title: string;
+  age_group: string;
+  type: string;
+};
+
+function getTasks(): Task[] {
+  const filePath = path.join(process.cwd(), "public", "api", "recommendations", "tasks.json");
+  const json = fs.readFileSync(filePath, "utf-8");
+  const data = JSON.parse(json);
+  return data.tasks;
 }
 
-export default async function TaskPage({
+function getBooks(): Book[] {
+  const filePath = path.join(process.cwd(), "public", "api", "fscbac-dataset", "books.json");
+  const json = fs.readFileSync(filePath, "utf-8");
+  const data = JSON.parse(json);
+  return data.books;
+}
+
+export default function TaskPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const tasks = await getTasks();
+  const tasks = getTasks();
   const task = tasks.find((t) => t.slug === params.slug);
 
   if (!task) {
     notFound();
   }
+
+  const allBooks = getBooks();
+  const taskBooks = allBooks.filter((book) => 
+    task.book_ids.includes(book.canonical_id)
+  );
 
   return (
     <main className="container mx-auto px-4 py-10">
@@ -61,7 +83,28 @@ export default async function TaskPage({
         <ul className="space-y-1">
           {Object.entries(task.parameters).map(([key, value]) => (
             <li key={key}>
-              <strong>{key}:</strong> {value}
+              <strong>{key.replace(/_/g, " ")}:</strong> {value}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold mb-2">
+          Recommended books
+        </h2>
+        <ul className="space-y-2">
+          {taskBooks.map((book) => (
+            <li key={book.canonical_id}>
+              <Link
+                href={`/books/${book.canonical_id}`}
+                className="text-blue-600 underline"
+              >
+                {book.title}
+              </Link>
+              <span className="text-sm text-gray-600 ml-2">
+                (Age {book.age_group})
+              </span>
             </li>
           ))}
         </ul>
@@ -74,12 +117,12 @@ export default async function TaskPage({
         <ul className="list-disc pl-5">
           {task.related_tasks.map((slug) => (
             <li key={slug}>
-              <a
+              <Link
                 href={`/recommendations/tasks/${slug}`}
                 className="text-blue-600 underline"
               >
                 {slug}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -92,12 +135,12 @@ export default async function TaskPage({
         <ul className="list-disc pl-5">
           {task.age_bands.map((age) => (
             <li key={age}>
-              <a
+              <Link
                 href={`/ages/${age}`}
                 className="text-blue-600 underline"
               >
                 {age}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
