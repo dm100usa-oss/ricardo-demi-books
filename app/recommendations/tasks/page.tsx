@@ -1,4 +1,6 @@
 import Link from "next/link";
+import fs from "fs";
+import path from "path";
 
 type Task = {
   id: string;
@@ -7,16 +9,15 @@ type Task = {
   age_bands: string[];
 };
 
-async function getTasks(): Promise<Task[]> {
-  const res = await fetch(
-    "/api/recommendations/tasks.json",
-    { cache: "no-store" }
-  );
-  return res.json();
+function getTasks(): Task[] {
+  const filePath = path.join(process.cwd(), "public", "api", "recommendations", "tasks.json");
+  const json = fs.readFileSync(filePath, "utf-8");
+  const data = JSON.parse(json);
+  return data.tasks;
 }
 
-export default async function TasksPage() {
-  const tasks = await getTasks();
+export default function TasksPage() {
+  const tasks = getTasks();
 
   return (
     <main className="container mx-auto px-4 py-10">
