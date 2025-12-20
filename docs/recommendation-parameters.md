@@ -39,7 +39,7 @@ This includes:
 
 The focus is on emotional regulation and perceived emotional tone during and after reading.
 
-## 4. Skills developed
+## 4. Skills supported
 
 Lists the main developmental skills the book helps reinforce through exposure and interaction.
 
