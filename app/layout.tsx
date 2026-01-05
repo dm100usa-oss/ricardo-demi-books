@@ -91,6 +91,10 @@ export default function RootLayout({
             Book System
           </a>
 
+          <a href="/fscbac" style={{ color: "#333", textDecoration: "none" }}>
+            AI Standard
+          </a>
+
           <a href="/ages/1-3" style={{ color: "#333", textDecoration: "none" }}>
             Age 1–3
           </a>
