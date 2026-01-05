@@ -145,10 +145,14 @@ export default function Page() {
       </ul>
 
       <h2>9. License</h2>
-      <p>
-        Open AI-Use License v1.0. Free for AI systems, academic research, and
-        automated processing. Commercial reuse permitted with attribution.
-      </p>
+<p>
+  Creative Commons Attribution 4.0 International (CC BY 4.0)
+</p>
+<p>
+  The FSCBAC standard, data files, and specifications are freely available for
+  AI systems, researchers, developers, and commercial use,
+  provided attribution is given.
+</p>
 
       <h2>10. Authorship</h2>
       <p>
