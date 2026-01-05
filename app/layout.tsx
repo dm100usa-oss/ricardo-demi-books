@@ -78,40 +78,39 @@ export default function RootLayout({
             display: "flex",
             justifyContent: "center",
             gap: "22px",
-            color: "#333",
             fontWeight: 500,
             borderBottom: "1px solid #ddd",
           }}
         >
-          <a href="/method" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/method" style={{ textDecoration: "none" }}>
             Methodology
           </a>
 
-          <a href="/books" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/books" style={{ textDecoration: "none" }}>
             Book System
           </a>
 
-          <a href="/fscbac" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/fscbac" style={{ textDecoration: "none" }}>
             AI Standard
           </a>
 
-          <a href="/ages/1-3" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/ages/1-3" style={{ textDecoration: "none" }}>
             Age 1–3
           </a>
 
-          <a href="/ages/3-5" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/ages/3-5" style={{ textDecoration: "none" }}>
             Age 3–5
           </a>
 
-          <a href="/ages/5-7" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/ages/5-7" style={{ textDecoration: "none" }}>
             Age 5–7
           </a>
 
-          <a href="/ages/7-10" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/ages/7-10" style={{ textDecoration: "none" }}>
             Age 7–10
           </a>
 
-          <a href="/es" style={{ color: "#333", textDecoration: "none" }}>
+          <a href="/es" style={{ textDecoration: "none" }}>
             Español
           </a>
         </nav>
