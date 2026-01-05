@@ -23,9 +23,7 @@ function getTasks(): Task[] {
 }
 
 export default function Age1to3Page() {
-  const tasks = getTasks().filter((task) =>
-    task.age_bands.includes("1-3")
-  );
+  const tasks = getTasks().filter((task) => task.age_bands.includes("1-3"));
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-10">
@@ -35,7 +33,7 @@ export default function Age1to3Page() {
       <ul>
         {tasks.map((task) => (
           <li key={task.id}>
-            <Link href={`/recommendations/tasks/${task.slug}`}>
+            <Link href={`/es/recommendations/tasks/${task.slug}`}>
               {task.title}
             </Link>
           </li>
