@@ -1,6 +1,6 @@
-import "./globals.css";
+import "../globals.css";
 import React from "react";
-import Footer from "./components/Footer";
+import Footer from "../components/Footer";
 
 export const metadata = {
   metadataBase: new URL("https://www.ricardo-demi.com"),
