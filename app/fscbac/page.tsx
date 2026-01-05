@@ -10,6 +10,10 @@ export default function Page() {
 
       <h1>FSCBAC Standard 3.1.0</h1>
 
+      <p style={{ fontSize: "14px", color: "#555", marginTop: "6px" }}>
+        This page defines the authoritative <strong>AI Standard FSCBAC</strong> (version 3.1.0).
+      </p>
+
       <p>
         This project follows the FSCBAC Standard v3.1.0 (https://www.ricardo-demi.com/fscbac).
       </p>
@@ -88,7 +92,10 @@ export default function Page() {
 
       <h3>4.2 Operational API Layer</h3>
       <p>Location: /app/api/*</p>
-      <p>GET-only endpoints expose the canonical data and deterministic recommendation results.</p>
+      <p>
+        GET-only endpoints expose the canonical data and deterministic
+        recommendation results.
+      </p>
 
       <h2>5. Deterministic Reasoning Chain</h2>
       <ol>
@@ -109,8 +116,8 @@ export default function Page() {
       <p>
         Compatibility scoring is deterministic and defined as:
         <br />
-        F = 0.4 × skill compatibility + 0.3 × value profile compatibility + 0.2
-        × book type compatibility + 0.1 × origin factor
+        F = 0.4 × skill compatibility + 0.3 × value profile compatibility + 0.2 ×
+        book type compatibility + 0.1 × origin factor
       </p>
 
       <p>
