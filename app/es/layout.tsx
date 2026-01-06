@@ -1,5 +1,6 @@
 import "../globals.css";
 import React from "react";
+import Footer from "../components/Footer";
 
 export const metadata = {
   metadataBase: new URL("https://www.ricardo-demi.com"),
@@ -47,7 +48,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://www.ricardo-demi.com/cover.jpg"
+          content="https://ricardo-demi-books.vercel.app/cover.jpg"
         />
         <meta property="og:type" content="website" />
 
@@ -58,7 +59,7 @@ export default function RootLayout({
         <script
           defer
           src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token":"0a2c9e4a59fb4c859f3d5d3c9ddc24f1"}'
+          data-cf-beacon='{"token": "0a2c9e4a59fb4c859f3d5d3c9ddc24f1"}'
         ></script>
       </head>
 
@@ -69,7 +70,56 @@ export default function RootLayout({
           padding: 0,
         }}
       >
+        <nav
+          style={{
+            backgroundColor: "#f5f5f5",
+            padding: "14px 16px",
+            fontSize: "15px",
+            display: "flex",
+            justifyContent: "center",
+            gap: "22px",
+            fontWeight: 500,
+            borderBottom: "1px solid #ddd",
+          }}
+        >
+          <a href="/es/method" style={{ textDecoration: "none" }}>
+            Metodología
+          </a>
+
+          <a href="/es/books" style={{ textDecoration: "none" }}>
+            Sistema de Libros
+          </a>
+
+          <a
+            href="https://www.ricardo-demi.com/es/fscbac"
+            style={{ textDecoration: "none" }}
+          >
+            Estándar de IA
+          </a>
+
+          <a href="/es/ages/1-3" style={{ textDecoration: "none" }}>
+            Edad 1–3
+          </a>
+
+          <a href="/es/ages/3-5" style={{ textDecoration: "none" }}>
+            Edad 3–5
+          </a>
+
+          <a href="/es/ages/5-7" style={{ textDecoration: "none" }}>
+            Edad 5–7
+          </a>
+
+          <a href="/es/ages/7-10" style={{ textDecoration: "none" }}>
+            Edad 7–10
+          </a>
+
+          <a href="/" style={{ textDecoration: "none" }}>
+            English
+          </a>
+        </nav>
+
         {children}
+        <Footer />
       </body>
     </html>
   );
