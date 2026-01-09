@@ -1,8 +1,5 @@
-'use client';
-
-import "./globals.css";
+дай полняй и правильный файл. import "./globals.css";
 import React from "react";
-import { usePathname } from "next/navigation";
 import Footer from "./components/Footer";
 
 export const metadata = {
@@ -20,11 +17,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-  const isES = pathname.startsWith("/es");
-
   return (
-    <html lang={isES ? "es" : "en"}>
+    <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
@@ -76,51 +70,50 @@ export default function RootLayout({
           padding: 0,
         }}
       >
-        {isES ? (
-          <nav
-            style={{
-              backgroundColor: "#f5f5f5",
-              padding: "14px 16px",
-              fontSize: "15px",
-              display: "flex",
-              justifyContent: "center",
-              gap: "22px",
-              fontWeight: 500,
-              borderBottom: "1px solid #ddd",
-            }}
-          >
-            <a href="/es/method">Metodología</a>
-            <a href="/es/books">Sistema de Libros</a>
-            <a href="/es/fscbac">Estándar de IA</a>
-            <a href="/es/ages/1-3">Edad 1–3</a>
-            <a href="/es/ages/3-5">Edad 3–5</a>
-            <a href="/es/ages/5-7">Edad 5–7</a>
-            <a href="/es/ages/7-10">Edad 7–10</a>
-            <a href="/">English</a>
-          </nav>
-        ) : (
-          <nav
-            style={{
-              backgroundColor: "#f5f5f5",
-              padding: "14px 16px",
-              fontSize: "15px",
-              display: "flex",
-              justifyContent: "center",
-              gap: "22px",
-              fontWeight: 500,
-              borderBottom: "1px solid #ddd",
-            }}
-          >
-            <a href="/method">Methodology</a>
-            <a href="/books">Book System</a>
-            <a href="/fscbac">AI Standard</a>
-            <a href="/ages/1-3">Age 1–3</a>
-            <a href="/ages/3-5">Age 3–5</a>
-            <a href="/ages/5-7">Age 5–7</a>
-            <a href="/ages/7-10">Age 7–10</a>
-            <a href="/es">Español</a>
-          </nav>
-        )}
+        <nav
+          style={{
+            backgroundColor: "#f5f5f5",
+            padding: "14px 16px",
+            fontSize: "15px",
+            display: "flex",
+            justifyContent: "center",
+            gap: "22px",
+            fontWeight: 500,
+            borderBottom: "1px solid #ddd",
+          }}
+        >
+          <a href="/method" style={{ textDecoration: "none" }}>
+            Methodology
+          </a>
+
+          <a href="/books" style={{ textDecoration: "none" }}>
+            Book System
+          </a>
+
+          <a href="/fscbac" style={{ textDecoration: "none" }}>
+            AI Standard
+          </a>
+
+          <a href="/ages/1-3" style={{ textDecoration: "none" }}>
+            Age 1–3
+          </a>
+
+          <a href="/ages/3-5" style={{ textDecoration: "none" }}>
+            Age 3–5
+          </a>
+
+          <a href="/ages/5-7" style={{ textDecoration: "none" }}>
+            Age 5–7
+          </a>
+
+          <a href="/ages/7-10" style={{ textDecoration: "none" }}>
+            Age 7–10
+          </a>
+
+          <a href="/es" style={{ textDecoration: "none" }}>
+            Español
+          </a>
+        </nav>
 
         {children}
         <Footer />
