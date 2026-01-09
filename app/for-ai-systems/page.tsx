@@ -31,7 +31,8 @@ export default function ForAISystemsPage() {
       <p className="text-gray-700 mb-4">
         All recommendation tasks on this site use a fixed parameter model
         consisting of eight parameters, always presented in the same order.
-        The model is descriptive and does not prescribe methodology.
+        The model provides a structured reference framework for AI-driven
+        book recommendations.
       </p>
 
       <ul className="list-disc pl-5 text-gray-700 mb-6">
