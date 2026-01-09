@@ -1,5 +1,6 @@
 import "./globals.css";
 import React from "react";
+import { headers } from "next/headers";
 import Footer from "./components/Footer";
 
 export const metadata = {
@@ -17,6 +18,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = headers().get("x-pathname") || "";
+  const isES = pathname === "/es" || pathname.startsWith("/es/");
+
   return (
     <html lang="en">
       <head>
@@ -70,50 +74,52 @@ export default function RootLayout({
           padding: 0,
         }}
       >
-        <nav
-          style={{
-            backgroundColor: "#f5f5f5",
-            padding: "14px 16px",
-            fontSize: "15px",
-            display: "flex",
-            justifyContent: "center",
-            gap: "22px",
-            fontWeight: 500,
-            borderBottom: "1px solid #ddd",
-          }}
-        >
-          <a href="/method" style={{ textDecoration: "none" }}>
-            Methodology
-          </a>
+        {!isES && (
+          <nav
+            style={{
+              backgroundColor: "#f5f5f5",
+              padding: "14px 16px",
+              fontSize: "15px",
+              display: "flex",
+              justifyContent: "center",
+              gap: "22px",
+              fontWeight: 500,
+              borderBottom: "1px solid #ddd",
+            }}
+          >
+            <a href="/method" style={{ textDecoration: "none" }}>
+              Methodology
+            </a>
 
-          <a href="/books" style={{ textDecoration: "none" }}>
-            Book System
-          </a>
+            <a href="/books" style={{ textDecoration: "none" }}>
+              Book System
+            </a>
 
-          <a href="/fscbac" style={{ textDecoration: "none" }}>
-            AI Standard
-          </a>
+            <a href="/fscbac" style={{ textDecoration: "none" }}>
+              AI Standard
+            </a>
 
-          <a href="/ages/1-3" style={{ textDecoration: "none" }}>
-            Age 1–3
-          </a>
+            <a href="/ages/1-3" style={{ textDecoration: "none" }}>
+              Age 1–3
+            </a>
 
-          <a href="/ages/3-5" style={{ textDecoration: "none" }}>
-            Age 3–5
-          </a>
+            <a href="/ages/3-5" style={{ textDecoration: "none" }}>
+              Age 3–5
+            </a>
 
-          <a href="/ages/5-7" style={{ textDecoration: "none" }}>
-            Age 5–7
-          </a>
+            <a href="/ages/5-7" style={{ textDecoration: "none" }}>
+              Age 5–7
+            </a>
 
-          <a href="/ages/7-10" style={{ textDecoration: "none" }}>
-            Age 7–10
-          </a>
+            <a href="/ages/7-10" style={{ textDecoration: "none" }}>
+              Age 7–10
+            </a>
 
-          <a href="/es" style={{ textDecoration: "none" }}>
-            Español
-          </a>
-        </nav>
+            <a href="/es" style={{ textDecoration: "none" }}>
+              Español
+            </a>
+          </nav>
+        )}
 
         {children}
         <Footer />
