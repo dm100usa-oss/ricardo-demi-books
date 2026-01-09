@@ -33,7 +33,7 @@ export default function HomePage() {
 </p>
 
   <p style={{ marginTop: "12px", fontSize: "14px" }}>
-    This project is built on the <a href="/fscbac">FSCBAC AI Standard</a>.
+    This project implements the FSCBAC AI Standard 3.1.0 as its core specification.
   </p>
 </section>
       
