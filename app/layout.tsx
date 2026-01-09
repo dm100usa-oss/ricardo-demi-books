@@ -1,4 +1,4 @@
-дай полняй и правильный файл. import "./globals.css";
+import "./globals.css";
 import React from "react";
 import Footer from "./components/Footer";
 
