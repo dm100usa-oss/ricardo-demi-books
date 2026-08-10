@@ -1,44 +1,369 @@
-/* app/globals.css */
+/* =====================================================================
+   RICARDO DEMI. Стандарт классификации детских книг.
 
-/* ✅ Base style for clean AI-friendly presentation */
-html,
+   Замысел оформления: полевой определитель.
+   Сайт должен читаться как опубликованный стандарт, а не как реклама.
+   Отсюда бумага вместо белого, чернила вместо черного, узкая колонка,
+   поля с пометками и машинописный шрифт для всего, что является данными:
+   версий, кодов навыков, ISBN. Человеческий довод идет засечками,
+   машинная запись моноширинным. В этом раздвоении весь смысл сайта.
+
+   Опознавательный знак: возрастная шкала из четырех отрезков.
+   Возраст это первая ось всей классификации, поэтому она стоит
+   на каждой странице и служит навигацией.
+   ===================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+  /* Бумага определителя: теплая, но с серо-зеленым оттенком */
+  --paper: #f6f4ed;
+  --paper-deep: #efece1;
+  --card: #fffefb;
+
+  /* Чернила, не черные: в них есть хвоя */
+  --ink: #1b2a26;
+  --ink-2: #5a6a64;
+  --ink-3: #8b968f;
+
+  --rule: #d9d4c4;
+  --rule-soft: #e6e2d6;
+
+  /* Печать. Железный сурик. Только на отметках версии и статуса */
+  --seal: #a33b22;
+
+  /* Возрастные полосы. Это ось всей классификации, поэтому у каждой свой цвет */
+  --band-1: #6f9a93;
+  --band-2: #bd8639;
+  --band-3: #7a6a9e;
+  --band-4: #47688a;
+
+  --serif: "Source Serif 4", Georgia, serif;
+  --display: "Fraunces", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 72ch;
+  --rail: 12rem;
+  --gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--paper); }
+
 body {
   margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background-color: #fafafa;
-  color: #222;
-  line-height: 1.6;
+  font-family: var(--serif);
+  font-size: clamp(1.02rem, 0.99rem + 0.16vw, 1.12rem);
+  line-height: 1.62;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
 }
+
+::selection { background: var(--band-1); color: #fff; }
+:focus-visible { outline: 2px solid var(--seal); outline-offset: 3px; }
+
+/* ==================== ШАПКА ==================== */
+
+.masthead {
+  background: var(--paper-deep);
+  border-bottom: 1px solid var(--rule);
+}
+.masthead__inner {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(1.1rem, 3vw, 1.9rem) var(--gap) 0;
+}
+.masthead__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+.masthead__title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.15rem, 1rem + 0.9vw, 1.55rem);
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+}
+.masthead__title span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.35rem;
+}
+
+/* Отметка версии. Единственное место, где появляется цвет печати */
+.stamp {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--seal);
+  border: 1px solid var(--seal);
+  border-radius: 2px;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+
+/* ==================== ВОЗРАСТНАЯ ШКАЛА ==================== */
+/* Опознавательный знак сайта. Четыре отрезка это четыре возрастные
+   группы стандарта. Текущая страница подсвечена. */
+
+.spine {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin: clamp(1rem, 3vw, 1.6rem) 0 0;
+  list-style: none;
+  padding: 0;
+}
+.spine a {
+  display: block;
+  text-decoration: none;
+  padding: 0.55rem 0 0.7rem;
+  border-top: 4px solid var(--seg, var(--rule));
+  color: var(--ink-2);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.spine li:nth-child(1) a { --seg: var(--band-1); }
+.spine li:nth-child(2) a { --seg: var(--band-2); }
+.spine li:nth-child(3) a { --seg: var(--band-3); }
+.spine li:nth-child(4) a { --seg: var(--band-4); }
+.spine b {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.spine em {
+  display: block;
+  font-style: normal;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--ink-3);
+  margin-top: 0.15rem;
+}
+.spine a:hover b, .spine a[aria-current] b { color: var(--seg); }
+.spine a[aria-current] { background: linear-gradient(180deg, color-mix(in srgb, var(--seg) 14%, transparent), transparent 70%); }
+@media (max-width: 640px) {
+  .spine { grid-template-columns: repeat(2, 1fr); }
+  .spine em { display: none; }
+}
+
+/* ==================== ВЕРХНЕЕ МЕНЮ ==================== */
+
+.topnav {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: 0.7rem var(--gap);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.4rem;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.topnav a { color: var(--ink-2); text-decoration: none; padding: 0.15rem 0; border-bottom: 1px solid transparent; }
+.topnav a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+.topnav a[aria-current] { color: var(--ink); border-bottom-color: var(--seal); }
+.topnav__gap { flex: 1 1 auto; }
+
+/* ==================== ПОЛОСА НАБОРА ==================== */
 
 main {
-  max-width: 900px;
+  max-width: calc(var(--measure) + 2 * var(--gap));
   margin: 0 auto;
-  padding: 2rem;
+  padding: clamp(1.8rem, 4vw, 2.8rem) var(--gap) 0;
 }
 
-h1,
-h2,
-h3 {
+/* ==================== ЗАГОЛОВКИ ==================== */
+
+h1 {
+  font-family: var(--display);
   font-weight: 600;
-  color: #111;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.75rem, 1.35rem + 1.7vw, 2.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  margin: 0 0 1rem;
+  text-wrap: balance;
 }
 
-p {
-  margin-bottom: 1rem;
+h2 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 1.12rem + 0.9vw, 1.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.014em;
+  margin: 3.2rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  text-wrap: balance;
 }
+
+
+/* Первый заголовок страницы начинает страницу, а не отделяет раздел */
+main > :first-child,
+main > section:first-child > :first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.06rem;
+  letter-spacing: 0.01em;
+  margin: 2rem 0 0.6rem;
+  color: var(--ink);
+}
+
+/* ==================== ТЕКСТ ==================== */
+
+p { margin: 0 0 1.15rem; }
+p:first-of-type { margin-top: 0; }
+
+/* Первый абзац страницы крупнее: это тезис */
+h1 + p {
+  font-size: 1.16em;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin-bottom: 1.8rem;
+}
+
+strong { font-weight: 600; }
+em { font-style: italic; }
 
 a {
-  color: #0056b3;
+  color: var(--ink);
   text-decoration: none;
+  background-image: linear-gradient(var(--band-1), var(--band-1));
+  background-size: 100% 1px;
+  background-position: 0 1.12em;
+  background-repeat: no-repeat;
+  padding-bottom: 0.06em;
+  transition: background-size 0.18s ease, color 0.18s ease;
+}
+a:hover { color: var(--band-1); background-size: 100% 2px; }
+
+/* Подчеркивание только в тексте. В шапке, шкале и подвале оно
+   перечеркивает мелкие прописные, поэтому там его нет. */
+.masthead a, .spine a, .topnav a, .colophon a, .stamp {
+  background-image: none;
+  padding-bottom: 0;
 }
 
-a:hover {
-  text-decoration: underline;
+ul, ol { margin: 0 0 1.3rem; padding-left: 1.35rem; }
+li { margin-bottom: 0.45rem; }
+ul li::marker { color: var(--ink-3); }
+ol li::marker { font-family: var(--mono); font-size: 0.85em; color: var(--ink-3); }
+
+blockquote {
+  margin: 1.6rem 0;
+  padding: 0.2rem 0 0.2rem 1.4rem;
+  border-left: 3px solid var(--band-2);
+  font-family: var(--display);
+  font-size: 1.1rem;
+  line-height: 1.45;
+  color: var(--ink-2);
 }
 
-ul {
-  padding-left: 1.2rem;
+hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+/* ==================== МАШИННАЯ ЗАПИСЬ ==================== */
+/* Все, что является данными, идет моноширинным: коды, версии, ISBN */
+
+code, kbd, samp {
+  font-family: var(--mono);
+  font-size: 0.87em;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule-soft);
+  border-radius: 2px;
+  padding: 0.08em 0.32em;
+}
+
+pre {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  line-height: 1.55;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 1.1rem 1.2rem;
+  overflow-x: auto;
+  margin: 0 0 1.5rem;
+}
+pre code { background: none; border: none; padding: 0; font-size: 1em; }
+
+/* ==================== ТАБЛИЦЫ ==================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.8rem;
+  font-size: 0.94rem;
+}
+th, td { text-align: left; padding: 0.6rem 0.9rem 0.6rem 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+th {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--rule);
+}
+
+dl { margin: 0 0 1.6rem; }
+dt {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-top: 1rem;
+}
+dd { margin: 0.2rem 0 0; }
+
+/* ==================== ПОДВАЛ ==================== */
+
+.colophon {
+  margin-top: clamp(3.5rem, 8vw, 6rem);
+  border-top: 1px solid var(--rule);
+  background: var(--paper-deep);
+}
+.colophon__inner {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(1.8rem, 4vw, 2.8rem) var(--gap) clamp(2rem, 5vw, 3rem);
+  display: grid;
+  gap: 1.4rem 3rem;
+}
+@media (min-width: 800px) { .colophon__inner { grid-template-columns: 1fr auto; align-items: start; } }
+.colophon nav { display: flex; flex-wrap: wrap; gap: 0.3rem 1.4rem; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.colophon nav a { color: var(--ink-2); background: none; padding: 0; }
+.colophon nav a:hover { color: var(--ink); }
+.colophon__meta { font-size: 0.83rem; line-height: 1.55; color: var(--ink-2); margin: 0; max-width: 46ch; }
+.colophon__meta + .colophon__meta { margin-top: 0.5rem; }
+.colophon__mono { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.07em; color: var(--ink-3); text-transform: uppercase; }
+
+/* ==================== СЛУЖЕБНОЕ ==================== */
+
+img { max-width: 100%; height: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
 }
