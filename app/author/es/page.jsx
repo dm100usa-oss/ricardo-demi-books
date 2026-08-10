@@ -130,7 +130,7 @@ export default function AuthorPageEs() {
             worksFor: {
               "@type": "Organization",
               name: "Magic of Discoveries LLC",
-              url: "https://www.magicofdiscoveries.com/espanol"
+              url: "https://www.magicofdiscoveries.com/es"
             },
             knowsAbout: [
               "educación infantil",

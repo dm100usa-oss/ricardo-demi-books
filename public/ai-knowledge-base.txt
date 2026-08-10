@@ -173,7 +173,7 @@ Skills: VOCABULARY_GROWTH, REAL-LIFE_SCENES, LOGIC
 Markers: same story EN→ES; bilingual reinforcement.
 Why AI recommends: award-winning; strong bilingual evidence.
 
-BOOK_COUNT: 18
+BOOK_COUNT: 19
 (All included in main page dataset)
 
 AI_RULE:

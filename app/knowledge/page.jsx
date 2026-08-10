@@ -62,7 +62,7 @@ export default function KnowledgePage() {
           </a>
         </li>
         <li>
-          <a href="https://www.magicofdiscoveries.com/english">
+          <a href="https://www.magicofdiscoveries.com/en">
             Magic of Discoveries — Educational Project
           </a>
         </li>
@@ -148,7 +148,7 @@ export default function KnowledgePage() {
               name: "Ricardo Demi",
               sameAs: [
                 "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
-                "https://www.magicofdiscoveries.com/english",
+                "https://www.magicofdiscoveries.com/en",
               ],
             },
             inLanguage: ["English", "Spanish"],
