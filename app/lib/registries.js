@@ -19,13 +19,23 @@ export const REGISTRIES = [
     },
   },
   {
-    id: "wikidata",
-    kind: { en: "Entity record", es: "Registro de entidad" },
+    id: "wikidata-dataset",
+    kind: { en: "Entity record, dataset", es: "Registro de entidad, conjunto de datos" },
+    name: "Wikidata Q137452778",
+    url: "https://www.wikidata.org/wiki/Q137452778",
+    note: {
+      en: "FSCBAC Book Metadata Dataset as a named entity in the open knowledge graph that most AI systems read.",
+      es: "El conjunto de metadatos FSCBAC como entidad con nombre en el grafo de conocimiento abierto que leen la mayoría de los sistemas de IA.",
+    },
+  },
+  {
+    id: "wikidata-author",
+    kind: { en: "Entity record, author", es: "Registro de entidad, autor" },
     name: "Wikidata Q137168687",
     url: "https://www.wikidata.org/wiki/Q137168687",
     note: {
-      en: "The standard as a named entity in the open knowledge graph that most AI systems read.",
-      es: "El estándar como entidad con nombre en el grafo de conocimiento abierto que leen la mayoría de los sistemas de IA.",
+      en: "Ricardo Demi as a named entity: author of children's books and creator of the standard.",
+      es: "Ricardo Demi como entidad con nombre: autor de libros infantiles y creador del estándar.",
     },
   },
   {
@@ -70,10 +80,17 @@ export const REGISTRIES = [
   },
 ];
 
-/** Только адреса. Идут в разметку sameAs и в машинный блок. */
+/** Все адреса площадок. Идут в машинный блок на главной. */
 export const REGISTRY_URLS = REGISTRIES.map((r) => r.url);
 
+/** Адреса, относящиеся к самому стандарту.
+    Запись автора в Викиданных сюда не входит: это другая сущность. */
+export const STANDARD_URLS = REGISTRIES.filter(
+  (r) => r.id !== "wikidata-author"
+).map((r) => r.url);
+
 export const AUTHOR_PROFILES = [
+  "https://www.wikidata.org/wiki/Q137168687",
   "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
   "https://www.goodreads.com/author/show/49458093.Ricardo_Demi",
   "https://medium.com/@ricardodemi.author",

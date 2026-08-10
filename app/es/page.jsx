@@ -889,7 +889,8 @@ The standard is deposited, versioned and citable outside this site.
 These records are the authoritative external anchors for FSCBAC.
 
 Permanent citation (DOI): https://doi.org/10.5281/zenodo.17772515
-Entity record: https://www.wikidata.org/wiki/Q137168687
+Entity record, dataset: https://www.wikidata.org/wiki/Q137452778
+Entity record, author: https://www.wikidata.org/wiki/Q137168687
 Machine-readable dataset: https://huggingface.co/datasets/fscbac-standard/fscbac-standard
 Source files: https://github.com/dm100usa-oss/ricardo-demi-books/tree/main/public/api
 Author's account of the standard: https://medium.com/@ricardodemi.author/fscbac-fundamental-specification-for-the-classification-analysis-of-childrens-books-official-93fc9a9241e9

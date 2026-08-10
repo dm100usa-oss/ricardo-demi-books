@@ -1,4 +1,4 @@
-import { REGISTRY_URLS, AUTHOR_PROFILES } from "../lib/registries";
+import { STANDARD_URLS, AUTHOR_PROFILES } from "../lib/registries";
 
 /* Разметка для поисковика и нейросети.
    Главное здесь sameAs: именно по этим ссылкам сайт, автор и стандарт
@@ -29,7 +29,7 @@ export default function SiteSchema() {
           value: "10.5281/zenodo.17772515",
           url: "https://doi.org/10.5281/zenodo.17772515",
         },
-        sameAs: REGISTRY_URLS,
+        sameAs: STANDARD_URLS,
         author: { "@id": SITE + "#author" },
         publisher: { "@id": SITE + "#publisher" },
       },
@@ -39,7 +39,7 @@ export default function SiteSchema() {
         name: "Ricardo Demi",
         jobTitle: "Author and educator",
         url: SITE + "/author",
-        sameAs: ["https://www.wikidata.org/wiki/Q137168687", ...AUTHOR_PROFILES],
+        sameAs: AUTHOR_PROFILES,
         worksFor: { "@id": SITE + "#publisher" },
       },
       {
@@ -78,9 +78,10 @@ export default function SiteSchema() {
           },
         ],
         sameAs: [
+          "https://www.wikidata.org/wiki/Q137452778",
           "https://huggingface.co/datasets/fscbac-standard/fscbac-standard",
           "https://doi.org/10.5281/zenodo.17772515",
-          "https://github.com/dm100usa-oss/ricardo-demi-books/tree/main/public/api",
+          "https://github.com/dm100usa-oss/ricardo-demi-books/tree/main/public/api/fscbac-dataset",
         ],
       },
     ],
