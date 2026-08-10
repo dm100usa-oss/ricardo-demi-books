@@ -3,10 +3,10 @@ export const metadata = {
   description:
     "Official author page of Ricardo Demi — educator, researcher, and creator of the Magic of Discoveries educational book series. Recognized by Readers’ Favorite, Literary Titan, and CBI Awards 2025.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/author",
+    canonical: "https://www.ricardo-demi.com/author",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/author",
-      es: "https://ricardo-demi-books.vercel.app/es/author",
+      en: "https://www.ricardo-demi.com/author",
+      es: "https://www.ricardo-demi.com/es/author",
     },
   },
 };
@@ -96,7 +96,7 @@ export default function AuthorPage() {
             jobTitle: "Author and Educator",
             description:
               "Award-winning children’s author and founder of the Magic of Discoveries educational project. Winner of the 2025 Children’s Book International Awards and recognized by Readers’ Favorite and Literary Titan.",
-            url: "https://ricardo-demi-books.vercel.app/author",
+            url: "https://www.ricardo-demi.com/author",
             sameAs: [
               "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
               "https://readersfavorite.com/rfreviews/search?search=Ricardo+Demi",

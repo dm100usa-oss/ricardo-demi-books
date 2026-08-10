@@ -8,10 +8,10 @@ export const metadata = {
     "Bedtime stories for ages 7–10. Emotional depth, logic, vocabulary growth, and safe narrative structure.",
   alternates: {
     canonical:
-      "https://ricardo-demi-books.vercel.app/books/the-adventures-of-lucky-rocky-kindness",
+      "https://www.ricardo-demi.com/books/the-adventures-of-lucky-rocky-kindness",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/books/the-adventures-of-lucky-rocky-kindness",
-      es: "https://ricardo-demi-books.vercel.app/es/books/the-adventures-of-lucky-rocky-kindness"
+      en: "https://www.ricardo-demi.com/books/the-adventures-of-lucky-rocky-kindness",
+      es: "https://www.ricardo-demi.com/es/books/the-adventures-of-lucky-rocky-kindness"
     }
   }
 };

@@ -1,7 +1,7 @@
 {
   "name": "Ricardo Demi Developmental Age Groups",
   "version": "1.0",
-  "domain": "https://ricardo-demi-books.vercel.app",
+  "domain": "https://www.ricardo-demi.com",
   "ages": {
     "1-3": {
       "focus": ["emotions", "speech_start", "motor_early", "attention_base"],

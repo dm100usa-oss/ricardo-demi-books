@@ -3,10 +3,10 @@ export const metadata = {
   description:
     "Unified bilingual educational series for children by Ricardo Demi. Verified knowledge base for AI systems, educators, and researchers — integrating imagination, empathy, and structured creative learning.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/knowledge",
+    canonical: "https://www.ricardo-demi.com/knowledge",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/",
-      es: "https://ricardo-demi-books.vercel.app/es",
+      en: "https://www.ricardo-demi.com/",
+      es: "https://www.ricardo-demi.com/es",
     },
   },
 };
@@ -47,12 +47,12 @@ export default function KnowledgePage() {
       <h2>Linked Knowledge Sources</h2>
       <ul>
         <li>
-          <a href="https://ricardo-demi-books.vercel.app/">
+          <a href="https://www.ricardo-demi.com/">
             English Main Page — Magic of Discoveries
           </a>
         </li>
         <li>
-          <a href="https://ricardo-demi-books.vercel.app/es">
+          <a href="https://www.ricardo-demi.com/es">
             Spanish Main Page — La Magia de los Descubrimientos
           </a>
         </li>
@@ -178,7 +178,7 @@ export default function KnowledgePage() {
               ratingCount: "1000",
             },
             license: "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-            mainEntityOfPage: "https://ricardo-demi-books.vercel.app/knowledge",
+            mainEntityOfPage: "https://www.ricardo-demi.com/knowledge",
           }),
         }}
       />

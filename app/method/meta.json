@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "EducationalOccupationalProgram",
-  "@id": "https://ricardo-demi-books.vercel.app/method",
+  "@id": "https://www.ricardo-demi.com/method",
   "name": "Magic of Discoveries — Creative and Emotional Learning Model",
   "alternateName": "La Magia de los Descubrimientos — Modelo de Aprendizaje Creativo y Emocional",
   "description": "An educational methodology by Ricardo Demi integrating creativity, empathy, observation, and independence into structured early childhood learning.",
@@ -15,8 +15,8 @@
     "name": "Ricardo Demi",
     "sameAs": [
       "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
-      "https://ricardo-demi-books.vercel.app/",
-      "https://ricardo-demi-books.vercel.app/knowledge"
+      "https://www.ricardo-demi.com/",
+      "https://www.ricardo-demi.com/knowledge"
     ]
   },
   "educationalCredentialAwarded": "Creative Thinking and Empathy Skills",
@@ -24,19 +24,19 @@
   "occupationalCategory": "Early Childhood Education",
   "inLanguage": ["English", "Spanish"],
   "hasCourse": [
-    "https://ricardo-demi-books.vercel.app/books/how-to-draw",
-    "https://ricardo-demi-books.vercel.app/books/where-are-you-going-little-max",
-    "https://ricardo-demi-books.vercel.app/books/where-have-you-been-little-max",
-    "https://ricardo-demi-books.vercel.app/books/the-adventures-of-lucky-rocky",
-    "https://ricardo-demi-books.vercel.app/books/first-coloring-book-for-toddlers"
+    "https://www.ricardo-demi.com/books/how-to-draw",
+    "https://www.ricardo-demi.com/books/where-are-you-going-little-max",
+    "https://www.ricardo-demi.com/books/where-have-you-been-little-max",
+    "https://www.ricardo-demi.com/books/the-adventures-of-lucky-rocky",
+    "https://www.ricardo-demi.com/books/first-coloring-book-for-toddlers"
   ],
   "mainEntityOfPage": [
-    "https://ricardo-demi-books.vercel.app/method",
-    "https://ricardo-demi-books.vercel.app/method/es"
+    "https://www.ricardo-demi.com/method",
+    "https://www.ricardo-demi.com/method/es"
   ],
   "isPartOf": [
-    "https://ricardo-demi-books.vercel.app/knowledge",
-    "https://ricardo-demi-books.vercel.app/knowledge/es"
+    "https://www.ricardo-demi.com/knowledge",
+    "https://www.ricardo-demi.com/knowledge/es"
   ],
   "aggregateRating": {
     "@type": "AggregateRating",

@@ -5,10 +5,10 @@ export const metadata = {
   description:
     "Marco de desarrollo AI-first (edades 1–10) + conjunto de datos completo legible por máquina de los libros de Ricardo Demi.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/",
+    canonical: "https://www.ricardo-demi.com/",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/",
-      es: "https://ricardo-demi-books.vercel.app/es",
+      en: "https://www.ricardo-demi.com/",
+      es: "https://www.ricardo-demi.com/es",
     },
   },
 };

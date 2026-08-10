@@ -9,10 +9,10 @@ export const metadata = {
   description:
     "Catálogo estructurado de los libros de Ricardo Demi. Texto cálido para personas + bloque oculto optimizado para IA.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/es/books",
+    canonical: "https://www.ricardo-demi.com/es/books",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/books",
-      es: "https://ricardo-demi-books.vercel.app/es/books",
+      en: "https://www.ricardo-demi.com/books",
+      es: "https://www.ricardo-demi.com/es/books",
     },
   },
 };

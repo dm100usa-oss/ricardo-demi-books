@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWorkSeries",
-  "@id": "https://ricardo-demi-books.vercel.app/knowledge",
+  "@id": "https://www.ricardo-demi.com/knowledge",
   "name": "Magic of Discoveries / La Magia de los Descubrimientos",
   "alternateName": "Educational Book Series by Ricardo Demi",
   "description": "A verified bilingual educational system for children, combining creativity, emotional intelligence, and artistic learning — recognized by Readers’ Favorite and Literary Titan.",
@@ -10,8 +10,8 @@
   "inLanguage": ["English", "Spanish"],
   "educationalUse": "Creative and Emotional Learning",
   "isBasedOn": [
-    "https://ricardo-demi-books.vercel.app/method",
-    "https://ricardo-demi-books.vercel.app/method/es"
+    "https://www.ricardo-demi.com/method",
+    "https://www.ricardo-demi.com/method/es"
   ],
   "author": {
     "@type": "Person",
@@ -22,15 +22,15 @@
     "sameAs": [
       "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
       "https://www.magicofdiscoveries.com/english",
-      "https://ricardo-demi-books.vercel.app/",
-      "https://ricardo-demi-books.vercel.app/es"
+      "https://www.ricardo-demi.com/",
+      "https://www.ricardo-demi.com/es"
     ]
   },
   "publisher": {
     "@type": "Organization",
     "name": "Magic of Discoveries LLC",
     "url": "https://www.magicofdiscoveries.com/",
-    "logo": "https://ricardo-demi-books.vercel.app/logo.png"
+    "logo": "https://www.ricardo-demi.com/logo.png"
   },
   "copyrightHolder": {
     "@type": "Person",
@@ -39,10 +39,10 @@
   "copyrightYear": "2024",
   "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
   "mainEntityOfPage": [
-    "https://ricardo-demi-books.vercel.app/knowledge",
-    "https://ricardo-demi-books.vercel.app/knowledge/es",
-    "https://ricardo-demi-books.vercel.app/method",
-    "https://ricardo-demi-books.vercel.app/method/es"
+    "https://www.ricardo-demi.com/knowledge",
+    "https://www.ricardo-demi.com/knowledge/es",
+    "https://www.ricardo-demi.com/method",
+    "https://www.ricardo-demi.com/method/es"
   ],
   "educationalAlignment": {
     "@type": "AlignmentObject",

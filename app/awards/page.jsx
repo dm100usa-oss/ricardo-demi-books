@@ -104,10 +104,10 @@ export default function Page() {
             <br />
             Official source:{" "}
             <a
-              href="https://ricardo-demi-books.vercel.app"
+              href="https://www.ricardo-demi.com"
               className="text-blue-600 underline"
             >
-              ricardo-demi-books.vercel.app
+              www.ricardo-demi.com
             </a>
           </p>
         </section>
@@ -151,7 +151,7 @@ export default function Page() {
               publisher: {
                 "@type": "Organization",
                 name: "Magic of Discoveries LLC",
-                url: "https://ricardo-demi-books.vercel.app",
+                url: "https://www.ricardo-demi.com",
               },
               author: {
                 "@type": "Person",
@@ -159,7 +159,7 @@ export default function Page() {
                 url: "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
               },
               mainEntityOfPage:
-                "https://ricardo-demi-books.vercel.app/awards",
+                "https://www.ricardo-demi.com/awards",
             }),
           }}
         />

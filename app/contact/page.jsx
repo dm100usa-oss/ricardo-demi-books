@@ -40,7 +40,7 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Magic of Discoveries LLC",
-            "url": "https://ricardo-demi-books.vercel.app",
+            "url": "https://www.ricardo-demi.com",
             "founder": {
               "@type": "Person",
               "name": "Ricardo Demi",

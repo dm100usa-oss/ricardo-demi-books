@@ -18,15 +18,15 @@ export const metadata = {
     title: "Método Ricardo Demi — Desarrollo Emocional, Creativo y Lingüístico",
     description:
       "Un modelo educativo integral que une emociones, creatividad y lenguaje en el desarrollo infantil temprano, creado por Ricardo Demi.",
-    url: "https://ricardo-demi-books.vercel.app/metodo",
+    url: "https://www.ricardo-demi.com/metodo",
     siteName: "La Magia de los Descubrimientos",
     type: "article",
   },
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/metodo",
+    canonical: "https://www.ricardo-demi.com/metodo",
     languages: {
-      "en": "https://ricardo-demi-books.vercel.app/method",
-      "es": "https://ricardo-demi-books.vercel.app/metodo",
+      "en": "https://www.ricardo-demi.com/method",
+      "es": "https://www.ricardo-demi.com/metodo",
     },
   },
 };

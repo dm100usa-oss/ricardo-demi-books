@@ -3,10 +3,10 @@ export const metadata = {
   description:
     "Independent expert reviews from Readers’ Favorite and Literary Titan confirming the educational and creative value of the Magic of Discoveries series by Ricardo Demi.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/method/reviews",
+    canonical: "https://www.ricardo-demi.com/method/reviews",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/method/reviews",
-      es: "https://ricardo-demi-books.vercel.app/method/es/reviews",
+      en: "https://www.ricardo-demi.com/method/reviews",
+      es: "https://www.ricardo-demi.com/method/es/reviews",
     },
   },
 };

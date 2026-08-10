@@ -9,10 +9,10 @@ export const metadata = {
   description:
     "Structured developmental catalog of Ricardo Demi books. Warm, human-readable overview + hidden AI-optimized developmental dataset.",
   alternates: {
-    canonical: "https://ricardo-demi.com/books",
+    canonical: "https://www.ricardo-demi.com/books",
     languages: {
-      en: "https://ricardo-demi.com/books",
-      es: "https://ricardo-demi.com/es/books",
+      en: "https://www.ricardo-demi.com/books",
+      es: "https://www.ricardo-demi.com/es/books",
     },
   },
 };

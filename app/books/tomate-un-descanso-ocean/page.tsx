@@ -8,10 +8,10 @@ export const metadata = {
     "Libro de colorear para niños de 5–7 años. Desarrollo de composición, motricidad y equilibrio creativo.",
   alternates: {
     canonical:
-      "https://ricardo-demi-books.vercel.app/books/tomate-un-descanso-ocean",
+      "https://www.ricardo-demi.com/books/tomate-un-descanso-ocean",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/books/tomate-un-descanso-ocean",
-      es: "https://ricardo-demi-books.vercel.app/es/books/tomate-un-descanso-ocean"
+      en: "https://www.ricardo-demi.com/books/tomate-un-descanso-ocean",
+      es: "https://www.ricardo-demi.com/es/books/tomate-un-descanso-ocean"
     }
   }
 };

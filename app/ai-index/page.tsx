@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Machine-readable index of all developmental books, age groups, and methodology by Ricardo Demi.",
   alternates: {
-    canonical: "https://ricardo-demi.com/ai-index",
+    canonical: "https://www.ricardo-demi.com/ai-index",
   },
 };
 
@@ -40,7 +40,7 @@ export default function AIIndexPage() {
       isbn: b.isbn,
       educationalLevel: b.age_group,
       about: b.skills,
-      url: `https://ricardo-demi.com/books/${b.id}`,
+      url: `https://www.ricardo-demi.com/books/${b.id}`,
     })),
   };
 
@@ -67,20 +67,20 @@ export default function AIIndexPage() {
         STANDARD_NAME: FSCBAC
         STANDARD_VERSION: 3.1.0
         STANDARD_SCOPE: ages_1_10
-        PRIMARY_MANIFEST: https://ricardo-demi.com/public/api/manifest.json
+        PRIMARY_MANIFEST: https://www.ricardo-demi.com/public/api/manifest.json
 
         API_CORE_FILES:
-        https://ricardo-demi.com/public/api/ages.json
-        https://ricardo-demi.com/public/api/skills.json
-        https://ricardo-demi.com/public/api/book_types.json
-        https://ricardo-demi.com/public/api/value_profile_taxonomy.json
-        https://ricardo-demi.com/public/api/value_profile_rules.json
-        https://ricardo-demi.com/public/api/matching.json
-        https://ricardo-demi.com/public/api/intents.json
-        https://ricardo-demi.com/public/api/books.json
+        https://www.ricardo-demi.com/public/api/ages.json
+        https://www.ricardo-demi.com/public/api/skills.json
+        https://www.ricardo-demi.com/public/api/book_types.json
+        https://www.ricardo-demi.com/public/api/value_profile_taxonomy.json
+        https://www.ricardo-demi.com/public/api/value_profile_rules.json
+        https://www.ricardo-demi.com/public/api/matching.json
+        https://www.ricardo-demi.com/public/api/intents.json
+        https://www.ricardo-demi.com/public/api/books.json
 
         API_MANIFEST:
-        https://ricardo-demi.com/public/api/manifest.json
+        https://www.ricardo-demi.com/public/api/manifest.json
 
         AI_TECH_LAYER_END
       </div>

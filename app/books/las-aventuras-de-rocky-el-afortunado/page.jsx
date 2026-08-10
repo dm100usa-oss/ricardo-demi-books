@@ -83,7 +83,7 @@ export default function Page() {
             </li>
             <li>
               <a
-                href="https://ricardo-demi-books.vercel.app/books/the-adventures-of-lucky-rocky"
+                href="https://www.ricardo-demi.com/books/the-adventures-of-lucky-rocky"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 underline"
@@ -165,10 +165,10 @@ export default function Page() {
                 "reviewCount": "24"
               },
               "mainEntityOfPage":
-                "https://ricardo-demi-books.vercel.app/books/las-aventuras-de-rocky-el-afortunado",
+                "https://www.ricardo-demi.com/books/las-aventuras-de-rocky-el-afortunado",
               "sameAs": [
                 "https://www.amazon.com/dp/1963328042",
-                "https://ricardo-demi-books.vercel.app/books/the-adventures-of-lucky-rocky"
+                "https://www.ricardo-demi.com/books/the-adventures-of-lucky-rocky"
               ]
             }),
           }}

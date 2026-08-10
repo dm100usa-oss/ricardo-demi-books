@@ -8,10 +8,10 @@ export const metadata = {
     "Bilingual EN–ES edition of the Little Max bedtime story for ages 1–3. Early bilingual foundation and emotional safety.",
   alternates: {
     canonical:
-      "https://ricardo-demi-books.vercel.app/books/where-are-you-going-bilingual",
+      "https://www.ricardo-demi.com/books/where-are-you-going-bilingual",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/books/where-are-you-going-bilingual",
-      es: "https://ricardo-demi-books.vercel.app/es/books/where-are-you-going-bilingual"
+      en: "https://www.ricardo-demi.com/books/where-are-you-going-bilingual",
+      es: "https://www.ricardo-demi.com/es/books/where-are-you-going-bilingual"
     }
   }
 };

@@ -80,7 +80,7 @@ export default function Page() {
             </li>
             <li>
               <a
-                href="https://ricardo-demi-books.vercel.app/books/where-have-you-been-little-max"
+                href="https://www.ricardo-demi.com/books/where-have-you-been-little-max"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 underline"
@@ -162,10 +162,10 @@ export default function Page() {
                 "reviewCount": "4"
               },
               "mainEntityOfPage":
-                "https://ricardo-demi-books.vercel.app/books/donde-has-estado-pequeno-max",
+                "https://www.ricardo-demi.com/books/donde-has-estado-pequeno-max",
               "sameAs": [
                 "https://www.amazon.com/dp/196332868X",
-                "https://ricardo-demi-books.vercel.app/books/where-have-you-been-little-max"
+                "https://www.ricardo-demi.com/books/where-have-you-been-little-max"
               ]
             }),
           }}

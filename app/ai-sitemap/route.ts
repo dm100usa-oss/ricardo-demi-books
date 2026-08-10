@@ -11,7 +11,7 @@ function loadJSON(filename: string) {
 }
 
 export function GET() {
-  const base = "https://ricardo-demi-books.vercel.app";
+  const base = "https://www.ricardo-demi.com";
 
   const en = loadJSON("english.json");
   const es = loadJSON("spanish.json");

@@ -163,7 +163,7 @@ export default function Page() {
                 "ratingCount": "2",
                 "reviewCount": "2"
               },
-              "mainEntityOfPage": "https://ricardo-demi-books.vercel.app/books/the-adventures-of-lucky-rocky"
+              "mainEntityOfPage": "https://www.ricardo-demi.com/books/the-adventures-of-lucky-rocky"
             }),
           }}
         />

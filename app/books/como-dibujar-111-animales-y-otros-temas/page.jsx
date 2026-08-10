@@ -141,7 +141,7 @@ export default function Page() {
                 "reviewCount": "14"
               },
               "mainEntityOfPage":
-                "https://ricardo-demi-books.vercel.app/books/como-dibujar-111-animales-y-otros-temas",
+                "https://www.ricardo-demi.com/books/como-dibujar-111-animales-y-otros-temas",
               "sameAs": [
                 "https://www.amazon.com/dp/1963328175",
                 "https://www.amazon.com/dp/1963328140"

@@ -90,7 +90,7 @@ export default function ApplicationPage() {
             "provider": {
               "@type": "Organization",
               "name": "Magic of Discoveries LLC",
-              "url": "https://ricardo-demi-books.vercel.app"
+              "url": "https://www.ricardo-demi.com"
             },
             "hasCourse": [
               {

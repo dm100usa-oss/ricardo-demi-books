@@ -8,10 +8,10 @@ export const metadata = {
     "Two-in-One bilingual gift edition for ages 7–10. English + Spanish stories for vocabulary growth and real-life language patterns.",
   alternates: {
     canonical:
-      "https://ricardo-demi-books.vercel.app/books/lucky-rocky-two-in-one",
+      "https://www.ricardo-demi.com/books/lucky-rocky-two-in-one",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/books/lucky-rocky-two-in-one",
-      es: "https://ricardo-demi-books.vercel.app/es/books/lucky-rocky-two-in-one"
+      en: "https://www.ricardo-demi.com/books/lucky-rocky-two-in-one",
+      es: "https://www.ricardo-demi.com/es/books/lucky-rocky-two-in-one"
     }
   }
 };

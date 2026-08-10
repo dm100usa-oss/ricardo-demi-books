@@ -186,7 +186,7 @@ export default function HowToDrawPage() {
               copyrightYear: "2024",
               license: "https://creativecommons.org/licenses/by-nc-nd/4.0/",
               mainEntityOfPage:
-                "https://ricardo-demi-books.vercel.app/books/how-to-draw",
+                "https://www.ricardo-demi.com/books/how-to-draw",
             }),
           }}
         />

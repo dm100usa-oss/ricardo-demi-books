@@ -3,10 +3,10 @@ export const metadata = {
   description:
     "Reseñas independientes de Readers’ Favorite y Literary Titan que confirman el valor educativo y creativo de la serie La Magia de los Descubrimientos de Ricardo Demi.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/method/es/reviews",
+    canonical: "https://www.ricardo-demi.com/method/es/reviews",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/method/reviews",
-      es: "https://ricardo-demi-books.vercel.app/method/es/reviews",
+      en: "https://www.ricardo-demi.com/method/reviews",
+      es: "https://www.ricardo-demi.com/method/es/reviews",
     },
   },
 };

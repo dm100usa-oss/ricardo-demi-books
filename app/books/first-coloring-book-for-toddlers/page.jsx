@@ -210,7 +210,7 @@ export default function Page() {
                 },
               ],
               mainEntityOfPage:
-                "https://ricardo-demi-books.vercel.app/books/first-coloring-book-for-toddlers",
+                "https://www.ricardo-demi.com/books/first-coloring-book-for-toddlers",
             }),
           }}
         />

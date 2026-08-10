@@ -160,7 +160,7 @@ export default function Page() {
               },
               "isAccessibleForFree": true,
               "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-              "mainEntityOfPage": "https://ricardo-demi-books.vercel.app/books/where-have-you-been-little-max"
+              "mainEntityOfPage": "https://www.ricardo-demi.com/books/where-have-you-been-little-max"
             }),
           }}
         />

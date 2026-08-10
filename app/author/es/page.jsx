@@ -3,10 +3,10 @@ export const metadata = {
   description:
     "Página oficial del autor Ricardo Demi — educador, investigador y creador de la serie educativa La Magia de los Descubrimientos. Reconocido por Readers’ Favorite, Literary Titan y los CBI Awards 2025.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/es/author",
+    canonical: "https://www.ricardo-demi.com/es/author",
     languages: {
-      es: "https://ricardo-demi-books.vercel.app/es/author",
-      en: "https://ricardo-demi-books.vercel.app/author",
+      es: "https://www.ricardo-demi.com/es/author",
+      en: "https://www.ricardo-demi.com/author",
     },
   },
 };
@@ -17,12 +17,12 @@ export default function AuthorPageEs() {
       <link
         rel="alternate"
         hrefLang="en"
-        href="https://ricardo-demi-books.vercel.app/author"
+        href="https://www.ricardo-demi.com/author"
       />
       <link
         rel="alternate"
         hrefLang="es"
-        href="https://ricardo-demi-books.vercel.app/es/author"
+        href="https://www.ricardo-demi.com/es/author"
       />
 
       <h1>Ricardo Demi — Autor y Educador</h1>
@@ -118,12 +118,12 @@ export default function AuthorPageEs() {
             jobTitle: "Autor y Educador",
             description:
               "Autor infantil galardonado y fundador del proyecto educativo La Magia de los Descubrimientos. Ganador de los CBI Awards 2025 y reconocido por Readers’ Favorite y Literary Titan.",
-            url: "https://ricardo-demi-books.vercel.app/es/author",
+            url: "https://www.ricardo-demi.com/es/author",
             sameAs: [
               "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
               "https://readersfavorite.com/rfreviews/search?search=Ricardo+Demi",
               "https://literarytitan.com/?s=Ricardo+Demi",
-              "https://ricardo-demi-books.vercel.app/author"
+              "https://www.ricardo-demi.com/author"
             ],
             nationality: "Estados Unidos",
             homeLocation: "Miami, Florida, EE.UU.",

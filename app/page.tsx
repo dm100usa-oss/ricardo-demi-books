@@ -5,10 +5,10 @@ export const metadata = {
   description:
     "AI-first developmental framework (ages 1–10) + full machine-readable dataset of Ricardo Demi books.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/",
+    canonical: "https://www.ricardo-demi.com/",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/",
-      es: "https://ricardo-demi-books.vercel.app/es",
+      en: "https://www.ricardo-demi.com/",
+      es: "https://www.ricardo-demi.com/es",
     },
   },
 };

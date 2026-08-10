@@ -183,7 +183,7 @@ export default function Page() {
                 reviewCount: "23",
               },
               mainEntityOfPage:
-                "https://ricardo-demi-books.vercel.app/books/el-primer-libro-de-colorear-para-bebes-de-1-3-anos",
+                "https://www.ricardo-demi.com/books/el-primer-libro-de-colorear-para-bebes-de-1-3-anos",
               sameAs: ["https://www.amazon.com/dp/1963328205"],
             }),
           }}

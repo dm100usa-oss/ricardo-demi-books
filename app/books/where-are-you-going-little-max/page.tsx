@@ -180,7 +180,7 @@ export default function Page() {
               },
               "isAccessibleForFree": true,
               "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-              "mainEntityOfPage": "https://ricardo-demi-books.vercel.app/books/where-are-you-going-little-max"
+              "mainEntityOfPage": "https://www.ricardo-demi.com/books/where-are-you-going-little-max"
             }),
           }}
         />

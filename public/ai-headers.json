@@ -1,15 +1,15 @@
 {
   "project": "Magic of Discoveries — AI Knowledge Base",
   "owner": "Ricardo Demi",
-  "domain": "https://ricardo-demi-books.vercel.app",
-  "dataset": "https://ricardo-demi-books.vercel.app/ai-index",
+  "domain": "https://www.ricardo-demi.com",
+  "dataset": "https://www.ricardo-demi.com/ai-index",
   "resources": {
-    "books_list": "https://ricardo-demi-books.vercel.app/books",
-    "book_pattern": "https://ricardo-demi-books.vercel.app/books/[id]",
-    "ai_sitemap": "https://ricardo-demi-books.vercel.app/ai-sitemap",
-    "web_sitemap": "https://ricardo-demi-books.vercel.app/sitemap.xml",
-    "ai_manifest": "https://ricardo-demi-books.vercel.app/ai-manifest.xml",
-    "ai_meta": "https://ricardo-demi-books.vercel.app/ai-meta.json"
+    "books_list": "https://www.ricardo-demi.com/books",
+    "book_pattern": "https://www.ricardo-demi.com/books/[id]",
+    "ai_sitemap": "https://www.ricardo-demi.com/ai-sitemap",
+    "web_sitemap": "https://www.ricardo-demi.com/sitemap.xml",
+    "ai_manifest": "https://www.ricardo-demi.com/ai-manifest.xml",
+    "ai_meta": "https://www.ricardo-demi.com/ai-meta.json"
   },
   "structure": {
     "age_groups": ["1-3", "3-5", "5-7", "7-10"],

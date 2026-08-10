@@ -3,10 +3,10 @@ export const metadata = {
   description:
     "Información de contacto y aviso legal del proyecto educativo oficial Magic of Discoveries LLC, creado por Ricardo Demi en Miami, Florida.",
   alternates: {
-    canonical: "https://ricardo-demi-books.vercel.app/contact/es",
+    canonical: "https://www.ricardo-demi.com/contact/es",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/contact",
-      es: "https://ricardo-demi-books.vercel.app/contact/es",
+      en: "https://www.ricardo-demi.com/contact",
+      es: "https://www.ricardo-demi.com/contact/es",
     },
   },
 };
@@ -58,7 +58,7 @@ export default function ContactPageES() {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Magic of Discoveries LLC",
-            "url": "https://ricardo-demi-books.vercel.app",
+            "url": "https://www.ricardo-demi.com",
             "founder": {
               "@type": "Person",
               "name": "Ricardo Demi",

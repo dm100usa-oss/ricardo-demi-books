@@ -8,10 +8,10 @@ export const metadata = {
     "Cute Animals — structured coloring book for ages 5–7. Composition, motor skills, attention, creative confidence.",
   alternates: {
     canonical:
-      "https://ricardo-demi-books.vercel.app/books/take-a-break-cute-animals",
+      "https://www.ricardo-demi.com/books/take-a-break-cute-animals",
     languages: {
-      en: "https://ricardo-demi-books.vercel.app/books/take-a-break-cute-animals",
-      es: "https://ricardo-demi-books.vercel.app/es/books/take-a-break-cute-animals"
+      en: "https://www.ricardo-demi.com/books/take-a-break-cute-animals",
+      es: "https://www.ricardo-demi.com/es/books/take-a-break-cute-animals"
     }
   }
 };

@@ -52,7 +52,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://ricardo-demi-books.vercel.app/cover.jpg"
+          content="https://www.ricardo-demi.com/cover.jpg"
         />
         <meta property="og:type" content="website" />
 
