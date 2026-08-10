@@ -367,3 +367,47 @@ img { max-width: 100%; height: auto; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
 }
+
+/* ==================== ВНЕШНИЕ ПЛОЩАДКИ ==================== */
+/* Где стандарт зарегистрирован. Для человека доказательство,
+   для машины связь сайта с внешними записями о нем. */
+
+.registry__list { list-style: none; margin: 1.6rem 0 2rem; padding: 0; }
+.registry__list li {
+  padding: 0.95rem 0 1rem;
+  border-top: 1px solid var(--rule-soft);
+  margin: 0;
+}
+.registry__list li:last-child { border-bottom: 1px solid var(--rule-soft); }
+
+.registry__kind {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.28rem;
+}
+.registry__list a { font-weight: 600; }
+.registry__note {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin-top: 0.25rem;
+}
+
+.registry__cite {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--seal);
+  border-radius: 2px;
+  padding: 0.9rem 1.1rem;
+}
+.registry__cite .registry__kind { margin-bottom: 0.4rem; }

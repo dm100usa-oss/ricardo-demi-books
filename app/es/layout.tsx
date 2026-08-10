@@ -1,5 +1,6 @@
 import "../globals.css";
 import React from "react";
+import SiteSchema from "../components/SiteSchema";
 import Masthead from "../components/Masthead";
 import FooterES from "../components/FooterES";
 
@@ -62,6 +63,7 @@ export default function RootLayout({
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token": "0a2c9e4a59fb4c859f3d5d3c9ddc24f1"}'
         ></script>
+        <SiteSchema />
       </head>
 
       <body>

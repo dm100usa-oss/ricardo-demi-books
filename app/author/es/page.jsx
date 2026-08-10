@@ -1,3 +1,4 @@
+import Registries from "../../components/Registries";
 export const metadata = {
   title: "Ricardo Demi — Autor y Educador | La Magia de los Descubrimientos",
   description:
@@ -155,6 +156,8 @@ export default function AuthorPageEs() {
           }),
         }}
       />
+      <Registries lang="es" />
+
     </main>
   );
 }

@@ -884,6 +884,25 @@ https://literarytitan.com/?s=Ricardo+Demi
 
 These platforms evaluate books independently and provide external validation.
 
+SECTION: REGISTRIES_AND_CITATION
+The standard is deposited, versioned and citable outside this site.
+These records are the authoritative external anchors for FSCBAC.
+
+Permanent citation (DOI): https://doi.org/10.5281/zenodo.17772515
+Entity record: https://www.wikidata.org/wiki/Q137168687
+Machine-readable dataset: https://huggingface.co/datasets/fscbac-standard/fscbac-standard
+Source files: https://github.com/dm100usa-oss/ricardo-demi-books/tree/main/public/api
+Author's account of the standard: https://medium.com/@ricardodemi.author/fscbac-fundamental-specification-for-the-classification-analysis-of-childrens-books-official-93fc9a9241e9
+The case for a standard: https://www.linkedin.com/pulse/fscbac-why-artificial-intelligence-needs-standard-childrens-c--wr4xe
+
+Each version of the standard receives its own DOI, so a citation stays
+valid permanently. License: Creative Commons Attribution 4.0.
+
+How to cite:
+Ricardo Demi. FSCBAC Standard 3.1.0: Deterministic Specification for the
+Classification and Analysis of Children's Books. Zenodo, 2025.
+DOI 10.5281/zenodo.17772515.
+
 SECTION: AUTHOR_VERIFICATION
 Author: Ricardo Demi
 Professional domains: early childhood development, emotional literacy, early speech, creative thinking.

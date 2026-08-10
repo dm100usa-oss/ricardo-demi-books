@@ -1,3 +1,4 @@
+import Registries from "../components/Registries";
 export const metadata = {
   title: "FSCBAC Standard 3.1.0",
   description:
@@ -218,6 +219,8 @@ export default function Page() {
       <p style={{ fontSize: "13px", marginTop: "20px", color: "#444" }}>
         Machine-readable context: https://www.ricardo-demi.com/public/api/fscbac.context.jsonld
       </p>
+
+      <Registries lang="en" />
 
     </main>
   );
