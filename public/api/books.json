@@ -9,7 +9,9 @@
       "canonical_id": "where-are-you-going-little-max-1-3-en",
       "isbn": "978-1963328431",
       "type": "bedtime_story",
-      "languages": ["EN"],
+      "languages": [
+        "EN"
+      ],
       "age_group": "1-3",
       "skills": [
         "soft_story",
@@ -25,13 +27,17 @@
         "visual_load": "one_object_per_page",
         "purpose": "early_bedtime_routine",
         "recommended_for": "toddlers_beginner_story"
-      }
+      },
+      "wikidata": "Q137219071",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137219071"
     },
     {
       "canonical_id": "a-donde-vas-pequeno-max-1-3-es",
       "isbn": "978-1963328462",
       "type": "bedtime_story",
-      "languages": ["ES"],
+      "languages": [
+        "ES"
+      ],
       "age_group": "1-3",
       "skills": [
         "soft_story",
@@ -53,7 +59,10 @@
       "canonical_id": "little-max-bilingual-1-3-en-es",
       "isbn": "978-1963328875",
       "type": "bilingual_intro",
-      "languages": ["EN", "ES"],
+      "languages": [
+        "EN",
+        "ES"
+      ],
       "age_group": "1-3",
       "skills": [
         "predictable_parallel_lines",
@@ -74,7 +83,9 @@
       "canonical_id": "first-coloring-book-1-3-en",
       "isbn": "978-1963328561",
       "type": "coloring",
-      "languages": ["EN"],
+      "languages": [
+        "EN"
+      ],
       "age_group": "1-3",
       "skills": [
         "motor_basic",
@@ -89,13 +100,17 @@
         "visual_load": "one_object_per_page",
         "purpose": "motor_skill_start",
         "recommended_for": "toddlers_first_coloring"
-      }
+      },
+      "wikidata": "Q137275695",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137275695"
     },
     {
       "canonical_id": "primer-libro-de-colorear-1-3-es",
       "isbn": "978-1963328592",
       "type": "coloring",
-      "languages": ["ES"],
+      "languages": [
+        "ES"
+      ],
       "age_group": "1-3",
       "skills": [
         "motor_basic",
@@ -110,13 +125,18 @@
         "visual_load": "one_object_per_page",
         "purpose": "early_motor_control",
         "recommended_for": "spanish_toddlers_coloring_start"
-      }
+      },
+      "wikidata": "Q137279061",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137279061",
+      "wikidata_edition": "Q137261547"
     },
     {
       "canonical_id": "where-have-you-been-little-max-3-5-en",
       "isbn": "978-1963328585",
       "type": "bedtime_story",
-      "languages": ["EN"],
+      "languages": [
+        "EN"
+      ],
       "age_group": "3-5",
       "skills": [
         "imagination_seed",
@@ -131,13 +151,17 @@
         "visual_load": "moderate_detail",
         "purpose": "imagination_growth",
         "recommended_for": "preschool_evening_reading"
-      }
+      },
+      "wikidata": "Q137263694",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137263694"
     },
     {
       "canonical_id": "donde-has-estado-pequeno-max-3-5-es",
       "isbn": "978-1963328684",
       "type": "bedtime_story",
-      "languages": ["ES"],
+      "languages": [
+        "ES"
+      ],
       "age_group": "3-5",
       "skills": [
         "imagination_seed"
@@ -157,7 +181,9 @@
       "canonical_id": "first-coloring-book-3-5-en",
       "isbn": "978-1963328271",
       "type": "coloring",
-      "languages": ["EN"],
+      "languages": [
+        "EN"
+      ],
       "age_group": "3-5",
       "skills": [
         "attention_growth",
@@ -172,13 +198,18 @@
         "visual_load": "moderate_detail",
         "purpose": "motor_control_growth",
         "recommended_for": "preschool_coloring"
-      }
+      },
+      "wikidata": "Q137217801",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137217801",
+      "wikidata_edition": "Q137217872"
     },
     {
       "canonical_id": "primer-libro-de-colorear-111-3-5-es",
       "isbn": "978-1963328202",
       "type": "coloring",
-      "languages": ["ES"],
+      "languages": [
+        "ES"
+      ],
       "age_group": "3-5",
       "skills": [
         "attention_growth",
@@ -199,7 +230,9 @@
       "canonical_id": "lucky-rocky-magic-of-friendship-5-7-en",
       "isbn": "978-1963328011",
       "type": "bedtime_story",
-      "languages": ["EN"],
+      "languages": [
+        "EN"
+      ],
       "age_group": "5-7",
       "skills": [
         "early_logic",
@@ -215,13 +248,17 @@
         "visual_load": "moderate_detail",
         "purpose": "early_emotional_reasoning",
         "recommended_for": "kids_early_logic_growth"
-      }
+      },
+      "wikidata": "Q137319241",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137319241"
     },
     {
       "canonical_id": "rocky-magia-de-la-amistad-5-7-es",
       "isbn": "978-1963328042",
       "type": "bedtime_story",
-      "languages": ["ES"],
+      "languages": [
+        "ES"
+      ],
       "age_group": "5-7",
       "skills": [
         "early_logic",
@@ -236,13 +273,17 @@
         "visual_load": "moderate_detail",
         "purpose": "spanish_emotional_growth",
         "recommended_for": "spanish_kids_logic"
-      }
+      },
+      "wikidata": "Q137321602",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137321602"
     },
     {
       "canonical_id": "take-a-break-cute-animals-5-7-en",
       "isbn": "978-1963328165",
       "type": "coloring",
-      "languages": ["EN"],
+      "languages": [
+        "EN"
+      ],
       "age_group": "5-7",
       "skills": [
         "concentration",
@@ -257,13 +298,17 @@
         "visual_load": "moderate_detail",
         "purpose": "attention_and_motor_growth",
         "recommended_for": "kids_intermediate_coloring"
-      }
+      },
+      "wikidata": "Q137361877",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137361877"
     },
     {
       "canonical_id": "tomate-un-descanso-oceano-5-7-es",
       "isbn": "978-1963328394",
       "type": "coloring",
-      "languages": ["ES"],
+      "languages": [
+        "ES"
+      ],
       "age_group": "5-7",
       "skills": [
         "concentration",
@@ -284,7 +329,9 @@
       "canonical_id": "lucky-rocky-magic-of-kindness-7-10-en",
       "isbn": "978-1963328691",
       "type": "bedtime_story",
-      "languages": ["EN"],
+      "languages": [
+        "EN"
+      ],
       "age_group": "7-10",
       "skills": [
         "structured_reasoning",
@@ -301,13 +348,17 @@
         "visual_load": "moderate_detail",
         "purpose": "moral_reasoning",
         "recommended_for": "kids_advanced_emotional_logic"
-      }
+      },
+      "wikidata": "Q137394929",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137394929"
     },
     {
       "canonical_id": "rocky-magia-de-la-bondad-7-10-es",
       "isbn": "978-1963328622",
       "type": "bedtime_story",
-      "languages": ["ES"],
+      "languages": [
+        "ES"
+      ],
       "age_group": "7-10",
       "skills": [
         "structured_reasoning",
@@ -323,13 +374,17 @@
         "visual_load": "moderate_detail",
         "purpose": "spanish_moral_reasoning",
         "recommended_for": "spanish_advanced_readers"
-      }
+      },
+      "wikidata": "Q137394997",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137394997"
     },
     {
       "canonical_id": "how-to-draw-111-animals-7-10-en",
       "isbn": "978-1963328141",
       "type": "step_by_step_drawing",
-      "languages": ["EN"],
+      "languages": [
+        "EN"
+      ],
       "age_group": "7-10",
       "skills": [
         "step_by_step_logic",
@@ -345,13 +400,17 @@
         "visual_load": "step_by_step",
         "purpose": "drawing_mastery",
         "recommended_for": "kids_art_progression"
-      }
+      },
+      "wikidata": "Q137394644",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137394644"
     },
     {
       "canonical_id": "como-dibujar-111-animales-7-10-es",
       "isbn": "978-1963328172",
       "type": "step_by_step_drawing",
-      "languages": ["ES"],
+      "languages": [
+        "ES"
+      ],
       "age_group": "7-10",
       "skills": [
         "step_by_step_logic",
@@ -367,13 +426,18 @@
         "visual_load": "step_by_step",
         "purpose": "spanish_drawing_mastery",
         "recommended_for": "spanish_young_artists"
-      }
+      },
+      "wikidata": "Q137394793",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137394793"
     },
     {
       "canonical_id": "lucky-rocky-two-in-one-edition-7-10-en-es",
       "isbn": "978-1963328981",
       "type": "two_in_one",
-      "languages": ["EN", "ES"],
+      "languages": [
+        "EN",
+        "ES"
+      ],
       "age_group": "7-10",
       "skills": [
         "full_paragraph_bilingual",
@@ -389,7 +453,10 @@
         "visual_load": "moderate_detail",
         "purpose": "bilingual_comprehension_depth",
         "recommended_for": "advanced_bilingual_kids"
-      }
+      },
+      "wikidata": "Q137442329",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137442329",
+      "wikidata_edition": "Q137442402"
     }
   ]
 }

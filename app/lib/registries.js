@@ -19,6 +19,16 @@ export const REGISTRIES = [
     },
   },
   {
+    id: "wikidata-standard",
+    kind: { en: "Entity record, the standard", es: "Registro de entidad, el estándar" },
+    name: "Wikidata Q137125272",
+    url: "https://www.wikidata.org/wiki/Q137125272",
+    note: {
+      en: "FSCBAC itself as a named entity in the open knowledge graph that most AI systems read.",
+      es: "FSCBAC como entidad con nombre en el grafo de conocimiento abierto que leen la mayoría de los sistemas de IA.",
+    },
+  },
+  {
     id: "wikidata-dataset",
     kind: { en: "Entity record, dataset", es: "Registro de entidad, conjunto de datos" },
     name: "Wikidata Q137452778",
@@ -95,6 +105,15 @@ export const AUTHOR_PROFILES = [
   "https://www.goodreads.com/author/show/49458093.Ricardo_Demi",
   "https://medium.com/@ricardodemi.author",
 ];
+
+/** Номера в Викиданных. Одно место, откуда их берут все страницы. */
+export const WIKIDATA = {
+  standard: "Q137125272",
+  dataset: "Q137452778",
+  author: "Q137168687",
+};
+
+export const wikidataUrl = (q) => "https://www.wikidata.org/wiki/" + q;
 
 export const CITATION =
   "Ricardo Demi. FSCBAC Standard 3.1.0: Deterministic Specification for the " +

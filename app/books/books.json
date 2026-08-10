@@ -3,7 +3,12 @@
     "author": "Ricardo Demi",
     "system": "Magic of Discoveries — Developmental Methodology",
     "version": "2.0",
-    "age_groups": ["1-3", "3-5", "5-7", "7-10"],
+    "age_groups": [
+      "1-3",
+      "3-5",
+      "5-7",
+      "7-10"
+    ],
     "book_types": [
       "bedtime-story",
       "coloring-book",
@@ -26,7 +31,9 @@
         "speech_start",
         "attention_base"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328434"
+      "amazon": "https://www.amazon.com/dp/1963328434",
+      "wikidata": "Q137219071",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137219071"
     },
     {
       "id": "a-donde-vas-pequeno-max-bedtime-story-1-3-es",
@@ -55,7 +62,9 @@
         "attention_base",
         "creative_confidence"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328566"
+      "amazon": "https://www.amazon.com/dp/1963328566",
+      "wikidata": "Q137275695",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137275695"
     },
     {
       "id": "el-primer-libro-de-colorear-pequeno-max-coloring-book-1-3-es",
@@ -68,7 +77,9 @@
       "skills": [
         "motor_early"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328590"
+      "amazon": "https://www.amazon.com/dp/1963328590",
+      "wikidata": "Q137279061",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137279061"
     },
     {
       "id": "where-are-you-going-little-max-bilingual-1-3-bi",
@@ -97,7 +108,9 @@
         "emotion_safety",
         "attention_base"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328582"
+      "amazon": "https://www.amazon.com/dp/1963328582",
+      "wikidata": "Q137263694",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137263694"
     },
     {
       "id": "donde-has-estado-pequeno-max-bedtime-story-3-5-es",
@@ -126,7 +139,9 @@
         "motor_early",
         "creative_confidence"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328272"
+      "amazon": "https://www.amazon.com/dp/1963328272",
+      "wikidata": "Q137217801",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137217801"
     },
     {
       "id": "el-primer-libro-de-colorear-sorprendentes-animales-coloring-book-3-5-es",
@@ -168,7 +183,9 @@
         "imagination",
         "emotion_safety"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328019"
+      "amazon": "https://www.amazon.com/dp/1963328019",
+      "wikidata": "Q137319241",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137319241"
     },
     {
       "id": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-amistad-bedtime-story-5-7-es",
@@ -182,7 +199,9 @@
         "logic",
         "emotion_safety"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328043"
+      "amazon": "https://www.amazon.com/dp/1963328043",
+      "wikidata": "Q137321602",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137321602"
     },
     {
       "id": "take-a-break-cute-animals-coloring-book-5-7-en",
@@ -197,7 +216,9 @@
         "motor_early",
         "creative_confidence"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328167"
+      "amazon": "https://www.amazon.com/dp/1963328167",
+      "wikidata": "Q137361877",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137361877"
     },
     {
       "id": "tomate-un-descanso-belleza-del-oceano-coloring-book-5-7-es",
@@ -239,7 +260,9 @@
         "vocabulary_growth",
         "structural_thinking"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328698"
+      "amazon": "https://www.amazon.com/dp/1963328698",
+      "wikidata": "Q137394929",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137394929"
     },
     {
       "id": "las-aventuras-de-rocky-el-afortunado-la-magia-de-la-bondad-bedtime-story-7-10-es",
@@ -253,7 +276,9 @@
         "logic",
         "vocabulary_growth"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328620"
+      "amazon": "https://www.amazon.com/dp/1963328620",
+      "wikidata": "Q137394997",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137394997"
     },
     {
       "id": "how-to-draw-111-amazing-and-cute-animals-step-by-step-drawing-7-10-en",
@@ -268,7 +293,9 @@
         "structured_thinking",
         "creative_confidence"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328140"
+      "amazon": "https://www.amazon.com/dp/1963328140",
+      "wikidata": "Q137394644",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137394644"
     },
     {
       "id": "como-dibujar-111-sorprendentes-y-adorables-animales-step-by-step-drawing-7-10-es",
@@ -281,7 +308,9 @@
       "skills": [
         "independent_drawing"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328175"
+      "amazon": "https://www.amazon.com/dp/1963328175",
+      "wikidata": "Q137394793",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137394793"
     },
     {
       "id": "the-adventures-of-lucky-rocky-two-in-one-edition-bilingual-transition-7-10-en",
@@ -296,7 +325,9 @@
         "real_life_scenes",
         "logic"
       ],
-      "amazon": "https://www.amazon.com/dp/1963328981"
+      "amazon": "https://www.amazon.com/dp/1963328981",
+      "wikidata": "Q137442329",
+      "wikidata_url": "https://www.wikidata.org/wiki/Q137442329"
     },
     {
       "id": "las-aventuras-de-rocky-el-afortunado-edicion-dos-en-uno-bilingual-transition-7-10-es",

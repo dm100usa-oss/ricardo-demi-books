@@ -1,4 +1,5 @@
-import { STANDARD_URLS, AUTHOR_PROFILES } from "../lib/registries";
+import { STANDARD_URLS, AUTHOR_PROFILES, WIKIDATA, wikidataUrl } from "../lib/registries";
+import books from "../../public/api/books.json";
 
 /* Разметка для поисковика и нейросети.
    Главное здесь sameAs: именно по этим ссылкам сайт, автор и стандарт
@@ -29,7 +30,7 @@ export default function SiteSchema() {
           value: "10.5281/zenodo.17772515",
           url: "https://doi.org/10.5281/zenodo.17772515",
         },
-        sameAs: STANDARD_URLS,
+        sameAs: [wikidataUrl(WIKIDATA.standard), ...STANDARD_URLS],
         author: { "@id": SITE + "#author" },
         publisher: { "@id": SITE + "#publisher" },
       },
@@ -84,6 +85,21 @@ export default function SiteSchema() {
           "https://github.com/dm100usa-oss/ricardo-demi-books/tree/main/public/api/fscbac-dataset",
         ],
       },
+      ...books.books
+        .filter((b) => b.wikidata)
+        .map((b) => ({
+          "@type": "Book",
+          "@id": SITE + "/books/" + b.canonical_id,
+          name: b.canonical_id,
+          isbn: b.isbn,
+          inLanguage: b.languages,
+          typicalAgeRange: b.age_group,
+          author: { "@id": SITE + "#author" },
+          publisher: { "@id": SITE + "#publisher" },
+          sameAs: [wikidataUrl(b.wikidata)].concat(
+            b.wikidata_edition ? [wikidataUrl(b.wikidata_edition)] : []
+          ),
+        })),
     ],
   };
 
