@@ -13,21 +13,21 @@
    на каждой странице и служит навигацией.
    ===================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 
 :root {
   /* Бумага определителя: теплая, но с серо-зеленым оттенком */
-  --paper: #f6f4ed;
-  --paper-deep: #efece1;
-  --card: #fffefb;
+  --paper: #f8f8f6;
+  --paper-deep: #eeeeea;
+  --card: #ffffff;
 
   /* Чернила, не черные: в них есть хвоя */
   --ink: #1b2a26;
   --ink-2: #5a6a64;
   --ink-3: #8b968f;
 
-  --rule: #d9d4c4;
-  --rule-soft: #e6e2d6;
+  --rule: #dcdcd6;
+  --rule-soft: #e9e9e4;
 
   /* Печать. Железный сурик. Только на отметках версии и статуса */
   --seal: #a33b22;
@@ -38,11 +38,14 @@
   --band-3: #7a6a9e;
   --band-4: #47688a;
 
-  --serif: "Source Serif 4", Georgia, serif;
-  --display: "Fraunces", Georgia, serif;
+  --serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Space Grotesk", "Inter", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --measure: 72ch;
+  --measure: 100%;
+  /* Одна рамка для шапки, текста и подвала. Задана в rem, а не в знаках:
+     знак зависит от шрифта блока, и меню получало свою узкую рамку. */
+  --frame: 54rem;
   --rail: 12rem;
   --gap: clamp(1.5rem, 4vw, 3rem);
 }
@@ -54,8 +57,8 @@ html { background: var(--paper); }
 body {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(1.02rem, 0.99rem + 0.16vw, 1.12rem);
-  line-height: 1.62;
+  font-size: clamp(0.99rem, 0.96rem + 0.15vw, 1.06rem);
+  line-height: 1.65;
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
 }
@@ -70,7 +73,7 @@ body {
   border-bottom: 1px solid var(--rule);
 }
 .masthead__inner {
-  max-width: 78rem;
+  max-width: var(--frame);
   margin: 0 auto;
   padding: clamp(1.1rem, 3vw, 1.9rem) var(--gap) 0;
 }
@@ -83,7 +86,8 @@ body {
 }
 .masthead__title {
   font-family: var(--display);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   font-size: clamp(1.15rem, 1rem + 0.9vw, 1.55rem);
   letter-spacing: -0.015em;
   margin: 0;
@@ -165,7 +169,7 @@ body {
 /* ==================== ВЕРХНЕЕ МЕНЮ ==================== */
 
 .topnav {
-  max-width: 78rem;
+  max-width: var(--frame);
   margin: 0 auto;
   padding: 0.7rem var(--gap);
   display: flex;
@@ -184,7 +188,7 @@ body {
 /* ==================== ПОЛОСА НАБОРА ==================== */
 
 main {
-  max-width: calc(var(--measure) + 2 * var(--gap));
+  max-width: var(--frame);
   margin: 0 auto;
   padding: clamp(1.8rem, 4vw, 2.8rem) var(--gap) 0;
 }
@@ -193,20 +197,20 @@ main {
 
 h1 {
   font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(1.75rem, 1.35rem + 1.7vw, 2.5rem);
-  line-height: 1.08;
-  letter-spacing: -0.022em;
-  margin: 0 0 1rem;
+  font-weight: 700;
+  font-size: clamp(1.85rem, 1.4rem + 1.9vw, 2.7rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  margin: 0 0 1.1rem;
   text-wrap: balance;
 }
 
 h2 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: clamp(1.3rem, 1.12rem + 0.9vw, 1.75rem);
-  line-height: 1.2;
-  letter-spacing: -0.014em;
+  font-size: clamp(1.25rem, 1.08rem + 0.8vw, 1.6rem);
+  line-height: 1.18;
+  letter-spacing: -0.022em;
   margin: 3.2rem 0 1rem;
   padding-top: 1rem;
   border-top: 1px solid var(--rule);
@@ -223,10 +227,10 @@ main > section:first-child > :first-child {
 }
 
 h3 {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 600;
-  font-size: 1.06rem;
-  letter-spacing: 0.01em;
+  font-size: 1.02rem;
+  letter-spacing: -0.008em;
   margin: 2rem 0 0.6rem;
   color: var(--ink);
 }
@@ -238,8 +242,8 @@ p:first-of-type { margin-top: 0; }
 
 /* Первый абзац страницы крупнее: это тезис */
 h1 + p {
-  font-size: 1.16em;
-  line-height: 1.5;
+  font-size: 1.13em;
+  line-height: 1.55;
   color: var(--ink-2);
   margin-bottom: 1.8rem;
 }
@@ -275,9 +279,8 @@ blockquote {
   margin: 1.6rem 0;
   padding: 0.2rem 0 0.2rem 1.4rem;
   border-left: 3px solid var(--band-2);
-  font-family: var(--display);
-  font-size: 1.1rem;
-  line-height: 1.45;
+  font-size: 1.04rem;
+  line-height: 1.5;
   color: var(--ink-2);
 }
 
@@ -346,7 +349,7 @@ dd { margin: 0.2rem 0 0; }
   background: var(--paper-deep);
 }
 .colophon__inner {
-  max-width: 78rem;
+  max-width: var(--frame);
   margin: 0 auto;
   padding: clamp(1.8rem, 4vw, 2.8rem) var(--gap) clamp(2rem, 5vw, 3rem);
   display: grid;

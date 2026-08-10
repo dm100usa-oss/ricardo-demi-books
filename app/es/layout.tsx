@@ -1,8 +1,8 @@
-import "../globals.css";
 import React from "react";
-import SiteSchema from "../components/SiteSchema";
-import Masthead from "../components/Masthead";
-import FooterES from "../components/FooterES";
+
+/* Испанский раздел. Каркас общий, здесь только свои заголовки страницы.
+   Свой html и свой подвал тут были бы вторыми: испанские страницы
+   рисуются внутри общего каркаса. */
 
 export const metadata = {
   metadataBase: new URL("https://www.ricardo-demi.com"),
@@ -14,64 +14,10 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
+export default function EsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="es">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="Ricardo Demi" />
-
-        <meta
-          name="msvalidate.01"
-          content="7A3E245327DA485A41AE5DFAC5449599"
-        />
-
-        <meta
-          name="google-site-verification"
-          content="D_yiTSM0zWdBs-hpefX9cotH2U5FSStgcb1W-XOwTgw"
-        />
-
-        <meta
-          name="keywords"
-          content="libros infantiles, libros educativos, aprendizaje bilingüe, Ricardo Demi, Magic of Discoveries"
-        />
-
-        <meta
-          property="og:title"
-          content="Magic of Discoveries — Base Oficial de Conocimiento de Ricardo Demi"
-        />
-        <meta
-          property="og:description"
-          content="Sistema educativo de libros infantiles para edades 1–10 enfocado en creatividad, inteligencia emocional y desarrollo bilingüe."
-        />
-        <meta
-          property="og:image"
-          content="https://www.ricardo-demi.com/cover.jpg"
-        />
-        <meta property="og:type" content="website" />
-
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-
-        <script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "0a2c9e4a59fb4c859f3d5d3c9ddc24f1"}'
-        ></script>
-        <SiteSchema />
-      </head>
-
-      <body>
-        <Masthead lang="es" />
-
-        {children}
-        <FooterES />
-      </body>
-    </html>
-  );
+  return <>{children}</>;
 }

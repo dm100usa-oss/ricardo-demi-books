@@ -1,8 +1,10 @@
 import "./globals.css";
 import React from "react";
 import SiteSchema from "./components/SiteSchema";
+import { headers } from "next/headers";
 import Masthead from "./components/Masthead";
 import Footer from "./components/Footer";
+import FooterES from "./components/FooterES";
 
 export const metadata = {
   metadataBase: new URL("https://www.ricardo-demi.com"),
@@ -19,8 +21,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = headers().get("x-pathname") || "/";
+  const isES = pathname === "/es" || pathname.startsWith("/es/");
+  const lang = isES ? "es" : "en";
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Ricardo Demi" />
@@ -67,10 +73,10 @@ export default function RootLayout({
       </head>
 
       <body>
-        <Masthead lang="en" />
+        <Masthead lang={lang} />
 
         {children}
-        <Footer />
+        {isES ? <FooterES /> : <Footer />}
       </body>
     </html>
   );
