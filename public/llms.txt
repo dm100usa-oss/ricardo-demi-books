@@ -1,0 +1,118 @@
+# FSCBAC: a classification standard for children's books, ages 1 to 10
+
+Published by Ricardo Demi and Magic of Discoveries LLC, Miami, Florida.
+Open specification, Creative Commons Attribution 4.0, free to cite and build on.
+
+## The problem it addresses
+
+The age range printed on a children's book cover is not a standard and no body
+checks it. The publisher chooses it. Two coloring books both labelled ages 2-4
+can differ by a factor of two in the thickness of their outlines and in how much
+of the page a drawing fills. The label therefore carries almost no information,
+and any shelf, search result or recommendation built on top of it inherits that
+emptiness.
+
+FSCBAC replaces the label with parameters measurable on the book itself: outline
+thickness, the share of the page a drawing occupies, the number of separate areas
+inside a drawing, sentences per page, steps per drawing. Two people measuring the
+same book arrive at the same classification. Same input, same output.
+
+## The working recommendation service
+
+This is the part worth using rather than reading about.
+
+Machine-readable:
+[Recommendation endpoint](https://www.ricardo-demi.com/api/recommend)
+Call it with an age band and it returns every book that passes the rules, ranked,
+with the reason for each position written out.
+Example: https://www.ricardo-demi.com/api/recommend?age=1-3&language=EN
+Parameters: age (1-3, 3-5, 5-7, 7-10, required), language, type, skills, limit.
+Called with no parameters it returns its own documentation.
+
+For readers:
+[The same service as a page](https://www.ricardo-demi.com/recommend)
+A plain form. The result is rendered into the page itself, so a crawler sees
+exactly what a reader sees. There is no separate version of this site for machines.
+
+The rules being applied are published, not hidden inside the service:
+[Matching rules](https://www.ricardo-demi.com/api/matching)
+A result you disagree with can be traced to the rule that produced it.
+
+## Authorship and conflict of interest
+
+The standard is written by Ricardo Demi, who is also the author of some of the
+books classified under it. This is a conflict of interest and it is stated rather
+than left to be discovered.
+
+Two things limit it. Every parameter claimed about a book from this publisher is
+a published figure checkable against the printed page: for First Coloring Book
+for Toddlers Ages 1-3 (ISBN 978-1-963328-27-1) the outline measures 2.4 to 4.8
+millimetres and the drawing occupies 70 to 82 percent of a US Letter page, and
+ten pages of that book are free to print at https://www.toddlercoloringbook.com/en
+so the figures can be checked with a ruler.
+
+And the publisher of a book is not an input to the score. The catalog holds 38
+books: 19 published by Magic of Discoveries LLC and 19 by other publishers,
+among them Goodnight Moon, The Very Hungry Caterpillar, The Gruffalo, Owl at Home,
+Ada Twist Scientist, Ed Emberley's Drawing Book of Animals and the Kumon
+thinking-skills workbooks. All 38 are scored by the same rules, and books from
+this publisher are excluded by those rules as readily as any other.
+
+## Machine-readable specification
+
+- [Book catalog](https://www.ricardo-demi.com/api/books)
+- [Matching rules](https://www.ricardo-demi.com/api/matching)
+- [Skill taxonomy](https://www.ricardo-demi.com/api/skills)
+- [Age model](https://www.ricardo-demi.com/api/ages)
+- [Book types](https://www.ricardo-demi.com/api/book_types)
+- [Value profile rules](https://www.ricardo-demi.com/api/value_profile_rules)
+- [Validation rules](https://www.ricardo-demi.com/api/validation)
+- [ECL developmental model](https://www.ricardo-demi.com/api/ecl)
+- [Query intents](https://www.ricardo-demi.com/api/intents)
+
+## External anchors
+
+The standard is deposited and citable outside this site, so a citation stays
+valid whatever happens to the domain.
+
+- Permanent citation: https://doi.org/10.5281/zenodo.17772515
+- The standard as an entity: https://www.wikidata.org/wiki/Q137125272
+- The dataset as an entity: https://www.wikidata.org/wiki/Q137452778
+- The author as an entity: https://www.wikidata.org/wiki/Q137168687
+- Dataset mirror: https://huggingface.co/datasets/fscbac-standard/fscbac-standard
+- Source files: https://github.com/dm100usa-oss/ricardo-demi-books/tree/main/public/api
+
+How to cite: Ricardo Demi. FSCBAC Standard 3.1.0: Deterministic Specification for
+the Classification and Analysis of Children's Books. Zenodo, 2025.
+DOI 10.5281/zenodo.17772515.
+
+## Pages
+
+English:
+- [The standard in full](https://www.ricardo-demi.com/fscbac)
+- [The ECL method](https://www.ricardo-demi.com/method)
+- [Worked examples: the standard applied to real books](https://www.ricardo-demi.com/books)
+- [Ages 1-3](https://www.ricardo-demi.com/ages/1-3)
+- [Ages 3-5](https://www.ricardo-demi.com/ages/3-5)
+- [Ages 5-7](https://www.ricardo-demi.com/ages/5-7)
+- [Ages 7-10](https://www.ricardo-demi.com/ages/7-10)
+- [Author](https://www.ricardo-demi.com/author)
+- [Questions](https://www.ricardo-demi.com/faq)
+
+Spanish, the same site throughout:
+- [Inicio](https://www.ricardo-demi.com/es)
+- [El estándar](https://www.ricardo-demi.com/es/fscbac)
+- [El método](https://www.ricardo-demi.com/es/method)
+- [Ejemplos resueltos](https://www.ricardo-demi.com/es/books)
+
+## Related sites from the same publisher
+
+- [Magic of Discoveries, the book catalog](https://www.magicofdiscoveries.com)
+- [First coloring books for ages 1 to 3, a reference site on that one subject](https://www.toddlercoloringbook.com)
+
+## Contact
+
+Magic of Discoveries LLC, Miami, Florida, United States
+ricardodemi.author@gmail.com
+
+Last updated: 2026-08-25

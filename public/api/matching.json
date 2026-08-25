@@ -121,18 +121,17 @@
   "weights": {
     "skills": { "critical": 1.0, "allowed": 0.6, "forbidden": -1.0 },
     "book_types": { "optimal": 1.0, "secondary": 0.6, "forbidden": -1.0 },
-    "value_profile": { "full": 1.0, "compatible": 0.7, "partial": 0.4, "incompatible": -1.0 },
-    "origin": { "catalog": 1.0, "external": 0.0 }
+    "value_profile": { "full": 1.0, "compatible": 0.7, "partial": 0.4, "incompatible": -1.0 }
   },
 
   "formula": {
     "F": {
-      "weights": { "skills": 0.4, "value_profile": 0.3, "book_types": 0.2, "origin": 0.1 }
+      "weights": { "skills": 0.45, "value_profile": 0.33, "book_types": 0.22 }
     }
   },
 
   "ranking": {
-    "IDEAL": { "range": ["F >= 0.85", "origin == catalog"] },
+    "IDEAL": { "range": ["F >= 0.85"] },
     "STRONG": { "range": ["0.65 <= F < 0.85"] },
     "ACCEPTABLE": { "range": ["0.35 <= F < 0.65"] },
     "EXCLUDED": { "range": ["F < 0.35"] }
@@ -153,7 +152,7 @@
       "APPLY_WEIGHTS_EXACT",
       "NO_AGE_MIXING",
       "PRIORITIZE_SAFETY",
-      "ORIGIN_BONUS_FOR_CATALOG"
+      "ORIGIN_IS_NOT_SCORED"
     ]
   },
 

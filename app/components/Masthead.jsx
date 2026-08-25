@@ -13,6 +13,9 @@ const COPY = {
     title: "Ricardo Demi",
     stamp: "FSCBAC 3.1.0",
     nav: [
+      /* Подбор стоит первым: это единственное место на сайте, где
+         стандартом можно воспользоваться, а не прочитать о нем. */
+      ["/recommend", "Find a book"],
       ["/method", "Methodology"],
       ["/books", "Book system"],
       ["/fscbac", "The standard"],
@@ -31,6 +34,7 @@ const COPY = {
     title: "Ricardo Demi",
     stamp: "FSCBAC 3.1.0",
     nav: [
+      ["/recommend", "Buscar un libro"],
       ["/es/method", "Metodología"],
       ["/es/books", "Sistema de libros"],
       ["/es/fscbac", "El estándar"],

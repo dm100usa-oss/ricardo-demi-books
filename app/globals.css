@@ -613,3 +613,114 @@ details > pre {
   white-space: pre-wrap;
   overflow-x: auto;
 }
+
+/* ==================== ПОДБОР КНИГИ ====================
+
+   Обычная форма без единой строчки на стороне браузера: ответ
+   приходит целой страницей. Поэтому результат виден и человеку,
+   и сборщику нейросети, и второй версии для машин не нужно.    */
+
+.picker {
+  margin: 2rem 0 2.4rem;
+  padding: 1.4rem 1.5rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--band-1);
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem 2.6rem;
+  align-items: flex-end;
+}
+
+.picker fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.picker legend {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 0 0 0.55rem;
+}
+
+.picker label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.picker input { accent-color: var(--band-1); margin: 0; }
+
+.picker button {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--ink);
+  border: 0;
+  border-radius: 2px;
+  padding: 0.72rem 1.3rem;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+.picker button:hover { background: var(--band-1); }
+.picker button:active { transform: translateY(1px); }
+
+.results { list-style: none; padding: 0; margin: 1.4rem 0 0; counter-reset: r; }
+.results > li {
+  counter-increment: r;
+  position: relative;
+  padding: 0.95rem 0 0.95rem 2.6rem;
+  border-top: 1px solid var(--rule-soft);
+  margin: 0;
+}
+.results > li::before {
+  content: counter(r);
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-3);
+}
+.results__title { font-weight: 600; margin: 0 0 0.3rem; line-height: 1.35; }
+.results__tag {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 0.1rem 0.4rem;
+  vertical-align: 0.15em;
+}
+.results__meta {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--ink-2);
+  margin: 0 0 0.35rem;
+}
+.results__why { font-size: 0.92rem; color: var(--ink-2); margin: 0; }
+
+/* На телефоне поля подбора идут в столбец, кнопка во всю ширину:
+   иначе она уезжает за край. */
+@media (max-width: 640px) {
+  .picker { flex-direction: column; align-items: stretch; gap: 1.2rem; padding: 1.1rem 1.1rem 1.2rem; }
+  .picker button { width: 100%; }
+  .results > li { padding-left: 2.1rem; }
+}

@@ -18,4 +18,3 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://www.ricardo-demi.com/sitemap.xml
-Sitemap: https://www.ricardo-demi.com/ai-sitemap.xml
