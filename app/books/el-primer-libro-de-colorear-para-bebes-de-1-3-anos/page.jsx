@@ -1,6 +1,9 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/books/el-primer-libro-de-colorear-para-bebes-de-1-3-anos",
+  },
   title:
     "El Primer Libro de Colorear para Bebés de 1–3 Años | Ricardo Demi – Magic of Discoveries",
   description:

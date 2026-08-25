@@ -1,6 +1,9 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/books/the-adventures-of-lucky-rocky",
+  },
   title: "The Adventures of Lucky Rocky: The Magic of Friendship | Magic of Discoveries by Ricardo Demi",
   description:
     "Bilingual story for children 3–6 years old by Ricardo Demi. Part of the Magic of Discoveries educational series. Teaches empathy, kindness, and the value of friendship.",

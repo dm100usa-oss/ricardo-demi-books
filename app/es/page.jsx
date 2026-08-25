@@ -5,7 +5,11 @@ export const metadata = {
   description:
     "Un estándar abierto de clasificación de libros infantiles, de uno a diez años, hecho para los sistemas que los clasifican y recomiendan. Propiedades medibles del libro en lugar de posición de ventas y estrellas. Licencia abierta, depósito permanente.",
   alternates: {
-    canonical: "https://www.ricardo-demi.com/",
+    /* Была ошибка: испанская главная объявляла каноническим адресом
+       английскую, то есть говорила поисковику "я копия другой страницы".
+       Испанская версия это самостоятельная страница на своем языке,
+       а не перевод-дубль. */
+    canonical: "https://www.ricardo-demi.com/es",
     languages: {
       en: "https://www.ricardo-demi.com/",
       es: "https://www.ricardo-demi.com/es",

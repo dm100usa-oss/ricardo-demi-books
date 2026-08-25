@@ -1,6 +1,13 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/awards",
+    languages: {
+      en: "https://www.ricardo-demi.com/awards",
+      es: "https://www.ricardo-demi.com/premios",
+    },
+  },
   title: "Awards & Recognition | Magic of Discoveries by Ricardo Demi",
   description:
     "Official recognitions and international awards received by Ricardo Demi and the Magic of Discoveries educational book series — verified by Readers’ Favorite, Literary Titan, and CBI Awards 2025.",

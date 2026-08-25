@@ -22,6 +22,16 @@ function getTasks(): Task[] {
   return data.tasks;
 }
 
+export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/ages/1-3",
+    languages: {
+      en: "https://www.ricardo-demi.com/ages/1-3",
+      es: "https://www.ricardo-demi.com/es/ages/1-3",
+    },
+  },
+};
+
 export default function Age1to3Page() {
   const tasks = getTasks().filter((task) =>
     task.age_bands.includes("1-3")

@@ -1,6 +1,9 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/books/como-dibujar-111-animales-y-otros-temas",
+  },
   title:
     "Cómo dibujar 111 Sorprendentes y Adorables Animales, Personajes de Cuentos, Flores, Alimentos, Regalos y otros Temas | Ricardo Demi – Magic of Discoveries",
   description:

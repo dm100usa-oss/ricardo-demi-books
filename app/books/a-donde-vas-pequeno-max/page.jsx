@@ -1,6 +1,9 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/books/a-donde-vas-pequeno-max",
+  },
   title:
     "¿A dónde vas, Pequeño Max? | Ricardo Demi – Magic of Discoveries",
   description:

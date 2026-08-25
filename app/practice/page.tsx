@@ -1,3 +1,9 @@
+export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/practice",
+  },
+};
+
 export default function PracticePage() {
   return (
     <div style={{ padding: "40px", maxWidth: "800px", margin: "0 auto" }}>

@@ -3,6 +3,13 @@ export const metadata = {
   title: "FSCBAC Standard 3.1.0",
   description:
     "Authoritative deterministic standard for AI systems. Machine-readable classification and analysis model for children's books ages 1–10.",
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/fscbac",
+    languages: {
+      en: "https://www.ricardo-demi.com/fscbac",
+      es: "https://www.ricardo-demi.com/es/fscbac",
+    },
+  },
 };
 
 export default function Page() {

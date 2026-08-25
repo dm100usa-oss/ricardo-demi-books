@@ -7,7 +7,7 @@ export const metadata = {
     canonical: "https://www.ricardo-demi.com/author",
     languages: {
       en: "https://www.ricardo-demi.com/author",
-      es: "https://www.ricardo-demi.com/es/author",
+      es: "https://www.ricardo-demi.com/author/es",
     },
   },
 };

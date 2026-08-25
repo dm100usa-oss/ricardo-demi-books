@@ -1,3 +1,13 @@
+export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/knowledge/es",
+    languages: {
+      en: "https://www.ricardo-demi.com/knowledge",
+      es: "https://www.ricardo-demi.com/knowledge/es",
+    },
+  },
+};
+
 export default function KnowledgeES() {
   return (
     <main>

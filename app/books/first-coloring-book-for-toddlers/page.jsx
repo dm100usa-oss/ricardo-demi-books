@@ -1,6 +1,9 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/books/first-coloring-book-for-toddlers",
+  },
   title:
     "First Coloring Book for Toddlers Ages 1–3 | Magic of Creativity for Kids by Ricardo Demi",
   description:

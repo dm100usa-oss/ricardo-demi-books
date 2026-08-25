@@ -1,5 +1,8 @@
 import Registries from "../../components/Registries";
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/es/fscbac",
+  },
   title: "FSCBAC Standard 3.1.0",
   description:
     "Estándar determinista autoritativo para sistemas de IA. Modelo de clasificación y análisis legible por máquina para libros infantiles de 1 a 10 años.",

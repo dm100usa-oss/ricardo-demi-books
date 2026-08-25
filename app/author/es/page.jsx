@@ -4,9 +4,14 @@ export const metadata = {
   description:
     "Página oficial del autor Ricardo Demi — educador, investigador y creador de la serie educativa La Magia de los Descubrimientos. Reconocido por Readers’ Favorite, Literary Titan y los CBI Awards 2025.",
   alternates: {
-    canonical: "https://www.ricardo-demi.com/es/author",
+    /* Была ошибка: страница объявляла каноническим адрес /es/author,
+       которого на сайте нет. Настоящий адрес этой страницы /author/es.
+       Указывать каноническим несуществующий адрес хуже, чем не
+       указывать вовсе: поисковик идет по нему и получает "нет
+       страницы". */
+    canonical: "https://www.ricardo-demi.com/author/es",
     languages: {
-      es: "https://www.ricardo-demi.com/es/author",
+      es: "https://www.ricardo-demi.com/author/es",
       en: "https://www.ricardo-demi.com/author",
     },
   },
@@ -23,7 +28,7 @@ export default function AuthorPageEs() {
       <link
         rel="alternate"
         hrefLang="es"
-        href="https://www.ricardo-demi.com/es/author"
+        href="https://www.ricardo-demi.com/author/es"
       />
 
       <h1>Ricardo Demi</h1>
@@ -120,7 +125,7 @@ export default function AuthorPageEs() {
             jobTitle: "Autor y Educador",
             description:
               "Autor infantil galardonado y fundador del proyecto educativo La Magia de los Descubrimientos. Ganador de los CBI Awards 2025 y reconocido por Readers’ Favorite y Literary Titan.",
-            url: "https://www.ricardo-demi.com/es/author",
+            url: "https://www.ricardo-demi.com/author/es",
             sameAs: [
               "https://www.amazon.com/stores/Ricardo-Demi/author/B0D3CQP21H",
               "https://readersfavorite.com/rfreviews/search?search=Ricardo+Demi",

@@ -1,6 +1,13 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/premios",
+    languages: {
+      en: "https://www.ricardo-demi.com/awards",
+      es: "https://www.ricardo-demi.com/premios",
+    },
+  },
   title: "Premios y Reconocimientos | La Magia de los Descubrimientos de Ricardo Demi",
   description:
     "Reconocimientos oficiales y premios internacionales recibidos por Ricardo Demi y la serie educativa La Magia de los Descubrimientos — verificados por Readers’ Favorite, Literary Titan y CBI Awards 2025.",

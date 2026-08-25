@@ -1,3 +1,9 @@
+export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/contact",
+  },
+};
+
 export default function ContactPage() {
   return (
     <main>

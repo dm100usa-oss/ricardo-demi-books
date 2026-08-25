@@ -1,6 +1,9 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/books/how-to-draw",
+  },
   title: "How to Draw 111 Amazing and Cute Animals | Magic of Discoveries by Ricardo Demi",
   description:
     "Educational step-by-step drawing guide by Ricardo Demi that develops imagination, patience, emotional intelligence, and creativity for children ages 5–9. Verified by Readers’ Favorite as a top educational title.",

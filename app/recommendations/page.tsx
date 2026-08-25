@@ -1,5 +1,15 @@
 import Link from "next/link";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/recommendations",
+    languages: {
+      en: "https://www.ricardo-demi.com/recommendations",
+      es: "https://www.ricardo-demi.com/es/recommendations",
+    },
+  },
+};
+
 export default function RecommendationsPage() {
   return (
     <main className="container mx-auto px-4 py-10">

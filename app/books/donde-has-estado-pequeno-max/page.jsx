@@ -1,6 +1,9 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/books/donde-has-estado-pequeno-max",
+  },
   title:
     "¿Dónde Has Estado, Pequeño Max? Cuentos para Dormir | Ricardo Demi – Magic of Discoveries",
   description:

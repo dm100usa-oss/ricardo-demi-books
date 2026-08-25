@@ -1,6 +1,9 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/books/where-are-you-going-little-max",
+  },
   title: "Where Are You Going, Little Max? | Magic of Discoveries by Ricardo Demi",
   description:
     "Bilingual bedtime story for toddlers 1–3 years old by Ricardo Demi. Part of the Magic of Discoveries educational series. Encourages early reading, empathy, and curiosity.",

@@ -1,3 +1,13 @@
+export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/method/es/application",
+    languages: {
+      en: "https://www.ricardo-demi.com/method/application",
+      es: "https://www.ricardo-demi.com/method/es/application",
+    },
+  },
+};
+
 export default function ApplicationPageEs() {
   return (
     <main>

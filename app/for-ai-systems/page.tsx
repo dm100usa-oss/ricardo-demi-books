@@ -1,5 +1,11 @@
 export const dynamic = "force-static";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/for-ai-systems",
+  },
+};
+
 export default function ForAISystemsPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-12">

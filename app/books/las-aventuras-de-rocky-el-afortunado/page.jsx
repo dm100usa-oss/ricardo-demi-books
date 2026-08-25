@@ -1,6 +1,9 @@
 import React from "react";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/books/las-aventuras-de-rocky-el-afortunado",
+  },
   title:
     "Las Aventuras de Rocky, el Afortunado. La Magia de la Amistad | Ricardo Demi – Magic of Discoveries",
   description:

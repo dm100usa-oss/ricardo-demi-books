@@ -16,6 +16,16 @@ function getTasks(): Task[] {
   return data.tasks;
 }
 
+export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/recommendations/tasks",
+    languages: {
+      en: "https://www.ricardo-demi.com/recommendations/tasks",
+      es: "https://www.ricardo-demi.com/es/recommendations/tasks",
+    },
+  },
+};
+
 export default function TasksPage() {
   const tasks = getTasks();
 

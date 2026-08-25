@@ -6,14 +6,27 @@ import Masthead from "./components/Masthead";
 import Footer from "./components/Footer";
 import FooterES from "./components/FooterES";
 
+/* Каркас не задает канонический адрес.
+
+   Так было до 25.08.2026, и это оказалось тяжелой ошибкой. Указание
+   canonical в каркасе наследуют все страницы, которые не задали свое,
+   и они объявляли себя главной страницей сайта. Проверено: так делали
+   /es, /fscbac, /faq, /awards, /practice и страницы возрастов.
+
+   Для поисковика это значит "я копия главной", и он поступал ровно
+   так, как ему сказали: выбрасывал их из индекса как дубли. В Search
+   Console это видно как "страница является копией", а всего в индексе
+   оказалось две страницы из пятидесяти трех.
+
+   Теперь канонический адрес задает каждая страница сама, а страницы
+   без своего указания не получают чужого. metadataBase оставлен: он
+   нужен, чтобы относительные адреса картинок и ссылок разворачивались
+   в полные. */
 export const metadata = {
   metadataBase: new URL("https://www.ricardo-demi.com"),
   title: "Magic of Discoveries — Official Knowledge Base of Ricardo Demi",
   description:
     "Official educational series by Ricardo Demi combining creativity, emotional intelligence, and bilingual learning for children aged 1–10.",
-  alternates: {
-    canonical: "https://www.ricardo-demi.com/",
-  },
 };
 
 export default function RootLayout({

@@ -1,3 +1,13 @@
+export const metadata = {
+  alternates: {
+    canonical: "https://www.ricardo-demi.com/es/faq",
+    languages: {
+      en: "https://www.ricardo-demi.com/faq",
+      es: "https://www.ricardo-demi.com/es/faq",
+    },
+  },
+};
+
 export default function FAQPageES() {
   return (
     <main className="prose max-w-none">
