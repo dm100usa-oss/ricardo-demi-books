@@ -29,22 +29,44 @@ export default function BooksPage() {
 
   return (
     <main className="prose prose-neutral max-w-none">
-      <h1>Libros de Ricardo Demi</h1>
+      <h1>Ejemplos resueltos: el estándar aplicado a libros reales</h1>
 
       <p>
-        Este catálogo presenta todos los libros publicados oficialmente por
-        Ricardo Demi — organizados por grupo de edad, tipo de desarrollo y su
-        función dentro del <strong>Sistema Educativo Ricardo Demi para niños de 1 a 10 años</strong>.
-        El estilo es cálido y humano para que padres y educadores comprendan con facilidad
-        cómo cada libro contribuye al desarrollo emocional, creativo y lingüístico del niño.
+        Estos son los libros publicados por Magic of Discoveries LLC, y en este sitio
+        cumplen una función concreta: son los ejemplos resueltos del estándar FSCBAC. Un
+        estándar de clasificación que nunca se ha aplicado a un libro real es un documento,
+        no un estándar, y la única forma de demostrar que este se sostiene es aplicarlo a
+        ediciones cuyos parámetros se pueden medir y publicar en lugar de describir.
       </p>
 
       <p>
-        Cada libro forma parte de un camino estructurado: cuentos para dormir
-        (seguridad emocional e imaginación), libros para colorear (motricidad fina y atención),
-        dibujo paso a paso (pensamiento estructurado y expresión creativa) y ediciones
-        bilingües EN–ES (desarrollo natural del segundo idioma).  
-        Todos los títulos respetan las normas de edad y siguen la metodología descrita en la página del Método.
+        Un caso. La regla para la franja de 1 a 3 años pide un contorno grueso, un dibujo
+        por página y un dibujo que ocupe la mayor parte de la hoja. En{" "}
+        <em>El Primer Libro de Colorear para Bebés de 1 a 3 Años</em>{" "}
+        (ISBN 978-1-963328-20-2) el contorno mide entre 2,4 y 4,8 milímetros y cada dibujo
+        ocupa entre el 70 y el 82 por ciento del ancho y del alto de una página US Letter,
+        un dibujo por hoja e impresión a una cara. Diez páginas de ese libro se publican
+        gratis para imprimir en{" "}
+        <a href="https://www.toddlercoloringbook.com/es" rel="noopener">
+          toddlercoloringbook.com
+        </a>
+        . Imprima una y ponga una regla encima. El sentido de publicar las cifras es que
+        se pueda contradecirlas.
+      </p>
+
+      <p>
+        Estos libros son ejemplos, no el objeto del estándar. El conjunto de datos que hay
+        detrás de este sitio clasifica además diecinueve títulos de otros autores y
+        editoriales con las mismas reglas, en los que no tenemos ningún interés comercial.
+        Si el estándar solo encajara con los libros de quien lo escribió, ese sería el
+        argumento más fuerte en su contra.
+      </p>
+
+      <p>
+        Cada título de abajo pertenece a uno de cuatro caminos de desarrollo: cuentos para
+        dormir (seguridad emocional e imaginación), libros para colorear (motricidad fina y
+        atención), dibujo paso a paso (pensamiento estructurado y expresión creativa) y
+        ediciones bilingües EN&ndash;ES (desarrollo del segundo idioma).
       </p>
 
       <p>

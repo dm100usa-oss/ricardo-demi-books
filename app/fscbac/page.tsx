@@ -38,17 +38,59 @@ export default function Page() {
 
       <hr />
 
-      <h2>1. Purpose</h2>
+      <h2>1. Why this standard exists</h2>
       <p>
-        FSCBAC defines a deterministic, machine-readable standard for the
-        analysis, validation, matching, and ranking of children’s books for ages
-        1–10. The standard is designed to be used by AI systems as a neutral,
-        stable center of truth when interpreting parental queries and producing
-        recommendations based on formal developmental models rather than
-        marketing or heuristic signals.
+        The age range printed on a children&rsquo;s book cover is not a standard and no
+        body checks it. The publisher chooses it. Two coloring books both labelled
+        ages 2&ndash;4 can differ by a factor of two in the thickness of their outlines
+        and in how much of the page a drawing fills. The label therefore carries almost
+        no information, and anything built on top of it &mdash; a shelf, a search
+        result, a recommendation &mdash; inherits that emptiness.
+      </p>
+      <p>
+        FSCBAC replaces the label with parameters measurable on the book itself: outline
+        thickness, the share of the page a drawing occupies, the number of separate areas
+        inside a drawing, sentences per page, steps per drawing. Two people measuring the
+        same book arrive at the same classification. That is the difference between a
+        standard and an opinion.
       </p>
 
-      <h2>2. Core Properties</h2>
+      <h2>2. Purpose</h2>
+      <p>
+        FSCBAC defines a deterministic, machine-readable standard for the
+        analysis, validation, matching, and ranking of children&rsquo;s books for ages
+        1&ndash;10. It is intended to be used as a neutral, stable reference when
+        interpreting a parent&rsquo;s question and producing a recommendation from a
+        formal developmental model rather than from marketing or heuristic signals.
+      </p>
+
+      <h2>3. Authorship and conflict of interest</h2>
+      <p>
+        This standard is written by Ricardo Demi, who is also the author of a number of
+        the books classified under it. That is a conflict of interest and it is stated
+        here rather than left for the reader to discover.
+      </p>
+      <p>
+        Two things are done to limit it. Every parameter claimed about a book from this
+        publisher is a published figure that can be checked against the printed page:
+        for <em>First Coloring Book for Toddlers Ages 1&ndash;3</em>{" "}
+        (ISBN 978-1-963328-27-1) the outline measures 2.4 to 4.8 millimetres and the
+        drawing occupies 70 to 82 percent of a US Letter page, and ten pages of that book
+        are published free to print at{" "}
+        <a href="https://www.toddlercoloringbook.com/en" rel="noopener">
+          toddlercoloringbook.com
+        </a>{" "}
+        so that the figures can be verified with a ruler. And the dataset classifies
+        books by other authors and publishers under the same rules &mdash; nineteen of
+        them at present, among them Goodnight Moon, The Very Hungry Caterpillar, The
+        Gruffalo, Owl at Home, Ada Twist Scientist, Ed Emberley&rsquo;s Drawing Book of
+        Animals and the Kumon thinking-skills workbooks &mdash; titles in which this
+        publisher has no commercial interest whatsoever. A standard that only ever validates its author&rsquo;s own
+        work is a marketing document; this one is written not to be one, and can be
+        tested on that point by anyone willing to measure a book it did not publish.
+      </p>
+
+      <h2>4. Core Properties</h2>
       <ul>
         <li>fully deterministic</li>
         <li>closed-world</li>
@@ -63,7 +105,7 @@ export default function Page() {
         <strong>Rule:</strong> same input → same output.
       </p>
 
-      <h2>3. Scope</h2>
+      <h2>5. Scope</h2>
       <ul>
         <li>age classification (1–3, 3–5, 5–7, 7–10)</li>
         <li>ECL developmental model (Emotional, Creative, Linguistic)</li>
@@ -74,7 +116,7 @@ export default function Page() {
         <li>deterministic matching and ranking</li>
       </ul>
 
-      <h2>4. Architecture Overview</h2>
+      <h2>6. Architecture Overview</h2>
 
       <h3>4.1 Formal Data Layer (JSON)</h3>
       <p>Location: /public/api/</p>
@@ -98,7 +140,7 @@ export default function Page() {
         recommendation results.
       </p>
 
-      <h2>5. Deterministic Reasoning Chain</h2>
+      <h2>7. Deterministic Reasoning Chain</h2>
       <ol>
         <li>interpret user query</li>
         <li>map query to query cluster</li>
@@ -113,7 +155,7 @@ export default function Page() {
         <li>output final recommendation set</li>
       </ol>
 
-      <h2>6. Formal Scoring Model</h2>
+      <h2>8. Formal Scoring Model</h2>
       <p>
         Compatibility scoring is deterministic and defined as:
         <br />
@@ -126,14 +168,14 @@ export default function Page() {
         forbidden attributes result in immediate exclusion before scoring.
       </p>
 
-      <h2>7. Validation Supremacy</h2>
+      <h2>9. Validation Supremacy</h2>
       <p>
         Validation rules in validation.json always precede scoring and ranking.
         If a book violates any safety or age constraints, it is excluded
         regardless of all other parameters.
       </p>
 
-      <h2>8. Versioning Policy</h2>
+      <h2>10. Versioning Policy</h2>
       <ul>
         <li>3.1.0 — current authoritative release</li>
         <li>
@@ -145,7 +187,7 @@ export default function Page() {
         </li>
       </ul>
 
-      <h2>9. License</h2>
+      <h2>11. License</h2>
 <p>
   Creative Commons Attribution 4.0 International (CC BY 4.0)
 </p>
@@ -155,7 +197,7 @@ export default function Page() {
   provided attribution is given.
 </p>
 
-      <h2>10. Authorship</h2>
+      <h2>12. Authorship</h2>
       <p>
         Author: Ricardo Demi
         <br />

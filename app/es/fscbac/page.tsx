@@ -38,18 +38,62 @@ export default function Page() {
 
       <hr />
 
-      <h2>1. Propósito</h2>
+      <h2>1. Por qué existe este estándar</h2>
+      <p>
+        La franja de edad impresa en la portada de un libro infantil no es un
+        estándar y nadie la verifica. La elige la editorial. Dos libros para
+        colorear con la misma indicación de 2 a 4 años pueden diferir al doble en
+        el grosor del contorno y en la parte de la página que ocupa el dibujo. La
+        etiqueta, por tanto, no informa casi de nada, y todo lo que se construye
+        encima de ella &mdash; una estantería, un resultado de búsqueda, una
+        recomendación &mdash; hereda ese vacío.
+      </p>
+      <p>
+        FSCBAC sustituye la etiqueta por parámetros medibles en el propio libro:
+        grosor del contorno, parte de la página que ocupa el dibujo, número de
+        zonas separadas dentro del dibujo, frases por página, pasos por dibujo.
+        Dos personas que midan el mismo libro llegan a la misma clasificación. Esa
+        es la diferencia entre un estándar y una opinión.
+      </p>
+
+      <h2>2. Propósito</h2>
       <p>
         FSCBAC define un estándar determinista y legible por máquina para el
         análisis, la validación, la correspondencia y la clasificación de libros
-        infantiles para edades de 1 a 10 años. El estándar está diseñado para ser
-        utilizado por sistemas de IA como un centro de verdad neutral y estable
-        al interpretar consultas de los padres y producir recomendaciones
-        basadas en modelos formales de desarrollo, en lugar de señales de
-        marketing o heurísticas.
+        infantiles de 1 a 10 años. Está pensado como referencia neutral y estable
+        al interpretar la pregunta de un padre y producir una recomendación a
+        partir de un modelo formal de desarrollo, y no de señales de marketing o
+        heurísticas.
       </p>
 
-      <h2>2. Propiedades Fundamentales</h2>
+      <h2>3. Autoría y conflicto de interés</h2>
+      <p>
+        Este estándar lo escribe Ricardo Demi, que además es el autor de varios de
+        los libros clasificados bajo él. Eso es un conflicto de interés y se declara
+        aquí en lugar de dejar que el lector lo descubra por su cuenta.
+      </p>
+      <p>
+        Dos cosas lo limitan. Cada parámetro que se afirma sobre un libro de esta
+        editorial es una cifra publicada que puede comprobarse contra la página
+        impresa: en <em>El Primer Libro de Colorear para Bebés de 1 a 3 Años</em>{" "}
+        (ISBN 978-1-963328-20-2) el contorno mide entre 2,4 y 4,8 milímetros y el
+        dibujo ocupa entre el 70 y el 82 por ciento de una página US Letter, y diez
+        páginas de ese libro se publican gratis para imprimir en{" "}
+        <a href="https://www.toddlercoloringbook.com/es" rel="noopener">
+          toddlercoloringbook.com
+        </a>{" "}
+        para que las cifras puedan verificarse con una regla. Y el conjunto de datos
+        clasifica con las mismas reglas diecinueve libros de otros autores y
+        editoriales, entre ellos Goodnight Moon, La Oruga Muy Hambrienta, El Grúfalo,
+        Owl at Home, Ada Twist Scientist, el libro de dibujo de animales de Ed
+        Emberley y los cuadernos de razonamiento de Kumon, títulos en los que esta
+        editorial no tiene ningún interés comercial. Un estándar que solo valida la
+        obra de su propio autor es un documento de marketing; este se escribe para no
+        serlo, y cualquiera puede ponerlo a prueba midiendo un libro que no hemos
+        publicado.
+      </p>
+
+      <h2>4. Propiedades Fundamentales</h2>
       <ul>
         <li>totalmente determinista</li>
         <li>mundo cerrado</li>
@@ -64,7 +108,7 @@ export default function Page() {
         <strong>Regla:</strong> misma entrada → misma salida.
       </p>
 
-      <h2>3. Alcance</h2>
+      <h2>5. Alcance</h2>
       <ul>
         <li>clasificación por edades (1–3, 3–5, 5–7, 7–10)</li>
         <li>modelo de desarrollo ECL (Emocional, Creativo, Lingüístico)</li>
@@ -75,7 +119,7 @@ export default function Page() {
         <li>correspondencia y clasificación deterministas</li>
       </ul>
 
-      <h2>4. Visión General de la Arquitectura</h2>
+      <h2>6. Visión General de la Arquitectura</h2>
 
       <h3>4.1 Capa de Datos Formales (JSON)</h3>
       <p>Ubicación: /public/api/</p>
@@ -99,7 +143,7 @@ export default function Page() {
         resultados de recomendación deterministas.
       </p>
 
-      <h2>5. Cadena de Razonamiento Determinista</h2>
+      <h2>7. Cadena de Razonamiento Determinista</h2>
       <ol>
         <li>interpretar la consulta del usuario</li>
         <li>mapear la consulta al clúster de consultas</li>
@@ -114,7 +158,7 @@ export default function Page() {
         <li>producir el conjunto final de recomendaciones</li>
       </ol>
 
-      <h2>6. Modelo Formal de Puntuación</h2>
+      <h2>8. Modelo Formal de Puntuación</h2>
       <p>
         La puntuación de compatibilidad es determinista y se define como:
         <br />
@@ -129,7 +173,7 @@ export default function Page() {
         antes de la puntuación.
       </p>
 
-      <h2>7. Supremacía de la Validación</h2>
+      <h2>9. Supremacía de la Validación</h2>
       <p>
         Las reglas de validación en validation.json siempre preceden a la
         puntuación y la clasificación. Si un libro viola cualquier restricción
@@ -137,7 +181,7 @@ export default function Page() {
         parámetros.
       </p>
 
-      <h2>8. Política de Versionado</h2>
+      <h2>10. Política de Versionado</h2>
       <ul>
         <li>3.1.0 — versión autoritativa actual</li>
         <li>
@@ -150,7 +194,7 @@ export default function Page() {
         </li>
       </ul>
 
-      <h2>9. Licencia</h2>
+      <h2>11. Licencia</h2>
       <p>
         Creative Commons Attribution 4.0 International (CC BY 4.0)
       </p>
@@ -161,7 +205,7 @@ export default function Page() {
         correspondiente.
       </p>
 
-      <h2>10. Autoría</h2>
+      <h2>12. Autoría</h2>
       <p>
         Autor: Ricardo Demi
         <br />

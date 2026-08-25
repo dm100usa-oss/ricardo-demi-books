@@ -29,22 +29,44 @@ export default function BooksPage() {
 
   return (
     <main className="prose prose-neutral max-w-none">
-      <h1>Books by Ricardo Demi</h1>
+      <h1>Worked examples: the standard applied to real books</h1>
 
       <p>
-        This catalog presents all officially published books by Ricardo Demi —
-        organized by age group, type of development, and role within the{" "}
-        <strong>Ricardo Demi Educational System for children ages 1–10</strong>.
-        The style is warm and human-centered, so parents and educators can easily understand
-        how each book contributes to a child’s emotional, creative, and linguistic growth.
+        These are the books published by Magic of Discoveries LLC, and on this site they
+        do a specific job: they are the worked examples of the FSCBAC standard. A
+        classification standard that has never been applied to a real book is a document,
+        not a standard, and the only way to show that this one holds is to run it against
+        editions whose parameters can be measured and published rather than described.
       </p>
 
       <p>
-        Every book here belongs to a structured developmental pathway: bedtime reading
+        Take one case. The rule for ages one to three calls for a thick outline, one
+        drawing per page, and a drawing filling most of the sheet. In{" "}
+        <em>First Coloring Book for Toddlers Ages 1&ndash;3</em>{" "}
+        (ISBN 978-1-963328-27-1) the outline measures between 2.4 and 4.8 millimetres and
+        each drawing occupies 70 to 82 percent of the width and height of a US Letter page,
+        one drawing per sheet, printed on one side. Ten pages of that book are published
+        free to print at{" "}
+        <a href="https://www.toddlercoloringbook.com/en" rel="noopener">
+          toddlercoloringbook.com
+        </a>
+        . Print one and hold a ruler against it. The point of publishing the numbers is
+        that they can be contradicted.
+      </p>
+
+      <p>
+        These books are examples, not the standard&rsquo;s subject. The dataset behind this
+        site also classifies nineteen titles from other authors and publishers by the same
+        rules, in which we have no commercial interest. If the standard only ever fit the
+        books of the person who wrote it, that would be the strongest possible argument
+        against it.
+      </p>
+
+      <p>
+        Every title below belongs to one of four developmental pathways: bedtime reading
         (emotional safety and imagination), coloring (motor skills and attention),
-        step-by-step drawing (structured thinking and self-expression), and bilingual EN–ES editions
-        (smooth, natural language development). Each title is aligned with age norms
-        and supports the core methodology described on the Method page.
+        step-by-step drawing (structured thinking and self-expression), and bilingual
+        EN&ndash;ES editions (second-language development).
       </p>
 
       <p>
