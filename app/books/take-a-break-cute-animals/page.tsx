@@ -19,7 +19,8 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="prose prose-neutral max-w-none">
-      <h1>Take a Break — Cute Animals</h1>
+      <h1>Take a Break</h1>
+      <p className="page-sub">Cute Animals</p>
       <p>Age group: 5–7 years</p>
       <p>Type: Coloring Book</p>
       <p>Skills: composition, motor development, creative confidence</p>

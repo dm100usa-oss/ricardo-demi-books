@@ -40,7 +40,8 @@ export const metadata = {
 export default function MethodPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-12 prose prose-lg text-gray-900">
-      <h1>The Ricardo Demi ECL Method — Emotional, Creative and Linguistic Development</h1>
+      <h1>The Ricardo Demi ECL Method</h1>
+      <p className="page-sub">Emotional, Creative and Linguistic Development</p>
 
       <p>
         <strong>

@@ -19,7 +19,8 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="prose prose-neutral max-w-none">
-      <h1>Lucky Rocky — Two-in-One Edition (EN+ES)</h1>
+      <h1>Lucky Rocky</h1>
+      <p className="page-sub">Two-in-One Edition (EN+ES)</p>
       <p>Age group: 7–10 years</p>
       <p>Type: Bilingual Two-in-One Edition</p>
       <p>Skills: vocabulary expansion, real-life scenes, logic</p>

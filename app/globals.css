@@ -44,8 +44,12 @@
 
   --measure: 100%;
   /* Одна рамка для шапки, текста и подвала. Задана в rem, а не в знаках:
-     знак зависит от шрифта блока, и меню получало свою узкую рамку. */
-  --frame: 54rem;
+     знак зависит от шрифта блока, и меню получало свою узкую рамку.
+
+     Было 54rem: на широком экране текст стоял узкой колонкой посреди
+     пустоты. Стало 78rem, то есть примерно ширина страницы Word при
+     обычных полях. Текст идет во всю ширину, переносов по слогам нет. */
+  --frame: 78rem;
   --rail: 12rem;
   --gap: clamp(1.5rem, 4vw, 3rem);
 }
@@ -56,6 +60,12 @@ html { background: var(--paper); }
 
 body {
   margin: 0;
+  /* Слова не рвутся по слогам ни при каких условиях: это техническая
+     страница, а не газетная полоса, и разорванное слово в ней читается
+     как опечатка. */
+  hyphens: none;
+  -webkit-hyphens: none;
+  overflow-wrap: normal;
   font-family: var(--serif);
   font-size: clamp(0.99rem, 0.96rem + 0.15vw, 1.06rem);
   line-height: 1.65;
@@ -195,27 +205,66 @@ main {
 
 /* ==================== ЗАГОЛОВКИ ==================== */
 
+/* Заголовок первого уровня.
+
+   Полоса набора теперь широкая, и заголовок во всю ее ширину
+   расползался бы на строку в полтора метра. Поэтому у заголовков
+   своя, более узкая мера: длинная строка тяжело читается именно
+   в крупном кегле. Текст под ними идет во всю ширину.
+
+   Под заголовком короткий отрезок цвета первой возрастной полосы.
+   Он же стоит в шкале наверху, поэтому страница читается как часть
+   одного издания, а не как отдельный лист. */
 h1 {
   font-family: var(--display);
   font-weight: 700;
-  font-size: clamp(1.85rem, 1.4rem + 1.9vw, 2.7rem);
-  line-height: 1.04;
-  letter-spacing: -0.035em;
-  margin: 0 0 1.1rem;
+  font-size: clamp(1.9rem, 1.35rem + 2.1vw, 3.1rem);
+  line-height: 1.06;
+  letter-spacing: -0.032em;
+  max-width: 26ch;
+  margin: 0 0 1.4rem;
+  padding-bottom: 0.85rem;
   text-wrap: balance;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3.4rem;
+  height: 3px;
+  background: var(--band-1);
+  border-radius: 2px;
+}
+
+/* Подзаголовок страницы. Раньше его роль играло длинное тире внутри
+   самого заголовка, отчего заголовок ломался в неудобном месте.
+   Теперь это отдельная строка своим начертанием. */
+.page-sub {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.02rem, 0.95rem + 0.35vw, 1.2rem);
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+  color: var(--ink-2);
+  max-width: 46ch;
+  margin: -0.6rem 0 1.7rem;
 }
 
 h2 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: clamp(1.25rem, 1.08rem + 0.8vw, 1.6rem);
-  line-height: 1.18;
-  letter-spacing: -0.022em;
-  margin: 3.2rem 0 1rem;
-  padding-top: 1rem;
+  font-size: clamp(1.3rem, 1.1rem + 0.9vw, 1.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 3.4rem 0 1.05rem;
+  padding-top: 1.15rem;
   border-top: 1px solid var(--rule);
   text-wrap: balance;
 }
+
 
 
 /* Первый заголовок страницы начинает страницу, а не отделяет раздел */
@@ -414,3 +463,153 @@ img { max-width: 100%; height: auto; }
   padding: 0.9rem 1.1rem;
 }
 .registry__cite .registry__kind { margin-bottom: 0.4rem; }
+
+/* =====================================================================
+   ТРИ РАЗМЕРА ЭКРАНА
+
+   Одна и та же полоса набора --frame ведет себя по-разному на трех
+   устройствах, и разница не в масштабе, а в назначении.
+
+   Телефон. Полоса занимает всю ширину, поля минимальные: отнимать
+   у текста место на экране шириной в ладонь нельзя. Крупный кегль
+   заголовков там мешает, поэтому он снижен, а свои меры в знаках
+   у заголовков сняты: на такой ширине они и так короче меры.
+
+   Планшет. Промежуточная ширина. Заголовки уже могут дышать, но
+   разгонять их до настольного размера рано.
+
+   Компьютер. Полная ширина 78rem, примерно страница Word с обычными
+   полями. Заголовкам возвращается своя мера, чтобы крупная строка
+   не растягивалась через весь экран.
+
+   Во всех трех случаях слова не переносятся по слогам.
+   ===================================================================== */
+
+/* ---------- Телефон ---------- */
+@media (max-width: 640px) {
+  :root {
+    --gap: 1.1rem;
+  }
+
+  main {
+    padding-top: 1.5rem;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 1.15rem + 2.4vw, 2rem);
+    max-width: none;
+    line-height: 1.1;
+    margin-bottom: 1.15rem;
+    padding-bottom: 0.7rem;
+  }
+  h1::after { width: 2.6rem; height: 2px; }
+
+  .page-sub {
+    max-width: none;
+    margin-bottom: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 2.4rem;
+    padding-top: 0.95rem;
+  }
+
+  h3 { margin-top: 1.5rem; }
+
+  /* Длинные адреса и коды навыков не должны раздвигать страницу
+     вбок: на телефоне горизонтальная прокрутка это поломка. */
+  a, code, pre { overflow-wrap: anywhere; }
+
+  /* Машинный блок читается прокруткой внутри себя, а не всей страницей */
+  details pre {
+    font-size: 11px;
+    max-height: 60vh;
+    overflow: auto;
+  }
+
+  ul, ol { padding-left: 1.1rem; }
+}
+
+/* ---------- Планшет ---------- */
+@media (min-width: 641px) and (max-width: 1024px) {
+  :root {
+    --frame: 46rem;
+    --gap: 1.8rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 1.5rem + 1.6vw, 2.5rem);
+    max-width: 22ch;
+  }
+
+  h2 { font-size: 1.42rem; }
+
+  details pre { max-height: 70vh; overflow: auto; }
+}
+
+/* ---------- Компьютер ---------- */
+@media (min-width: 1025px) {
+  main {
+    padding-top: 2.8rem;
+    padding-bottom: 1rem;
+  }
+
+  /* Машинный блок длинный. На большом экране он открывается в окно
+     с собственной прокруткой, иначе страница вырастает до сотен
+     экранов и полоса прокрутки перестает что-либо значить. */
+  details pre {
+    max-height: 70vh;
+    overflow: auto;
+  }
+}
+
+/* ==================== СВЕРНУТЫЙ МАШИННЫЙ БЛОК ====================
+
+   Он есть на половине страниц и до сих пор выглядел как голая
+   системная строка. Оформлен как то, чем является: приложение
+   с данными, которое можно открыть и посмотреть.                    */
+
+details {
+  margin: 2rem 0 1.4rem;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--band-4);
+  border-radius: 3px;
+  background: var(--card);
+}
+
+details > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.85rem 1.1rem;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: "+";
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--band-4);
+}
+details[open] > summary::before { content: "\2212"; }
+details > summary:hover { color: var(--ink); }
+details[open] > summary { border-bottom: 1px solid var(--rule-soft); }
+
+details > pre {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  white-space: pre-wrap;
+  overflow-x: auto;
+}

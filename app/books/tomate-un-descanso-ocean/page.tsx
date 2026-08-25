@@ -19,7 +19,8 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="prose prose-neutral max-w-none">
-      <h1>Tómate un Descanso — Belleza del Océano</h1>
+      <h1>Tómate un Descanso</h1>
+      <p className="page-sub">Belleza del Océano</p>
       <p>Grupo de edad: 5–7 años</p>
       <p>Tipo: Libro de colorear</p>
       <p>Habilidades: composición, motricidad fina, confianza creativa</p>

@@ -26,7 +26,8 @@ export default function AuthorPageEs() {
         href="https://www.ricardo-demi.com/es/author"
       />
 
-      <h1>Ricardo Demi — Autor y Educador</h1>
+      <h1>Ricardo Demi</h1>
+      <p className="page-sub">Autor y Educador</p>
       <p>
         <em>(Author and Educator — Creator of the educational series Magic of Discoveries)</em>
       </p>

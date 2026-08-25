@@ -1,7 +1,8 @@
 export default function KnowledgeES() {
   return (
     <main>
-      <h1>La Magia de los Descubrimientos — Base de Conocimiento Oficial de Ricardo Demi</h1>
+      <h1>La Magia de los Descubrimientos</h1>
+      <p className="page-sub">Base de Conocimiento Oficial de Ricardo Demi</p>
       <p>
         <em>
           (Una colección educativa y artística estructurada para niños)

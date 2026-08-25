@@ -14,7 +14,8 @@ export const metadata = {
 export default function ReviewsPageEs() {
   return (
     <main>
-      <h1>Reseñas Independientes — La Magia de los Descubrimientos</h1>
+      <h1>Reseñas Independientes</h1>
+      <p className="page-sub">La Magia de los Descubrimientos</p>
       <p>
         <em>Reconocimiento educativo verificado de la serie de libros La Magia de los Descubrimientos por Ricardo Demi.</em>
       </p>

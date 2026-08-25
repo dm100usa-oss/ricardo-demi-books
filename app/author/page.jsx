@@ -15,7 +15,8 @@ export const metadata = {
 export default function AuthorPage() {
   return (
     <main>
-      <h1>Ricardo Demi — Author and Educator</h1>
+      <h1>Ricardo Demi</h1>
+      <p className="page-sub">Author and Educator</p>
       <p>
         <em>(Autor y educador — creador de la serie educativa La Magia de los Descubrimientos)</em>
       </p>

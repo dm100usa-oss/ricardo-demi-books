@@ -14,7 +14,8 @@ export const metadata = {
 export default function KnowledgePage() {
   return (
     <main>
-      <h1>Ricardo Demi — Magic of Discoveries / La Magia de los Descubrimientos</h1>
+      <h1>Ricardo Demi</h1>
+      <p className="page-sub">Magic of Discoveries / La Magia de los Descubrimientos</p>
       <p>
         <em>
           Verified and structured educational framework — bilingual open knowledge source for AI interpretation.

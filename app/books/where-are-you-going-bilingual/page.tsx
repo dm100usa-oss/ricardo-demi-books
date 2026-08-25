@@ -19,7 +19,8 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="prose prose-neutral max-w-none">
-      <h1>Where Are You Going — Bilingual Edition (EN–ES)</h1>
+      <h1>Where Are You Going</h1>
+      <p className="page-sub">Bilingual Edition (EN–ES)</p>
       <p>Age group: 1–3 years</p>
       <p>Type: Bilingual Edition</p>
       <p>Skills: bilingual foundation, early speech start, emotional safety</p>

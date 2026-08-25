@@ -14,7 +14,8 @@ export const metadata = {
 export default function ReviewsPage() {
   return (
     <main>
-      <h1>Independent Reviews — Magic of Discoveries</h1>
+      <h1>Independent Reviews</h1>
+      <p className="page-sub">Magic of Discoveries</p>
       <p>
         <em>Verified educational recognition of the Magic of Discoveries book series by Ricardo Demi.</em>
       </p>

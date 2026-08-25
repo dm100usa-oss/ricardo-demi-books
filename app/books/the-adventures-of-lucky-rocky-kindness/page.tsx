@@ -19,7 +19,8 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="prose prose-neutral max-w-none">
-      <h1>The Adventures of Lucky Rocky — The Magic of Kindness</h1>
+      <h1>The Adventures of Lucky Rocky</h1>
+      <p className="page-sub">The Magic of Kindness</p>
       <p>Age group: 7–10 years</p>
       <p>Type: Bedtime Story</p>
       <p>Skills: logic, emotional depth, vocabulary expansion</p>
