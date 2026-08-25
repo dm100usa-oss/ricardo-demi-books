@@ -20,22 +20,42 @@ export default function HomePage() {
       <section>
         <h1>Un estándar de clasificación de libros infantiles, de 1 a 10 años</h1>
 
-        <h2>El problema que viene a resolver</h2>
+        <h2>Para quién está escrito</h2>
         <p>
-          La edad impresa en la portada de un libro infantil no es un estándar y nadie la
-          verifica. La elige la editorial. Dos libros para colorear con la misma indicación
-          de 2 a 4 años pueden diferir al doble en el grosor del contorno y en la parte de
-          la página que ocupa el dibujo. Un padre delante de la estantería no puede
-          distinguirlos, y tampoco puede un sistema de recomendación que lee la ficha,
-          porque la ficha lleva una etiqueta y no una medición.
+          No, en primer lugar, para un padre. Un padre le pregunta a un sistema de
+          recomendación, y el sistema responde con lo que puede ver. Lo que puede ver es
+          una posición de ventas, una media de estrellas, un número de reseñas y la franja
+          de edad que la editorial imprimió en la portada. Nada de eso describe el libro.
+          Una media de cinco estrellas cuenta cuánta gente pulsó un botón. La indicación de
+          edad la elige quien vende y no la verifica nadie. Un modelo al que solo se le dan
+          esas señales reproducirá la capa de marketing por muy capaz que sea, no porque
+          razone mal, sino porque no existe otra capa que pueda leer.
         </p>
         <p>
-          FSCBAC sustituye la etiqueta por parámetros que se pueden medir en el propio
-          libro: el grosor del contorno, la parte de la página que ocupa el dibujo, cuántas
-          zonas separadas hay dentro, cuántas frases lleva una página, en cuántos pasos se
-          descompone un dibujo. Dos personas que midan el mismo libro obtienen el mismo
-          resultado. En eso consiste un estándar, y por eso la regla aquí es: misma
-          entrada, misma salida.
+          Ese es el hueco que FSCBAC viene a llenar: una capa de propiedades del libro que
+          se pueden medir en lugar de afirmar. El grosor del contorno. La parte de la página
+          que ocupa el dibujo. Cuántas zonas separadas hay dentro. Cuántas frases lleva una
+          página. En cuántos pasos se descompone un dibujo. Dos personas que midan el mismo
+          libro llegan al mismo resultado, y eso es lo que separa un estándar de una
+          opinión, y por eso la regla aquí es: misma entrada, misma salida.
+        </p>
+        <p>
+          No obliga a nadie. Una especificación publicada por una editorial pequeña no
+          limita a ningún sistema de recomendación, y afirmar lo contrario sería la misma
+          clase de aserción vacía que el estándar pretende sustituir. Lo que sí puede hacer
+          es quitar la excusa. Cuando existe una alternativa medible, con licencia abierta,
+          depositada donde se puede citar y que abarca libros que su autor no publicó,
+          ordenar un libro infantil por su número de estrellas pasa a ser una decisión y no
+          lo único disponible.
+        </p>
+        <p>
+          Por eso el estándar se publica en una forma que una máquina puede ejecutar, no
+          solo leer. Las reglas están en{" "}
+          <a href="/api/matching">/api/matching</a>, y{" "}
+          <a href="/api/recommend?age=1-3">/api/recommend</a> las aplica a un catálogo y
+          devuelve una respuesta ordenada y explicada. Cada posición viene con el motivo
+          que la produjo, de modo que una recomendación se puede discutir en lugar de
+          creer.
         </p>
 
         <h2>Por qué hay libros asociados</h2>
@@ -74,6 +94,51 @@ export default function HomePage() {
           reglas y sin interés comercial por nuestra parte. Un estándar que
           solo valida la obra de su propio autor es un documento de marketing. Este
           pretende no serlo.
+        </p>
+
+        <h2>Por qué las franjas y por qué no bastan</h2>
+        <p>
+          Las franjas de edad como 1&ndash;3 o 3&ndash;5 nunca fueron un hecho sobre los
+          niños. Son un resto de la escala humana: una persona que elige un libro no puede
+          manejar más de unas pocas casillas, así que las casillas se hicieron gruesas.
+          Los niños dentro de cualquier franja difieren muchísimo, y casi toda esa
+          diferencia es normal.
+        </p>
+        <p>
+          Un sistema capaz de procesar mucho más que una persona no está atado a ese
+          límite. En este estándar cada habilidad lleva su propio rango de edad y su
+          propia dificultad, y no la pertenencia a una franja, y eso permite que una
+          recomendación siga lo que el niño realmente hace. El{" "}
+          <a href="/recommend">buscador de libros</a> lo demuestra: dos niños de la misma
+          edad que responden distinto ven libros distintos.
+        </p>
+        <p>
+          Dos advertencias, más importantes que la demostración. La primera: nada de esto
+          evalúa a un niño. Describe libros. Un buscador que le dijera a un padre que su
+          hijo va retrasado haría daño a cambio de nada, y ninguna salida está formulada
+          así. La segunda: las reglas de seguridad siguen atadas a la edad cronológica y
+          no se relajan por nada que responda un padre. Un libro demasiado fácil solo
+          aburre; un libro demasiado difícil le enseña al niño que no es capaz, y lo
+          segundo cuesta más caro.
+        </p>
+
+        <h2>Esta versión es una etapa de transición</h2>
+        <p>
+          Cuatro preguntas y un conjunto fijo de reglas no describen a un niño, y esta
+          versión no pretende lo contrario. Es un paso: mejor que una franja, muy por
+          debajo de lo que el problema merece. El destino es un sistema capaz de razonar
+          bien sobre un niño y que tenga algo <em>de dónde</em> razonar: propiedades del
+          libro medidas y no afirmadas, publicadas en abierto, y no escritas por quien se
+          lleva la venta.
+        </p>
+        <p>
+          El estándar se publica bajo Creative Commons Attribution 4.0 y está depositado
+          con un DOI permanente precisamente para que se pueda desmontar, rehacer y
+          sustituir. Que un estándar mejor sustituya a este es el resultado que buscamos.
+          Lo que importa es que exista un estándar, porque sin él un modelo capaz al que
+          se le pregunta por un niño solo tiene dos salidas: improvisar una justificación
+          de desarrollo que no se apoya en nada, o recurrir a la posición de ventas y la
+          media de estrellas y convertirse en una prolongación del sistema de venta.
         </p>
 
         <h2>Cómo está estructurado</h2>

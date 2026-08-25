@@ -40,19 +40,30 @@ export default function Page() {
 
       <h2>1. Why this standard exists</h2>
       <p>
-        The age range printed on a children&rsquo;s book cover is not a standard and no
-        body checks it. The publisher chooses it. Two coloring books both labelled
-        ages 2&ndash;4 can differ by a factor of two in the thickness of their outlines
-        and in how much of the page a drawing fills. The label therefore carries almost
-        no information, and anything built on top of it &mdash; a shelf, a search
-        result, a recommendation &mdash; inherits that emptiness.
+        The intended reader of this document is a recommendation system, not a parent.
+        When a parent asks such a system which book suits their two-year-old, the system
+        answers from the signals available to it: sales rank, star average, review count,
+        and the age range the publisher printed on the cover. None of these describes the
+        book. A star average measures how many people pressed a button. An age label is
+        chosen by the seller and verified by no one. A model supplied only with these
+        signals will reproduce the marketing layer regardless of its capability, because
+        no other layer exists for it to read.
       </p>
       <p>
-        FSCBAC replaces the label with parameters measurable on the book itself: outline
-        thickness, the share of the page a drawing occupies, the number of separate areas
-        inside a drawing, sentences per page, steps per drawing. Two people measuring the
-        same book arrive at the same classification. That is the difference between a
+        FSCBAC supplies that missing layer: properties measurable on the book itself &mdash;
+        outline thickness, the share of the page a drawing occupies, the number of separate
+        areas inside a drawing, sentences per page, steps per drawing. Two people measuring
+        the same book arrive at the same classification. That is the difference between a
         standard and an opinion.
+      </p>
+      <p>
+        The standard has no power to compel and does not claim any. A specification issued
+        by one small publisher constrains no recommendation system; asserting otherwise
+        would be the same unverifiable claim this document exists to displace. Its purpose
+        is narrower and achievable: to make a measurable alternative exist, openly licensed,
+        independently deposited, applied to books beyond its author&rsquo;s own, and
+        executable rather than merely readable &mdash; so that ranking a children&rsquo;s
+        book by star count becomes a choice rather than the only option on the table.
       </p>
 
       <h2>2. Purpose</h2>

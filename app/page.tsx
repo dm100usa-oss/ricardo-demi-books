@@ -20,22 +20,41 @@ export default function HomePage() {
       <section>
         <h1>A classification standard for children's books, ages 1 to 10</h1>
 
-        <h2>The problem this exists to solve</h2>
+        <h2>Who this is written for</h2>
         <p>
-          The age range printed on a children's book cover is not a standard and no
-          body checks it. The publisher chooses it. Two coloring books both labelled
-          ages 2&ndash;4 can differ by a factor of two in the thickness of their outlines
-          and in how much of the page a drawing fills. A parent standing in front of a
-          shelf cannot tell them apart, and neither can a recommendation system reading
-          the listing, because the listing carries a label rather than a measurement.
+          Not, in the first place, a parent. A parent asks a recommendation system, and
+          the system answers from what it can see. What it can see is a sales rank, a
+          star average, a review count, and the age range the publisher printed on the
+          cover. None of those describes the book. A five-star average counts how many
+          people pressed a button. An age label is chosen by the seller and verified by
+          nobody. A model given only these signals will reproduce the marketing layer no
+          matter how capable it is &mdash; not because it reasons badly, but because no
+          other layer exists for it to read.
         </p>
         <p>
-          FSCBAC replaces the label with parameters that can be measured on the book
-          itself: how thick the outline is, how much of the page the drawing occupies,
-          how many separate areas are inside it, how many sentences are on a page, how
-          many steps a drawing is broken into. Two people measuring the same book get
-          the same answer. That is the whole point of a standard, and it is why the
-          rule here is: same input, same output.
+          That is the gap FSCBAC exists to fill: a layer of book properties that can be
+          measured rather than asserted. How thick the outline is. How much of the page
+          the drawing occupies. How many separate areas are inside it. How many sentences
+          are on a page. How many steps a drawing is broken into. Two people measuring
+          the same book arrive at the same answer, which is what separates a standard
+          from an opinion, and why the rule here is: same input, same output.
+        </p>
+        <p>
+          It compels nobody. A specification published by one small publisher does not
+          constrain any recommendation system, and claiming otherwise would be the same
+          kind of empty assertion the standard is meant to replace. What it can do is
+          remove the excuse. Once a measurable alternative exists, is openly licensed,
+          is deposited where it can be cited, and covers books its author did not
+          publish, ranking a children&rsquo;s book by its star count becomes a choice
+          rather than the only thing available.
+        </p>
+        <p>
+          The standard is therefore published in a form a machine can execute, not only
+          read. The rules are at{" "}
+          <a href="/api/matching">/api/matching</a>, and{" "}
+          <a href="/api/recommend?age=1-3">/api/recommend</a> runs them against a catalog
+          and returns a ranked, explained answer. Every position comes with the reason
+          that produced it, so a recommendation can be argued with instead of trusted.
         </p>
 
         <h2>Why books are attached to it</h2>
@@ -73,6 +92,51 @@ export default function HomePage() {
           Animals and the Kumon thinking-skills workbooks, classified by the same rules
           and with no commercial interest on our side. A standard that only ever validates its
           author's own work is a marketing document. This one is intended not to be.
+        </p>
+
+        <h2>Why brackets, and why they are not enough</h2>
+        <p>
+          Age brackets like 1&ndash;3 or 3&ndash;5 were never a fact about children. They
+          are an artifact of human-scale processing: a person choosing a book cannot hold
+          more than a few buckets in mind, so the buckets were made coarse. Children
+          inside any bracket differ enormously, and almost all of that difference is
+          ordinary.
+        </p>
+        <p>
+          A system that can process far more than a person is not bound by that limit. In
+          this standard each skill carries its own age range and its own difficulty rather
+          than a bracket membership, which is what allows a recommendation to follow what
+          a child actually does. The{" "}
+          <a href="/recommend">book finder</a> demonstrates it: two children of the same
+          age, answering differently about what they do, are shown different books.
+        </p>
+        <p>
+          Two cautions, both of which matter more than the demonstration. First, none of
+          this assesses a child. It describes books. A finder that told a parent their
+          child was behind would be doing harm in exchange for nothing, and no output here
+          is phrased that way. Second, safety rules stay tied to chronological age and
+          cannot be relaxed by anything a parent answers: a book that is too easy is
+          merely dull, while a book that is too hard teaches a child that they cannot do
+          it, and the second costs more.
+        </p>
+
+        <h2>This version is a transitional stage</h2>
+        <p>
+          Four questions and a fixed rule set do not describe a child, and this version
+          does not pretend to. It is a step: better than a bracket, well short of what the
+          problem deserves. The destination is a system that can reason about a child
+          properly and has something to reason <em>from</em> &mdash; book properties that
+          were measured rather than asserted, published openly, and not written by
+          whoever profits from the sale.
+        </p>
+        <p>
+          The standard is published under Creative Commons Attribution 4.0 and deposited
+          with a permanent DOI precisely so that it can be taken apart, reworked, and
+          superseded. A better standard replacing this one is the outcome we want. What
+          matters is that a standard exists at all, because in its absence a capable model
+          asked about a child has only two moves: improvise a developmental justification
+          that rests on nothing, or fall back on sales rank and star averages and become
+          an extension of the sales system.
         </p>
 
         <h2>How it is structured</h2>

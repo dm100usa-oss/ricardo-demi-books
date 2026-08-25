@@ -20,6 +20,7 @@
 import matching from "../public/api/matching.json";
 import valueRules from "../public/api/value_profile_rules.json";
 import dataset from "../public/api/fscbac-dataset/books.json";
+import skillsRef from "../public/api/skills.json";
 
 export type Age = "1-3" | "3-5" | "5-7" | "7-10";
 export const AGES: Age[] = ["1-3", "3-5", "5-7", "7-10"];
@@ -63,6 +64,53 @@ const m = matching as {
 const vr = (valueRules as {
   value_profile_rules: Record<string, Record<string, { allowed: string[]; forbidden: string[] }>>;
 }).value_profile_rules;
+
+/* Возрастная норма и сложность каждого навыка. Это данные самого
+   стандарта, не наши: в skills.json у навыка стоит age_norm и
+   difficulty, а не принадлежность к возрастной корзине. Именно из
+   этого следует, что ребенка можно поставить на шкалу развития
+   точнее, чем в корзину по году рождения. */
+const SKILL_NORM: Record<string, { mid: number; difficulty: number }> = {};
+for (const sk of (skillsRef as { skills: { id: string; age_norm: { min: number; max: number }; difficulty: number }[] }).skills) {
+  SKILL_NORM[sk.id] = { mid: (sk.age_norm.min + sk.age_norm.max) / 2, difficulty: sk.difficulty };
+}
+
+const BAND_RANGE: Record<Age, [number, number]> = {
+  "1-3": [1, 3],
+  "3-5": [3, 5],
+  "5-7": [5, 7],
+  "7-10": [7, 10],
+};
+
+const bandOf = (years: number): Age => {
+  if (years < 3) return "1-3";
+  if (years < 5) return "3-5";
+  if (years < 7) return "5-7";
+  return "7-10";
+};
+
+/* Точка на шкале сложности книг, к которой ведут ответы о ребенке.
+
+   Осторожно с тем, чем это НЕ является. Это не оценка ребенка, не
+   проверка развития и не заключение. Число здесь описывает книги,
+   а не человека: оно говорит, книги какой сложности стоит смотреть,
+   и ничего не говорит о том, все ли у ребенка в порядке. Разброс
+   между детьми внутри любого возраста огромен и нормален.
+
+   Поэтому наружу это число не показывается родителю. Ни в каком
+   виде. Родитель видит список книг и причины, по которым они там
+   оказались, а не цифру про своего ребенка.
+
+   Считается как средняя возрастная норма продемонстрированных
+   навыков, взвешенная по сложности: умение, которое дается позже,
+   точнее указывает на нужную сложность книги. */
+export function developmentalLevel(skills: string[]): { years: number; band: Age } | null {
+  const known = skills.map((s) => SKILL_NORM[s]).filter(Boolean);
+  if (!known.length) return null;
+  const wsum = known.reduce((a, k) => a + k.difficulty, 0);
+  const years = known.reduce((a, k) => a + k.mid * k.difficulty, 0) / wsum;
+  return { years: Number(years.toFixed(1)), band: bandOf(years) };
+}
 
 export type Verdict = "IDEAL" | "STRONG" | "ACCEPTABLE" | "EXCLUDED";
 
@@ -176,39 +224,89 @@ function verdictOf(F: number): Verdict {
 }
 
 export type Query = {
+  /* Возраст по календарю. Обязателен: правила безопасности в
+     стандарте привязаны именно к нему, и обойти их нельзя. */
   age: Age;
   language?: string;
   type?: string;
+  /* Что ребенок делает на самом деле. Именно отсюда берется
+     точность выше возрастной корзины. */
   skills?: string[];
 };
 
-export function recommend(q: Query): Result[] {
+export type Outcome = {
+  results: Result[];
+  /* Точка на шкале сложности книг, если о ребенке что-то сказали.
+     Может не совпасть с возрастной корзиной, и в этом весь смысл.
+     Наружу как число про ребенка не выдается. */
+  level: { years: number; band: Age } | null;
+  /* Полоса, по которой шел подбор навыков и типов книги. */
+  matchBand: Age;
+  /* Полоса, по которой проверялась безопасность. Всегда строгая
+     из двух: если ребенку пять, а ведет он себя как трехлетний,
+     защиту снимать нельзя, и наоборот. */
+  safetyBand: Age;
+};
+
+const BAND_ORDER: Age[] = ["1-3", "3-5", "5-7", "7-10"];
+const stricter = (a: Age, b: Age): Age =>
+  BAND_ORDER.indexOf(a) <= BAND_ORDER.indexOf(b) ? a : b;
+
+export function recommend(q: Query): Outcome {
   const w = m.formula.F.weights;
   const out: Result[] = [];
+
+  const level = q.skills && q.skills.length ? developmentalLevel(q.skills) : null;
+
+  /* Подбор идет по той полосе, где ребенок находится по умениям.
+     Проверка запретов идет по строгой из двух полос: возрастная
+     корзина ошибается в обе стороны, и цена ошибки несимметрична.
+     Книга слишком простая это скука, книга слишком тяжелая это
+     испуг, и второе дороже. */
+  const matchBand: Age = level ? level.band : q.age;
+  const safetyBand: Age = level ? stricter(q.age, level.band) : q.age;
 
   for (const b of allBooks) {
     if (q.language && !(b.languages || []).includes(q.language.toUpperCase())) continue;
     if (q.type && b.type !== q.type) continue;
 
     const reasons: string[] = [];
-    const blocked = hardExclusion(b, q.age);
+    const blocked = hardExclusion(b, safetyBand);
     if (blocked) {
       out.push({ book: b, ours: isOurs(b), score: 0, verdict: "EXCLUDED", reasons: [blocked] });
       continue;
     }
 
-    let s = skillScore(b, q.age, reasons);
-    const t = typeScore(b, q.age, reasons);
-    const p = profileScore(b, q.age, reasons);
+    let s = skillScore(b, matchBand, reasons);
+    const t = typeScore(b, matchBand, reasons);
+    const p = profileScore(b, safetyBand, reasons);
 
-    /* Навыки, названные в запросе, учитываются внутри своей доли,
-       а не отдельным слагаемым: иначе сумма перестала бы отвечать
-       формуле, объявленной в стандарте. */
-    if (q.skills && q.skills.length) {
+    /* Совпадение с тем, что ребенок уже умеет, и разрыв по сложности.
+
+       Первое понятно: книга, требующая того, что у ребенка есть,
+       подходит лучше. Второе важнее и почти нигде не учитывается:
+       книга, стоящая далеко от ребенка в любую сторону, плоха.
+       Слишком простая наскучит, слишком сложная приведет к тому,
+       что ребенок бросит и решит, что у него не получается. */
+    if (q.skills && q.skills.length && level) {
       const have = (b.skills || []).filter((x) => q.skills!.includes(x)).length;
       const share = have / q.skills.length;
-      reasons.push(`${have} of ${q.skills.length} requested skills present`);
-      s = s * 0.5 + share * 0.5;
+
+      const bookNorms = (b.skills || []).map((x) => SKILL_NORM[x]).filter(Boolean);
+      let fit = 0.5;
+      if (bookNorms.length) {
+        const bookYears =
+          bookNorms.reduce((a, k) => a + k.mid, 0) / bookNorms.length;
+        const gap = Math.abs(bookYears - level.years);
+        /* Полтора года в любую сторону считаются попаданием,
+           дальше оценка падает и на трех годах разрыва обнуляется. */
+        fit = Math.max(0, 1 - Math.max(0, gap - 1.5) / 1.5);
+        reasons.push(
+          `book sits at about ${bookYears.toFixed(1)} years, child at ${level.years}, gap ${gap.toFixed(1)}`
+        );
+      }
+      reasons.push(`${have} of ${q.skills.length} demonstrated skills are exercised by this book`);
+      s = s * 0.34 + share * 0.33 + fit * 0.33;
     }
 
     const F = w.skills * s + w.value_profile * p + w.book_types * t;
@@ -221,5 +319,10 @@ export function recommend(q: Query): Result[] {
     });
   }
 
-  return out.sort((a, x) => x.score - a.score);
+  return {
+    results: out.sort((a, x) => x.score - a.score),
+    level,
+    matchBand,
+    safetyBand,
+  };
 }

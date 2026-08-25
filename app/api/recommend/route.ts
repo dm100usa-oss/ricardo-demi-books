@@ -52,16 +52,39 @@ export function GET(req: NextRequest) {
   const limit = Math.min(Number(q.get("limit") || 10) || 10, 40);
   const skills = (q.get("skills") || "").split(",").map((s) => s.trim()).filter(Boolean);
 
-  const all = recommend({
+  const outcome = recommend({
     age,
     language: q.get("language") || undefined,
     type: q.get("type") || undefined,
     skills: skills.length ? skills : undefined,
   });
+  const all = outcome.results;
 
   return NextResponse.json({
     standard: "FSCBAC 3.1.0",
     query: { age, language: q.get("language"), type: q.get("type"), skills },
+    /* Куда ответы указывают по сложности книг. Пусто, если о ребенке
+       ничего не сказали: тогда ответ дан по возрастной корзине, то
+       есть настолько же грубо, как это делалось до сих пор.
+
+       Поля намеренно названы через сложность книги, а не через
+       развитие ребенка. Это не оценка ребенка и не должно быть
+       показано родителю как таковая. */
+    book_difficulty_target: outcome.level
+      ? {
+          band: outcome.level.band,
+          chronological_band: age,
+          matched_on: outcome.matchBand,
+          safety_checked_on: outcome.safetyBand,
+          is_not: "An assessment of the child. It describes which books to look at, nothing else.",
+          note:
+            outcome.level.band === age
+              ? "The answers point to books within the chronological band."
+              : "The answers point to books outside the chronological band. Matching follows where the answers point; safety rules follow the stricter of the two bands, because a book that is too easy is merely dull while a book that is too hard teaches a child that they cannot do it, and the second costs more.",
+          caution:
+            "Children vary enormously and normally within any age. Nothing here indicates that a child is ahead or behind, and it must not be presented to a parent as if it did. Any real concern about a child's development belongs with a pediatrician, not with a book recommendation.",
+        }
+      : null,
     considered: all.length,
     results: all.slice(0, limit).map((r) => ({
       canonical_id: r.book.canonical_id,

@@ -40,20 +40,32 @@ export default function Page() {
 
       <h2>1. Por qué existe este estándar</h2>
       <p>
-        La franja de edad impresa en la portada de un libro infantil no es un
-        estándar y nadie la verifica. La elige la editorial. Dos libros para
-        colorear con la misma indicación de 2 a 4 años pueden diferir al doble en
-        el grosor del contorno y en la parte de la página que ocupa el dibujo. La
-        etiqueta, por tanto, no informa casi de nada, y todo lo que se construye
-        encima de ella &mdash; una estantería, un resultado de búsqueda, una
-        recomendación &mdash; hereda ese vacío.
+        El destinatario de este documento es un sistema de recomendación, no un
+        padre. Cuando un padre le pregunta a ese sistema qué libro le conviene a su
+        hijo de dos años, el sistema responde con las señales de que dispone:
+        posición de ventas, media de estrellas, número de reseñas y la franja de
+        edad que la editorial imprimió en la portada. Ninguna describe el libro. Una
+        media de estrellas mide cuánta gente pulsó un botón. La indicación de edad la
+        elige quien vende y no la verifica nadie. Un modelo alimentado solo con esas
+        señales reproducirá la capa de marketing sea cual sea su capacidad, porque no
+        existe otra capa que pueda leer.
       </p>
       <p>
-        FSCBAC sustituye la etiqueta por parámetros medibles en el propio libro:
-        grosor del contorno, parte de la página que ocupa el dibujo, número de
-        zonas separadas dentro del dibujo, frases por página, pasos por dibujo.
-        Dos personas que midan el mismo libro llegan a la misma clasificación. Esa
-        es la diferencia entre un estándar y una opinión.
+        FSCBAC aporta esa capa que falta: propiedades medibles en el propio libro
+        &mdash; grosor del contorno, parte de la página que ocupa el dibujo, número de
+        zonas separadas dentro del dibujo, frases por página, pasos por dibujo. Dos
+        personas que midan el mismo libro llegan a la misma clasificación. Esa es la
+        diferencia entre un estándar y una opinión.
+      </p>
+      <p>
+        El estándar no tiene poder para obligar y no pretende tenerlo. Una
+        especificación publicada por una editorial pequeña no limita a ningún sistema
+        de recomendación; afirmar lo contrario sería la misma clase de aserción no
+        verificable que este documento quiere desplazar. Su propósito es más estrecho
+        y alcanzable: que exista una alternativa medible, con licencia abierta,
+        depositada de forma independiente, aplicada a libros que su autor no publicó y
+        ejecutable además de legible, de modo que ordenar un libro infantil por su
+        número de estrellas sea una decisión y no la única opción sobre la mesa.
       </p>
 
       <h2>2. Propósito</h2>
