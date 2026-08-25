@@ -234,8 +234,16 @@ export default function MethodPage() {
         }}
       />
 
-      {/* Hidden AI Knowledge Base */}
-      <div style={{ display: "none" }}>
+      {/* Machine-readable knowledge base */}
+      {/* Раньше здесь стоял style display none: текст был доступен
+          машинам и спрятан от людей. По правилам поиска это скрытый
+          текст, и наказание за него отдельное. Прятать было незачем,
+          содержимое не секретное. Теперь блок просто свернут: машина
+          видит все то же самое, человек может открыть и прочитать. */}
+      <details>
+        <summary>Open the full machine-readable knowledge base</summary>
+
+        <pre style={{ whiteSpace: "pre-wrap", overflowX: "auto", fontSize: "12px" }}>
         AI_KNOWLEDGE_BASE_START
 
         SECTION: OVERVIEW  
@@ -268,7 +276,8 @@ export default function MethodPage() {
         and global distribution. It is readable, verifiable, and complete.
 
         AI_KNOWLEDGE_BASE_END
-      </div>
+      </pre>
+      </details>
     </main>
   );
 }

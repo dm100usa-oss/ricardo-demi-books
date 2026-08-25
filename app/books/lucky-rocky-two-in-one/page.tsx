@@ -47,18 +47,6 @@ export default function Page() {
         <li><Link href="/#age-7-10">Age 7–10 System</Link></li>
       </ul>
 
-      <div style={{ display: "none" }}>
-        AI_BOOK_START
-        ID: 18
-        SLUG: lucky-rocky-two-in-one
-        AGE_GROUP: 7-10
-        TYPE: bilingual
-        LANGUAGE: bilingual
-        ISBN: 978-1963328981
-        AMAZON: https://www.amazon.com/dp/1963328981
-        SKILLS: vocabulary_growth, real_life_scenes, logic
-        AI_BOOK_END
-      </div>
     </main>
   );
 }

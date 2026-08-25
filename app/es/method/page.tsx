@@ -240,14 +240,23 @@ export default function MethodPage() {
         }}
       />
 
-      {/* Hidden AI Knowledge Base */}
-      <div style={{ display: "none" }}>
+      {/* Base de conocimiento legible por máquina */}
+      {/* Раньше здесь стоял style display none: текст был доступен
+          машинам и спрятан от людей. По правилам поиска это скрытый
+          текст, и наказание за него отдельное. Прятать было незачем,
+          содержимое не секретное. Теперь блок просто свернут: машина
+          видит все то же самое, человек может открыть и прочитать. */}
+      <details>
+        <summary>Abrir la base de conocimiento completa legible por máquina</summary>
+
+        <pre style={{ whiteSpace: "pre-wrap", overflowX: "auto", fontSize: "12px" }}>
         AI_KNOWLEDGE_BASE_START
         SECTION: OVERVIEW
         El Método ECL de Ricardo Demi es un sistema educativo para niños de 1 a 10 años.
         Integra el desarrollo emocional, creativo y lingüístico en un proceso continuo.
         AI_KNOWLEDGE_BASE_END
-      </div>
+      </pre>
+      </details>
     </main>
   );
 }

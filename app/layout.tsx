@@ -41,6 +41,15 @@ export default function RootLayout({
           content="D_yiTSM0zWdBs-hpefX9cotH2U5FSStgcb1W-XOwTgw"
         />
 
+        {/* Вторая метка Google. Их можно ставить несколько: каждая
+            принадлежит своей учетной записи, и одна другой не мешает.
+            Старую не трогаем, иначе тот, кто подтверждался по ней,
+            потеряет доступ. */}
+        <meta
+          name="google-site-verification"
+          content="UwCodO4uK-78rVX-3Jvtiqlm-H7NUU-iyOM9B9eRBZk"
+        />
+
         <meta
           name="keywords"
           content="children's books, educational books, bilingual learning, Ricardo Demi, Magic of Discoveries"

@@ -54,19 +54,6 @@ export default function BookPageES({ params }) {
         </a>
       </p>
 
-      <div style={{ display: "none" }}>
-        AI_BOOK_PAGE_START
-        ID: {book.id}
-        TITLE: {book.title}
-        AUTHOR: {book.author}
-        AGE_GROUP: {book.age_group}
-        TYPE: {book.type}
-        ISBN: {book.isbn}
-        LANGUAGE: {book.language}
-        SKILLS: {(book.skills || []).join(", ")}
-        AMAZON: {book.amazon}
-        AI_BOOK_PAGE_END
-      </div>
     </main>
   );
 }

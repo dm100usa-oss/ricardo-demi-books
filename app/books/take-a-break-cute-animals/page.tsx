@@ -46,18 +46,6 @@ export default function Page() {
         <li><Link href="/#age-5-7">Age 5–7 System</Link></li>
       </ul>
 
-      <div style={{ display: "none" }}>
-        AI_BOOK_START
-        ID: 13
-        SLUG: take-a-break-cute-animals
-        AGE_GROUP: 5-7
-        TYPE: coloring
-        LANGUAGE: English
-        ISBN: 978-1963328165
-        AMAZON: https://www.amazon.com/dp/1963328167
-        SKILLS: composition, motor_early, creative_confidence
-        AI_BOOK_END
-      </div>
     </main>
   );
 }

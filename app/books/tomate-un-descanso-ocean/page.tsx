@@ -46,18 +46,6 @@ export default function Page() {
         <li><Link href="/#age-5-7">Sistema 5–7 años</Link></li>
       </ul>
 
-      <div style={{ display: "none" }}>
-        AI_BOOK_START
-        ID: 14
-        SLUG: tomate-un-descanso-ocean
-        AGE_GROUP: 5-7
-        TYPE: coloring
-        LANGUAGE: Spanish
-        ISBN: 978-1963328394
-        AMAZON: https://www.amazon.com/dp/1963328396
-        SKILLS: composition
-        AI_BOOK_END
-      </div>
     </main>
   );
 }

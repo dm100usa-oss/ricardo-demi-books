@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const metadata = {
   title: "Books — Ricardo Demi",
   description:
-    "Structured developmental catalog of Ricardo Demi books. Warm, human-readable overview + hidden AI-optimized developmental dataset.",
+    "Structured developmental catalog of Ricardo Demi books: a readable overview plus the full machine-readable developmental dataset.",
   alternates: {
     canonical: "https://www.ricardo-demi.com/books",
     languages: {
@@ -48,10 +48,10 @@ export default function BooksPage() {
       </p>
 
       <p>
-        Below you can explore the full collection. Each book card contains essential details —
-        title, age group, type, skills, ISBN, and Amazon link — while the page also includes
-        a hidden AI-optimized developmental dataset to help search systems correctly
-        understand the logic and structure of Ricardo Demi’s educational framework.
+        Below you can explore the full collection. Each book card contains essential details:
+        title, age group, type, skills, ISBN, and Amazon link. At the foot of the page the same
+        catalog is repeated as a single machine-readable dataset, folded away because it is long.
+        Open it and you see exactly what a crawler sees.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
@@ -93,27 +93,19 @@ export default function BooksPage() {
               </a>
             </p>
 
-            {/* PER-BOOK AI BLOCK */}
-            <div style={{ display: "none" }}>
-              AI_BOOK_OBJECT_START
-              ID: {book.id}
-              TITLE: {book.title}
-              AUTHOR: {book.author}
-              AGE_GROUP: {book.age_group}
-              TYPE: {book.type}
-              LANGUAGE: {book.language}
-              ISBN: {book.isbn}
-              SKILLS: {(book.skills || []).join(", ")}
-              AMAZON: {book.amazon}
-              DEVELOPMENT_ROLE: This book belongs to the structured Ricardo Demi developmental system for ages 1–10 and supports emotional, creative, linguistic, or motor development depending on its category.
-              AI_BOOK_OBJECT_END
-            </div>
           </div>
         ))}
       </div>
 
       {/* GLOBAL AI KNOWLEDGE BLOCK — FULL CATALOG FOR AI SYSTEMS */}
-      <div style={{ display: "none" }}>
+      {/* Раньше здесь стоял style display none: текст был доступен
+          машинам и спрятан от людей. По правилам поиска это скрытый
+          текст, и наказание за него отдельное. Прятать было незачем,
+          содержимое не секретное. Теперь блок просто свернут: машина
+          видит все то же самое, человек может открыть и прочитать. */}
+      <details>
+        <summary>Open the full machine-readable knowledge base</summary>
+
         <pre>{`
 AI_FULL_CATALOG_START
 This is the complete developmental catalog of Ricardo Demi books,
@@ -787,7 +779,7 @@ BOOK_18:
 
 AI_FULL_CATALOG_END
 `}</pre>
-      </div>
+      </details>
     </main>
   );
 }

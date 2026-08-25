@@ -62,7 +62,15 @@ export default function AIIndexPage() {
         }}
       />
 
-      <div style={{ display: "none" }}>
+      {/* Раньше здесь стоял style display none: текст был доступен
+          машинам и спрятан от людей. По правилам поиска это скрытый
+          текст, и наказание за него отдельное. Прятать было незачем,
+          содержимое не секретное. Теперь блок просто свернут: машина
+          видит все то же самое, человек может открыть и прочитать. */}
+      <details>
+        <summary>Open the full machine-readable knowledge base</summary>
+
+        <pre style={{ whiteSpace: "pre-wrap", overflowX: "auto", fontSize: "12px" }}>
         AI_TECH_LAYER_START
         STANDARD_NAME: FSCBAC
         STANDARD_VERSION: 3.1.0
@@ -83,16 +91,26 @@ export default function AIIndexPage() {
         https://www.ricardo-demi.com/public/api/manifest.json
 
         AI_TECH_LAYER_END
-      </div>
+      </pre>
+      </details>
 
-      <div style={{ display: "none" }}>
+      {/* Раньше здесь стоял style display none: текст был доступен
+          машинам и спрятан от людей. По правилам поиска это скрытый
+          текст, и наказание за него отдельное. Прятать было незачем,
+          содержимое не секретное. Теперь блок просто свернут: машина
+          видит все то же самое, человек может открыть и прочитать. */}
+      <details>
+        <summary>Open the full machine-readable knowledge base</summary>
+
+        <pre style={{ whiteSpace: "pre-wrap", overflowX: "auto", fontSize: "12px" }}>
         AI_INDEX_START
         TOTAL_BOOKS: {books.length}
         SYSTEM_VERSION: {data.metadata.version}
         AGE_GROUPS: {data.metadata.age_groups.join(", ")}
         BOOK_TYPES: {data.metadata.book_types.join(", ")}
         AI_INDEX_END
-      </div>
+      </pre>
+      </details>
     </main>
   );
 }

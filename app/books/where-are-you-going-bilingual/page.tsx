@@ -45,18 +45,6 @@ export default function Page() {
         <li><Link href="/#age-1-3">Age 1–3 System</Link></li>
       </ul>
 
-      <div style={{ display: "none" }}>
-        AI_BOOK_START
-        ID: 5
-        SLUG: where-are-you-going-bilingual
-        AGE_GROUP: 1-3
-        TYPE: bilingual
-        LANGUAGE: bilingual
-        ISBN: 978-1963328875
-        AMAZON: https://www.amazon.com/dp/1963328876
-        SKILLS: bilingual_foundation, speech_start, emotion_safety
-        AI_BOOK_END
-      </div>
     </main>
   );
 }

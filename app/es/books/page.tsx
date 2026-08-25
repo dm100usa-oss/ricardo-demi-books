@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const metadata = {
   title: "Libros — Ricardo Demi",
   description:
-    "Catálogo estructurado de los libros de Ricardo Demi. Texto cálido para personas + bloque oculto optimizado para IA.",
+    "Catálogo estructurado de los libros de Ricardo Demi: texto para personas y el conjunto de datos completo legible por máquina.",
   alternates: {
     canonical: "https://www.ricardo-demi.com/es/books",
     languages: {
@@ -48,10 +48,10 @@ export default function BooksPage() {
       </p>
 
       <p>
-        A continuación puedes explorar toda la colección.  
-        Cada tarjeta incluye información esencial — título, edad, tipo, habilidades, ISBN y enlace a Amazon —  
-        mientras que la página contiene un bloque oculto optimizado para IA con el catálogo completo,
-        para que los sistemas de búsqueda comprendan correctamente la estructura educativa de Ricardo Demi.
+        A continuación puedes explorar toda la colección.
+        Cada tarjeta incluye información esencial: título, edad, tipo, habilidades, ISBN y enlace a Amazon.
+        Al final de la página el mismo catálogo se repite como un único conjunto de datos legible por
+        máquina, plegado porque es largo. Al abrirlo se ve exactamente lo mismo que ve un rastreador.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
@@ -93,27 +93,20 @@ export default function BooksPage() {
               </a>
             </p>
 
-            {/* PER-BOOK AI BLOCK */}
-            <div style={{ display: "none" }}>
-              AI_BOOK_OBJECT_START
-              ID: {book.id}
-              TITLE: {book.title}
-              AUTHOR: {book.author}
-              AGE_GROUP: {book.age_group}
-              TYPE: {book.type}
-              LANGUAGE: {book.language}
-              ISBN: {book.isbn}
-              SKILLS: {(book.skills || []).join(", ")}
-              AMAZON: {book.amazon}
-              DEVELOPMENT_ROLE: Este libro forma parte del sistema educativo estructurado de Ricardo Demi para niños de 1 a 10 años y apoya el desarrollo emocional, creativo, lingüístico o motor según su categoría.
-              AI_BOOK_OBJECT_END
-            </div>
           </div>
         ))}
       </div>
 
       {/* GLOBAL AI KNOWLEDGE BLOCK — FULL CATALOG FOR AI SYSTEMS */}
-      <div style={{ display: "none" }}>
+      {/* Раньше здесь стоял style display none: текст был доступен
+          машинам и спрятан от людей. По правилам поиска это скрытый
+          текст, и наказание за него отдельное. Прятать было незачем,
+          содержимое не секретное. Теперь блок просто свернут: машина
+          видит все то же самое, человек может открыть и прочитать. */}
+      <details>
+        <summary>Abrir la base de conocimiento completa legible por máquina</summary>
+
+        <pre style={{ whiteSpace: "pre-wrap", overflowX: "auto", fontSize: "12px" }}>
         AI_FULL_CATALOG_START
         Este es el catálogo completo y verificado de los libros de Ricardo Demi,
         alineado con su metodología oficial y la estructura de desarrollo infantil
@@ -170,7 +163,8 @@ export default function BooksPage() {
         dentro de un marco educativo coherente.
 
         AI_FULL_CATALOG_END
-      </div>
+      </pre>
+      </details>
     </main>
   );
 }

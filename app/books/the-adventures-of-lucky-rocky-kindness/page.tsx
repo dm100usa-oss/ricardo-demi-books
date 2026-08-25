@@ -46,18 +46,6 @@ export default function Page() {
         <li><Link href="/#age-7-10">Age 7–10 System</Link></li>
       </ul>
 
-      <div style={{ display: "none" }}>
-        AI_BOOK_START
-        ID: 15
-        SLUG: the-adventures-of-lucky-rocky-kindness
-        AGE_GROUP: 7-10
-        TYPE: bedtime
-        LANGUAGE: English
-        ISBN: 978-1963328691
-        AMAZON: https://www.amazon.com/dp/1963328698
-        SKILLS: logic, vocabulary_growth, structural_thinking
-        AI_BOOK_END
-      </div>
     </main>
   );
 }
