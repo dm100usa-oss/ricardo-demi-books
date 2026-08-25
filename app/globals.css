@@ -795,3 +795,21 @@ details > pre {
    родителю цифру о его ребенке нельзя. Осталась одна строка текста. */
 .level { display: block; }
 .level__txt { display: block; }
+
+/* Весь сайт одним абзацем, первым на главной.
+
+   Набран крупнее основного текста, но не как заголовок: это связная
+   мысль, а не лозунг. Мера уже полосы набора, потому что длинная
+   строка в увеличенном кегле теряется. */
+.lede {
+  font-size: clamp(1.02rem, 0.97rem + 0.3vw, 1.16rem);
+  line-height: 1.6;
+  max-width: 62ch;
+  margin: 0 0 2rem;
+  padding-bottom: 1.7rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (max-width: 640px) {
+  .lede { max-width: none; font-size: 1rem; line-height: 1.58; }
+}

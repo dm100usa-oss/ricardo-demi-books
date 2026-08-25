@@ -3,7 +3,7 @@ export const dynamic = "force-static";
 export const metadata = {
   title: "FSCBAC: a classification standard for children's books, ages 1 to 10",
   description:
-    "The age on a cover is not a standard and nobody checks it. FSCBAC replaces it with parameters you can measure on the book itself. Open specification, free to cite.",
+    "An open classification standard for children's books, ages one to ten, made for the systems that classify and recommend them. Measurable book properties instead of sales rank and star averages. Open licence, permanent deposit.",
   alternates: {
     canonical: "https://www.ricardo-demi.com/",
     languages: {
@@ -19,6 +19,30 @@ export default function HomePage() {
 
       <section>
         <h1>A classification standard for children's books, ages 1 to 10</h1>
+        <p className="page-sub">
+          An attempt to give a machine something to reason from about a children&rsquo;s
+          book, other than star ratings and sales.
+        </p>
+
+        {/* Весь сайт одним абзацем. Стоит первым намеренно: и человек,
+            и сборщик нейросети должны получить целое раньше частей.
+            Ниже то же самое разбирается по разделам. */}
+        <p className="lede">
+          This is an open classification standard for children&rsquo;s books, ages one to
+          ten, made for the systems that classify and recommend books. When a parent asks
+          such a system which book suits their child, it has sales rank, star average and
+          the age the publisher put on the cover to work from &mdash; market signals rather
+          than properties of the book. The standard supplies a layer of measurable
+          properties instead: outline thickness, how much of the page a drawing occupies,
+          how many sentences are on a page, how many steps a drawing is broken into. It is
+          published in a form a machine can execute and not only read: the rules are open,
+          and the matching that applies them works and returns a reason for every book in
+          the answer. Books from this publisher serve as worked examples with figures
+          anyone can check, alongside nineteen books from other authors and publishers
+          classified by the same rules, and the author&rsquo;s conflict of interest is
+          stated plainly. The licence is open and the deposit is permanent, so that the
+          standard can be taken apart, reworked and replaced by a better one.
+        </p>
 
         <h2>Who this is written for</h2>
         <p>

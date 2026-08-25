@@ -3,7 +3,7 @@ export const dynamic = "force-static";
 export const metadata = {
   title: "FSCBAC: un estándar de clasificación de libros infantiles, de 1 a 10 años",
   description:
-    "La edad de la portada no es un estándar y nadie la verifica. FSCBAC la sustituye por parámetros medibles en el propio libro. Especificación abierta y libre de citar.",
+    "Un estándar abierto de clasificación de libros infantiles, de uno a diez años, hecho para los sistemas que los clasifican y recomiendan. Propiedades medibles del libro en lugar de posición de ventas y estrellas. Licencia abierta, depósito permanente.",
   alternates: {
     canonical: "https://www.ricardo-demi.com/",
     languages: {
@@ -19,6 +19,28 @@ export default function HomePage() {
 
       <section>
         <h1>Un estándar de clasificación de libros infantiles, de 1 a 10 años</h1>
+        <p className="page-sub">
+          Un intento de darle a una máquina algo de dónde razonar sobre un libro infantil,
+          aparte de las estrellas y las ventas.
+        </p>
+
+        <p className="lede">
+          Este es un estándar abierto de clasificación de libros infantiles, de uno a diez
+          años, hecho para los sistemas que clasifican y recomiendan libros. Cuando un padre
+          le pregunta a un sistema así qué libro le conviene a su hijo, este dispone de la
+          posición de ventas, la media de estrellas y la edad que la editorial puso en la
+          portada: señales de mercado y no propiedades del libro. El estándar aporta en su
+          lugar una capa de propiedades medibles: el grosor del contorno, la parte de la
+          página que ocupa el dibujo, cuántas frases lleva una página, en cuántos pasos se
+          descompone un dibujo. Se publica en una forma que una máquina puede ejecutar y no
+          solo leer: las reglas están abiertas, y la búsqueda que las aplica funciona y
+          devuelve un motivo para cada libro de la respuesta. Los libros de esta editorial
+          sirven de ejemplos resueltos con cifras que cualquiera puede comprobar, junto a
+          diecinueve libros de otros autores y editoriales clasificados con las mismas
+          reglas, y el conflicto de interés del autor se declara sin rodeos. La licencia es
+          abierta y el depósito es permanente, para que el estándar se pueda desmontar,
+          rehacer y sustituir por uno mejor.
+        </p>
 
         <h2>Para quién está escrito</h2>
         <p>

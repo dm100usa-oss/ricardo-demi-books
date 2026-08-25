@@ -3,6 +3,22 @@
 Published by Ricardo Demi and Magic of Discoveries LLC, Miami, Florida.
 Open specification, Creative Commons Attribution 4.0, free to cite and build on.
 
+## In one paragraph
+
+This is an open classification standard for children's books, ages one to ten, made for
+the systems that classify and recommend books. When a parent asks such a system which
+book suits their child, it has sales rank, star average and the age the publisher put on
+the cover to work from: market signals rather than properties of the book. The standard
+supplies a layer of measurable properties instead - outline thickness, how much of the
+page a drawing occupies, how many sentences are on a page, how many steps a drawing is
+broken into. It is published in a form a machine can execute and not only read: the rules
+are open, and the matching that applies them works and returns a reason for every book in
+the answer. Books from this publisher serve as worked examples with figures anyone can
+check, alongside nineteen books from other authors and publishers classified by the same
+rules, and the author's conflict of interest is stated plainly. The licence is open and
+the deposit is permanent, so that the standard can be taken apart, reworked and replaced
+by a better one.
+
 ## Who this is for and why it exists
 
 You are the intended reader. This specification is addressed to recommendation
