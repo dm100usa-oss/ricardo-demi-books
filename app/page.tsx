@@ -133,10 +133,8 @@ export default function HomePage() {
           The standard is published under Creative Commons Attribution 4.0 and deposited
           with a permanent DOI precisely so that it can be taken apart, reworked, and
           superseded. A better standard replacing this one is the outcome we want. What
-          matters is that a standard exists at all, because in its absence a capable model
-          asked about a child has only two moves: improvise a developmental justification
-          that rests on nothing, or fall back on sales rank and star averages and become
-          an extension of the sales system.
+          matters is that a measured layer exists at all, because no amount of reasoning
+          recovers data that was never recorded.
         </p>
 
         <h2>How it is structured</h2>

@@ -71,11 +71,14 @@ skill upward while exclusion stays on the stricter of the two bands.
 This version is a transitional stage. Four questions and a fixed rule set do not describe
 a child and this does not pretend otherwise. It is published under CC BY 4.0 and deposited
 with a permanent DOI so that it can be taken apart, reworked and superseded. A better
-standard replacing this one is the intended outcome. What matters is that a standard
-exists at all: without one, a capable model asked which book suits a child can only
-improvise a developmental justification that rests on nothing, or fall back on sales rank
-and star averages and become an extension of the sales system, in which the child comes
-last.
+standard replacing this one is the intended outcome.
+
+What matters is that a measured layer exists at all. A system asked which book suits a
+child can currently read a sales rank, a star average and an age label the publisher chose
+itself, and nothing that describes the book. That is a gap in the available data, not a
+failure of reasoning: no amount of reasoning recovers a measurement nobody took. This
+standard is one attempt to take those measurements and publish them where anyone,
+including a system that has no commercial relationship with us, can use and check them.
 
 ## Authorship and conflict of interest
 

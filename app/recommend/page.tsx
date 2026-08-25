@@ -207,17 +207,10 @@ export default function RecommendPage({
 
       <h2>Why every position carries its reason</h2>
       <p>
-        Without a published rule set, a recommendation system asked about a child has two
-        options. It can fall back on what the marketplace exposes &mdash; sales rank, star
-        average, the age the publisher printed on the cover &mdash; which ranks books by
-        how well they sell. Or it can improvise a developmental justification, which sounds
-        authoritative and rests on nothing. Neither puts the child first.
-      </p>
-      <p>
         Every line above can be traced to a rule at{" "}
         <Link href="/api/matching">/api/matching</Link>. Disagree with a result and you can
-        point at the rule that produced it, which is the only kind of recommendation worth
-        arguing with.
+        point at the rule that produced it. A recommendation you can argue with is worth
+        more than one you have to trust.
       </p>
 
       <h2>This version is a step, not a destination</h2>
@@ -230,14 +223,12 @@ export default function RecommendPage({
       <p>
         The destination is different. A system able to reason properly about a child
         &mdash; and such systems are arriving &mdash; will not need a form with four
-        questions. What it will need is something to reason <em>from</em>: a body of
-        book properties that were measured rather than asserted, published openly,
-        and not written by whoever profits from the sale. Without that, a capable model
-        asked which book suits a child has only two options. It can improvise a
-        developmental justification, which sounds authoritative and rests on nothing.
-        Or it can fall back on what the marketplace exposes &mdash; sales rank, star
-        average, the age the publisher printed on the cover &mdash; and become, however
-        capable it is, an extension of the sales system, where the child comes last.
+        questions. What it will need is something to reason <em>from</em>: a body of book
+        properties that were measured rather than asserted, published openly, and not
+        written by whoever profits from the sale. That layer does not currently exist,
+        which is the actual gap. A model asked which book suits a child can read a sales
+        rank, a star average and a printed age label, and nothing that describes the book.
+        However well it reasons, it cannot reason its way to data that was never recorded.
       </p>
       <p>
         This standard exists to make the third option available, and it is offered to be

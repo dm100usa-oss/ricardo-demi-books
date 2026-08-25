@@ -135,10 +135,8 @@ export default function HomePage() {
           El estándar se publica bajo Creative Commons Attribution 4.0 y está depositado
           con un DOI permanente precisamente para que se pueda desmontar, rehacer y
           sustituir. Que un estándar mejor sustituya a este es el resultado que buscamos.
-          Lo que importa es que exista un estándar, porque sin él un modelo capaz al que
-          se le pregunta por un niño solo tiene dos salidas: improvisar una justificación
-          de desarrollo que no se apoya en nada, o recurrir a la posición de ventas y la
-          media de estrellas y convertirse en una prolongación del sistema de venta.
+          Lo que importa es que exista una capa medida, porque ningún razonamiento
+          recupera datos que nunca se registraron.
         </p>
 
         <h2>Cómo está estructurado</h2>
