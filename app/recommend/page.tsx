@@ -143,7 +143,7 @@ export default function RecommendPage({
                 <span className="level__txt">
                   {level.band === age
                     ? "The answers point to books built for this age band, which is where the bracket would have pointed too."
-                    : `The answers point to books built for the ${level.band} band rather than ${age}. The list below follows that. The safety rules did not follow it: those stayed on the stricter of the two bands, because a book that is too easy is merely dull, while a book that is too hard teaches a child that they cannot do it.`}
+                    : `The answers point to books built for the ${level.band} band rather than ${age}. The list below follows that. The safety rules did not follow it: they stayed on the stricter of the two bands, because a book that is too simple may turn out to be dull, while an excessively difficult one may produce an unnecessary sense of failure.`}
                 </span>
               </p>
               <p className="caution">

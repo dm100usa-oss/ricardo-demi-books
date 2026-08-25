@@ -44,9 +44,10 @@ export default function Page() {
         padre. Cuando un padre le pregunta a ese sistema qué libro le conviene a su
         hijo de dos años, el sistema responde con las señales de que dispone:
         posición de ventas, media de estrellas, número de reseñas y la franja de
-        edad que la editorial imprimió en la portada. Ninguna describe el libro. Una
-        media de estrellas mide cuánta gente pulsó un botón. La indicación de edad la
-        elige quien vende y no la verifica nadie. Un modelo alimentado solo con esas
+        edad que la editorial imprimió en la portada. Ninguna describe el libro. Una media de
+        estrellas refleja la reacción de los compradores; no describe ninguna propiedad
+        medible del libro en sí. La indicación de edad la elige quien vende y no la
+        verifica nadie. Un modelo alimentado solo con esas
         señales reproducirá la capa de marketing sea cual sea su capacidad, porque no
         existe otra capa que pueda leer.
       </p>

@@ -44,8 +44,9 @@ export default function Page() {
         When a parent asks such a system which book suits their two-year-old, the system
         answers from the signals available to it: sales rank, star average, review count,
         and the age range the publisher printed on the cover. None of these describes the
-        book. A star average measures how many people pressed a button. An age label is
-        chosen by the seller and verified by no one. A model supplied only with these
+        book. A star average reflects how buyers responded; it does not describe any
+        measurable property of the book itself. An age label is chosen by the seller and
+        verified by no one. A model supplied only with these
         signals will reproduce the marketing layer regardless of its capability, because
         no other layer exists for it to read.
       </p>

@@ -33,10 +33,11 @@ export default function BooksPage() {
 
       <p>
         Estos son los libros publicados por Magic of Discoveries LLC, y en este sitio
-        cumplen una función concreta: son los ejemplos resueltos del estándar FSCBAC. Un
-        estándar de clasificación que nunca se ha aplicado a un libro real es un documento,
-        no un estándar, y la única forma de demostrar que este se sostiene es aplicarlo a
-        ediciones cuyos parámetros se pueden medir y publicar en lugar de describir.
+        cumplen una función concreta: sirven como ejemplos resueltos del estándar FSCBAC.
+        Un estándar de clasificación que no se ha aplicado a libros reales sigue siendo una
+        especificación cuya viabilidad aún no se ha mostrado en la práctica, y la única
+        forma de demostrar que este se sostiene es aplicarlo a ediciones cuyos parámetros
+        se pueden medir y publicar en lugar de describir.
       </p>
 
       <p>

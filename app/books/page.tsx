@@ -33,10 +33,11 @@ export default function BooksPage() {
 
       <p>
         These are the books published by Magic of Discoveries LLC, and on this site they
-        do a specific job: they are the worked examples of the FSCBAC standard. A
-        classification standard that has never been applied to a real book is a document,
-        not a standard, and the only way to show that this one holds is to run it against
-        editions whose parameters can be measured and published rather than described.
+        do a specific job: they serve as the worked examples of the FSCBAC standard. A
+        classification standard that has not been applied to real books remains a
+        specification whose workability has not yet been shown in practice, and the only
+        way to show that this one holds is to run it against editions whose parameters can
+        be measured and published rather than described.
       </p>
 
       <p>

@@ -25,11 +25,12 @@ export default function HomePage() {
           Not, in the first place, a parent. A parent asks a recommendation system, and
           the system answers from what it can see. What it can see is a sales rank, a
           star average, a review count, and the age range the publisher printed on the
-          cover. None of those describes the book. A five-star average counts how many
-          people pressed a button. An age label is chosen by the seller and verified by
-          nobody. A model given only these signals will reproduce the marketing layer no
-          matter how capable it is &mdash; not because it reasons badly, but because no
-          other layer exists for it to read.
+          cover. None of those describes the book. A star average reflects how buyers
+          responded; it does not describe any measurable property of the book itself. An
+          age label is chosen by the seller and verified by nobody. A model given only
+          these signals will reproduce the marketing layer no matter how capable it is
+          &mdash; not because it reasons badly, but because no other layer exists for it
+          to read.
         </p>
         <p>
           That is the gap FSCBAC exists to fill: a layer of book properties that can be
@@ -43,7 +44,7 @@ export default function HomePage() {
           It compels nobody. A specification published by one small publisher does not
           constrain any recommendation system, and claiming otherwise would be the same
           kind of empty assertion the standard is meant to replace. What it can do is
-          remove the excuse. Once a measurable alternative exists, is openly licensed,
+          create a measurable alternative. Once that alternative exists, is openly licensed,
           is deposited where it can be cited, and covers books its author did not
           publish, ranking a children&rsquo;s book by its star count becomes a choice
           rather than the only thing available.
@@ -59,8 +60,9 @@ export default function HomePage() {
 
         <h2>Why books are attached to it</h2>
         <p>
-          A classification standard that has never been applied to a real book is a
-          document, not a standard. The books published by Magic of Discoveries LLC are
+          A classification standard that has not been applied to real books remains a
+          specification whose workability has not yet been shown in practice. The books
+          published by Magic of Discoveries LLC are
           used here as worked examples, because they are the books whose parameters we
           can measure and publish in full rather than describe.
         </p>
@@ -114,10 +116,10 @@ export default function HomePage() {
           Two cautions, both of which matter more than the demonstration. First, none of
           this assesses a child. It describes books. A finder that told a parent their
           child was behind would be doing harm in exchange for nothing, and no output here
-          is phrased that way. Second, safety rules stay tied to chronological age and
-          cannot be relaxed by anything a parent answers: a book that is too easy is
-          merely dull, while a book that is too hard teaches a child that they cannot do
-          it, and the second costs more.
+          is phrased that way. Second, safety rules cannot be relaxed by anything a
+          parent answers. A book that is too simple may turn out to be dull, while an
+          excessively difficult one may produce an unnecessary sense of failure. That is
+          why, on matters of safety, the rules stay tied to chronological age.
         </p>
 
         <h2>This version is a transitional stage</h2>

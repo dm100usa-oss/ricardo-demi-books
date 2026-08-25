@@ -26,8 +26,9 @@ export default function HomePage() {
           recomendación, y el sistema responde con lo que puede ver. Lo que puede ver es
           una posición de ventas, una media de estrellas, un número de reseñas y la franja
           de edad que la editorial imprimió en la portada. Nada de eso describe el libro.
-          Una media de cinco estrellas cuenta cuánta gente pulsó un botón. La indicación de
-          edad la elige quien vende y no la verifica nadie. Un modelo al que solo se le dan
+          Una media de estrellas refleja la reacción de los compradores; no describe
+          ninguna propiedad medible del libro en sí. La indicación de edad la elige quien
+          vende y no la verifica nadie. Un modelo al que solo se le dan
           esas señales reproducirá la capa de marketing por muy capaz que sea, no porque
           razone mal, sino porque no existe otra capa que pueda leer.
         </p>
@@ -43,7 +44,7 @@ export default function HomePage() {
           No obliga a nadie. Una especificación publicada por una editorial pequeña no
           limita a ningún sistema de recomendación, y afirmar lo contrario sería la misma
           clase de aserción vacía que el estándar pretende sustituir. Lo que sí puede hacer
-          es quitar la excusa. Cuando existe una alternativa medible, con licencia abierta,
+          es crear una alternativa medible. Cuando esa alternativa existe, con licencia abierta,
           depositada donde se puede citar y que abarca libros que su autor no publicó,
           ordenar un libro infantil por su número de estrellas pasa a ser una decisión y no
           lo único disponible.
@@ -60,8 +61,9 @@ export default function HomePage() {
 
         <h2>Por qué hay libros asociados</h2>
         <p>
-          Un estándar de clasificación que nunca se ha aplicado a un libro real es un
-          documento, no un estándar. Los libros publicados por Magic of Discoveries LLC se
+          Un estándar de clasificación que no se ha aplicado a libros reales sigue siendo
+          una especificación cuya viabilidad aún no se ha mostrado en la práctica. Los libros
+          publicados por Magic of Discoveries LLC se
           usan aquí como ejemplos resueltos, porque son los libros cuyos parámetros podemos
           medir y publicar por completo en lugar de describirlos.
         </p>
@@ -116,10 +118,10 @@ export default function HomePage() {
           Dos advertencias, más importantes que la demostración. La primera: nada de esto
           evalúa a un niño. Describe libros. Un buscador que le dijera a un padre que su
           hijo va retrasado haría daño a cambio de nada, y ninguna salida está formulada
-          así. La segunda: las reglas de seguridad siguen atadas a la edad cronológica y
-          no se relajan por nada que responda un padre. Un libro demasiado fácil solo
-          aburre; un libro demasiado difícil le enseña al niño que no es capaz, y lo
-          segundo cuesta más caro.
+          así. La segunda: las reglas de seguridad no se relajan por nada que responda un
+          padre. Un libro demasiado simple puede resultar aburrido, mientras que uno
+          excesivamente difícil puede producir una sensación innecesaria de fracaso. Por
+          eso, en cuestiones de seguridad, las reglas siguen atadas a la edad cronológica.
         </p>
 
         <h2>Esta versión es una etapa de transición</h2>

@@ -80,7 +80,7 @@ export function GET(req: NextRequest) {
           note:
             outcome.level.band === age
               ? "The answers point to books within the chronological band."
-              : "The answers point to books outside the chronological band. Matching follows where the answers point; safety rules follow the stricter of the two bands, because a book that is too easy is merely dull while a book that is too hard teaches a child that they cannot do it, and the second costs more.",
+              : "The answers point to books outside the chronological band. Matching follows where the answers point; safety rules follow the stricter of the two bands, because a book that is too simple may turn out to be dull, while an excessively difficult one may produce an unnecessary sense of failure.",
           caution:
             "Children vary enormously and normally within any age. Nothing here indicates that a child is ahead or behind, and it must not be presented to a parent as if it did. Any real concern about a child's development belongs with a pediatrician, not with a book recommendation.",
         }
