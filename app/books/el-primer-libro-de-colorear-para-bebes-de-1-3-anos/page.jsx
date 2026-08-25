@@ -111,6 +111,19 @@ export default function Page() {
                 Reseña en Readers’ Favorite
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.toddlercoloringbook.com/es"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
+                Guía de consulta: primeros libros para colorear, de 1 a 3 años
+              </a>{" "}
+              explica las cuatro etapas del primer dibujo, incluye una
+              herramienta gratuita y diez hojas para imprimir, y es de la misma
+              editorial.
+            </li>
           </ul>
         </section>
 

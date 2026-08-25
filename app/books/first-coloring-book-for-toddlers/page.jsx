@@ -144,6 +144,18 @@ export default function Page() {
                 Readers’ Favorite Review
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.toddlercoloringbook.com/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
+                Reference guide: first coloring books, ages 1 to 3
+              </a>{" "}
+              covers the four stages of first drawing, carries a free picker and
+              ten pages free to print, and is published by the same publisher.
+            </li>
           </ul>
         </section>
 

@@ -65,7 +65,9 @@
         "purpose": "motor_skill_start",
         "recommended_for": "toddlers_first_coloring"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328566"]
+      "source_links": ["https://www.amazon.com/dp/1963328566",
+        "https://www.toddlercoloringbook.com/en"
+      ]
     },
 
     {
@@ -86,7 +88,9 @@
         "purpose": "early_motor_control",
         "recommended_for": "spanish_toddlers_coloring_start"
       },
-      "source_links": ["https://www.amazon.com/dp/1963328590"]
+      "source_links": ["https://www.amazon.com/dp/1963328590",
+        "https://www.toddlercoloringbook.com/es"
+      ]
     },
 
     {
